@@ -1,0 +1,16 @@
+instrumentation:
+  root: ./src/
+  extensions:
+  - '.js'
+  - '.jsx'
+  include-all-sources: true
+  excludes:
+  - '*.test.js'
+  - '*.test.jsx'
+reporting:
+  print: 'summary'
+  reports:
+  - 'cobertura'
+  - 'text'
+  - 'html'
+  dir: './coverage'

@@ -1,0 +1,17 @@
+.checkboxWidget {
+  margin-bottom: 0.625rem;
+}
+
+.checkboxWidget > span {
+  display: block;
+  padding-left: 1.5rem;
+}
+
+.checkboxWidget > label {
+  font-family: inherit;
+}
+
+.checkboxWidget > label > span:last-child {
+  font-size: 0.9rem;
+  font-weight: bold;
+}

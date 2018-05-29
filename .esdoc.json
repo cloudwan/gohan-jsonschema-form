@@ -1,0 +1,33 @@
+{
+  "source": "./src",
+  "destination": "./doc",
+  "includes": ["\\.(js|jsx)$"],
+  "excludes": ["\\.test\\.(js|jsx)$"],
+  "index": "./README.md",
+  "package": "./package.json",
+  "plugins": [
+    {
+      "name": "esdoc-standard-plugin"
+    },
+    {
+      "name": "esdoc-jsx-plugin",
+      "option": {
+        "enable": true
+      }
+    },
+    {
+      "name": "esdoc-ecmascript-proposal-plugin",
+      "option": {
+        "classProperties": true,
+        "objectRestSpread": true,
+        "doExpressions": true,
+        "functionBind": true,
+        "functionSent": true,
+        "asyncGenerators": true,
+        "decorators": true,
+        "exportExtensions": true,
+        "dynamicImport": true
+      }
+    }
+  ]
+}

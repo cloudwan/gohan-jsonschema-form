@@ -1,0 +1,8 @@
+--require babel-register
+--require babel-polyfill
+--require ignore-styles
+--require ignore-styles
+--require ./test/helpers/dom.js
+--require ./test/helpers/babelRegisterConfig.js
+--reporter nyan
+--watch-extensions jsx,js
