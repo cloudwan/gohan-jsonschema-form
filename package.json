@@ -4,7 +4,7 @@
   "description": "Gohan jsonschema forms.",
   "main": "lib/index.js",
   "scripts": {
-    "precommit": "pretty-quick --staged",
+    "precommit": "pretty-quick --staged && ./hooks/precommit.js",
     "prettier": "prettier --write \"src/**/*.{js,jsx}\"",
     "build:lib": "NODE_ENV=lib babel -d ./lib ./src/",
     "build": "rm -rf ./dist/ && NODE_ENV=production webpack -p --colors --progress --bail",
@@ -118,6 +118,7 @@
     "pretty-quick": "^1.4.1",
     "react-inspector": "^2.3.0",
     "sass-loader": "^7.0.1",
+    "simple-git": "^1.95.0",
     "webpack": "^4.9.1",
     "webpack-cli": "^2.1.4",
     "webpack-dev-server": "^3.1.4"
