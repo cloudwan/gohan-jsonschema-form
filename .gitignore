@@ -6,3 +6,4 @@ doc/
 demo/
 .sass-cache
 coverage/
+.awcache/

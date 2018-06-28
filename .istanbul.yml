@@ -1,12 +1,12 @@
 instrumentation:
   root: ./src/
   extensions:
-  - '.js'
-  - '.jsx'
+  - '.ts'
+  - '.tsx'
   include-all-sources: true
   excludes:
-  - '*.test.js'
-  - '*.test.jsx'
+  - '*.test.ts'
+  - '*.test.tsx'
 reporting:
   print: 'summary'
   reports:

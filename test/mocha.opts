@@ -1,8 +1,9 @@
---require babel-register
---require babel-polyfill
+--require ts-node/register/transpile-only
+--require @babel/register
 --require ignore-styles
 --require ignore-styles
 --require ./test/helpers/dom.js
---require ./test/helpers/babelRegisterConfig.js
---reporter nyan
---watch-extensions jsx,js
+--require ./test/helpers/setup.js
+--require mocha-snapshots
+--watch-extensions tsx,ts
+--reporter spec

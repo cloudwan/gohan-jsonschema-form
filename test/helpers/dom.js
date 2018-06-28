@@ -1,21 +1,7 @@
 require('mock-local-storage');
-var jsdom = require('jsdom');
-// setup the simplest document possible
-var doc = new jsdom.JSDOM('<!doctype html><html><body></body></html>', {
-  url: 'http://localhost/',
-});
-// get the window object out of the document
-var win = doc.window;
-// set globals for mocha that make access to document and window feel
-// natural in the test environment
-global.document = doc;
-global.window = win;
+const jsdom = require('jsdom');
+const {PerformanceObserver} = require('perf_hooks');
 
-// take all properties of the window object and also attach it to the
-// mocha global object
-propagateToGlobal(win);
-
-// from mocha-jsdom https://github.com/rstacruz/mocha-jsdom/blob/master/index.js#L80
 function propagateToGlobal(window) {
   for (let key in window) {
     if (!window.hasOwnProperty(key)) continue;
@@ -31,3 +17,17 @@ function propagateToGlobal(window) {
   }
   window.sessionStorage = global.sessionStorage;
 }
+
+// setup the simplest document possible
+const dom = new jsdom.JSDOM('<!doctype html><html><body></body></html>', {
+  url: 'http://localhost/',
+});
+
+global.window = dom.window;
+global.document = dom.window.document;
+
+propagateToGlobal(dom.window);
+
+global.window.Object = Object;
+global.window.Math = Math;
+global.Performance = PerformanceObserver;

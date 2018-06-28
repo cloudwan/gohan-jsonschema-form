@@ -4,6 +4,7 @@ const process = require('process');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const {CheckerPlugin} = require('awesome-typescript-loader');
 
 const lessCustomVars = require('./css/lessCustomVars');
 
@@ -30,18 +31,34 @@ module.exports = {
     filename: '[name].[hash].bundle.js',
     chunkFilename: '[name].[hash].bundle.js',
   },
+  mode: 'production',
   module: {
     rules: [
       {
         test: /\.ts(x?)$/,
-        exclude: /\*\.test\.ts$/,
-        loader: 'ts-loader',
+        exclude: /\*\.test\.ts(x?)$/,
+        loader: 'awesome-typescript-loader',
+        options: {
+          useBabel: true,
+          useCache: true,
+          babelCore: '@babel/core',
+        },
       },
       {
         test: /\.js(x?)$/,
         exclude: /node_modules/,
         include: __dirname,
-        use: 'babel-loader',
+        use: {
+          loader: 'babel-loader',
+          options: {
+            cacheDirectory: true,
+          },
+        },
+      },
+      {
+        enforce: 'pre',
+        test: /\.js$/,
+        loader: 'source-map-loader',
       },
       {
         test: /\.css$/,
@@ -49,10 +66,10 @@ module.exports = {
         use: ExtractTextPlugin.extract({
           use: [
             {
-              loader: 'css-loader',
-              query: {
-                sourceMap: false,
+              loader: 'typings-for-css-modules-loader',
+              options: {
                 modules: true,
+                sourceMap: false,
               },
             },
           ],
@@ -119,6 +136,7 @@ module.exports = {
       template: './src/index.html',
       inject: 'body',
     }),
+    new CheckerPlugin(),
     new webpack.DefinePlugin({
       process: {
         env: {
@@ -132,7 +150,7 @@ module.exports = {
   ],
   optimization: {
     splitChunks: {
-      chunks: 'async',
+      chunks: 'all',
       minSize: 30000,
       minChunks: 1,
       maxAsyncRequests: 5,

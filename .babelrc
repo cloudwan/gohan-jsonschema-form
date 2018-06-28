@@ -1,68 +1,28 @@
 {
   "presets": [
-    "flow",
-    "es2016",
-    "react"
+    ["@babel/env", {"modules": false}],
+    "@babel/typescript",
+    "@babel/react"
   ],
   "plugins": [
-    "transform-object-rest-spread",
-    "transform-class-properties",
-    "transform-regenerator",
-    "transform-export-extensions",
-    "transform-strict-mode",
-    "transform-object-rest-spread",
-    "syntax-async-functions",
-    "syntax-trailing-function-commas"
+    "@babel/proposal-class-properties",
+    "@babel/proposal-object-rest-spread"
   ],
   "env": {
     "lib": {
       "presets": [
-        "flow",
-        "es2015",
-        "es2016",
-        "react"
-      ],
-      "ignore": [
-        "**/*.test.js"
+        "@babel/env"
       ],
       "plugins": [
         [
-          "css-modules-transform",
+          "babel-plugin-css-modules-transform",
           {
             "extractCss": "./lib/style.css",
             "keepImport": false,
             "extensions": [".css", ".scss"],
             "processCss": "./utils/processSass.js"
           }
-        ],
-        "transform-object-rest-spread",
-        "transform-class-properties",
-        "transform-regenerator",
-        "transform-export-extensions",
-        "transform-strict-mode",
-        "transform-object-rest-spread",
-        "syntax-async-functions",
-        "syntax-trailing-function-commas"
-      ]
-    },
-    "dev-server": {
-      "presets": [
-        "react-hmre"
-      ]
-    },
-    "test": {
-      "presets": [
-        "es2015"
-      ],
-      "plugins": [
-        "transform-object-rest-spread",
-        "transform-class-properties",
-        "transform-regenerator",
-        "transform-export-extensions",
-        "transform-strict-mode",
-        "transform-object-rest-spread",
-        "syntax-async-functions",
-        "syntax-trailing-function-commas"
+        ]
       ]
     }
   }

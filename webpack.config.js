@@ -4,6 +4,9 @@ const process = require('process');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const {CheckerPlugin} = require('awesome-typescript-loader');
+
+const lessCustomVars = require('./css/lessCustomVars');
 
 const devServerPort = 8080;
 const devServerHostname = 'localhost';
@@ -38,7 +41,12 @@ module.exports = {
       {
         test: /\.ts(x?)$/,
         exclude: /\*\.test\.ts(x?)$/,
-        loader: 'ts-loader',
+        loader: 'awesome-typescript-loader',
+        options: {
+          useBabel: true,
+          useCache: true,
+          babelCore: '@babel/core',
+        },
       },
       {
         test: /\.js(x?)$/,
@@ -52,16 +60,22 @@ module.exports = {
         },
       },
       {
+        enforce: 'pre',
+        test: /\.js$/,
+        loader: 'source-map-loader',
+      },
+      {
         test: /\.css$/,
         include: __dirname,
         use: ExtractTextPlugin.extract({
           use: [
             {
-              loader: 'css-loader',
+              loader: 'typings-for-css-modules-loader',
               options: {
+                modules: true,
+                namedExport: true,
                 minimize: false,
                 sourceMap: true,
-                modules: true,
               },
             },
           ],
@@ -104,6 +118,7 @@ module.exports = {
               options: {
                 sourceMap: true,
                 minimize: false,
+                modifyVars: lessCustomVars,
                 javascriptEnabled: true,
               },
             },
@@ -141,6 +156,7 @@ module.exports = {
       template: './demo/index.html',
       inject: 'body',
     }),
+    new CheckerPlugin(),
     new webpack.DefinePlugin({
       process: {
         env: {
@@ -153,6 +169,28 @@ module.exports = {
   ],
   performance: {
     hints: false,
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'async',
+      minSize: 30000,
+      minChunks: 1,
+      maxAsyncRequests: 5,
+      maxInitialRequests: 3,
+      automaticNameDelimiter: '~',
+      name: true,
+      cacheGroups: {
+        vendors: {
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10,
+        },
+        default: {
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true,
+        },
+      },
+    },
   },
   devtool: 'source-map',
   devServer: {
