@@ -3,7 +3,7 @@ import * as React from 'react';
 import {ObjectWidget} from './widgets';
 
 interface TFormPorps {
-  uiSchema: object;
+  uiSchema?: object;
   formData: object;
   schema: object;
 }

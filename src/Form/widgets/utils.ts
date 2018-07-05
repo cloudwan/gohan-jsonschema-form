@@ -25,3 +25,23 @@ export const getWidgetName = (schema, uiSchema): string => {
 
   return 'NotFoundWidget';
 };
+
+export const asNumber = (value: string): number | string | undefined => {
+  if (value === '') {
+    return undefined;
+  }
+  if (/\.$/.test(value)) {
+    return value;
+  }
+  if (/\.0$/.test(value)) {
+    return value;
+  }
+  if (/\.\d*0$/.test(value)) {
+    return value;
+  }
+
+  const n = Number(value);
+  const valid = typeof n === 'number' && !Number.isNaN(n);
+
+  return valid ? n : value;
+};

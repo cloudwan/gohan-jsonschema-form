@@ -127,9 +127,13 @@ export default class ArrayWidget extends React.Component<
     const {schema, isRequired, uiSchema} = this.props;
     const {value} = this.state;
 
-    if (Boolean(schema.items) && schema.items.type === 'object') {
+    if (schema.items && schema.items.type === 'object') {
       return this.renderObjectArray();
-    } else if (schema.items.enum) {
+    } else if (
+      !schema.uniqueItems || !schema.items
+        ? false
+        : Array.isArray(schema.items.enum)
+    ) {
       const Widget = getWidget('SelectWidget');
 
       return (
@@ -139,6 +143,7 @@ export default class ArrayWidget extends React.Component<
           uiSchema={uiSchema}
           isRequired={isRequired}
           value={value}
+          multiple={true}
         />
       );
     }

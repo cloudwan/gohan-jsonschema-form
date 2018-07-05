@@ -1,6 +1,8 @@
 import {Select} from 'antd';
 import * as React from 'react';
 
+import {asNumber} from './utils';
+
 import Asterisk from '../components/Asterisk';
 import Description from '../components/Description';
 import Errors from '../components/Errors';
@@ -21,6 +23,7 @@ interface TSelectWidgetProps {
   readonly?: boolean;
   disabled?: boolean;
   searchThreshold?: number;
+  multiple?: boolean;
 }
 
 interface TSelectWidgetState {
@@ -37,6 +40,7 @@ export default class SelectWidget extends React.Component<
     disabled: false,
     readonly: false,
     isRequired: false,
+    multiple: false,
   };
 
   constructor(props, context) {
@@ -44,16 +48,22 @@ export default class SelectWidget extends React.Component<
 
     this.state = {
       value:
-        this.props.value === undefined &&
-        this.props.schema.type.includes('null')
-          ? null
-          : this.props.value,
+        this.props.value ||
+        this.props.schema.default ||
+        (this.props.multiple ? [] : ''),
       errors: [],
     };
   }
 
   get value() {
-    return this.state.value;
+    const {value} = this.state;
+    const isInputEmpty = !value || (Array.isArray(value) && value.length === 0);
+
+    if (isInputEmpty && this.props.schema.type.includes('null')) {
+      return null;
+    }
+
+    return value;
   }
 
   get isValid() {
@@ -88,18 +98,9 @@ export default class SelectWidget extends React.Component<
   }
 
   public handleChangeInput = value => {
-    const {
-      schema: {type},
-    } = this.props;
-
     this.setState(
       {
-        value:
-          type.includes('string') || type.includes('array')
-            ? value === undefined && type.includes('null')
-              ? null
-              : value
-            : Number(value),
+        value: this.processValue(this.props.schema, value),
       },
       () => this.isValid,
     );
@@ -112,6 +113,7 @@ export default class SelectWidget extends React.Component<
       searchThreshold,
       disabled,
       readonly,
+      multiple,
     } = this.props;
 
     const {value, errors} = this.state;
@@ -120,10 +122,6 @@ export default class SelectWidget extends React.Component<
     const haystack = type.includes('string')
       ? enums
       : enums.map(i => i.toString());
-    const inputValue =
-      type.includes('string') || type.includes('array')
-        ? value
-        : value.toString();
 
     return (
       <div className={styles.selectWidget}>
@@ -135,12 +133,12 @@ export default class SelectWidget extends React.Component<
         <Select
           className={styles.select}
           allowClear={type.includes('null')}
-          value={inputValue}
+          value={value}
           disabled={disabled || readonly}
           placeholder="Not selected"
           onChange={this.handleChangeInput}
           showSearch={haystack.length >= searchThreshold}
-          mode={Array.isArray(value) ? 'multiple' : 'default'}
+          mode={multiple ? 'multiple' : 'default'}
         >
           {haystack.map(item => {
             if (typeof item === 'object') {
@@ -168,4 +166,21 @@ export default class SelectWidget extends React.Component<
       </div>
     );
   }
+
+  private processValue = ({type, items}, value) => {
+    if (value === '') {
+      return undefined;
+    } else if (
+      type === 'array' &&
+      items &&
+      ['number', 'integer'].includes(items.type)
+    ) {
+      return value.map(asNumber);
+    } else if (type === 'boolean') {
+      return value === 'true';
+    } else if (type === 'number') {
+      return asNumber(value);
+    }
+    return value;
+  };
 }
