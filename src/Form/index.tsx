@@ -1,3 +1,4 @@
+import {JSONSchema4} from 'json-schema';
 import * as React from 'react';
 
 import {ObjectWidget} from './widgets';
@@ -5,7 +6,7 @@ import {ObjectWidget} from './widgets';
 interface TFormPorps {
   uiSchema?: object;
   formData: object;
-  schema: object;
+  schema: JSONSchema4;
 }
 
 export class Form extends React.Component<TFormPorps> {
