@@ -1,10 +1,12 @@
 import {JSONSchema4} from 'json-schema';
 import * as React from 'react';
-
+import {IUiSchema} from '../../typings/IUiSchema';
 import {ObjectWidget} from './widgets';
 
 interface TFormPorps {
-  uiSchema?: object;
+  uiSchema?: {
+    [key: string]: IUiSchema;
+  };
   formData: object;
   schema: JSONSchema4;
 }

@@ -1,0 +1,46 @@
+export interface ILogic {
+  test: string;
+  hide: string[];
+}
+
+export interface IFetch {
+  url: string;
+  query?: {
+    filters?: {
+      [key: string]: string;
+    };
+    fields: string[];
+  };
+  fetchData: (url: string, query?: string) => any;
+  onDemand?: boolean;
+}
+
+export interface IHelpLink {
+  label: string;
+  url: string;
+}
+
+export interface IProperties {
+  [key: string]: IUiSchema;
+}
+
+export interface IItems {
+  properties?: IProperties;
+}
+
+export interface IUiSchema {
+  'ui:widget'?: string | React.ReactNode;
+  'ui:options'?: object;
+  'ui:field'?: string | React.ReactNode;
+  'ui:logic'?: ILogic[];
+  'ui:title'?: string;
+  'ui:description'?: string;
+  'ui:order'?: string[];
+  'ui:label'?: string;
+  'ui:fetch'?: IFetch;
+  'ui:helpLink'?: IHelpLink;
+  'ui:disabled'?: boolean;
+  'ui:readonly'?: boolean;
+  properties?: IProperties;
+  items?: IItems;
+}
