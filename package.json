@@ -47,7 +47,7 @@
     "lodash": "^4.17.5",
     "prop-types": "^15.6.0",
     "react": "^16.4.0",
-    "react-ace": "^6.1.1",
+    "react-ace": "^6.1.4",
     "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^16.4.0",
     "react-sortable-hoc": "^0.8.0"
@@ -62,13 +62,16 @@
     "antd": "^3.6.4",
     "babel-polyfill": "^6.26.0",
     "brace": "^0.11.0",
+    "fs": "0.0.1-security",
     "js-yaml": "^3.10.0",
     "lodash": "^4.17.5",
     "prop-types": "^15.6.0",
     "react": "^16.4.1",
-    "react-ace": "^6.1.1",
+    "react-ace": "^6.1.4",
     "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^16.4.1",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
     "react-sortable-hoc": "^0.8.0"
   },
   "devDependencies": {

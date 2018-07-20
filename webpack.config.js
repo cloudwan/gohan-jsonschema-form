@@ -1,3 +1,4 @@
+const fs = require('fs');
 const path = require('path');
 const gitSync = require('git-rev-sync');
 const process = require('process');
@@ -20,6 +21,13 @@ function version() {
     tag: gitSync.tag(),
     version: process.env.npm_package_version,
   };
+}
+
+function samples() {
+  const files = fs.readdirSync(path.resolve(__dirname, './demo/schemas/'));
+  const imgList = files.filter(file => /.*\.json/.test(file));
+
+  return imgList;
 }
 
 module.exports = {
@@ -165,6 +173,7 @@ module.exports = {
         },
       },
       VERSION: JSON.stringify(version()),
+      schemas: JSON.stringify(samples()),
     }),
   ],
   performance: {
