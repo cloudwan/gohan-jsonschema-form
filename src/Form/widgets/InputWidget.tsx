@@ -3,10 +3,7 @@ import * as React from 'react';
 
 import validator from '../Validator';
 
-import Asterisk from '../components/Asterisk';
-import Description from '../components/Description';
 import Errors from '../components/Errors';
-import Label from '../components/Label';
 
 import 'antd/lib/input-number/style';
 import 'antd/lib/input/style';
@@ -90,12 +87,9 @@ export default class InputWidget extends React.Component<
   // eslint-disable-next-line complexity
   public render() {
     const {
-      isRequired,
       schema,
-      schema: {title, description, type},
-      uiSchema,
+      schema: {title, type},
     } = this.props;
-    const {'ui:title': uiTitle, 'ui:description': uiDescription} = uiSchema;
     const {value, errors} = this.state;
     const additionalProps: any = {};
 
@@ -113,11 +107,6 @@ export default class InputWidget extends React.Component<
 
     return (
       <div className={styles.inputWidget}>
-        <Label htmlFor={title}>
-          {uiTitle || title}
-          {isRequired && <Asterisk />}
-        </Label>
-        <Description>{uiDescription || description}</Description>
         {(type === 'number' || type === 'integer') && (
           <InputNumber
             id={title}

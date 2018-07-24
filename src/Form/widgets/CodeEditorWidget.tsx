@@ -7,10 +7,7 @@ import 'brace/mode/text';
 import 'brace/mode/yaml';
 import 'brace/theme/github';
 
-import Asterisk from '../components/Asterisk';
-import Description from '../components/Description';
 import Errors from '../components/Errors';
-import Label from '../components/Label';
 
 interface TCodeEditorWidgetProps {
   format: string;
@@ -99,18 +96,12 @@ export default class CodeEditorWidget extends React.Component<
 
   public render(): React.ReactNode {
     const {
-      isRequired,
-      schema: {title, description},
+      schema: {title},
     } = this.props;
     const {value, errors} = this.state;
 
     return (
       <div>
-        <Label htmlFor={title}>
-          {title}
-          {isRequired && <Asterisk />}
-        </Label>
-        <Description>{description}</Description>
         <AceEditor
           mode={this.getFormat()}
           value={value}

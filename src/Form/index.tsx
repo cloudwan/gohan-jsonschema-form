@@ -1,7 +1,7 @@
 import {JSONSchema4} from 'json-schema';
 import * as React from 'react';
 import {IUiSchema} from '../../typings/IUiSchema';
-import {ObjectWidget} from './widgets';
+import {SchemaField} from './fields/SchemaField';
 
 interface TFormPorps {
   uiSchema?: {
@@ -30,13 +30,13 @@ export class Form extends React.Component<TFormPorps> {
   public render(): JSX.Element {
     return (
       <form>
-        <ObjectWidget
+        <SchemaField
           ref={c => {
             this.object = c;
           }}
           schema={this.props.schema}
           uiSchema={this.props.uiSchema}
-          value={this.props.formData}
+          formData={this.props.formData}
         />
       </form>
     );

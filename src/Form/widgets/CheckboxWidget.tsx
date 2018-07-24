@@ -1,9 +1,6 @@
 import {Checkbox} from 'antd';
 import * as React from 'react';
 
-import Asterisk from '../components/Asterisk';
-import Description from '../components/Description';
-
 import {CheckboxChangeEvent} from 'antd/lib/checkbox';
 import 'antd/lib/checkbox/style';
 import * as styles from './CheckboxWidget.css';
@@ -24,7 +21,6 @@ export default class CheckboxWidget extends React.Component<
 > {
   private static defaultProps = {
     value: false,
-
     isRequired: false,
   };
 
@@ -41,19 +37,11 @@ export default class CheckboxWidget extends React.Component<
   }
 
   public render(): React.ReactNode {
-    const {
-      schema: {title, description},
-      isRequired,
-    } = this.props;
     const {checked} = this.state;
 
     return (
       <div className={styles.checkboxWidget}>
-        <Checkbox checked={checked} onChange={this.handleChangeCheckbox}>
-          {title}
-          {isRequired && <Asterisk />}
-        </Checkbox>
-        {description && <Description>{description}</Description>}
+        <Checkbox checked={checked} onChange={this.handleChangeCheckbox} />
       </div>
     );
   }

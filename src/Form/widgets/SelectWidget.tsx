@@ -3,10 +3,7 @@ import * as React from 'react';
 
 import {asNumber} from './utils';
 
-import Asterisk from '../components/Asterisk';
-import Description from '../components/Description';
 import Errors from '../components/Errors';
-import Label from '../components/Label';
 
 import validator from '../Validator';
 
@@ -108,8 +105,7 @@ export default class SelectWidget extends React.Component<
 
   public render() {
     const {
-      schema: {title, description, type, enum: enumItems, options, items},
-      isRequired,
+      schema: {type, enum: enumItems, options, items},
       searchThreshold,
       disabled,
       readonly,
@@ -127,11 +123,6 @@ export default class SelectWidget extends React.Component<
 
     return (
       <div className={styles.selectWidget}>
-        <Label htmlFor={title}>
-          {title}
-          {isRequired && <Asterisk />}
-        </Label>
-        <Description>{description}</Description>
         <Select
           className={styles.select}
           allowClear={type.includes('null')}

@@ -1,8 +1,6 @@
 import {Button, Icon, Tabs} from 'antd';
 import * as React from 'react';
 
-import Asterisk from '../components/Asterisk';
-import Description from '../components/Description';
 import Errors from '../components/Errors';
 import Label from '../components/Label';
 import SortableList from '../components/SortableList';
@@ -277,11 +275,6 @@ export default class ArrayWidget extends React.Component<
 
     return (
       <div>
-        <Label htmlFor={title}>
-          {title}
-          {isRequired && <Asterisk />}
-        </Label>
-        <Description>{description}</Description>
         <Tabs
           activeKey={activeTabKey}
           tabBarExtraContent={
@@ -352,11 +345,6 @@ export default class ArrayWidget extends React.Component<
 
     return (
       <div>
-        <Label htmlFor={title}>
-          {title}
-          {isRequired && <Asterisk />}
-        </Label>
-        <Description>{description}</Description>
         <SortableList
           pressDelay={500}
           // eslint-disable-next-line react/jsx-handler-names

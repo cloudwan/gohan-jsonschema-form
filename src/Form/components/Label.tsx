@@ -4,7 +4,7 @@ import * as styles from './Label.css';
 
 const Label = (props: {
   children: JSX.Element | any[];
-  htmlFor: string;
+  htmlFor?: string;
 }): JSX.Element => (
   <label className={styles.label} {...{htmlFor: props.htmlFor}}>
     {props.children}
