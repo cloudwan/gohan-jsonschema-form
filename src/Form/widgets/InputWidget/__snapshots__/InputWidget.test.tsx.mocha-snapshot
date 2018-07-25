@@ -1,0 +1,144 @@
+exports["should match snapshot when schema type is string(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "props": {
+      "children": [
+        {
+          "type": "Errors",
+          "props": {
+            "errors": []
+          },
+          "_store": {}
+        },
+        false,
+        {
+          "type": "[function]",
+          "props": {
+            "onChange": "[function]"
+          },
+          "_store": {}
+        }
+      ]
+    },
+    "rendered": [
+      {
+        "nodeType": "function",
+        "type": "Errors",
+        "props": {
+          "errors": []
+        }
+      },
+      false,
+      {
+        "nodeType": "function",
+        "type": "[function]",
+        "props": {
+          "onChange": "[function]"
+        }
+      }
+    ]
+  },
+  "type": "React.Fragment",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "Errors",
+        "props": {
+          "errors": []
+        }
+      },
+      "type": "Errors",
+      "props": {
+        "errors": []
+      }
+    },
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "[function]",
+        "props": {
+          "onChange": "[function]"
+        }
+      },
+      "type": "Component",
+      "props": {
+        "onChange": "[function]"
+      }
+    }
+  ]
+};
+
+exports["should match snapshot when schema type is number(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "props": {
+      "children": [
+        {
+          "type": "Errors",
+          "props": {
+            "errors": []
+          },
+          "_store": {}
+        },
+        {
+          "type": "[function]",
+          "props": {
+            "onChange": "[function]"
+          },
+          "_store": {}
+        },
+        false
+      ]
+    },
+    "rendered": [
+      {
+        "nodeType": "function",
+        "type": "Errors",
+        "props": {
+          "errors": []
+        }
+      },
+      {
+        "nodeType": "function",
+        "type": "[function]",
+        "props": {
+          "onChange": "[function]"
+        }
+      },
+      false
+    ]
+  },
+  "type": "React.Fragment",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "Errors",
+        "props": {
+          "errors": []
+        }
+      },
+      "type": "Errors",
+      "props": {
+        "errors": []
+      }
+    },
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "[function]",
+        "props": {
+          "onChange": "[function]"
+        }
+      },
+      "type": "Component",
+      "props": {
+        "onChange": "[function]"
+      }
+    }
+  ]
+};
+

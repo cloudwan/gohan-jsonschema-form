@@ -1,3 +1,7 @@
+export interface IOptions {
+  [key: string]: any;
+}
+
 export interface ILogic {
   test: string;
   hide: string[];
@@ -30,7 +34,7 @@ export interface IItems {
 
 export interface IUiSchema {
   'ui:widget'?: string | React.ReactNode;
-  'ui:options'?: object;
+  'ui:options'?: IOptions;
   'ui:field'?: string | React.ReactNode;
   'ui:logic'?: ILogic[];
   'ui:title'?: string;

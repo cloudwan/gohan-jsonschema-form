@@ -1,18 +1,21 @@
 import ArrayWidget from './ArrayWidget';
 import CheckboxWidget from './CheckboxWidget';
 import CodeEditorWidget from './CodeEditorWidget';
-import InputWidget from './InputWidget';
 import NotFoundWidget from './NotFoundWidget';
 import ObjectWidget from './ObjectWidget';
 import SelectWidget from './SelectWidget';
+
+import NumberField from '../fields/NumberField';
+import StringField from '../fields/StringField';
 
 const widgets = {
   ArrayWidget,
   CheckboxWidget,
   CodeEditorWidget,
-  InputWidget,
   ObjectWidget,
   SelectWidget,
+  NumberField,
+  StringField,
 };
 
 export const getWidget = (name: string) => {
@@ -28,7 +31,8 @@ export {
   ArrayWidget,
   CheckboxWidget,
   CodeEditorWidget,
-  InputWidget,
   ObjectWidget,
   SelectWidget,
+  NumberField,
+  StringField,
 };

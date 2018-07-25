@@ -19,8 +19,10 @@ export const getWidgetName = (schema, uiSchema): string => {
     return 'SelectWidget';
   } else if (schema.format) {
     return 'CodeEditorWidget';
-  } else if (type === 'string' || type === 'integer' || type === 'number') {
-    return 'InputWidget';
+  } else if (type === 'string') {
+    return 'StringField';
+  } else if (type === 'integer' || type === 'number') {
+    return 'NumberField';
   }
 
   return 'NotFoundWidget';

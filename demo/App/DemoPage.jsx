@@ -106,7 +106,6 @@ export default class DemoPage extends Component {
               key="data"
               value={safeDump(data, {
                 skipInvalid: true,
-                schema: FAILSAFE_SCHEMA,
               })}
               readOnly={true}
               onChange={this.handlerDataChange}

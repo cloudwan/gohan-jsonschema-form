@@ -4,6 +4,7 @@
 --require ignore-styles
 --require ./test/helpers/dom.js
 --require ./test/helpers/setup.js
+--require ./test/helpers/cssModules.js
 --require mocha-snapshots
 --watch-extensions tsx,ts
 --reporter spec

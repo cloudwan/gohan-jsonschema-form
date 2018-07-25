@@ -7,7 +7,7 @@ import SortableList from '../components/SortableList';
 import SortableListItem from '../components/SortableListItem';
 
 import Checkbox from './CheckboxWidget';
-import Input from './InputWidget';
+import InputWidget from './InputWidget';
 import Select from './SelectWidget';
 
 import ArrayItemActions from './components/ArrayItemActions';
@@ -255,7 +255,7 @@ export default class ArrayWidget extends React.Component<
       );
     }
     return (
-      <Input
+      <InputWidget
         ref={c => {
           this.items[index] = c;
         }}
