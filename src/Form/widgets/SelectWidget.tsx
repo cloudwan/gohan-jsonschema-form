@@ -108,7 +108,7 @@ export default class SelectWidget extends React.Component<
 
   public render() {
     const {
-      schema: {title, description, type, enum: enumItems, items},
+      schema: {title, description, type, enum: enumItems, options, items},
       isRequired,
       searchThreshold,
       disabled,
@@ -117,11 +117,13 @@ export default class SelectWidget extends React.Component<
     } = this.props;
 
     const {value, errors} = this.state;
-
-    const enums = enumItems || items.enum;
-    const haystack = type.includes('string')
+    const enums = options || enumItems || items.enum;
+    const haystack = Array.isArray(enums)
       ? enums
-      : enums.map(i => i.toString());
+      : Object.keys(enums).map(i => ({
+          value: i,
+          label: enums[i],
+        }));
 
     return (
       <div className={styles.selectWidget}>
