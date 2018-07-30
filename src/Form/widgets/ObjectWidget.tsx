@@ -1,8 +1,8 @@
 import {Button, Icon} from 'antd';
-import uniq from 'lodash/uniq';
+import {uniq} from 'lodash';
 import * as React from 'react';
 
-import {SchemaField} from '../fields/SchemaField';
+import SchemaField from '../fields/SchemaField';
 
 interface TObjectWidgetProps {
   schema: any;
@@ -12,6 +12,7 @@ interface TObjectWidgetProps {
   readonly?: boolean;
   disabled?: boolean;
   searchThreshold?: number;
+  id: string;
 }
 
 interface TObjectWidgetState {
@@ -63,6 +64,31 @@ export default class ObjectWidget extends React.Component<
     }, true);
   }
 
+  public render(): JSX.Element {
+    const {
+      isRequired,
+      schema: {title, type, description},
+      id,
+    } = this.props;
+    const {value} = this.state;
+    // TODO move fieldset to dump component
+    return (
+      <fieldset id={id}>
+        {type.includes('null') && (
+          <Button
+            type="primary"
+            size="small"
+            onClick={this.handleAddRemoveButton}
+            ghost={true}
+          >
+            <Icon type={value === null ? 'plus-circle' : 'minus-circle'} />
+          </Button>
+        )}
+        {value !== null && this.renderFields()}
+      </fieldset>
+    );
+  }
+
   private handleAddRemoveButton = (): void => {
     const {value} = this.state;
 
@@ -73,20 +99,14 @@ export default class ObjectWidget extends React.Component<
     }
   };
 
-  public render(): JSX.Element {
-    // tslint:disable-line
-    const {uiSchema} = this.props;
+  private renderFields(): React.ReactNode {
+    const {uiSchema, id} = this.props;
     const {'ui:order': uiOrder} = this.props.uiSchema;
-    const {
-      properties,
-      propertiesOrder = [],
-      required,
-      type,
-    } = this.props.schema;
+    const {properties, propertiesOrder = [], required} = this.props.schema;
 
     return uniq(
       (uiOrder || propertiesOrder).concat(Object.keys(properties)),
-    ).map(key => {
+    ).map((key: string) => {
       const property = properties[key];
       const uiProperty = uiSchema[key];
       const value =
@@ -99,33 +119,19 @@ export default class ObjectWidget extends React.Component<
         return null;
       }
 
-      if (value !== null) {
-        return (
-          <React.Fragment key={key}>
-            {type.includes('null') && (
-              <Button
-                type="primary"
-                size="small"
-                onClick={this.handleAddRemoveButton}
-                ghost={true}
-              >
-                <Icon type={value === null ? 'plus-circle' : 'minus-circle'} />
-              </Button>
-            )}
-            {value !== null && (
-              <SchemaField
-                ref={c => {
-                  this.properties[key] = c;
-                }}
-                schema={property}
-                uiSchema={uiProperty}
-                required={isRequired}
-                formData={value}
-              />
-            )}
-          </React.Fragment>
-        );
-      }
+      return (
+        <SchemaField
+          id={`${id}.${key}`}
+          key={key}
+          ref={c => {
+            this.properties[key] = c;
+          }}
+          schema={property}
+          uiSchema={uiProperty}
+          isRequired={isRequired}
+          value={value}
+        />
+      );
     });
   }
 }

@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "precommit": "pretty-quick --staged && ./hooks/precommit.js",
-    "prettier": "prettier --write \"src/**/*.{js,jsx}\"",
+    "prettier": "prettier --write \"src/**/*.{ts,tsx}\"",
     "build:lib": "tsc --emitDeclarationOnly && NODE_ENV=lib babel src --out-dir lib --extensions \".ts,.tsx\"",
     "build": "rm -rf ./dist/ && NODE_ENV=production webpack -p --colors --progress --bail",
     "build-dev": "rm -rf NODE_ENV=development ./dist/ && webpack -d --colors --display-reasons --progress --bail",
@@ -55,6 +55,7 @@
   "dependencies": {
     "@types/ajv": "^1.0.0",
     "@types/json-schema": "^6.0.1",
+    "@types/lodash": "^4.14.113",
     "@types/react": "^16.4.2",
     "@types/react-dom": "^16.0.6",
     "@types/react-sortable-hoc": "^0.6.3",

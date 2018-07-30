@@ -1,68 +1,97 @@
-import React from 'react';
-import {getWidget} from '../widgets';
-import {getWidgetName} from '../widgets/utils';
+import * as React from 'react';
 
-import {JSONSchema4} from 'json-schema';
-import {IUiSchema} from '../../../typings/IUiSchema';
+import {IWidget} from '../../../typings/IWidget';
+import {selectField} from './';
+import Template from './Template';
 
-import Asterisk from '../components/Asterisk';
-import Description from '../components/Description';
-import Fieldset from '../components/Fieldset';
-import Label from '../components/Label';
-
-interface TSchemaFieldProps {
-  uiSchema?: {
-    [key: string]: IUiSchema;
-  };
-  formData?: object;
-  schema: JSONSchema4;
-  required?: boolean;
-}
-
-export class SchemaField extends React.Component<TSchemaFieldProps> {
+export default class SchemaField extends React.Component<IWidget> {
   public static defaultProps = {
+    value: undefined,
+    id: '#',
     uiSchema: {},
-    required: false,
+    isRequired: false,
   };
 
-  private FieldComponent = getWidget(
-    getWidgetName(this.props.schema, this.props.uiSchema),
-  );
-
-  private field = undefined;
+  private field;
 
   public get value() {
+    if (this.props.uiSchema['ui:widget'] === 'Hidden') {
+      return undefined;
+    }
+
     return this.field.value;
   }
 
-  public get isValid() {
+  public get isValid(): boolean {
+    if (this.props.uiSchema['ui:widget'] === 'Hidden') {
+      return true;
+    }
+
     return this.field.isValid;
   }
 
-  public render() {
-    const {schema, uiSchema, formData, required} = this.props;
-    const {title, description} = schema;
-    const {FieldComponent} = this;
+  public render(): React.ReactNode {
+    const {
+      schema,
+      schema: {type},
+      uiSchema,
+      uiSchema: {'ui:title': uiTitle, 'ui:description': uiDescription},
+      isRequired,
+      value,
+      id,
+    } = this.props;
+    const title = uiTitle || schema.title;
+    const description = uiDescription || schema.description;
+
+    let Field;
+
+    if (uiSchema['ui:widget']) {
+      if (typeof uiSchema['ui:widget'] === 'function') {
+        Field = uiSchema['ui:widget'];
+      } else if (uiSchema['ui:widget'] === 'Hidden') {
+        return null;
+      } else {
+        Field = selectField(uiSchema['ui:widget']);
+      }
+    } else {
+      if (type.includes('object')) {
+        Field = selectField('Object');
+        if (!schema.properties) {
+          Field = selectField('Code');
+        }
+      } else if (type.includes('array')) {
+        Field = selectField('Array');
+      } else if (type.includes('boolean')) {
+        Field = selectField('Boolean');
+      } else if (schema.enum) {
+        Field = selectField('Select');
+      } else if (type.includes('string')) {
+        Field = selectField('String');
+      } else if (type.includes('integer') || type.includes('number')) {
+        Field = selectField('Number');
+      } else {
+        Field = selectField('NotFound');
+      }
+    }
 
     return (
-      <Fieldset>
-        {title && (
-          <Label htmlFor={title}>
-            {title}
-            {required && <Asterisk />}
-          </Label>
-        )}
-        {description && <Description>{description}</Description>}
-        <FieldComponent
+      <Template
+        title={title}
+        description={description}
+        isRequired={isRequired}
+        id={id}
+      >
+        <Field
           ref={c => {
             this.field = c;
           }}
+          id={id}
           schema={schema}
           uiSchema={uiSchema}
-          required={required}
-          value={formData}
+          isRequired={isRequired}
+          value={value}
         />
-      </Fieldset>
+      </Template>
     );
   }
 }

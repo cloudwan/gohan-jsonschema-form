@@ -1,7 +1,8 @@
 import {JSONSchema4} from 'json-schema';
 import * as React from 'react';
+
 import {IUiSchema} from '../../typings/IUiSchema';
-import {SchemaField} from './fields/SchemaField';
+import SchemaField from './fields/SchemaField';
 
 interface TFormPorps {
   uiSchema?: {
@@ -17,14 +18,15 @@ export class Form extends React.Component<TFormPorps> {
     formData: {},
   };
 
-  private object = undefined;
+  private field = undefined;
 
   public get value() {
-    return this.object.value;
+    return this.field.value;
   }
 
   public get isValid() {
-    return this.object.isValid;
+    console.log('isValid', this.field.isValid);
+    return this.field.isValid;
   }
 
   public render(): JSX.Element {
@@ -32,11 +34,11 @@ export class Form extends React.Component<TFormPorps> {
       <form>
         <SchemaField
           ref={c => {
-            this.object = c;
+            this.field = c;
           }}
           schema={this.props.schema}
           uiSchema={this.props.uiSchema}
-          formData={this.props.formData}
+          value={this.props.formData}
         />
       </form>
     );

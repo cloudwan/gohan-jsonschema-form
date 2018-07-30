@@ -49,7 +49,7 @@ export default class DemoPage extends Component {
     this.setState({data: this.form.value});
   };
   handleValid = () => {
-    this.form.isValid;
+    console.log('is valid?', this.form.isValid);
   };
 
   handleTabChange = key => {
@@ -123,24 +123,14 @@ export default class DemoPage extends Component {
                 }}
                 formData={data}
               />
-              <div
-                style={{
-                  display: 'flex',
-                  width: '100%',
-                  justifyContent: 'flex-end',
-                }}
-              >
-                <Button
-                  type="primary"
-                  onClick={this.handleSubmit}
-                  style={{marginRight: '10px'}}
-                >
+              <Button.Group>
+                <Button type="primary" onClick={this.handleSubmit}>
                   Submit
                 </Button>
                 <Button type="primary" onClick={this.handleValid}>
                   Valid
                 </Button>
-              </div>
+              </Button.Group>
             </div>
           </Card>
         </Col>

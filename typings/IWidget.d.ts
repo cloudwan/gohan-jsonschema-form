@@ -5,5 +5,6 @@ export interface IWidget {
   schema: JSONSchema4;
   uiSchema?: IUiSchema;
   value?: any[] | boolean | number | null | object | string;
-  required?: boolean;
+  isRequired?: boolean;
+  id?: string;
 }

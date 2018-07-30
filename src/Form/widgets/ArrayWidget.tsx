@@ -1,6 +1,8 @@
 import {Button, Icon, Tabs} from 'antd';
 import * as React from 'react';
 
+import Asterisk from '../components/Asterisk';
+import Description from '../components/Description';
 import Errors from '../components/Errors';
 import Label from '../components/Label';
 import SortableList from '../components/SortableList';
@@ -22,6 +24,7 @@ import 'antd/lib/icon/style';
 import 'antd/lib/tabs/style';
 
 import {SortEvent, SortEventWithTag} from 'react-sortable-hoc';
+import SchemaField from '../fields/SchemaField';
 import * as styles from './ArrayWidget.css';
 
 const {TabPane} = Tabs;
@@ -31,6 +34,7 @@ interface TArrayWidgetProps {
   isRequired: boolean;
   uiSchema: object;
   value: any;
+  id: string;
 }
 
 interface TArrayWidgetState {
@@ -47,7 +51,7 @@ export default class ArrayWidget extends React.Component<
   private static defaultProps = {
     isRequired: false,
     uiSchema: {},
-    value: undefined,
+    value: [],
   };
 
   private static reorderList(items, oldIndex, newIndex) {
@@ -224,6 +228,7 @@ export default class ArrayWidget extends React.Component<
   };
 
   private renderArrayWidgetItem(index, value) {
+    const {id} = this.props;
     const {items} = this.props.schema;
 
     const property = items;
@@ -239,6 +244,7 @@ export default class ArrayWidget extends React.Component<
           ref={c => {
             this.items[index] = c;
           }}
+          id={`${id}.${index}`}
           schema={property}
           value={value}
         />
@@ -249,6 +255,7 @@ export default class ArrayWidget extends React.Component<
           ref={c => {
             this.items[index] = c;
           }}
+          id={`${id}.${index}`}
           schema={property}
           value={value}
         />
@@ -259,6 +266,7 @@ export default class ArrayWidget extends React.Component<
         ref={c => {
           this.items[index] = c;
         }}
+        id={`${id}.${index}`}
         schema={property}
         value={value}
       />
@@ -268,71 +276,71 @@ export default class ArrayWidget extends React.Component<
   private renderObjectArray() {
     const {
       schema,
+      id,
       schema: {description, title},
       isRequired,
     } = this.props;
     const {value, errors, activeTabKey} = this.state;
 
     return (
-      <div>
-        <Tabs
-          activeKey={activeTabKey}
-          tabBarExtraContent={
-            <Button
-              className={styles.addButton}
-              size="small"
-              type="primary"
-              onClick={this.handleAddTab}
-              ghost={true}
-            >
-              <Icon type="plus-circle" />
-            </Button>
-          }
-          onChange={this.handleTabChange}
-          type="editable-card"
-          onEdit={this.handleTabEdit}
-          hideAdd={true}
-        >
-          {value.map((item, index) => (
-            <TabPane
-              key={index.toString()}
-              tab={`Item ${index + 1}`}
-              closable={true}
-            >
-              <ArrayItemBar>
-                <Button
-                  className={styles.moveButton}
-                  type="primary"
-                  size="small"
-                  disabled={index === 0}
-                  onClick={this.handleReorderClick(index, index - 1)}
-                  ghost={true}
-                >
-                  <Icon type="left" />Move Left
-                </Button>
-                <Button
-                  className={styles.moveButton}
-                  type="primary"
-                  size="small"
-                  disabled={index === value.length - 1}
-                  onClick={this.handleReorderClick(index, index + 1)}
-                  ghost={true}
-                >
-                  Move Right<Icon type="right" />
-                </Button>
-              </ArrayItemBar>
-              <ObjectField
-                ref={c => {
-                  this.items[index] = c;
-                }}
-                schema={schema.items}
-                value={item}
-              />
-            </TabPane>
-          ))}
-        </Tabs>
-        <Errors errors={errors} />
-      </div>
+      <Tabs
+        activeKey={activeTabKey}
+        tabBarExtraContent={
+          <Button
+            className={styles.addButton}
+            size="small"
+            type="primary"
+            onClick={this.handleAddTab}
+            ghost={true}
+          >
+            <Icon type="plus-circle" />
+          </Button>
+        }
+        onChange={this.handleTabChange}
+        type="editable-card"
+        onEdit={this.handleTabEdit}
+        hideAdd={true}
+      >
+        {value.map((item, index) => (
+          <TabPane
+            key={index.toString()}
+            tab={`Item ${index + 1}`}
+            closable={true}
+          >
+            <ArrayItemBar>
+              <Button
+                className={styles.moveButton}
+                type="primary"
+                size="small"
+                disabled={index === 0}
+                onClick={this.handleReorderClick(index, index - 1)}
+                ghost={true}
+              >
+                <Icon type="left" />Move Left
+              </Button>
+              <Button
+                className={styles.moveButton}
+                type="primary"
+                size="small"
+                disabled={index === value.length - 1}
+                onClick={this.handleReorderClick(index, index + 1)}
+                ghost={true}
+              >
+                Move Right<Icon type="right" />
+              </Button>
+            </ArrayItemBar>
+            <SchemaField
+              ref={c => {
+                this.items[index] = c;
+              }}
+              id={`${id}.${index}`}
+              uiSchema={{}} // TODO
+              schema={schema.items}
+              value={item}
+            />
+          </TabPane>
+        ))}
+      </Tabs>
     );
   }
 
@@ -344,68 +352,65 @@ export default class ArrayWidget extends React.Component<
     const {value, errors} = this.state;
 
     return (
-      <div>
-        <SortableList
-          pressDelay={500}
-          // eslint-disable-next-line react/jsx-handler-names
-          shouldCancelStart={this.handleReorderStarted}
-          onSortEnd={this.handleReorderMoved}
-          helperClass={'list-sortable-active'}
-          lockAxis={'y'}
-          lockToContainerEdges={true}
+      <SortableList
+        pressDelay={500}
+        // eslint-disable-next-line react/jsx-handler-names
+        shouldCancelStart={this.handleReorderStarted}
+        onSortEnd={this.handleReorderMoved}
+        helperClass={'list-sortable-active'}
+        lockAxis={'y'}
+        lockToContainerEdges={true}
+      >
+        <Button
+          className={styles.addButton}
+          type="primary"
+          onClick={this.handleAddButtonClick}
+          ghost={true}
         >
-          <Button
-            className={styles.addButton}
-            type="primary"
-            onClick={this.handleAddButtonClick}
-            ghost={true}
-          >
-            <Icon type="plus-circle" />
-          </Button>
-          {value.map((item, index) => (
-            // eslint-disable-next-line react/no-array-index-key
-            <SortableListItem index={index} key={index}>
-              <ArrayItemActions>
-                <Button
-                  className={styles.removeButton}
-                  type="primary"
-                  size="small"
-                  onClick={this.handleRemoveButtonClick(index)}
-                  ghost={true}
-                >
-                  <Icon type="minus-circle" />
-                </Button>
-              </ArrayItemActions>
-              <ArrayItemBody>
-                {this.renderArrayWidgetItem(index, item)}
-              </ArrayItemBody>
-              <ArrayItemSort>
-                <Button
-                  className={styles.moveButton}
-                  type="primary"
-                  size="small"
-                  disabled={index === 0}
-                  onClick={this.handleReorderClick(index, index - 1)}
-                  ghost={true}
-                >
-                  <Icon type="up" />Up
-                </Button>
-                <Button
-                  className={styles.moveButton}
-                  type="primary"
-                  size="small"
-                  disabled={index === value.length - 1}
-                  onClick={this.handleReorderClick(index, index + 1)}
-                  ghost={true}
-                >
-                  <Icon type="down" />Down
-                </Button>
-              </ArrayItemSort>
-            </SortableListItem>
-          ))}
-        </SortableList>
-        <Errors errors={errors} />
-      </div>
+          <Icon type="plus-circle" />
+        </Button>
+        {value.map((item, index) => (
+          // eslint-disable-next-line react/no-array-index-key
+          <SortableListItem index={index} key={index}>
+            <ArrayItemActions>
+              <Button
+                className={styles.removeButton}
+                type="primary"
+                size="small"
+                onClick={this.handleRemoveButtonClick(index)}
+                ghost={true}
+              >
+                <Icon type="minus-circle" />
+              </Button>
+            </ArrayItemActions>
+            <ArrayItemBody>
+              {this.renderArrayWidgetItem(index, item)}
+            </ArrayItemBody>
+            <ArrayItemSort>
+              <Button
+                className={styles.moveButton}
+                type="primary"
+                size="small"
+                disabled={index === 0}
+                onClick={this.handleReorderClick(index, index - 1)}
+                ghost={true}
+              >
+                <Icon type="up" />Up
+              </Button>
+              <Button
+                className={styles.moveButton}
+                type="primary"
+                size="small"
+                disabled={index === value.length - 1}
+                onClick={this.handleReorderClick(index, index + 1)}
+                ghost={true}
+              >
+                <Icon type="down" />Down
+              </Button>
+            </ArrayItemSort>
+          </SortableListItem>
+        ))}
+      </SortableList>
     );
   }
 }

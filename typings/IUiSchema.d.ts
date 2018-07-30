@@ -33,9 +33,9 @@ export interface IItems {
 }
 
 export interface IUiSchema {
-  'ui:widget'?: string | React.ReactNode;
+  'ui:widget'?: string | React.Component;
   'ui:options'?: IOptions;
-  'ui:field'?: string | React.ReactNode;
+  'ui:field'?: string | React.Component;
   'ui:logic'?: ILogic[];
   'ui:title'?: string;
   'ui:description'?: string;

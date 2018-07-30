@@ -68,8 +68,8 @@ describe('<InputWidget />', () => {
       instance = wrapper.instance() as InputWidget;
     });
 
-    const testIsValid = (value, expected, required = false) => {
-      wrapper.setProps({required});
+    const testIsValid = (value, expected, isRequired = false) => {
+      wrapper.setProps({isRequired});
       wrapper.setState({value});
       instance.isValid.should.equal(expected);
     };

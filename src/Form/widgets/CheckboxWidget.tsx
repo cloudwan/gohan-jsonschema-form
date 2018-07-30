@@ -10,6 +10,7 @@ interface TCheckboxWidgetProps {
   value?: any;
   schema: any;
   isRequired?: boolean;
+  id: string;
 }
 
 interface TCheckboxWidgetState {

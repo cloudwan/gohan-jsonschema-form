@@ -1,0 +1,908 @@
+exports["should match snapshot when uischema widget defined as function(0)"] = {
+  "node": {
+    "nodeType": "class",
+    "type": "Template",
+    "props": {
+      "title": "test string",
+      "isRequired": false,
+      "id": "#",
+      "children": {
+        "type": "ui:widget",
+        "ref": "ref",
+        "props": {
+          "id": "#",
+          "schema": {
+            "title": "test string",
+            "type": "string"
+          },
+          "uiSchema": {
+            "ui:widget": "ui:widget"
+          },
+          "isRequired": false
+        },
+        "_store": {}
+      }
+    },
+    "rendered": {
+      "nodeType": "function",
+      "type": "ui:widget",
+      "props": {
+        "id": "#",
+        "schema": {
+          "title": "test string",
+          "type": "string"
+        },
+        "uiSchema": {
+          "ui:widget": "ui:widget"
+        },
+        "isRequired": false
+      },
+      "ref": "ref"
+    }
+  },
+  "type": "Template",
+  "props": {
+    "title": "test string",
+    "isRequired": false,
+    "id": "#"
+  },
+  "children": [
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "ui:widget",
+        "props": {
+          "id": "#",
+          "schema": {
+            "title": "test string",
+            "type": "string"
+          },
+          "uiSchema": {
+            "ui:widget": "ui:widget"
+          },
+          "isRequired": false
+        },
+        "ref": "ref"
+      },
+      "type": "ui:widget",
+      "props": {
+        "id": "#",
+        "schema": {
+          "title": "test string",
+          "type": "string"
+        },
+        "uiSchema": {
+          "ui:widget": "ui:widget"
+        },
+        "isRequired": false
+      }
+    }
+  ]
+};
+
+exports["should match snapshot when uischema widget is hidden(0)"] = "";
+
+exports["should match snapshot when uischema widget defined as string(0)"] = {
+  "node": {
+    "nodeType": "class",
+    "type": "Template",
+    "props": {
+      "title": "test string",
+      "isRequired": false,
+      "id": "#",
+      "children": {
+        "type": "CodeEditorWidget",
+        "ref": "ref",
+        "props": {
+          "id": "#",
+          "schema": {
+            "title": "test string",
+            "type": "string"
+          },
+          "uiSchema": {
+            "ui:widget": "Code"
+          },
+          "isRequired": false,
+          "format": "text"
+        },
+        "_store": {}
+      }
+    },
+    "rendered": {
+      "nodeType": "class",
+      "type": "CodeEditorWidget",
+      "props": {
+        "id": "#",
+        "schema": {
+          "title": "test string",
+          "type": "string"
+        },
+        "uiSchema": {
+          "ui:widget": "Code"
+        },
+        "isRequired": false,
+        "format": "text"
+      },
+      "ref": "ref"
+    }
+  },
+  "type": "Template",
+  "props": {
+    "title": "test string",
+    "isRequired": false,
+    "id": "#"
+  },
+  "children": [
+    {
+      "node": {
+        "nodeType": "class",
+        "type": "CodeEditorWidget",
+        "props": {
+          "id": "#",
+          "schema": {
+            "title": "test string",
+            "type": "string"
+          },
+          "uiSchema": {
+            "ui:widget": "Code"
+          },
+          "isRequired": false,
+          "format": "text"
+        },
+        "ref": "ref"
+      },
+      "type": "CodeEditorWidget",
+      "props": {
+        "id": "#",
+        "schema": {
+          "title": "test string",
+          "type": "string"
+        },
+        "uiSchema": {
+          "ui:widget": "Code"
+        },
+        "isRequired": false,
+        "format": "text"
+      }
+    }
+  ]
+};
+
+exports["should match snapshot when schema type is object(0)"] = {
+  "node": {
+    "nodeType": "class",
+    "type": "Template",
+    "props": {
+      "title": "test string",
+      "isRequired": false,
+      "id": "#",
+      "children": {
+        "type": "ObjectWidget",
+        "ref": "ref",
+        "props": {
+          "id": "#",
+          "schema": {
+            "title": "test string",
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              }
+            }
+          },
+          "uiSchema": {},
+          "isRequired": false,
+          "value": {}
+        },
+        "_store": {}
+      }
+    },
+    "rendered": {
+      "nodeType": "class",
+      "type": "ObjectWidget",
+      "props": {
+        "id": "#",
+        "schema": {
+          "title": "test string",
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            }
+          }
+        },
+        "uiSchema": {},
+        "isRequired": false,
+        "value": {}
+      },
+      "ref": "ref"
+    }
+  },
+  "type": "Template",
+  "props": {
+    "title": "test string",
+    "isRequired": false,
+    "id": "#"
+  },
+  "children": [
+    {
+      "node": {
+        "nodeType": "class",
+        "type": "ObjectWidget",
+        "props": {
+          "id": "#",
+          "schema": {
+            "title": "test string",
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              }
+            }
+          },
+          "uiSchema": {},
+          "isRequired": false,
+          "value": {}
+        },
+        "ref": "ref"
+      },
+      "type": "ObjectWidget",
+      "props": {
+        "id": "#",
+        "schema": {
+          "title": "test string",
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            }
+          }
+        },
+        "uiSchema": {},
+        "isRequired": false,
+        "value": {}
+      }
+    }
+  ]
+};
+
+exports["should match snapshot when schema type is object w/o properties(0)"] = {
+  "node": {
+    "nodeType": "class",
+    "type": "Template",
+    "props": {
+      "title": "test string",
+      "isRequired": false,
+      "id": "#",
+      "children": {
+        "type": "CodeEditorWidget",
+        "ref": "ref",
+        "props": {
+          "id": "#",
+          "schema": {
+            "title": "test string",
+            "type": "object"
+          },
+          "uiSchema": {},
+          "isRequired": false,
+          "format": "text"
+        },
+        "_store": {}
+      }
+    },
+    "rendered": {
+      "nodeType": "class",
+      "type": "CodeEditorWidget",
+      "props": {
+        "id": "#",
+        "schema": {
+          "title": "test string",
+          "type": "object"
+        },
+        "uiSchema": {},
+        "isRequired": false,
+        "format": "text"
+      },
+      "ref": "ref"
+    }
+  },
+  "type": "Template",
+  "props": {
+    "title": "test string",
+    "isRequired": false,
+    "id": "#"
+  },
+  "children": [
+    {
+      "node": {
+        "nodeType": "class",
+        "type": "CodeEditorWidget",
+        "props": {
+          "id": "#",
+          "schema": {
+            "title": "test string",
+            "type": "object"
+          },
+          "uiSchema": {},
+          "isRequired": false,
+          "format": "text"
+        },
+        "ref": "ref"
+      },
+      "type": "CodeEditorWidget",
+      "props": {
+        "id": "#",
+        "schema": {
+          "title": "test string",
+          "type": "object"
+        },
+        "uiSchema": {},
+        "isRequired": false,
+        "format": "text"
+      }
+    }
+  ]
+};
+
+exports["should match snapshot when schema type is array(0)"] = {
+  "node": {
+    "nodeType": "class",
+    "type": "Template",
+    "props": {
+      "title": "test string",
+      "isRequired": false,
+      "id": "#",
+      "children": {
+        "type": "ArrayWidget",
+        "ref": "ref",
+        "props": {
+          "id": "#",
+          "schema": {
+            "title": "test string",
+            "type": "array"
+          },
+          "uiSchema": {},
+          "isRequired": false,
+          "value": []
+        },
+        "_store": {}
+      }
+    },
+    "rendered": {
+      "nodeType": "class",
+      "type": "ArrayWidget",
+      "props": {
+        "id": "#",
+        "schema": {
+          "title": "test string",
+          "type": "array"
+        },
+        "uiSchema": {},
+        "isRequired": false,
+        "value": []
+      },
+      "ref": "ref"
+    }
+  },
+  "type": "Template",
+  "props": {
+    "title": "test string",
+    "isRequired": false,
+    "id": "#"
+  },
+  "children": [
+    {
+      "node": {
+        "nodeType": "class",
+        "type": "ArrayWidget",
+        "props": {
+          "id": "#",
+          "schema": {
+            "title": "test string",
+            "type": "array"
+          },
+          "uiSchema": {},
+          "isRequired": false,
+          "value": []
+        },
+        "ref": "ref"
+      },
+      "type": "ArrayWidget",
+      "props": {
+        "id": "#",
+        "schema": {
+          "title": "test string",
+          "type": "array"
+        },
+        "uiSchema": {},
+        "isRequired": false,
+        "value": []
+      }
+    }
+  ]
+};
+
+exports["should match snapshot when schema type is boolean(0)"] = {
+  "node": {
+    "nodeType": "class",
+    "type": "Template",
+    "props": {
+      "title": "test string",
+      "isRequired": false,
+      "id": "#",
+      "children": {
+        "type": "CheckboxWidget",
+        "ref": "ref",
+        "props": {
+          "id": "#",
+          "schema": {
+            "title": "test string",
+            "type": "boolean"
+          },
+          "uiSchema": {},
+          "isRequired": false,
+          "value": false
+        },
+        "_store": {}
+      }
+    },
+    "rendered": {
+      "nodeType": "class",
+      "type": "CheckboxWidget",
+      "props": {
+        "id": "#",
+        "schema": {
+          "title": "test string",
+          "type": "boolean"
+        },
+        "uiSchema": {},
+        "isRequired": false,
+        "value": false
+      },
+      "ref": "ref"
+    }
+  },
+  "type": "Template",
+  "props": {
+    "title": "test string",
+    "isRequired": false,
+    "id": "#"
+  },
+  "children": [
+    {
+      "node": {
+        "nodeType": "class",
+        "type": "CheckboxWidget",
+        "props": {
+          "id": "#",
+          "schema": {
+            "title": "test string",
+            "type": "boolean"
+          },
+          "uiSchema": {},
+          "isRequired": false,
+          "value": false
+        },
+        "ref": "ref"
+      },
+      "type": "CheckboxWidget",
+      "props": {
+        "id": "#",
+        "schema": {
+          "title": "test string",
+          "type": "boolean"
+        },
+        "uiSchema": {},
+        "isRequired": false,
+        "value": false
+      }
+    }
+  ]
+};
+
+exports["should match snapshot when schema has enum(0)"] = {
+  "node": {
+    "nodeType": "class",
+    "type": "Template",
+    "props": {
+      "title": "test string",
+      "isRequired": false,
+      "id": "#",
+      "children": {
+        "type": "SelectWidget",
+        "ref": "ref",
+        "props": {
+          "id": "#",
+          "schema": {
+            "title": "test string",
+            "type": "string",
+            "enum": [
+              "test1",
+              "test2"
+            ]
+          },
+          "uiSchema": {},
+          "isRequired": false,
+          "value": "",
+          "searchThreshold": 6,
+          "disabled": false,
+          "readonly": false,
+          "multiple": false
+        },
+        "_store": {}
+      }
+    },
+    "rendered": {
+      "nodeType": "class",
+      "type": "SelectWidget",
+      "props": {
+        "id": "#",
+        "schema": {
+          "title": "test string",
+          "type": "string",
+          "enum": [
+            "test1",
+            "test2"
+          ]
+        },
+        "uiSchema": {},
+        "isRequired": false,
+        "value": "",
+        "searchThreshold": 6,
+        "disabled": false,
+        "readonly": false,
+        "multiple": false
+      },
+      "ref": "ref"
+    }
+  },
+  "type": "Template",
+  "props": {
+    "title": "test string",
+    "isRequired": false,
+    "id": "#"
+  },
+  "children": [
+    {
+      "node": {
+        "nodeType": "class",
+        "type": "SelectWidget",
+        "props": {
+          "id": "#",
+          "schema": {
+            "title": "test string",
+            "type": "string",
+            "enum": [
+              "test1",
+              "test2"
+            ]
+          },
+          "uiSchema": {},
+          "isRequired": false,
+          "value": "",
+          "searchThreshold": 6,
+          "disabled": false,
+          "readonly": false,
+          "multiple": false
+        },
+        "ref": "ref"
+      },
+      "type": "SelectWidget",
+      "props": {
+        "id": "#",
+        "schema": {
+          "title": "test string",
+          "type": "string",
+          "enum": [
+            "test1",
+            "test2"
+          ]
+        },
+        "uiSchema": {},
+        "isRequired": false,
+        "value": "",
+        "searchThreshold": 6,
+        "disabled": false,
+        "readonly": false,
+        "multiple": false
+      }
+    }
+  ]
+};
+
+exports["should match snapshot when schema type is string(0)"] = {
+  "node": {
+    "nodeType": "class",
+    "type": "Template",
+    "props": {
+      "title": "test string",
+      "isRequired": false,
+      "id": "#",
+      "children": {
+        "type": "StringField",
+        "ref": "ref",
+        "props": {
+          "id": "#",
+          "schema": {
+            "title": "test string",
+            "type": "string"
+          },
+          "uiSchema": {},
+          "isRequired": false
+        },
+        "_store": {}
+      }
+    },
+    "rendered": {
+      "nodeType": "class",
+      "type": "StringField",
+      "props": {
+        "id": "#",
+        "schema": {
+          "title": "test string",
+          "type": "string"
+        },
+        "uiSchema": {},
+        "isRequired": false
+      },
+      "ref": "ref"
+    }
+  },
+  "type": "Template",
+  "props": {
+    "title": "test string",
+    "isRequired": false,
+    "id": "#"
+  },
+  "children": [
+    {
+      "node": {
+        "nodeType": "class",
+        "type": "StringField",
+        "props": {
+          "id": "#",
+          "schema": {
+            "title": "test string",
+            "type": "string"
+          },
+          "uiSchema": {},
+          "isRequired": false
+        },
+        "ref": "ref"
+      },
+      "type": "StringField",
+      "props": {
+        "id": "#",
+        "schema": {
+          "title": "test string",
+          "type": "string"
+        },
+        "uiSchema": {},
+        "isRequired": false
+      }
+    }
+  ]
+};
+
+exports["should match snapshot when schema type is integer(0)"] = {
+  "node": {
+    "nodeType": "class",
+    "type": "Template",
+    "props": {
+      "title": "test string",
+      "isRequired": false,
+      "id": "#",
+      "children": {
+        "type": "NumberField",
+        "ref": "ref",
+        "props": {
+          "id": "#",
+          "schema": {
+            "title": "test string",
+            "type": "integer"
+          },
+          "uiSchema": {},
+          "isRequired": false
+        },
+        "_store": {}
+      }
+    },
+    "rendered": {
+      "nodeType": "class",
+      "type": "NumberField",
+      "props": {
+        "id": "#",
+        "schema": {
+          "title": "test string",
+          "type": "integer"
+        },
+        "uiSchema": {},
+        "isRequired": false
+      },
+      "ref": "ref"
+    }
+  },
+  "type": "Template",
+  "props": {
+    "title": "test string",
+    "isRequired": false,
+    "id": "#"
+  },
+  "children": [
+    {
+      "node": {
+        "nodeType": "class",
+        "type": "NumberField",
+        "props": {
+          "id": "#",
+          "schema": {
+            "title": "test string",
+            "type": "integer"
+          },
+          "uiSchema": {},
+          "isRequired": false
+        },
+        "ref": "ref"
+      },
+      "type": "NumberField",
+      "props": {
+        "id": "#",
+        "schema": {
+          "title": "test string",
+          "type": "integer"
+        },
+        "uiSchema": {},
+        "isRequired": false
+      }
+    }
+  ]
+};
+
+exports["should match snapshot when schema type is number(0)"] = {
+  "node": {
+    "nodeType": "class",
+    "type": "Template",
+    "props": {
+      "title": "test string",
+      "isRequired": false,
+      "id": "#",
+      "children": {
+        "type": "NumberField",
+        "ref": "ref",
+        "props": {
+          "id": "#",
+          "schema": {
+            "title": "test string",
+            "type": "integer"
+          },
+          "uiSchema": {},
+          "isRequired": false
+        },
+        "_store": {}
+      }
+    },
+    "rendered": {
+      "nodeType": "class",
+      "type": "NumberField",
+      "props": {
+        "id": "#",
+        "schema": {
+          "title": "test string",
+          "type": "integer"
+        },
+        "uiSchema": {},
+        "isRequired": false
+      },
+      "ref": "ref"
+    }
+  },
+  "type": "Template",
+  "props": {
+    "title": "test string",
+    "isRequired": false,
+    "id": "#"
+  },
+  "children": [
+    {
+      "node": {
+        "nodeType": "class",
+        "type": "NumberField",
+        "props": {
+          "id": "#",
+          "schema": {
+            "title": "test string",
+            "type": "integer"
+          },
+          "uiSchema": {},
+          "isRequired": false
+        },
+        "ref": "ref"
+      },
+      "type": "NumberField",
+      "props": {
+        "id": "#",
+        "schema": {
+          "title": "test string",
+          "type": "integer"
+        },
+        "uiSchema": {},
+        "isRequired": false
+      }
+    }
+  ]
+};
+
+exports["should match snapshot when schema type is incorrect(0)"] = {
+  "node": {
+    "nodeType": "class",
+    "type": "Template",
+    "props": {
+      "title": "test string",
+      "isRequired": false,
+      "id": "#",
+      "children": {
+        "type": "NotFoundWidget",
+        "ref": "ref",
+        "props": {
+          "id": "#",
+          "schema": {
+            "title": "test string",
+            "type": "void"
+          },
+          "uiSchema": {},
+          "isRequired": false
+        },
+        "_store": {}
+      }
+    },
+    "rendered": {
+      "nodeType": "class",
+      "type": "NotFoundWidget",
+      "props": {
+        "id": "#",
+        "schema": {
+          "title": "test string",
+          "type": "void"
+        },
+        "uiSchema": {},
+        "isRequired": false
+      },
+      "ref": "ref"
+    }
+  },
+  "type": "Template",
+  "props": {
+    "title": "test string",
+    "isRequired": false,
+    "id": "#"
+  },
+  "children": [
+    {
+      "node": {
+        "nodeType": "class",
+        "type": "NotFoundWidget",
+        "props": {
+          "id": "#",
+          "schema": {
+            "title": "test string",
+            "type": "void"
+          },
+          "uiSchema": {},
+          "isRequired": false
+        },
+        "ref": "ref"
+      },
+      "type": "NotFoundWidget",
+      "props": {
+        "id": "#",
+        "schema": {
+          "title": "test string",
+          "type": "void"
+        },
+        "uiSchema": {},
+        "isRequired": false
+      }
+    }
+  ]
+};
+

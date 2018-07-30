@@ -15,7 +15,7 @@ interface TInputWidgetState {
 export class InputWidget extends React.Component<IWidget, TInputWidgetState> {
   public static defaultProps = {
     uiSchema: {},
-    required: false,
+    isRequired: false,
   };
 
   constructor(props) {
@@ -48,10 +48,10 @@ export class InputWidget extends React.Component<IWidget, TInputWidgetState> {
   }
 
   public get isValid() {
-    const {required, schema} = this.props;
+    const {isRequired, schema} = this.props;
     const errors = [];
 
-    if (required && !this.value) {
+    if (isRequired && !this.value) {
       errors.push({
         message: 'required',
       });

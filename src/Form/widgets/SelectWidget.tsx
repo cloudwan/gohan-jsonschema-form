@@ -21,6 +21,7 @@ interface TSelectWidgetProps {
   disabled?: boolean;
   searchThreshold?: number;
   multiple?: boolean;
+  id: string;
 }
 
 interface TSelectWidgetState {
@@ -122,41 +123,38 @@ export default class SelectWidget extends React.Component<
         }));
 
     return (
-      <div className={styles.selectWidget}>
-        <Select
-          className={styles.select}
-          allowClear={type.includes('null')}
-          value={value}
-          disabled={disabled || readonly}
-          placeholder="Not selected"
-          onChange={this.handleChangeInput}
-          showSearch={haystack.length >= searchThreshold}
-          mode={multiple ? 'multiple' : 'default'}
-        >
-          {haystack.map(item => {
-            if (typeof item === 'object') {
-              return (
-                <Option key={item.value} value={item.value}>
-                  {item.label}
-                </Option>
-              );
-            } else if (typeof item === 'string') {
-              return (
-                <Option key={item} value={item}>
-                  {item}
-                </Option>
-              );
-            }
-
+      <Select
+        className={styles.select}
+        allowClear={type.includes('null')}
+        value={value}
+        disabled={disabled || readonly}
+        placeholder="Not selected"
+        onChange={this.handleChangeInput}
+        showSearch={haystack.length >= searchThreshold}
+        mode={multiple ? 'multiple' : 'default'}
+      >
+        {haystack.map(item => {
+          if (typeof item === 'object') {
             return (
-              <Option key={item} value={item}>
-                {`Unsupported type of haystack items (${typeof item})`}
+              <Option key={item.value} value={item.value}>
+                {item.label}
               </Option>
             );
-          })}
-        </Select>
-        <Errors errors={errors} />
-      </div>
+          } else if (typeof item === 'string') {
+            return (
+              <Option key={item} value={item}>
+                {item}
+              </Option>
+            );
+          }
+
+          return (
+            <Option key={item} value={item}>
+              {`Unsupported type of haystack items (${typeof item})`}
+            </Option>
+          );
+        })}
+      </Select>
     );
   }
 

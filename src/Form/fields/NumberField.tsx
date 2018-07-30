@@ -15,7 +15,7 @@ export class NumberField extends React.Component<IWidget> {
   }
 
   public render(): React.ReactNode {
-    const {schema, uiSchema, required, value} = this.props;
+    const {schema, uiSchema, isRequired, value} = this.props;
 
     return (
       <InputWidget
@@ -24,7 +24,7 @@ export class NumberField extends React.Component<IWidget> {
         }}
         schema={schema}
         uiSchema={uiSchema}
-        required={required}
+        isRequired={isRequired}
         value={value}
       />
     );

@@ -1,0 +1,6 @@
+exports["should return String field(0)"] = "StringField";
+
+exports["should return NotFound field for wrong firld name(0)"] = "NotFoundWidget";
+
+exports["should return NotFound field for incorrect name(0)"] = "NotFoundWidget";
+
