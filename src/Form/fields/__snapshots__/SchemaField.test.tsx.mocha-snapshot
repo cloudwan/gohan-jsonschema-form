@@ -18,7 +18,7 @@ exports["should match snapshot when uischema widget defined as function(0)"] = {
           "uiSchema": {
             "ui:widget": "ui:widget"
           },
-          "isRequired": false
+          "isRequired": false,
         },
         "_store": {}
       }
@@ -35,7 +35,7 @@ exports["should match snapshot when uischema widget defined as function(0)"] = {
         "uiSchema": {
           "ui:widget": "ui:widget"
         },
-        "isRequired": false
+        "isRequired": false,
       },
       "ref": "ref"
     }
@@ -60,7 +60,7 @@ exports["should match snapshot when uischema widget defined as function(0)"] = {
           "uiSchema": {
             "ui:widget": "ui:widget"
           },
-          "isRequired": false
+          "isRequired": false,
         },
         "ref": "ref"
       },
@@ -74,7 +74,7 @@ exports["should match snapshot when uischema widget defined as function(0)"] = {
         "uiSchema": {
           "ui:widget": "ui:widget"
         },
-        "isRequired": false
+        "isRequired": false,
       }
     }
   ]
@@ -509,7 +509,7 @@ exports["should match snapshot when schema has enum(0)"] = {
       "isRequired": false,
       "id": "#",
       "children": {
-        "type": "SelectWidget",
+        "type": "SelectField",
         "ref": "ref",
         "props": {
           "id": "#",
@@ -523,18 +523,13 @@ exports["should match snapshot when schema has enum(0)"] = {
           },
           "uiSchema": {},
           "isRequired": false,
-          "value": "",
-          "searchThreshold": 6,
-          "disabled": false,
-          "readonly": false,
-          "multiple": false
         },
         "_store": {}
       }
     },
     "rendered": {
       "nodeType": "class",
-      "type": "SelectWidget",
+      "type": "SelectField",
       "props": {
         "id": "#",
         "schema": {
@@ -547,11 +542,6 @@ exports["should match snapshot when schema has enum(0)"] = {
         },
         "uiSchema": {},
         "isRequired": false,
-        "value": "",
-        "searchThreshold": 6,
-        "disabled": false,
-        "readonly": false,
-        "multiple": false
       },
       "ref": "ref"
     }
@@ -566,7 +556,7 @@ exports["should match snapshot when schema has enum(0)"] = {
     {
       "node": {
         "nodeType": "class",
-        "type": "SelectWidget",
+        "type": "SelectField",
         "props": {
           "id": "#",
           "schema": {
@@ -579,15 +569,10 @@ exports["should match snapshot when schema has enum(0)"] = {
           },
           "uiSchema": {},
           "isRequired": false,
-          "value": "",
-          "searchThreshold": 6,
-          "disabled": false,
-          "readonly": false,
-          "multiple": false
         },
         "ref": "ref"
       },
-      "type": "SelectWidget",
+      "type": "SelectField",
       "props": {
         "id": "#",
         "schema": {
@@ -600,11 +585,6 @@ exports["should match snapshot when schema has enum(0)"] = {
         },
         "uiSchema": {},
         "isRequired": false,
-        "value": "",
-        "searchThreshold": 6,
-        "disabled": false,
-        "readonly": false,
-        "multiple": false
       }
     }
   ]
@@ -905,4 +885,3 @@ exports["should match snapshot when schema type is incorrect(0)"] = {
     }
   ]
 };
-

@@ -3,8 +3,8 @@ import CheckboxWidget from '../widgets/CheckboxWidget';
 import CodeEditorWidget from '../widgets/CodeEditorWidget';
 import NotFoundWidget from '../widgets/NotFoundWidget';
 import ObjectWidget from '../widgets/ObjectWidget';
-import SelectWidget from '../widgets/SelectWidget';
 import NumberField from './NumberField';
+import SelectField from './SelectField';
 import StringField from './StringField';
 
 const fields = {
@@ -14,7 +14,7 @@ const fields = {
   String: StringField,
   Number: NumberField,
   Object: ObjectWidget,
-  Select: SelectWidget,
+  Select: SelectField,
   NotFound: NotFoundWidget,
 };
 
