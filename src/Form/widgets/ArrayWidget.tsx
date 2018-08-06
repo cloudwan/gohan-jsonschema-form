@@ -16,7 +16,7 @@ import ArrayItemActions from './components/ArrayItemActions';
 import ArrayItemBar from './components/ArrayItemBar';
 import ArrayItemBody from './components/ArrayItemBody';
 import ArrayItemSort from './components/ArrayItemSort';
-import {getWidget} from './index';
+import {selectWidget} from './index';
 import ObjectField from './ObjectWidget';
 
 import 'antd/lib/button/style';
@@ -136,7 +136,7 @@ export default class ArrayWidget extends React.Component<
         ? false
         : Array.isArray(schema.items.enum)
     ) {
-      const Widget = getWidget('SelectWidget');
+      const Widget = selectWidget('Select');
 
       return (
         <Widget

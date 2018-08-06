@@ -1,15 +1,15 @@
 import ArrayWidget from '../widgets/ArrayWidget';
-import CheckboxWidget from '../widgets/CheckboxWidget';
 import CodeEditorWidget from '../widgets/CodeEditorWidget';
 import NotFoundWidget from '../widgets/NotFoundWidget';
 import ObjectWidget from '../widgets/ObjectWidget';
+import BooleanField from './BooleanField';
 import NumberField from './NumberField';
 import SelectField from './SelectField';
 import StringField from './StringField';
 
 const fields = {
   Array: ArrayWidget,
-  Boolean: CheckboxWidget,
+  Boolean: BooleanField,
   Code: CodeEditorWidget,
   String: StringField,
   Number: NumberField,

@@ -1,24 +1,23 @@
 import ArrayWidget from './ArrayWidget';
 import CheckboxWidget from './CheckboxWidget';
 import CodeEditorWidget from './CodeEditorWidget';
+import InputWidget from './InputWidget';
 import NotFoundWidget from './NotFoundWidget';
 import ObjectWidget from './ObjectWidget';
 import SelectWidget from './SelectWidget';
-
-import NumberField from '../fields/NumberField';
-import StringField from '../fields/StringField';
+import SwitchWidget from './SwitchWidget';
 
 const widgets = {
-  ArrayWidget,
-  CheckboxWidget,
-  CodeEditorWidget,
-  ObjectWidget,
-  SelectWidget,
-  NumberField,
-  StringField,
+  Array: ArrayWidget,
+  Checkbox: CheckboxWidget,
+  CodeEditor: CodeEditorWidget,
+  Object: ObjectWidget,
+  Select: SelectWidget,
+  Switch: SwitchWidget,
+  Input: InputWidget,
 };
 
-export const getWidget = (name: string) => {
+export const selectWidget = (name: string) => {
   const Widget = widgets[name];
 
   if (Widget) {
@@ -33,6 +32,6 @@ export {
   CodeEditorWidget,
   ObjectWidget,
   SelectWidget,
-  NumberField,
-  StringField,
+  SwitchWidget,
+  InputWidget,
 };

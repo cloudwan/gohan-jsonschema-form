@@ -18,7 +18,7 @@ exports["should match snapshot when uischema widget defined as function(0)"] = {
           "uiSchema": {
             "ui:widget": "ui:widget"
           },
-          "isRequired": false,
+          "isRequired": false
         },
         "_store": {}
       }
@@ -35,7 +35,7 @@ exports["should match snapshot when uischema widget defined as function(0)"] = {
         "uiSchema": {
           "ui:widget": "ui:widget"
         },
-        "isRequired": false,
+        "isRequired": false
       },
       "ref": "ref"
     }
@@ -60,7 +60,7 @@ exports["should match snapshot when uischema widget defined as function(0)"] = {
           "uiSchema": {
             "ui:widget": "ui:widget"
           },
-          "isRequired": false,
+          "isRequired": false
         },
         "ref": "ref"
       },
@@ -74,7 +74,7 @@ exports["should match snapshot when uischema widget defined as function(0)"] = {
         "uiSchema": {
           "ui:widget": "ui:widget"
         },
-        "isRequired": false,
+        "isRequired": false
       }
     }
   ]
@@ -431,7 +431,7 @@ exports["should match snapshot when schema type is boolean(0)"] = {
       "isRequired": false,
       "id": "#",
       "children": {
-        "type": "CheckboxWidget",
+        "type": "BooleanField",
         "ref": "ref",
         "props": {
           "id": "#",
@@ -440,15 +440,14 @@ exports["should match snapshot when schema type is boolean(0)"] = {
             "type": "boolean"
           },
           "uiSchema": {},
-          "isRequired": false,
-          "value": false
+          "isRequired": false
         },
         "_store": {}
       }
     },
     "rendered": {
       "nodeType": "class",
-      "type": "CheckboxWidget",
+      "type": "BooleanField",
       "props": {
         "id": "#",
         "schema": {
@@ -456,8 +455,7 @@ exports["should match snapshot when schema type is boolean(0)"] = {
           "type": "boolean"
         },
         "uiSchema": {},
-        "isRequired": false,
-        "value": false
+        "isRequired": false
       },
       "ref": "ref"
     }
@@ -472,7 +470,7 @@ exports["should match snapshot when schema type is boolean(0)"] = {
     {
       "node": {
         "nodeType": "class",
-        "type": "CheckboxWidget",
+        "type": "BooleanField",
         "props": {
           "id": "#",
           "schema": {
@@ -480,12 +478,11 @@ exports["should match snapshot when schema type is boolean(0)"] = {
             "type": "boolean"
           },
           "uiSchema": {},
-          "isRequired": false,
-          "value": false
+          "isRequired": false
         },
         "ref": "ref"
       },
-      "type": "CheckboxWidget",
+      "type": "BooleanField",
       "props": {
         "id": "#",
         "schema": {
@@ -493,8 +490,7 @@ exports["should match snapshot when schema type is boolean(0)"] = {
           "type": "boolean"
         },
         "uiSchema": {},
-        "isRequired": false,
-        "value": false
+        "isRequired": false
       }
     }
   ]
@@ -522,7 +518,7 @@ exports["should match snapshot when schema has enum(0)"] = {
             ]
           },
           "uiSchema": {},
-          "isRequired": false,
+          "isRequired": false
         },
         "_store": {}
       }
@@ -541,7 +537,7 @@ exports["should match snapshot when schema has enum(0)"] = {
           ]
         },
         "uiSchema": {},
-        "isRequired": false,
+        "isRequired": false
       },
       "ref": "ref"
     }
@@ -568,7 +564,7 @@ exports["should match snapshot when schema has enum(0)"] = {
             ]
           },
           "uiSchema": {},
-          "isRequired": false,
+          "isRequired": false
         },
         "ref": "ref"
       },
@@ -584,7 +580,7 @@ exports["should match snapshot when schema has enum(0)"] = {
           ]
         },
         "uiSchema": {},
-        "isRequired": false,
+        "isRequired": false
       }
     }
   ]
@@ -885,3 +881,4 @@ exports["should match snapshot when schema type is incorrect(0)"] = {
     }
   ]
 };
+

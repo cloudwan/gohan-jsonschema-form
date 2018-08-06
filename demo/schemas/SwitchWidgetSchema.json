@@ -1,0 +1,43 @@
+{
+  "id": "switch_widget",
+  "title": "Switch Widget",
+  "schema": {
+    "permission": [
+      "create",
+      "read",
+      "update",
+      "delete"
+    ],
+    "properties": {
+      "basicSwitch": {
+        "title": "Basic switch",
+        "description": "Basic Switch Widget",
+        "type": "boolean"
+      },
+      "requiredSwitch": {
+        "title": "Required switch",
+        "description": "Required Switch Widget",
+        "type": "boolean"
+      },
+      "disabledSwitch": {
+        "title": "Disabled switch",
+        "description": "Disabled Switch Widget",
+        "type": "boolean"
+      }
+    },
+    "propertiesOrder": [
+      "basicSwitch",
+      "requiredSwitch"
+    ],
+    "required": [
+      "requiredSwitch"
+    ],
+    "type": "object"
+  },
+  "uiSchema": {
+    "disabledSwitch": {
+      "ui:disabled": true
+    }
+  },
+  "formData": {}
+}
