@@ -4,6 +4,7 @@ import CodeEditorWidget from './CodeEditorWidget';
 import InputWidget from './InputWidget';
 import NotFoundWidget from './NotFoundWidget';
 import ObjectWidget from './ObjectWidget';
+import PasswordConfirmWidget from './PasswordConfirmWidget';
 import SelectWidget from './SelectWidget';
 import SwitchWidget from './SwitchWidget';
 
@@ -15,6 +16,7 @@ const widgets = {
   Select: SelectWidget,
   Switch: SwitchWidget,
   Input: InputWidget,
+  'password-confirm': PasswordConfirmWidget,
 };
 
 export const selectWidget = (name: string) => {
@@ -34,4 +36,5 @@ export {
   SelectWidget,
   SwitchWidget,
   InputWidget,
+  PasswordConfirmWidget,
 };

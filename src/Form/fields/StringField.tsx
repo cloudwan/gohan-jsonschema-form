@@ -1,7 +1,8 @@
 import * as React from 'react';
 
 import {IWidget} from '../../../typings/IWidget';
-import InputWidget from '../widgets/InputWidget';
+
+import {selectWidget} from '../widgets';
 
 export class StringField extends React.Component<IWidget> {
   private field = undefined;
@@ -15,10 +16,18 @@ export class StringField extends React.Component<IWidget> {
   }
 
   public render(): React.ReactNode {
-    const {schema, uiSchema, isRequired, value} = this.props;
+    const {
+      schema,
+      schema: {format},
+      uiSchema,
+      isRequired,
+      value,
+    } = this.props;
+
+    const Widget = selectWidget(format || 'Input');
 
     return (
-      <InputWidget
+      <Widget
         ref={c => {
           this.field = c;
         }}

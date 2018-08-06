@@ -5,8 +5,8 @@ import Description from '../components/Description';
 import Label from '../components/Label';
 
 interface TTemplateProps {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   id: string;
   isRequired?: boolean;
 }
@@ -14,6 +14,8 @@ interface TTemplateProps {
 export default class Template extends React.Component<TTemplateProps> {
   public static defaultProps = {
     isRequired: false,
+    description: undefined,
+    title: undefined,
   };
 
   public render() {

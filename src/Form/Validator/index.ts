@@ -16,6 +16,7 @@ const ajv = new Ajv({
     uuid: uuidFormat,
     ipv4: ipV4Format,
     ipv6: ipV6Format,
+    'password-confirm': () => true,
   },
 });
 
