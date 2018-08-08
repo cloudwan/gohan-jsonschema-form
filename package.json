@@ -1,6 +1,6 @@
 {
   "name": "gohan-jsonschema-form",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Gohan jsonschema forms.",
   "main": "lib/index.js",
   "scripts": {
