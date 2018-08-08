@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {IWidget} from '../../../typings/IWidget';
+import {IWidget} from '../../typings/IWidget';
 import SelectWidget from '../widgets/SelectWidget';
 
 export class SelectField extends React.Component<IWidget> {

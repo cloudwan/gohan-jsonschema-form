@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {IWidget} from '../../../../typings/IWidget';
+import {IWidget} from '../../../typings/IWidget';
 import Errors from '../../components/Errors';
 
 import Template from '../../fields/Template';

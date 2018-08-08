@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {IWidget} from '../../../typings/IWidget';
+import {IWidget} from '../../typings/IWidget';
 import InputWidget from '../widgets/InputWidget';
 
 export class NumberField extends React.Component<IWidget> {

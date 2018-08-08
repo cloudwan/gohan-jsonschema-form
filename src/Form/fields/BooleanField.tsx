@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {IWidget} from '../../../typings/IWidget';
+import {IWidget} from '../../typings/IWidget';
 import SwitchWidget from '../widgets/SwitchWidget';
 
 export class BooleanField extends React.Component<IWidget> {

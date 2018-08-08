@@ -1,6 +1,7 @@
 import * as React from 'react';
 
-import {IWidget} from '../../../typings/IWidget';
+import {JSONSchema4TypeName} from 'json-schema';
+import {IWidget} from '../../typings/IWidget';
 import {selectField} from './';
 import Template from './Template';
 
@@ -33,13 +34,13 @@ export default class SchemaField extends React.Component<IWidget> {
   public render(): React.ReactNode {
     const {
       schema,
-      schema: {type},
       uiSchema,
       uiSchema: {'ui:title': uiTitle, 'ui:description': uiDescription},
       isRequired,
       value,
       id,
     } = this.props;
+    const type: string | string[] = schema.type;
     const title = uiTitle || schema.title;
     const description = uiDescription || schema.description;
 
