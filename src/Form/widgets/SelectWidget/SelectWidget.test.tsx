@@ -131,7 +131,7 @@ describe('<SelectWidget />', () => {
         />,
       );
 
-      wrapper.should.not.equal(undefined);
+      wrapper.should.to.matchSnapshot();
     });
 
     it('should render elements with custom labels', () => {
@@ -139,17 +139,20 @@ describe('<SelectWidget />', () => {
         <SelectWidget
           schema={{
             type: ['array'],
-            enum: ['foo', 'bar', 'baz'],
-            options: {
-              foo: 'test 1',
-              bar: 'test 2',
-              baz: 'test 3',
+            items: {
+              type: ['string'],
+              enum: ['foo', 'bar', 'baz'],
+              options: {
+                foo: 'test 1',
+                bar: 'test 2',
+                baz: 'test 3',
+              },
             },
           }}
         />,
       );
 
-      wrapper.should.not.equal(undefined);
+      wrapper.should.to.matchSnapshot();
     });
   });
 });

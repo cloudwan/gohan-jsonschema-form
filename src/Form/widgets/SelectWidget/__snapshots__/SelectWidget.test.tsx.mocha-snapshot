@@ -136,3 +136,279 @@ exports["should match snapshot(0)"] = {
   ]
 };
 
+exports["should render elements for multiple choice select(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "props": {
+      "children": [
+        {
+          "type": "[function]",
+          "props": {
+            "mode": "multiple",
+            "onChange": "[function]",
+            "options": [
+              {
+                "value": "foo",
+                "label": "foo"
+              },
+              {
+                "value": "bar",
+                "label": "bar"
+              },
+              {
+                "value": "baz",
+                "label": "baz"
+              }
+            ],
+            "showSearch": false,
+            "optionFilterProp": "children"
+          },
+          "_store": {}
+        },
+        {
+          "type": "Errors",
+          "props": {
+            "errors": []
+          },
+          "_store": {}
+        }
+      ]
+    },
+    "rendered": [
+      {
+        "nodeType": "function",
+        "type": "[function]",
+        "props": {
+          "mode": "multiple",
+          "onChange": "[function]",
+          "options": [
+            {
+              "value": "foo",
+              "label": "foo"
+            },
+            {
+              "value": "bar",
+              "label": "bar"
+            },
+            {
+              "value": "baz",
+              "label": "baz"
+            }
+          ],
+          "showSearch": false,
+          "optionFilterProp": "children"
+        }
+      },
+      {
+        "nodeType": "function",
+        "type": "Errors",
+        "props": {
+          "errors": []
+        }
+      }
+    ]
+  },
+  "type": "React.Fragment",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "[function]",
+        "props": {
+          "mode": "multiple",
+          "onChange": "[function]",
+          "options": [
+            {
+              "value": "foo",
+              "label": "foo"
+            },
+            {
+              "value": "bar",
+              "label": "bar"
+            },
+            {
+              "value": "baz",
+              "label": "baz"
+            }
+          ],
+          "showSearch": false,
+          "optionFilterProp": "children"
+        }
+      },
+      "type": "Component",
+      "props": {
+        "mode": "multiple",
+        "onChange": "[function]",
+        "options": [
+          {
+            "value": "foo",
+            "label": "foo"
+          },
+          {
+            "value": "bar",
+            "label": "bar"
+          },
+          {
+            "value": "baz",
+            "label": "baz"
+          }
+        ],
+        "showSearch": false,
+        "optionFilterProp": "children"
+      }
+    },
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "Errors",
+        "props": {
+          "errors": []
+        }
+      },
+      "type": "Errors",
+      "props": {
+        "errors": []
+      }
+    }
+  ]
+};
+
+exports["should render elements with custom labels(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "props": {
+      "children": [
+        {
+          "type": "[function]",
+          "props": {
+            "mode": "multiple",
+            "onChange": "[function]",
+            "options": [
+              {
+                "value": "foo",
+                "label": "test 1"
+              },
+              {
+                "value": "bar",
+                "label": "test 2"
+              },
+              {
+                "value": "baz",
+                "label": "test 3"
+              }
+            ],
+            "showSearch": false,
+            "optionFilterProp": "children"
+          },
+          "_store": {}
+        },
+        {
+          "type": "Errors",
+          "props": {
+            "errors": []
+          },
+          "_store": {}
+        }
+      ]
+    },
+    "rendered": [
+      {
+        "nodeType": "function",
+        "type": "[function]",
+        "props": {
+          "mode": "multiple",
+          "onChange": "[function]",
+          "options": [
+            {
+              "value": "foo",
+              "label": "test 1"
+            },
+            {
+              "value": "bar",
+              "label": "test 2"
+            },
+            {
+              "value": "baz",
+              "label": "test 3"
+            }
+          ],
+          "showSearch": false,
+          "optionFilterProp": "children"
+        }
+      },
+      {
+        "nodeType": "function",
+        "type": "Errors",
+        "props": {
+          "errors": []
+        }
+      }
+    ]
+  },
+  "type": "React.Fragment",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "[function]",
+        "props": {
+          "mode": "multiple",
+          "onChange": "[function]",
+          "options": [
+            {
+              "value": "foo",
+              "label": "test 1"
+            },
+            {
+              "value": "bar",
+              "label": "test 2"
+            },
+            {
+              "value": "baz",
+              "label": "test 3"
+            }
+          ],
+          "showSearch": false,
+          "optionFilterProp": "children"
+        }
+      },
+      "type": "Component",
+      "props": {
+        "mode": "multiple",
+        "onChange": "[function]",
+        "options": [
+          {
+            "value": "foo",
+            "label": "test 1"
+          },
+          {
+            "value": "bar",
+            "label": "test 2"
+          },
+          {
+            "value": "baz",
+            "label": "test 3"
+          }
+        ],
+        "showSearch": false,
+        "optionFilterProp": "children"
+      }
+    },
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "Errors",
+        "props": {
+          "errors": []
+        }
+      },
+      "type": "Errors",
+      "props": {
+        "errors": []
+      }
+    }
+  ]
+};
+

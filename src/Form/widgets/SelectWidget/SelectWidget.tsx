@@ -88,7 +88,7 @@ export default class SelectWidget extends React.Component<
       String.prototype.includes.call(type, 'array') && items !== undefined
         ? 'multiple'
         : 'default';
-    const enums = options || schema.enum || items['enum']; //tslint:disable-line
+    const enums = options || schema.enum || items['options'] || items['enum']; //tslint:disable-line
     const haystack = Array.isArray(enums)
       ? enums
       : Object.keys(enums).map(i => ({

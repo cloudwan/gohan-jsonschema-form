@@ -101,6 +101,24 @@
           "enum": ["foo", "bar", "fuz", "baz", "faz", "far"]
         },
         "uniqueItems": true
+      },
+      "multipleSelectLabels": {
+        "title": "Multiple Select with labels",
+        "description": "Multiple Select Widget",
+        "type": ["array"],
+        "items": {
+          "type": "string",
+          "enum": ["foo", "bar", "fuz", "baz", "faz", "far"],
+          "options": {
+            "foo": "Foo",
+            "bar": "Bar",
+            "fuz": "Fuz",
+            "baz": "Baz",
+            "faz": "Faz",
+            "far": "Far"
+          }
+        },
+        "uniqueItems": true
       }
     },
     "propertiesOrder": [
