@@ -2,6 +2,7 @@ import ArrayWidget from '../widgets/ArrayWidget';
 import CodeEditorWidget from '../widgets/CodeEditorWidget';
 import NotFoundWidget from '../widgets/NotFoundWidget';
 import ObjectWidget from '../widgets/ObjectWidget';
+import RangeWidget from '../widgets/RangeWidget';
 import BooleanField from './BooleanField';
 import NumberField from './NumberField';
 import SelectField from './SelectField';
@@ -16,6 +17,7 @@ const fields = {
   Object: ObjectWidget,
   Select: SelectField,
   NotFound: NotFoundWidget,
+  Range: RangeWidget,
 };
 
 export default fields;

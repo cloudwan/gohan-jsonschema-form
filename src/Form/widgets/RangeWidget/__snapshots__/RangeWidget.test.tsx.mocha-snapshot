@@ -1,0 +1,282 @@
+exports["should match snapshot(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "props": {
+      "children": [
+        {
+          "type": "Errors",
+          "props": {
+            "errors": []
+          },
+          "_store": {}
+        },
+        {
+          "type": "Range",
+          "props": {
+            "onChange": "[function]",
+            "value": [
+              1,
+              10
+            ],
+            "min": 1,
+            "max": 10
+          },
+          "_store": {}
+        }
+      ]
+    },
+    "rendered": [
+      {
+        "nodeType": "function",
+        "type": "Errors",
+        "props": {
+          "errors": []
+        }
+      },
+      {
+        "nodeType": "function",
+        "type": "Range",
+        "props": {
+          "onChange": "[function]",
+          "value": [
+            1,
+            10
+          ],
+          "min": 1,
+          "max": 10
+        }
+      }
+    ]
+  },
+  "type": "React.Fragment",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "Errors",
+        "props": {
+          "errors": []
+        }
+      },
+      "type": "Errors",
+      "props": {
+        "errors": []
+      }
+    },
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "Range",
+        "props": {
+          "onChange": "[function]",
+          "value": [
+            1,
+            10
+          ],
+          "min": 1,
+          "max": 10
+        }
+      },
+      "type": "Range",
+      "props": {
+        "onChange": "[function]",
+        "value": [
+          1,
+          10
+        ],
+        "min": 1,
+        "max": 10
+      }
+    }
+  ]
+};
+
+exports["should match snapshot with default values(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "props": {
+      "children": [
+        {
+          "type": "Errors",
+          "props": {
+            "errors": []
+          },
+          "_store": {}
+        },
+        {
+          "type": "Range",
+          "props": {
+            "onChange": "[function]",
+            "value": [
+              2,
+              3
+            ],
+            "min": 1,
+            "max": 10
+          },
+          "_store": {}
+        }
+      ]
+    },
+    "rendered": [
+      {
+        "nodeType": "function",
+        "type": "Errors",
+        "props": {
+          "errors": []
+        }
+      },
+      {
+        "nodeType": "function",
+        "type": "Range",
+        "props": {
+          "onChange": "[function]",
+          "value": [
+            2,
+            3
+          ],
+          "min": 1,
+          "max": 10
+        }
+      }
+    ]
+  },
+  "type": "React.Fragment",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "Errors",
+        "props": {
+          "errors": []
+        }
+      },
+      "type": "Errors",
+      "props": {
+        "errors": []
+      }
+    },
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "Range",
+        "props": {
+          "onChange": "[function]",
+          "value": [
+            2,
+            3
+          ],
+          "min": 1,
+          "max": 10
+        }
+      },
+      "type": "Range",
+      "props": {
+        "onChange": "[function]",
+        "value": [
+          2,
+          3
+        ],
+        "min": 1,
+        "max": 10
+      }
+    }
+  ]
+};
+
+exports["should match snapshot with value passed by props(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "props": {
+      "children": [
+        {
+          "type": "Errors",
+          "props": {
+            "errors": []
+          },
+          "_store": {}
+        },
+        {
+          "type": "Range",
+          "props": {
+            "onChange": "[function]",
+            "value": [
+              5,
+              9
+            ],
+            "min": 1,
+            "max": 10
+          },
+          "_store": {}
+        }
+      ]
+    },
+    "rendered": [
+      {
+        "nodeType": "function",
+        "type": "Errors",
+        "props": {
+          "errors": []
+        }
+      },
+      {
+        "nodeType": "function",
+        "type": "Range",
+        "props": {
+          "onChange": "[function]",
+          "value": [
+            5,
+            9
+          ],
+          "min": 1,
+          "max": 10
+        }
+      }
+    ]
+  },
+  "type": "React.Fragment",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "Errors",
+        "props": {
+          "errors": []
+        }
+      },
+      "type": "Errors",
+      "props": {
+        "errors": []
+      }
+    },
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "Range",
+        "props": {
+          "onChange": "[function]",
+          "value": [
+            5,
+            9
+          ],
+          "min": 1,
+          "max": 10
+        }
+      },
+      "type": "Range",
+      "props": {
+        "onChange": "[function]",
+        "value": [
+          5,
+          9
+        ],
+        "min": 1,
+        "max": 10
+      }
+    }
+  ]
+};
+
