@@ -11,7 +11,7 @@ exports["should match snapshot(0)"] = {
           "_store": {}
         },
         {
-          "type": "[function]",
+          "type": "Switch",
           "props": {
             "onChange": "[function]"
           },
@@ -29,7 +29,7 @@ exports["should match snapshot(0)"] = {
       },
       {
         "nodeType": "function",
-        "type": "[function]",
+        "type": "Switch",
         "props": {
           "onChange": "[function]"
         }
@@ -55,12 +55,12 @@ exports["should match snapshot(0)"] = {
     {
       "node": {
         "nodeType": "function",
-        "type": "[function]",
+        "type": "Switch",
         "props": {
           "onChange": "[function]"
         }
       },
-      "type": "Component",
+      "type": "Switch",
       "props": {
         "onChange": "[function]"
       }

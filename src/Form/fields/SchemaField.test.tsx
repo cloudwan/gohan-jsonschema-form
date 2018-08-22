@@ -1,12 +1,10 @@
 import * as chai from 'chai';
-import * as chaiEnzyme from 'chai-enzyme';
+import chaiEnzyme from 'chai-enzyme';
 import {shallow, mount} from 'enzyme';
 import * as React from 'react';
 
 import SchemaField from './SchemaField';
-import {selectField} from './';
-
-chai.use(chaiEnzyme());
+chai.use(chaiEnzyme);
 chai.should();
 
 const should = chai.should();

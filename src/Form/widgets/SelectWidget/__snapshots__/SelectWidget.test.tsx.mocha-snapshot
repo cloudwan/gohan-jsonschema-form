@@ -4,7 +4,7 @@ exports["should match snapshot(0)"] = {
     "props": {
       "children": [
         {
-          "type": "[function]",
+          "type": "Select",
           "props": {
             "mode": "default",
             "onChange": "[function]",
@@ -39,7 +39,7 @@ exports["should match snapshot(0)"] = {
     "rendered": [
       {
         "nodeType": "function",
-        "type": "[function]",
+        "type": "Select",
         "props": {
           "mode": "default",
           "onChange": "[function]",
@@ -76,7 +76,7 @@ exports["should match snapshot(0)"] = {
     {
       "node": {
         "nodeType": "function",
-        "type": "[function]",
+        "type": "Select",
         "props": {
           "mode": "default",
           "onChange": "[function]",
@@ -98,7 +98,7 @@ exports["should match snapshot(0)"] = {
           "optionFilterProp": "children"
         }
       },
-      "type": "Component",
+      "type": "Select",
       "props": {
         "mode": "default",
         "onChange": "[function]",
@@ -142,7 +142,7 @@ exports["should render elements for multiple choice select(0)"] = {
     "props": {
       "children": [
         {
-          "type": "[function]",
+          "type": "Select",
           "props": {
             "mode": "multiple",
             "onChange": "[function]",
@@ -177,7 +177,7 @@ exports["should render elements for multiple choice select(0)"] = {
     "rendered": [
       {
         "nodeType": "function",
-        "type": "[function]",
+        "type": "Select",
         "props": {
           "mode": "multiple",
           "onChange": "[function]",
@@ -214,7 +214,7 @@ exports["should render elements for multiple choice select(0)"] = {
     {
       "node": {
         "nodeType": "function",
-        "type": "[function]",
+        "type": "Select",
         "props": {
           "mode": "multiple",
           "onChange": "[function]",
@@ -236,7 +236,7 @@ exports["should render elements for multiple choice select(0)"] = {
           "optionFilterProp": "children"
         }
       },
-      "type": "Component",
+      "type": "Select",
       "props": {
         "mode": "multiple",
         "onChange": "[function]",
@@ -280,7 +280,7 @@ exports["should render elements with custom labels(0)"] = {
     "props": {
       "children": [
         {
-          "type": "[function]",
+          "type": "Select",
           "props": {
             "mode": "multiple",
             "onChange": "[function]",
@@ -315,7 +315,7 @@ exports["should render elements with custom labels(0)"] = {
     "rendered": [
       {
         "nodeType": "function",
-        "type": "[function]",
+        "type": "Select",
         "props": {
           "mode": "multiple",
           "onChange": "[function]",
@@ -352,7 +352,7 @@ exports["should render elements with custom labels(0)"] = {
     {
       "node": {
         "nodeType": "function",
-        "type": "[function]",
+        "type": "Select",
         "props": {
           "mode": "multiple",
           "onChange": "[function]",
@@ -374,7 +374,7 @@ exports["should render elements with custom labels(0)"] = {
           "optionFilterProp": "children"
         }
       },
-      "type": "Component",
+      "type": "Select",
       "props": {
         "mode": "multiple",
         "onChange": "[function]",

@@ -12,7 +12,7 @@ exports["should match snapshot when schema type is string(0)"] = {
         },
         false,
         {
-          "type": "[function]",
+          "type": "Input",
           "props": {
             "onChange": "[function]"
           },
@@ -31,7 +31,7 @@ exports["should match snapshot when schema type is string(0)"] = {
       false,
       {
         "nodeType": "function",
-        "type": "[function]",
+        "type": "Input",
         "props": {
           "onChange": "[function]"
         }
@@ -57,12 +57,12 @@ exports["should match snapshot when schema type is string(0)"] = {
     {
       "node": {
         "nodeType": "function",
-        "type": "[function]",
+        "type": "Input",
         "props": {
           "onChange": "[function]"
         }
       },
-      "type": "Component",
+      "type": "Input",
       "props": {
         "onChange": "[function]"
       }
@@ -83,7 +83,7 @@ exports["should match snapshot when schema type is number(0)"] = {
           "_store": {}
         },
         {
-          "type": "[function]",
+          "type": "InputNumber",
           "props": {
             "onChange": "[function]"
           },
@@ -102,7 +102,7 @@ exports["should match snapshot when schema type is number(0)"] = {
       },
       {
         "nodeType": "function",
-        "type": "[function]",
+        "type": "InputNumber",
         "props": {
           "onChange": "[function]"
         }
@@ -129,12 +129,12 @@ exports["should match snapshot when schema type is number(0)"] = {
     {
       "node": {
         "nodeType": "function",
-        "type": "[function]",
+        "type": "InputNumber",
         "props": {
           "onChange": "[function]"
         }
       },
-      "type": "Component",
+      "type": "InputNumber",
       "props": {
         "onChange": "[function]"
       }

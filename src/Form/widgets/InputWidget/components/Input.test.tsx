@@ -1,9 +1,9 @@
 import * as chai from 'chai';
-import * as chaiEnzyme from 'chai-enzyme';
+import chaiEnzyme from 'chai-enzyme';
 import {shallow} from 'enzyme';
 import * as React from 'react';
 import * as sinon from 'sinon';
-import * as sinonChai from 'sinon-chai';
+import sinonChai from 'sinon-chai';
 
 import Input from './Input';
 

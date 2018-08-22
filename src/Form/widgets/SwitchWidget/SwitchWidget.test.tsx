@@ -1,12 +1,12 @@
 import * as chai from 'chai';
-import * as chaiEnzyme from 'chai-enzyme';
+import chaiEnzyme from 'chai-enzyme';
 import {shallow} from 'enzyme';
 import * as React from 'react';
 
 import Switch from './components/Switch';
 import SwitchWidget from './SwitchWidget';
 
-chai.use(chaiEnzyme());
+chai.use(chaiEnzyme);
 chai.should();
 
 const should = chai.should();

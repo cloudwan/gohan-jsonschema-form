@@ -1,14 +1,23 @@
 {
   "presets": [
     ["@babel/env", {"modules": false}],
-    "@babel/typescript",
-    "@babel/react"
+    "@babel/react",
+    "@babel/typescript"
   ],
   "plugins": [
     "@babel/proposal-class-properties",
     "@babel/proposal-object-rest-spread"
   ],
   "env": {
+    "test": {
+      "presets": [
+        ["@babel/env", {
+          "targets": {
+            "node": "8"
+          }
+        }]
+      ]
+    },
     "lib": {
       "presets": [
         "@babel/env"
