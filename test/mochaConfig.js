@@ -1,4 +1,4 @@
-require('./test/helpers/babelRegisterConfig.js');
+require('./helpers/babelRegisterConfig.js');
 require('ignore-styles');
 require('./helpers/dom.js');
 require('./helpers/setup.js');

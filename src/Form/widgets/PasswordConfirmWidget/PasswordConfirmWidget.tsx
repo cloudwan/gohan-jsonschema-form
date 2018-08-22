@@ -71,7 +71,9 @@ export class PasswordConfirmWidget extends React.Component<
               this.fieldA = c;
             }}
             schema={schema}
-            uiSchema={uiSchema}
+            uiSchema={{
+              'ui:options': {...uiSchema['ui:options'], type: 'password'},
+            }}
             isRequired={isRequired}
             value={value}
           />
@@ -85,7 +87,9 @@ export class PasswordConfirmWidget extends React.Component<
                 this.fieldB = c;
               }}
               schema={schema}
-              uiSchema={uiSchema}
+              uiSchema={{
+                'ui:options': {...uiSchema['ui:options'], type: 'password'},
+              }}
               isRequired={isRequired}
               value={value}
             />
