@@ -18,6 +18,16 @@
         "title": "Simple string",
         "type": "string"
       },
+      "uuid": {
+        "id": "simple_string",
+        "description": "Simple InputWidget string example",
+        "permission": [
+          "create"
+        ],
+        "title": "UUID",
+        "format": "uuid",
+        "type": "string"
+      },
       "defaultString": {
         "id": "default_string",
         "description": "Simple InputWidget string example with default value",

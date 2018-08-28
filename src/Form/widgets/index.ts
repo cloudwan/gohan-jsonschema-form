@@ -7,7 +7,7 @@ import ObjectWidget from './ObjectWidget';
 import PasswordConfirmWidget from './PasswordConfirmWidget';
 import SelectWidget from './SelectWidget';
 import SwitchWidget from './SwitchWidget';
-
+import UUIDWidget from './UUIDWidget';
 const widgets = {
   Array: ArrayWidget,
   Checkbox: CheckboxWidget,
@@ -17,6 +17,7 @@ const widgets = {
   Switch: SwitchWidget,
   Input: InputWidget,
   'password-confirm': PasswordConfirmWidget,
+  uuid: UUIDWidget,
 };
 
 export const selectWidget = (name: string) => {

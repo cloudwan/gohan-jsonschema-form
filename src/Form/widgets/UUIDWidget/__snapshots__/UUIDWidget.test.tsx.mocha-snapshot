@@ -1,0 +1,238 @@
+exports["should match snapshot when schema type is string(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "props": {
+      "children": [
+        {
+          "type": "Errors",
+          "props": {
+            "errors": []
+          },
+          "_store": {}
+        },
+        {
+          "type": "InputSearch",
+          "props": {
+            "enterButton": "Generate",
+            "onChange": "[function]",
+            "onSearch": "[function]"
+          },
+          "_store": {}
+        }
+      ]
+    },
+    "rendered": [
+      {
+        "nodeType": "function",
+        "type": "Errors",
+        "props": {
+          "errors": []
+        }
+      },
+      {
+        "nodeType": "function",
+        "type": "InputSearch",
+        "props": {
+          "enterButton": "Generate",
+          "onChange": "[function]",
+          "onSearch": "[function]"
+        }
+      }
+    ]
+  },
+  "type": "React.Fragment",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "Errors",
+        "props": {
+          "errors": []
+        }
+      },
+      "type": "Errors",
+      "props": {
+        "errors": []
+      }
+    },
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "InputSearch",
+        "props": {
+          "enterButton": "Generate",
+          "onChange": "[function]",
+          "onSearch": "[function]"
+        }
+      },
+      "type": "InputSearch",
+      "props": {
+        "enterButton": "Generate",
+        "onChange": "[function]",
+        "onSearch": "[function]"
+      }
+    }
+  ]
+};
+
+exports["should set state value to null when null is passed by props(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "props": {
+      "children": [
+        {
+          "type": "Errors",
+          "props": {
+            "errors": []
+          },
+          "_store": {}
+        },
+        {
+          "type": "InputSearch",
+          "props": {
+            "enterButton": "Generate",
+            "onChange": "[function]",
+            "onSearch": "[function]"
+          },
+          "_store": {}
+        }
+      ]
+    },
+    "rendered": [
+      {
+        "nodeType": "function",
+        "type": "Errors",
+        "props": {
+          "errors": []
+        }
+      },
+      {
+        "nodeType": "function",
+        "type": "InputSearch",
+        "props": {
+          "enterButton": "Generate",
+          "onChange": "[function]",
+          "onSearch": "[function]"
+        }
+      }
+    ]
+  },
+  "type": "React.Fragment",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "Errors",
+        "props": {
+          "errors": []
+        }
+      },
+      "type": "Errors",
+      "props": {
+        "errors": []
+      }
+    },
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "InputSearch",
+        "props": {
+          "enterButton": "Generate",
+          "onChange": "[function]",
+          "onSearch": "[function]"
+        }
+      },
+      "type": "InputSearch",
+      "props": {
+        "enterButton": "Generate",
+        "onChange": "[function]",
+        "onSearch": "[function]"
+      }
+    }
+  ]
+};
+
+exports["should set state value when it is passed by props(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "props": {
+      "children": [
+        {
+          "type": "Errors",
+          "props": {
+            "errors": []
+          },
+          "_store": {}
+        },
+        {
+          "type": "InputSearch",
+          "props": {
+            "value": "foo",
+            "enterButton": "Generate",
+            "onChange": "[function]",
+            "onSearch": "[function]"
+          },
+          "_store": {}
+        }
+      ]
+    },
+    "rendered": [
+      {
+        "nodeType": "function",
+        "type": "Errors",
+        "props": {
+          "errors": []
+        }
+      },
+      {
+        "nodeType": "function",
+        "type": "InputSearch",
+        "props": {
+          "value": "foo",
+          "enterButton": "Generate",
+          "onChange": "[function]",
+          "onSearch": "[function]"
+        }
+      }
+    ]
+  },
+  "type": "React.Fragment",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "Errors",
+        "props": {
+          "errors": []
+        }
+      },
+      "type": "Errors",
+      "props": {
+        "errors": []
+      }
+    },
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "InputSearch",
+        "props": {
+          "value": "foo",
+          "enterButton": "Generate",
+          "onChange": "[function]",
+          "onSearch": "[function]"
+        }
+      },
+      "type": "InputSearch",
+      "props": {
+        "value": "foo",
+        "enterButton": "Generate",
+        "onChange": "[function]",
+        "onSearch": "[function]"
+      }
+    }
+  ]
+};
+

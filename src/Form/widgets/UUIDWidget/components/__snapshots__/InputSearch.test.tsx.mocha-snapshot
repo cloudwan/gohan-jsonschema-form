@@ -1,0 +1,38 @@
+exports["should match snapshot for minimal number of props(0)"] = {
+  "node": {
+    "nodeType": "class",
+    "type": "Search",
+    "props": {
+      "inputPrefixCls": "ant-input",
+      "prefixCls": "ant-input-search",
+      "enterButton": false
+    }
+  },
+  "type": "Search",
+  "props": {
+    "inputPrefixCls": "ant-input",
+    "prefixCls": "ant-input-search",
+    "enterButton": false
+  }
+};
+
+exports["should match snapshot(0)"] = {
+  "node": {
+    "nodeType": "class",
+    "type": "Search",
+    "props": {
+      "value": "test",
+      "inputPrefixCls": "ant-input",
+      "prefixCls": "ant-input-search",
+      "enterButton": false
+    }
+  },
+  "type": "Search",
+  "props": {
+    "value": "test",
+    "inputPrefixCls": "ant-input",
+    "prefixCls": "ant-input-search",
+    "enterButton": false
+  }
+};
+
