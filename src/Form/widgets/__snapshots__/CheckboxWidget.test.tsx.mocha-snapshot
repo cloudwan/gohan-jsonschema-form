@@ -1,0 +1,52 @@
+exports["should match snapshot for minimal number of props(0)"] = {
+  "node": {
+    "nodeType": "host",
+    "type": "div",
+    "props": {
+      "children": {
+        "type": "Checkbox",
+        "props": {
+          "checked": false,
+          "onChange": "[function]",
+          "prefixCls": "ant-checkbox",
+          "indeterminate": false
+        },
+        "_store": {}
+      }
+    },
+    "rendered": {
+      "nodeType": "class",
+      "type": "Checkbox",
+      "props": {
+        "checked": false,
+        "onChange": "[function]",
+        "prefixCls": "ant-checkbox",
+        "indeterminate": false
+      }
+    }
+  },
+  "type": "div",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "class",
+        "type": "Checkbox",
+        "props": {
+          "checked": false,
+          "onChange": "[function]",
+          "prefixCls": "ant-checkbox",
+          "indeterminate": false
+        }
+      },
+      "type": "Checkbox",
+      "props": {
+        "checked": false,
+        "onChange": "[function]",
+        "prefixCls": "ant-checkbox",
+        "indeterminate": false
+      }
+    }
+  ]
+};
+

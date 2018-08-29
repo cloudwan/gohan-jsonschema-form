@@ -1,0 +1,19 @@
+exports["should match snapshot for minimal number of props(0)"] = {
+  "node": {
+    "nodeType": "class",
+    "type": "SwitchWidget",
+    "props": {
+      "schema": {},
+      "uiSchema": {},
+      "isRequired": false
+    },
+    "ref": "ref"
+  },
+  "type": "SwitchWidget",
+  "props": {
+    "schema": {},
+    "uiSchema": {},
+    "isRequired": false
+  }
+};
+

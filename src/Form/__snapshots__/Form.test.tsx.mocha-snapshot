@@ -1,0 +1,59 @@
+exports["should match snapshot for minimal number of props(0)"] = {
+  "node": {
+    "nodeType": "host",
+    "type": "form",
+    "props": {
+      "children": {
+        "type": "SchemaField",
+        "ref": "ref",
+        "props": {
+          "schema": {},
+          "uiSchema": {},
+          "value": {},
+          "id": "#",
+          "isRequired": false
+        },
+        "_store": {}
+      }
+    },
+    "rendered": {
+      "nodeType": "class",
+      "type": "SchemaField",
+      "props": {
+        "schema": {},
+        "uiSchema": {},
+        "value": {},
+        "id": "#",
+        "isRequired": false
+      },
+      "ref": "ref"
+    }
+  },
+  "type": "form",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "class",
+        "type": "SchemaField",
+        "props": {
+          "schema": {},
+          "uiSchema": {},
+          "value": {},
+          "id": "#",
+          "isRequired": false
+        },
+        "ref": "ref"
+      },
+      "type": "SchemaField",
+      "props": {
+        "schema": {},
+        "uiSchema": {},
+        "value": {},
+        "id": "#",
+        "isRequired": false
+      }
+    }
+  ]
+};
+

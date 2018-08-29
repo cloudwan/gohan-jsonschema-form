@@ -58,6 +58,7 @@ simpleGit
       // Ignore test files
       changedFiles
         .filter(path => !path.match(/[^\s]*\.test\.tsx?/gi))
+        .filter(path => fs.existsSync(path))
         .map(path => {
           const source = fs.readFileSync(path, 'utf8');
           linter.lint(path, source, config);

@@ -1,0 +1,16 @@
+exports["should match snapshot(0)"] = {
+  "node": {
+    "nodeType": "host",
+    "type": "span",
+    "props": {
+      "children": "Foo"
+    },
+    "rendered": "Foo"
+  },
+  "type": "span",
+  "props": {},
+  "children": [
+    "Foo"
+  ]
+};
+

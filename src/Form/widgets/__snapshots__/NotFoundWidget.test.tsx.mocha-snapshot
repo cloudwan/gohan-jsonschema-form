@@ -1,0 +1,114 @@
+exports["should match snapshot for minimal number of props(0)"] = {
+  "node": {
+    "nodeType": "host",
+    "type": "div",
+    "props": {
+      "style": {
+        "background": "#ff0000"
+      },
+      "children": [
+        {
+          "type": "p",
+          "props": {
+            "children": "Not Found widget"
+          },
+          "_store": {}
+        },
+        {
+          "type": "p",
+          "props": {
+            "children": "{}"
+          },
+          "_store": {}
+        },
+        {
+          "type": "p",
+          "props": {
+            "children": "{}"
+          },
+          "_store": {}
+        }
+      ]
+    },
+    "rendered": [
+      {
+        "nodeType": "host",
+        "type": "p",
+        "props": {
+          "children": "Not Found widget"
+        },
+        "rendered": "Not Found widget"
+      },
+      {
+        "nodeType": "host",
+        "type": "p",
+        "props": {
+          "children": "{}"
+        },
+        "rendered": "{}"
+      },
+      {
+        "nodeType": "host",
+        "type": "p",
+        "props": {
+          "children": "{}"
+        },
+        "rendered": "{}"
+      }
+    ]
+  },
+  "type": "div",
+  "props": {
+    "style": {
+      "background": "#ff0000"
+    }
+  },
+  "children": [
+    {
+      "node": {
+        "nodeType": "host",
+        "type": "p",
+        "props": {
+          "children": "Not Found widget"
+        },
+        "rendered": "Not Found widget"
+      },
+      "type": "p",
+      "props": {},
+      "children": [
+        "Not Found widget"
+      ]
+    },
+    {
+      "node": {
+        "nodeType": "host",
+        "type": "p",
+        "props": {
+          "children": "{}"
+        },
+        "rendered": "{}"
+      },
+      "type": "p",
+      "props": {},
+      "children": [
+        "{}"
+      ]
+    },
+    {
+      "node": {
+        "nodeType": "host",
+        "type": "p",
+        "props": {
+          "children": "{}"
+        },
+        "rendered": "{}"
+      },
+      "type": "p",
+      "props": {},
+      "children": [
+        "{}"
+      ]
+    }
+  ]
+};
+

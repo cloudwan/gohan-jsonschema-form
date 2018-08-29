@@ -1,0 +1,56 @@
+exports["should match snapshot w/o errors array(0)"] = "";
+
+exports["should match snapshot with empty errors array(0)"] = "";
+
+exports["should match snapshot with one error in errors array(0)"] = {
+  "node": {
+    "nodeType": "host",
+    "type": "div",
+    "props": {
+      "children": [
+        {
+          "type": "div",
+          "key": "Something wrong",
+          "props": {
+            "children": "Something wrong"
+          },
+          "_store": {}
+        }
+      ]
+    },
+    "rendered": [
+      {
+        "nodeType": "host",
+        "type": "div",
+        "props": {
+          "children": "Something wrong"
+        },
+        "key": "Something wrong",
+        "rendered": "Something wrong"
+      }
+    ]
+  },
+  "type": "div",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "host",
+        "type": "div",
+        "props": {
+          "children": "Something wrong"
+        },
+        "key": "Something wrong",
+        "rendered": "Something wrong"
+      },
+      "type": "div",
+      "props": {
+        "key": "Something wrong"
+      },
+      "children": [
+        "Something wrong"
+      ]
+    }
+  ]
+};
+

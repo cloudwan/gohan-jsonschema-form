@@ -25,7 +25,6 @@ export class Form extends React.Component<TFormPorps> {
   }
 
   public get isValid() {
-    console.log('isValid', this.field.isValid);
     return this.field.isValid;
   }
 

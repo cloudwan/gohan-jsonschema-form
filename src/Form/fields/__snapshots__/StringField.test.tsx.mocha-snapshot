@@ -1,0 +1,40 @@
+exports["should match snapshot for minimal number of props(0)"] = {
+  "node": {
+    "nodeType": "class",
+    "type": "InputWidget",
+    "props": {
+      "schema": {},
+      "uiSchema": {},
+      "isRequired": false
+    },
+    "ref": "ref"
+  },
+  "type": "InputWidget",
+  "props": {
+    "schema": {},
+    "uiSchema": {},
+    "isRequired": false
+  }
+};
+
+exports["should match snapshot for defined schema format(0)"] = {
+  "node": {
+    "nodeType": "class",
+    "type": "NotFoundWidget",
+    "props": {
+      "schema": {
+        "format": "ipv4"
+      },
+      "uiSchema": {}
+    },
+    "ref": "ref"
+  },
+  "type": "NotFoundWidget",
+  "props": {
+    "schema": {
+      "format": "ipv4"
+    },
+    "uiSchema": {}
+  }
+};
+

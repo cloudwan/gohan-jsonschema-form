@@ -6,8 +6,8 @@ interface TError {
   message: string;
 }
 
-const Errors = (props: {errors: TError[]} = {errors: []}): JSX.Element => {
-  if (props.errors && props.errors.length === 0) {
+const Errors = (props: {errors?: TError[]}): JSX.Element => {
+  if (!props.errors || props.errors.length === 0) {
     return null;
   }
 
