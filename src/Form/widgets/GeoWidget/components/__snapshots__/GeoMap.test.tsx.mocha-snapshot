@@ -1,0 +1,303 @@
+exports["should match snapshot(0)"] = {
+  "node": {
+    "nodeType": "host",
+    "type": "div",
+    "props": {
+      "children": {
+        "type": "Map",
+        "props": {
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxBounds": {
+            "_southWest": {
+              "lat": -90,
+              "lng": -180
+            },
+            "_northEast": {
+              "lat": 90,
+              "lng": 180
+            }
+          },
+          "bounds": {
+            "_southWest": {
+              "lat": -85,
+              "lng": -175
+            },
+            "_northEast": {
+              "lat": 85,
+              "lng": 175
+            }
+          },
+          "maxBoundsViscosity": 0.5,
+          "animate": true,
+          "children": [
+            {
+              "type": {
+                "render": "WithLeafletComponent"
+              },
+              "props": {
+                "url": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              },
+              "_store": {}
+            },
+            {
+              "type": {
+                "render": "WithLeafletComponent"
+              },
+              "props": {
+                "onMarkerPositionChange": "[function]",
+                "setSearchMarkerUsed": "[function]",
+                "position": {
+                  "lat": 51,
+                  "lng": 21
+                }
+              },
+              "_store": {}
+            }
+          ]
+        },
+        "_store": {}
+      }
+    },
+    "rendered": {
+      "nodeType": "class",
+      "type": "Map",
+      "props": {
+        "minZoom": 2,
+        "maxZoom": 18,
+        "maxBounds": {
+          "_southWest": {
+            "lat": -90,
+            "lng": -180
+          },
+          "_northEast": {
+            "lat": 90,
+            "lng": 180
+          }
+        },
+        "bounds": {
+          "_southWest": {
+            "lat": -85,
+            "lng": -175
+          },
+          "_northEast": {
+            "lat": 85,
+            "lng": 175
+          }
+        },
+        "maxBoundsViscosity": 0.5,
+        "animate": true,
+        "children": [
+          {
+            "type": {
+              "render": "WithLeafletComponent"
+            },
+            "props": {
+              "url": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            },
+            "_store": {}
+          },
+          {
+            "type": {
+              "render": "WithLeafletComponent"
+            },
+            "props": {
+              "onMarkerPositionChange": "[function]",
+              "setSearchMarkerUsed": "[function]",
+              "position": {
+                "lat": 51,
+                "lng": 21
+              }
+            },
+            "_store": {}
+          }
+        ]
+      },
+      "rendered": [
+        {
+          "nodeType": "function",
+          "type": {
+            "render": "WithLeafletComponent"
+          },
+          "props": {
+            "url": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          }
+        },
+        {
+          "nodeType": "function",
+          "type": {
+            "render": "WithLeafletComponent"
+          },
+          "props": {
+            "onMarkerPositionChange": "[function]",
+            "setSearchMarkerUsed": "[function]",
+            "position": {
+              "lat": 51,
+              "lng": 21
+            }
+          }
+        }
+      ]
+    }
+  },
+  "type": "div",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "class",
+        "type": "Map",
+        "props": {
+          "minZoom": 2,
+          "maxZoom": 18,
+          "maxBounds": {
+            "_southWest": {
+              "lat": -90,
+              "lng": -180
+            },
+            "_northEast": {
+              "lat": 90,
+              "lng": 180
+            }
+          },
+          "bounds": {
+            "_southWest": {
+              "lat": -85,
+              "lng": -175
+            },
+            "_northEast": {
+              "lat": 85,
+              "lng": 175
+            }
+          },
+          "maxBoundsViscosity": 0.5,
+          "animate": true,
+          "children": [
+            {
+              "type": {
+                "render": "WithLeafletComponent"
+              },
+              "props": {
+                "url": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              },
+              "_store": {}
+            },
+            {
+              "type": {
+                "render": "WithLeafletComponent"
+              },
+              "props": {
+                "onMarkerPositionChange": "[function]",
+                "setSearchMarkerUsed": "[function]",
+                "position": {
+                  "lat": 51,
+                  "lng": 21
+                }
+              },
+              "_store": {}
+            }
+          ]
+        },
+        "rendered": [
+          {
+            "nodeType": "function",
+            "type": {
+              "render": "WithLeafletComponent"
+            },
+            "props": {
+              "url": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            }
+          },
+          {
+            "nodeType": "function",
+            "type": {
+              "render": "WithLeafletComponent"
+            },
+            "props": {
+              "onMarkerPositionChange": "[function]",
+              "setSearchMarkerUsed": "[function]",
+              "position": {
+                "lat": 51,
+                "lng": 21
+              }
+            }
+          }
+        ]
+      },
+      "type": "Map",
+      "props": {
+        "minZoom": 2,
+        "maxZoom": 18,
+        "maxBounds": {
+          "_southWest": {
+            "lat": -90,
+            "lng": -180
+          },
+          "_northEast": {
+            "lat": 90,
+            "lng": 180
+          }
+        },
+        "bounds": {
+          "_southWest": {
+            "lat": -85,
+            "lng": -175
+          },
+          "_northEast": {
+            "lat": 85,
+            "lng": 175
+          }
+        },
+        "maxBoundsViscosity": 0.5,
+        "animate": true
+      },
+      "children": [
+        {
+          "node": {
+            "nodeType": "function",
+            "type": {
+              "render": "WithLeafletComponent"
+            },
+            "props": {
+              "url": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            }
+          },
+          "type": {
+            "render": "WithLeafletComponent"
+          },
+          "props": {
+            "url": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          }
+        },
+        {
+          "node": {
+            "nodeType": "function",
+            "type": {
+              "render": "WithLeafletComponent"
+            },
+            "props": {
+              "onMarkerPositionChange": "[function]",
+              "setSearchMarkerUsed": "[function]",
+              "position": {
+                "lat": 51,
+                "lng": 21
+              }
+            }
+          },
+          "type": {
+            "render": "WithLeafletComponent"
+          },
+          "props": {
+            "onMarkerPositionChange": "[function]",
+            "setSearchMarkerUsed": "[function]",
+            "position": {
+              "lat": 51,
+              "lng": 21
+            }
+          }
+        }
+      ]
+    }
+  ]
+};
+

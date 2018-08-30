@@ -74,7 +74,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        include: __dirname,
+        include: __dirname + '/src',
         use: ExtractTextPlugin.extract({
           use: [
             {
@@ -84,6 +84,25 @@ module.exports = {
                 namedExport: true,
                 minimize: false,
                 sourceMap: true,
+                camelCase: true,
+              },
+            },
+          ],
+        }),
+      },
+      {
+        test: /\.css$/,
+        include: __dirname + '/node_modules',
+        use: ExtractTextPlugin.extract({
+          use: [
+            {
+              loader: 'typings-for-css-modules-loader',
+              options: {
+                modules: false,
+                namedExport: true,
+                minimize: false,
+                sourceMap: true,
+                camelCase: true,
               },
             },
           ],
@@ -134,7 +153,7 @@ module.exports = {
         }),
       },
       {
-        test: /\.(woff|woff2|svg|ttf|eot)([\?]?.*)$/,
+        test: /\.(woff|woff2|png|svg|ttf|eot)([\?]?.*)$/,
         use: {
           loader: 'file-loader',
           options: {
@@ -143,7 +162,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
+        test: /\.(jpe?g|gif|svg)$/i,
         use: [
           'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
           'image-webpack-loader?bypassOnDebug',
@@ -153,7 +172,11 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
-    modules: [path.resolve(__dirname, 'node_modules'), sourcePath],
+    modules: [
+      path.resolve(__dirname, 'node_modules'),
+      sourcePath,
+      `${__dirname}/node_modules/leaflet/dist/`,
+    ],
   },
   plugins: [
     new ExtractTextPlugin({

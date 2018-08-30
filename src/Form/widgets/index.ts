@@ -1,5 +1,6 @@
 import CodeEditorWidget from './CodeEditorWidget';
 import DateTimeWidget from './DateTimeWidget';
+import GeoWidget from './GeoWidget';
 import InputWidget from './InputWidget';
 import NotFoundWidget from './NotFoundWidget';
 import ObjectWidget from './ObjectWidget';
@@ -17,6 +18,7 @@ const widgets = {
   'password-confirm': PasswordConfirmWidget,
   'date-time': DateTimeWidget,
   uuid: UUIDWidget,
+  Geo: GeoWidget,
 };
 
 export const selectWidget = (name: string) => {
@@ -35,5 +37,6 @@ export {
   SwitchWidget,
   InputWidget,
   PasswordConfirmWidget,
+  GeoWidget,
   DateTimeWidget,
 };

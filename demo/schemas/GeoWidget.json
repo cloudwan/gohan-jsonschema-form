@@ -1,0 +1,43 @@
+{
+  "id": "geo_widget_sample",
+  "title": "Geo Widget Sample",
+  "schema": {
+    "description": "Geo Widget sample with map.",
+    "id": "geo_widget_sample",
+    "title": "Geo Widget Sample",
+    "type": "object",
+    "permission": [
+      "create",
+      "read",
+      "update",
+      "delete"
+    ],
+    "properties": {
+      "lat": {
+        "default": 52,
+        "description": "Latitude in degrees",
+        "minimum": -90,
+        "maximum": 90,
+        "title": "Latitude",
+        "type": "number"
+      },
+      "lng": {
+        "default": 21,
+        "description": "Longitude in degrees",
+        "minimum": -180,
+        "maximum": 180,
+        "title": "Longitude",
+        "type": "number"
+      }
+    },
+    "propertiesOrder": [
+      "lat",
+      "lng"
+    ],
+    "required": []
+  },
+  "uiSchema": {
+    "ui:widget": "Geo"
+  },
+  "formData": {}
+}
