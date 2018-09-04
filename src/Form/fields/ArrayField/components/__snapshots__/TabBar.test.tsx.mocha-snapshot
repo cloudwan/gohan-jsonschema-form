@@ -1,0 +1,77 @@
+exports["should match snapshot(0)"] = {
+  "node": {
+    "nodeType": "host",
+    "type": "div",
+    "props": {
+      "children": [
+        {
+          "type": "div",
+          "props": {
+            "children": "Test 1"
+          },
+          "_store": {}
+        },
+        {
+          "type": "div",
+          "props": {
+            "children": "Test 2"
+          },
+          "_store": {}
+        }
+      ]
+    },
+    "rendered": [
+      {
+        "nodeType": "host",
+        "type": "div",
+        "props": {
+          "children": "Test 1"
+        },
+        "rendered": "Test 1"
+      },
+      {
+        "nodeType": "host",
+        "type": "div",
+        "props": {
+          "children": "Test 2"
+        },
+        "rendered": "Test 2"
+      }
+    ]
+  },
+  "type": "div",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "host",
+        "type": "div",
+        "props": {
+          "children": "Test 1"
+        },
+        "rendered": "Test 1"
+      },
+      "type": "div",
+      "props": {},
+      "children": [
+        "Test 1"
+      ]
+    },
+    {
+      "node": {
+        "nodeType": "host",
+        "type": "div",
+        "props": {
+          "children": "Test 2"
+        },
+        "rendered": "Test 2"
+      },
+      "type": "div",
+      "props": {},
+      "children": [
+        "Test 2"
+      ]
+    }
+  ]
+};
+

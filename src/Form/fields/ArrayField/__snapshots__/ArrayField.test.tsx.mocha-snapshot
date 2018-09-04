@@ -1,0 +1,1400 @@
+exports["should match snapshot(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "props": {
+      "children": [
+        {
+          "type": "Errors",
+          "props": {
+            "errors": []
+          },
+          "_store": {}
+        },
+        {
+          "type": "ListAddButton",
+          "props": {
+            "onClick": "[function]"
+          },
+          "_store": {}
+        },
+        {
+          "type": "List",
+          "props": {
+            "children": []
+          },
+          "_store": {}
+        }
+      ]
+    },
+    "rendered": [
+      {
+        "nodeType": "function",
+        "type": "Errors",
+        "props": {
+          "errors": []
+        }
+      },
+      {
+        "nodeType": "function",
+        "type": "ListAddButton",
+        "props": {
+          "onClick": "[function]"
+        }
+      },
+      {
+        "nodeType": "function",
+        "type": "List",
+        "props": {
+          "children": []
+        },
+        "rendered": []
+      }
+    ]
+  },
+  "type": "React.Fragment",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "Errors",
+        "props": {
+          "errors": []
+        }
+      },
+      "type": "Errors",
+      "props": {
+        "errors": []
+      }
+    },
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "ListAddButton",
+        "props": {
+          "onClick": "[function]"
+        }
+      },
+      "type": "ListAddButton",
+      "props": {
+        "onClick": "[function]"
+      }
+    },
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "List",
+        "props": {
+          "children": []
+        },
+        "rendered": []
+      },
+      "type": "List",
+      "props": {}
+    }
+  ]
+};
+
+exports["should match snapshot with default value(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "props": {
+      "children": [
+        {
+          "type": "Errors",
+          "props": {
+            "errors": []
+          },
+          "_store": {}
+        },
+        {
+          "type": "ListAddButton",
+          "props": {
+            "onClick": "[function]"
+          },
+          "_store": {}
+        },
+        {
+          "type": "List",
+          "props": {
+            "children": []
+          },
+          "_store": {}
+        }
+      ]
+    },
+    "rendered": [
+      {
+        "nodeType": "function",
+        "type": "Errors",
+        "props": {
+          "errors": []
+        }
+      },
+      {
+        "nodeType": "function",
+        "type": "ListAddButton",
+        "props": {
+          "onClick": "[function]"
+        }
+      },
+      {
+        "nodeType": "function",
+        "type": "List",
+        "props": {
+          "children": []
+        },
+        "rendered": []
+      }
+    ]
+  },
+  "type": "React.Fragment",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "Errors",
+        "props": {
+          "errors": []
+        }
+      },
+      "type": "Errors",
+      "props": {
+        "errors": []
+      }
+    },
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "ListAddButton",
+        "props": {
+          "onClick": "[function]"
+        }
+      },
+      "type": "ListAddButton",
+      "props": {
+        "onClick": "[function]"
+      }
+    },
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "List",
+        "props": {
+          "children": []
+        },
+        "rendered": []
+      },
+      "type": "List",
+      "props": {}
+    }
+  ]
+};
+
+exports["should match snapshot with value passed by props(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "props": {
+      "children": [
+        {
+          "type": "Errors",
+          "props": {
+            "errors": []
+          },
+          "_store": {}
+        },
+        {
+          "type": "ListAddButton",
+          "props": {
+            "onClick": "[function]"
+          },
+          "_store": {}
+        },
+        {
+          "type": "List",
+          "props": {
+            "children": [
+              {
+                "type": "ListItem",
+                "key": "0",
+                "props": {
+                  "index": 0,
+                  "itemsCount": 1,
+                  "onMoveUpButtonClick": "[function]",
+                  "onMoveDownButtonClick": "[function]",
+                  "onRemoveButtonClick": "[function]",
+                  "children": {
+                    "type": "SchemaField",
+                    "ref": "ref",
+                    "props": {
+                      "id": "test.0",
+                      "schema": {
+                        "type": "string"
+                      },
+                      "value": "foo",
+                      "uiSchema": {},
+                      "isRequired": false
+                    },
+                    "_store": {}
+                  }
+                },
+                "_store": {}
+              }
+            ]
+          },
+          "_store": {}
+        }
+      ]
+    },
+    "rendered": [
+      {
+        "nodeType": "function",
+        "type": "Errors",
+        "props": {
+          "errors": []
+        }
+      },
+      {
+        "nodeType": "function",
+        "type": "ListAddButton",
+        "props": {
+          "onClick": "[function]"
+        }
+      },
+      {
+        "nodeType": "function",
+        "type": "List",
+        "props": {
+          "children": [
+            {
+              "type": "ListItem",
+              "key": "0",
+              "props": {
+                "index": 0,
+                "itemsCount": 1,
+                "onMoveUpButtonClick": "[function]",
+                "onMoveDownButtonClick": "[function]",
+                "onRemoveButtonClick": "[function]",
+                "children": {
+                  "type": "SchemaField",
+                  "ref": "ref",
+                  "props": {
+                    "id": "test.0",
+                    "schema": {
+                      "type": "string"
+                    },
+                    "value": "foo",
+                    "uiSchema": {},
+                    "isRequired": false
+                  },
+                  "_store": {}
+                }
+              },
+              "_store": {}
+            }
+          ]
+        },
+        "rendered": [
+          {
+            "nodeType": "function",
+            "type": "ListItem",
+            "props": {
+              "index": 0,
+              "itemsCount": 1,
+              "onMoveUpButtonClick": "[function]",
+              "onMoveDownButtonClick": "[function]",
+              "onRemoveButtonClick": "[function]",
+              "children": {
+                "type": "SchemaField",
+                "ref": "ref",
+                "props": {
+                  "id": "test.0",
+                  "schema": {
+                    "type": "string"
+                  },
+                  "value": "foo",
+                  "uiSchema": {},
+                  "isRequired": false
+                },
+                "_store": {}
+              }
+            },
+            "key": "0",
+            "rendered": {
+              "nodeType": "class",
+              "type": "SchemaField",
+              "props": {
+                "id": "test.0",
+                "schema": {
+                  "type": "string"
+                },
+                "value": "foo",
+                "uiSchema": {},
+                "isRequired": false
+              },
+              "ref": "ref"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "type": "React.Fragment",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "Errors",
+        "props": {
+          "errors": []
+        }
+      },
+      "type": "Errors",
+      "props": {
+        "errors": []
+      }
+    },
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "ListAddButton",
+        "props": {
+          "onClick": "[function]"
+        }
+      },
+      "type": "ListAddButton",
+      "props": {
+        "onClick": "[function]"
+      }
+    },
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "List",
+        "props": {
+          "children": [
+            {
+              "type": "ListItem",
+              "key": "0",
+              "props": {
+                "index": 0,
+                "itemsCount": 1,
+                "onMoveUpButtonClick": "[function]",
+                "onMoveDownButtonClick": "[function]",
+                "onRemoveButtonClick": "[function]",
+                "children": {
+                  "type": "SchemaField",
+                  "ref": "ref",
+                  "props": {
+                    "id": "test.0",
+                    "schema": {
+                      "type": "string"
+                    },
+                    "value": "foo",
+                    "uiSchema": {},
+                    "isRequired": false
+                  },
+                  "_store": {}
+                }
+              },
+              "_store": {}
+            }
+          ]
+        },
+        "rendered": [
+          {
+            "nodeType": "function",
+            "type": "ListItem",
+            "props": {
+              "index": 0,
+              "itemsCount": 1,
+              "onMoveUpButtonClick": "[function]",
+              "onMoveDownButtonClick": "[function]",
+              "onRemoveButtonClick": "[function]",
+              "children": {
+                "type": "SchemaField",
+                "ref": "ref",
+                "props": {
+                  "id": "test.0",
+                  "schema": {
+                    "type": "string"
+                  },
+                  "value": "foo",
+                  "uiSchema": {},
+                  "isRequired": false
+                },
+                "_store": {}
+              }
+            },
+            "key": "0",
+            "rendered": {
+              "nodeType": "class",
+              "type": "SchemaField",
+              "props": {
+                "id": "test.0",
+                "schema": {
+                  "type": "string"
+                },
+                "value": "foo",
+                "uiSchema": {},
+                "isRequired": false
+              },
+              "ref": "ref"
+            }
+          }
+        ]
+      },
+      "type": "List",
+      "props": {},
+      "children": [
+        {
+          "node": {
+            "nodeType": "function",
+            "type": "ListItem",
+            "props": {
+              "index": 0,
+              "itemsCount": 1,
+              "onMoveUpButtonClick": "[function]",
+              "onMoveDownButtonClick": "[function]",
+              "onRemoveButtonClick": "[function]",
+              "children": {
+                "type": "SchemaField",
+                "ref": "ref",
+                "props": {
+                  "id": "test.0",
+                  "schema": {
+                    "type": "string"
+                  },
+                  "value": "foo",
+                  "uiSchema": {},
+                  "isRequired": false
+                },
+                "_store": {}
+              }
+            },
+            "key": "0",
+            "rendered": {
+              "nodeType": "class",
+              "type": "SchemaField",
+              "props": {
+                "id": "test.0",
+                "schema": {
+                  "type": "string"
+                },
+                "value": "foo",
+                "uiSchema": {},
+                "isRequired": false
+              },
+              "ref": "ref"
+            }
+          },
+          "type": "ListItem",
+          "props": {
+            "index": 0,
+            "itemsCount": 1,
+            "onMoveUpButtonClick": "[function]",
+            "onMoveDownButtonClick": "[function]",
+            "onRemoveButtonClick": "[function]",
+            "key": "0"
+          },
+          "children": [
+            {
+              "node": {
+                "nodeType": "class",
+                "type": "SchemaField",
+                "props": {
+                  "id": "test.0",
+                  "schema": {
+                    "type": "string"
+                  },
+                  "value": "foo",
+                  "uiSchema": {},
+                  "isRequired": false
+                },
+                "ref": "ref"
+              },
+              "type": "SchemaField",
+              "props": {
+                "id": "test.0",
+                "schema": {
+                  "type": "string"
+                },
+                "value": "foo",
+                "uiSchema": {},
+                "isRequired": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+};
+
+exports["should match snapshot when array items are objects(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "props": {
+      "children": [
+        {
+          "type": "Errors",
+          "props": {
+            "errors": []
+          },
+          "_store": {}
+        },
+        {
+          "type": "Tabs",
+          "props": {
+            "activeTabKey": "0",
+            "onAddTab": "[function]",
+            "onChangeTab": "[function]",
+            "onEditTab": "[function]",
+            "children": [
+              {
+                "type": "[function]",
+                "key": "0",
+                "props": {
+                  "tab": "Item 1",
+                  "children": [
+                    {
+                      "type": "TabBar",
+                      "props": {
+                        "children": [
+                          {
+                            "type": "TabBarButton",
+                            "props": {
+                              "disabled": true,
+                              "iconType": "left",
+                              "postfix": "Move Left",
+                              "onClick": "[function]"
+                            },
+                            "_store": {}
+                          },
+                          {
+                            "type": "TabBarButton",
+                            "props": {
+                              "disabled": true,
+                              "iconType": "right",
+                              "postfix": "Move Right",
+                              "onClick": "[function]"
+                            },
+                            "_store": {}
+                          }
+                        ]
+                      },
+                      "_store": {}
+                    },
+                    {
+                      "type": "SchemaField",
+                      "ref": "ref",
+                      "props": {
+                        "id": "test.0",
+                        "schema": {
+                          "properties": {
+                            "foo": {
+                              "id": "foo",
+                              "type": "string"
+                            },
+                            "bar": {
+                              "id": "bar",
+                              "type": "string"
+                            }
+                          },
+                          "type": [
+                            "object"
+                          ]
+                        },
+                        "value": "foo",
+                        "uiSchema": {},
+                        "isRequired": false
+                      },
+                      "_store": {}
+                    }
+                  ]
+                },
+                "_store": {}
+              }
+            ]
+          },
+          "_store": {}
+        }
+      ]
+    },
+    "rendered": [
+      {
+        "nodeType": "function",
+        "type": "Errors",
+        "props": {
+          "errors": []
+        }
+      },
+      {
+        "nodeType": "class",
+        "type": "Tabs",
+        "props": {
+          "activeTabKey": "0",
+          "onAddTab": "[function]",
+          "onChangeTab": "[function]",
+          "onEditTab": "[function]",
+          "children": [
+            {
+              "type": "[function]",
+              "key": "0",
+              "props": {
+                "tab": "Item 1",
+                "children": [
+                  {
+                    "type": "TabBar",
+                    "props": {
+                      "children": [
+                        {
+                          "type": "TabBarButton",
+                          "props": {
+                            "disabled": true,
+                            "iconType": "left",
+                            "postfix": "Move Left",
+                            "onClick": "[function]"
+                          },
+                          "_store": {}
+                        },
+                        {
+                          "type": "TabBarButton",
+                          "props": {
+                            "disabled": true,
+                            "iconType": "right",
+                            "postfix": "Move Right",
+                            "onClick": "[function]"
+                          },
+                          "_store": {}
+                        }
+                      ]
+                    },
+                    "_store": {}
+                  },
+                  {
+                    "type": "SchemaField",
+                    "ref": "ref",
+                    "props": {
+                      "id": "test.0",
+                      "schema": {
+                        "properties": {
+                          "foo": {
+                            "id": "foo",
+                            "type": "string"
+                          },
+                          "bar": {
+                            "id": "bar",
+                            "type": "string"
+                          }
+                        },
+                        "type": [
+                          "object"
+                        ]
+                      },
+                      "value": "foo",
+                      "uiSchema": {},
+                      "isRequired": false
+                    },
+                    "_store": {}
+                  }
+                ]
+              },
+              "_store": {}
+            }
+          ]
+        },
+        "rendered": [
+          {
+            "nodeType": "class",
+            "type": "[function]",
+            "props": {
+              "tab": "Item 1",
+              "children": [
+                {
+                  "type": "TabBar",
+                  "props": {
+                    "children": [
+                      {
+                        "type": "TabBarButton",
+                        "props": {
+                          "disabled": true,
+                          "iconType": "left",
+                          "postfix": "Move Left",
+                          "onClick": "[function]"
+                        },
+                        "_store": {}
+                      },
+                      {
+                        "type": "TabBarButton",
+                        "props": {
+                          "disabled": true,
+                          "iconType": "right",
+                          "postfix": "Move Right",
+                          "onClick": "[function]"
+                        },
+                        "_store": {}
+                      }
+                    ]
+                  },
+                  "_store": {}
+                },
+                {
+                  "type": "SchemaField",
+                  "ref": "ref",
+                  "props": {
+                    "id": "test.0",
+                    "schema": {
+                      "properties": {
+                        "foo": {
+                          "id": "foo",
+                          "type": "string"
+                        },
+                        "bar": {
+                          "id": "bar",
+                          "type": "string"
+                        }
+                      },
+                      "type": [
+                        "object"
+                      ]
+                    },
+                    "value": "foo",
+                    "uiSchema": {},
+                    "isRequired": false
+                  },
+                  "_store": {}
+                }
+              ]
+            },
+            "key": "0",
+            "rendered": [
+              {
+                "nodeType": "function",
+                "type": "TabBar",
+                "props": {
+                  "children": [
+                    {
+                      "type": "TabBarButton",
+                      "props": {
+                        "disabled": true,
+                        "iconType": "left",
+                        "postfix": "Move Left",
+                        "onClick": "[function]"
+                      },
+                      "_store": {}
+                    },
+                    {
+                      "type": "TabBarButton",
+                      "props": {
+                        "disabled": true,
+                        "iconType": "right",
+                        "postfix": "Move Right",
+                        "onClick": "[function]"
+                      },
+                      "_store": {}
+                    }
+                  ]
+                },
+                "rendered": [
+                  {
+                    "nodeType": "function",
+                    "type": "TabBarButton",
+                    "props": {
+                      "disabled": true,
+                      "iconType": "left",
+                      "postfix": "Move Left",
+                      "onClick": "[function]"
+                    }
+                  },
+                  {
+                    "nodeType": "function",
+                    "type": "TabBarButton",
+                    "props": {
+                      "disabled": true,
+                      "iconType": "right",
+                      "postfix": "Move Right",
+                      "onClick": "[function]"
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "class",
+                "type": "SchemaField",
+                "props": {
+                  "id": "test.0",
+                  "schema": {
+                    "properties": {
+                      "foo": {
+                        "id": "foo",
+                        "type": "string"
+                      },
+                      "bar": {
+                        "id": "bar",
+                        "type": "string"
+                      }
+                    },
+                    "type": [
+                      "object"
+                    ]
+                  },
+                  "value": "foo",
+                  "uiSchema": {},
+                  "isRequired": false
+                },
+                "ref": "ref"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "type": "React.Fragment",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "Errors",
+        "props": {
+          "errors": []
+        }
+      },
+      "type": "Errors",
+      "props": {
+        "errors": []
+      }
+    },
+    {
+      "node": {
+        "nodeType": "class",
+        "type": "Tabs",
+        "props": {
+          "activeTabKey": "0",
+          "onAddTab": "[function]",
+          "onChangeTab": "[function]",
+          "onEditTab": "[function]",
+          "children": [
+            {
+              "type": "[function]",
+              "key": "0",
+              "props": {
+                "tab": "Item 1",
+                "children": [
+                  {
+                    "type": "TabBar",
+                    "props": {
+                      "children": [
+                        {
+                          "type": "TabBarButton",
+                          "props": {
+                            "disabled": true,
+                            "iconType": "left",
+                            "postfix": "Move Left",
+                            "onClick": "[function]"
+                          },
+                          "_store": {}
+                        },
+                        {
+                          "type": "TabBarButton",
+                          "props": {
+                            "disabled": true,
+                            "iconType": "right",
+                            "postfix": "Move Right",
+                            "onClick": "[function]"
+                          },
+                          "_store": {}
+                        }
+                      ]
+                    },
+                    "_store": {}
+                  },
+                  {
+                    "type": "SchemaField",
+                    "ref": "ref",
+                    "props": {
+                      "id": "test.0",
+                      "schema": {
+                        "properties": {
+                          "foo": {
+                            "id": "foo",
+                            "type": "string"
+                          },
+                          "bar": {
+                            "id": "bar",
+                            "type": "string"
+                          }
+                        },
+                        "type": [
+                          "object"
+                        ]
+                      },
+                      "value": "foo",
+                      "uiSchema": {},
+                      "isRequired": false
+                    },
+                    "_store": {}
+                  }
+                ]
+              },
+              "_store": {}
+            }
+          ]
+        },
+        "rendered": [
+          {
+            "nodeType": "class",
+            "type": "[function]",
+            "props": {
+              "tab": "Item 1",
+              "children": [
+                {
+                  "type": "TabBar",
+                  "props": {
+                    "children": [
+                      {
+                        "type": "TabBarButton",
+                        "props": {
+                          "disabled": true,
+                          "iconType": "left",
+                          "postfix": "Move Left",
+                          "onClick": "[function]"
+                        },
+                        "_store": {}
+                      },
+                      {
+                        "type": "TabBarButton",
+                        "props": {
+                          "disabled": true,
+                          "iconType": "right",
+                          "postfix": "Move Right",
+                          "onClick": "[function]"
+                        },
+                        "_store": {}
+                      }
+                    ]
+                  },
+                  "_store": {}
+                },
+                {
+                  "type": "SchemaField",
+                  "ref": "ref",
+                  "props": {
+                    "id": "test.0",
+                    "schema": {
+                      "properties": {
+                        "foo": {
+                          "id": "foo",
+                          "type": "string"
+                        },
+                        "bar": {
+                          "id": "bar",
+                          "type": "string"
+                        }
+                      },
+                      "type": [
+                        "object"
+                      ]
+                    },
+                    "value": "foo",
+                    "uiSchema": {},
+                    "isRequired": false
+                  },
+                  "_store": {}
+                }
+              ]
+            },
+            "key": "0",
+            "rendered": [
+              {
+                "nodeType": "function",
+                "type": "TabBar",
+                "props": {
+                  "children": [
+                    {
+                      "type": "TabBarButton",
+                      "props": {
+                        "disabled": true,
+                        "iconType": "left",
+                        "postfix": "Move Left",
+                        "onClick": "[function]"
+                      },
+                      "_store": {}
+                    },
+                    {
+                      "type": "TabBarButton",
+                      "props": {
+                        "disabled": true,
+                        "iconType": "right",
+                        "postfix": "Move Right",
+                        "onClick": "[function]"
+                      },
+                      "_store": {}
+                    }
+                  ]
+                },
+                "rendered": [
+                  {
+                    "nodeType": "function",
+                    "type": "TabBarButton",
+                    "props": {
+                      "disabled": true,
+                      "iconType": "left",
+                      "postfix": "Move Left",
+                      "onClick": "[function]"
+                    }
+                  },
+                  {
+                    "nodeType": "function",
+                    "type": "TabBarButton",
+                    "props": {
+                      "disabled": true,
+                      "iconType": "right",
+                      "postfix": "Move Right",
+                      "onClick": "[function]"
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "class",
+                "type": "SchemaField",
+                "props": {
+                  "id": "test.0",
+                  "schema": {
+                    "properties": {
+                      "foo": {
+                        "id": "foo",
+                        "type": "string"
+                      },
+                      "bar": {
+                        "id": "bar",
+                        "type": "string"
+                      }
+                    },
+                    "type": [
+                      "object"
+                    ]
+                  },
+                  "value": "foo",
+                  "uiSchema": {},
+                  "isRequired": false
+                },
+                "ref": "ref"
+              }
+            ]
+          }
+        ]
+      },
+      "type": "Tabs",
+      "props": {
+        "activeTabKey": "0",
+        "onAddTab": "[function]",
+        "onChangeTab": "[function]",
+        "onEditTab": "[function]"
+      },
+      "children": [
+        {
+          "node": {
+            "nodeType": "class",
+            "type": "[function]",
+            "props": {
+              "tab": "Item 1",
+              "children": [
+                {
+                  "type": "TabBar",
+                  "props": {
+                    "children": [
+                      {
+                        "type": "TabBarButton",
+                        "props": {
+                          "disabled": true,
+                          "iconType": "left",
+                          "postfix": "Move Left",
+                          "onClick": "[function]"
+                        },
+                        "_store": {}
+                      },
+                      {
+                        "type": "TabBarButton",
+                        "props": {
+                          "disabled": true,
+                          "iconType": "right",
+                          "postfix": "Move Right",
+                          "onClick": "[function]"
+                        },
+                        "_store": {}
+                      }
+                    ]
+                  },
+                  "_store": {}
+                },
+                {
+                  "type": "SchemaField",
+                  "ref": "ref",
+                  "props": {
+                    "id": "test.0",
+                    "schema": {
+                      "properties": {
+                        "foo": {
+                          "id": "foo",
+                          "type": "string"
+                        },
+                        "bar": {
+                          "id": "bar",
+                          "type": "string"
+                        }
+                      },
+                      "type": [
+                        "object"
+                      ]
+                    },
+                    "value": "foo",
+                    "uiSchema": {},
+                    "isRequired": false
+                  },
+                  "_store": {}
+                }
+              ]
+            },
+            "key": "0",
+            "rendered": [
+              {
+                "nodeType": "function",
+                "type": "TabBar",
+                "props": {
+                  "children": [
+                    {
+                      "type": "TabBarButton",
+                      "props": {
+                        "disabled": true,
+                        "iconType": "left",
+                        "postfix": "Move Left",
+                        "onClick": "[function]"
+                      },
+                      "_store": {}
+                    },
+                    {
+                      "type": "TabBarButton",
+                      "props": {
+                        "disabled": true,
+                        "iconType": "right",
+                        "postfix": "Move Right",
+                        "onClick": "[function]"
+                      },
+                      "_store": {}
+                    }
+                  ]
+                },
+                "rendered": [
+                  {
+                    "nodeType": "function",
+                    "type": "TabBarButton",
+                    "props": {
+                      "disabled": true,
+                      "iconType": "left",
+                      "postfix": "Move Left",
+                      "onClick": "[function]"
+                    }
+                  },
+                  {
+                    "nodeType": "function",
+                    "type": "TabBarButton",
+                    "props": {
+                      "disabled": true,
+                      "iconType": "right",
+                      "postfix": "Move Right",
+                      "onClick": "[function]"
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "class",
+                "type": "SchemaField",
+                "props": {
+                  "id": "test.0",
+                  "schema": {
+                    "properties": {
+                      "foo": {
+                        "id": "foo",
+                        "type": "string"
+                      },
+                      "bar": {
+                        "id": "bar",
+                        "type": "string"
+                      }
+                    },
+                    "type": [
+                      "object"
+                    ]
+                  },
+                  "value": "foo",
+                  "uiSchema": {},
+                  "isRequired": false
+                },
+                "ref": "ref"
+              }
+            ]
+          },
+          "type": "TabPane",
+          "props": {
+            "tab": "Item 1",
+            "key": "0"
+          },
+          "children": [
+            {
+              "node": {
+                "nodeType": "function",
+                "type": "TabBar",
+                "props": {
+                  "children": [
+                    {
+                      "type": "TabBarButton",
+                      "props": {
+                        "disabled": true,
+                        "iconType": "left",
+                        "postfix": "Move Left",
+                        "onClick": "[function]"
+                      },
+                      "_store": {}
+                    },
+                    {
+                      "type": "TabBarButton",
+                      "props": {
+                        "disabled": true,
+                        "iconType": "right",
+                        "postfix": "Move Right",
+                        "onClick": "[function]"
+                      },
+                      "_store": {}
+                    }
+                  ]
+                },
+                "rendered": [
+                  {
+                    "nodeType": "function",
+                    "type": "TabBarButton",
+                    "props": {
+                      "disabled": true,
+                      "iconType": "left",
+                      "postfix": "Move Left",
+                      "onClick": "[function]"
+                    }
+                  },
+                  {
+                    "nodeType": "function",
+                    "type": "TabBarButton",
+                    "props": {
+                      "disabled": true,
+                      "iconType": "right",
+                      "postfix": "Move Right",
+                      "onClick": "[function]"
+                    }
+                  }
+                ]
+              },
+              "type": "TabBar",
+              "props": {},
+              "children": [
+                {
+                  "node": {
+                    "nodeType": "function",
+                    "type": "TabBarButton",
+                    "props": {
+                      "disabled": true,
+                      "iconType": "left",
+                      "postfix": "Move Left",
+                      "onClick": "[function]"
+                    }
+                  },
+                  "type": "TabBarButton",
+                  "props": {
+                    "disabled": true,
+                    "iconType": "left",
+                    "postfix": "Move Left",
+                    "onClick": "[function]"
+                  }
+                },
+                {
+                  "node": {
+                    "nodeType": "function",
+                    "type": "TabBarButton",
+                    "props": {
+                      "disabled": true,
+                      "iconType": "right",
+                      "postfix": "Move Right",
+                      "onClick": "[function]"
+                    }
+                  },
+                  "type": "TabBarButton",
+                  "props": {
+                    "disabled": true,
+                    "iconType": "right",
+                    "postfix": "Move Right",
+                    "onClick": "[function]"
+                  }
+                }
+              ]
+            },
+            {
+              "node": {
+                "nodeType": "class",
+                "type": "SchemaField",
+                "props": {
+                  "id": "test.0",
+                  "schema": {
+                    "properties": {
+                      "foo": {
+                        "id": "foo",
+                        "type": "string"
+                      },
+                      "bar": {
+                        "id": "bar",
+                        "type": "string"
+                      }
+                    },
+                    "type": [
+                      "object"
+                    ]
+                  },
+                  "value": "foo",
+                  "uiSchema": {},
+                  "isRequired": false
+                },
+                "ref": "ref"
+              },
+              "type": "SchemaField",
+              "props": {
+                "id": "test.0",
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "id": "foo",
+                      "type": "string"
+                    },
+                    "bar": {
+                      "id": "bar",
+                      "type": "string"
+                    }
+                  },
+                  "type": [
+                    "object"
+                  ]
+                },
+                "value": "foo",
+                "uiSchema": {},
+                "isRequired": false
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+};
+

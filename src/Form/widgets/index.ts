@@ -1,4 +1,3 @@
-import ArrayWidget from './ArrayWidget';
 import CheckboxWidget from './CheckboxWidget';
 import CodeEditorWidget from './CodeEditorWidget';
 import InputWidget from './InputWidget';
@@ -8,8 +7,8 @@ import PasswordConfirmWidget from './PasswordConfirmWidget';
 import SelectWidget from './SelectWidget';
 import SwitchWidget from './SwitchWidget';
 import UUIDWidget from './UUIDWidget';
+
 const widgets = {
-  Array: ArrayWidget,
   Checkbox: CheckboxWidget,
   CodeEditor: CodeEditorWidget,
   Object: ObjectWidget,
@@ -30,7 +29,6 @@ export const selectWidget = (name: string) => {
 };
 
 export {
-  ArrayWidget,
   CheckboxWidget,
   CodeEditorWidget,
   ObjectWidget,

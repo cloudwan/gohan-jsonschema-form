@@ -1,0 +1,6 @@
+.listContainer {
+  counter-reset: section;
+  padding: 0;
+  margin-bottom: 5px;
+  min-height: 2em;
+}

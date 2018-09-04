@@ -1,0 +1,140 @@
+{
+  "id": "array_widget",
+  "title": "Array Widget",
+  "schema": {
+    "permission": [
+      "create",
+      "read",
+      "update",
+      "delete"
+    ],
+    "properties": {
+      "normalArrayInput": {
+        "description": "Normal Array with Input Description",
+        "items": {
+          "description": "Normal Array Input Description",
+          "title": "Normal Array Input",
+          "type": ["string"]
+        },
+        "maxItems": 5,
+        "permission": [
+          "create",
+          "update"
+        ],
+        "title": "Normal Array with Input",
+        "type": ["array"],
+        "view": [
+          "list",
+          "detail",
+          "create",
+          "update"
+        ]
+      },
+      "defaultArrayInput": {
+        "description": "Default Array with Input Description",
+        "default": ["foo"],
+        "items": {
+          "description": "Default Array Item Description",
+          "title": "Default Normal Array Item",
+          "type": ["string"]
+        },
+        "maxItems": 5,
+        "permission": [
+          "create",
+          "update"
+        ],
+        "title": "Default Array with Input",
+        "type": ["array"],
+        "view": [
+          "list",
+          "detail",
+          "create",
+          "update"
+        ]
+      },
+      "requiredArrayInput": {
+        "description": "Required Array with Input Description",
+        "items": {
+          "description": "Required Array Item Description",
+          "title": "Required Array Item",
+          "type": ["string"]
+        },
+        "maxItems": 5,
+        "permission": [
+          "create",
+          "update"
+        ],
+        "title": "Required Array with Input",
+        "type": ["array"],
+        "view": [
+          "list",
+          "detail",
+          "create",
+          "update"
+        ]
+      },
+      "normalArrayWithData": {
+        "description": "Array Widget with data",
+        "items": {
+          "description": "Array Widget with data Item Description",
+          "title": "Array Array Widget with data Item",
+          "type": ["string"]
+        },
+        "maxItems": 5,
+        "permission": [
+          "create",
+          "update"
+        ],
+        "title": "Array Widget Array Widget with data",
+        "type": ["array"],
+        "view": [
+          "list",
+          "detail",
+          "create",
+          "update"
+        ]
+      },
+      "normalArraySelect": {
+        "description": "Normal Array with Select Description",
+        "items": {
+          "description": "Normal Array Select Description",
+          "title": "Normal Array Select",
+          "type": ["string"],
+          "enum": [
+            "option 1",
+            "option 2",
+            "option 3"
+          ]
+        },
+        "maxItems": 5,
+        "permission": [
+          "create",
+          "update"
+        ],
+        "title": "Normal Array with Select",
+        "type": ["array"],
+        "view": [
+          "list",
+          "detail",
+          "create",
+          "update"
+        ]
+      }
+    },
+    "propertiesOrder": [
+      "normalArrayInput",
+      "defaultArrayInput",
+      "requiredArrayInput",
+      "normalArrayWithData",
+      "normalArraySelect"
+    ],
+    "required": [
+      "requiredArrayInput"
+    ],
+    "type": ["object"]
+  },
+  "uiSchema": {},
+  "formData": {
+    "normalArrayWithData": ["bar"]
+  }
+}

@@ -353,7 +353,6 @@ exports["should match snapshot when schema type is array(0)"] = {
       "isRequired": false,
       "id": "#",
       "children": {
-        "type": "ArrayWidget",
         "ref": "ref",
         "props": {
           "id": "#",
@@ -362,15 +361,13 @@ exports["should match snapshot when schema type is array(0)"] = {
             "type": "array"
           },
           "uiSchema": {},
-          "isRequired": false,
-          "value": []
+          "isRequired": false
         },
         "_store": {}
       }
     },
     "rendered": {
-      "nodeType": "class",
-      "type": "ArrayWidget",
+      "nodeType": "function",
       "props": {
         "id": "#",
         "schema": {
@@ -378,8 +375,7 @@ exports["should match snapshot when schema type is array(0)"] = {
           "type": "array"
         },
         "uiSchema": {},
-        "isRequired": false,
-        "value": []
+        "isRequired": false
       },
       "ref": "ref"
     }
@@ -389,37 +385,7 @@ exports["should match snapshot when schema type is array(0)"] = {
     "title": "test string",
     "isRequired": false,
     "id": "#"
-  },
-  "children": [
-    {
-      "node": {
-        "nodeType": "class",
-        "type": "ArrayWidget",
-        "props": {
-          "id": "#",
-          "schema": {
-            "title": "test string",
-            "type": "array"
-          },
-          "uiSchema": {},
-          "isRequired": false,
-          "value": []
-        },
-        "ref": "ref"
-      },
-      "type": "ArrayWidget",
-      "props": {
-        "id": "#",
-        "schema": {
-          "title": "test string",
-          "type": "array"
-        },
-        "uiSchema": {},
-        "isRequired": false,
-        "value": []
-      }
-    }
-  ]
+  }
 };
 
 exports["should match snapshot when schema type is boolean(0)"] = {

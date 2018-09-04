@@ -1,0 +1,144 @@
+{
+  "id": "tabs_widget",
+  "title": "Tabs Widget",
+  "schema": {
+    "permission": [
+      "create",
+      "read",
+      "update",
+      "delete"
+    ],
+    "properties": {
+      "tabs": {
+        "description": "Tabs Description",
+        "items": {
+          "description": "Tab Description",
+          "title": "Tab",
+          "type": ["object"],
+          "properties": {
+            "simpleString": {
+              "id": "simple_string",
+              "description": "Simple InputWidget string example",
+              "permission": [
+                "create"
+              ],
+              "title": "Simple string",
+              "type": "string"
+            },
+            "defaultSelect": {
+              "title": "Default Select",
+              "description": "Default Select Widget",
+              "enum": [
+                "option 1",
+                "option 2",
+                "option 3"
+              ],
+              "type": ["string"],
+              "default": "option 1"
+            },
+            "uuid": {
+              "id": "simple_string",
+              "description": "Simple InputWidget string example",
+              "permission": [
+                "create"
+              ],
+              "title": "UUID",
+              "format": "uuid",
+              "type": "string"
+            },
+            "nested_tabs": {
+              "description": "Nested Tabs Description",
+              "items": {
+                "description": "Nested Tab Description",
+                "title": "Nested Tab",
+                "type": ["object"],
+                "properties": {
+                  "simpleString": {
+                    "id": "simple_string",
+                    "description": "Simple InputWidget string example",
+                    "permission": [
+                      "create"
+                    ],
+                    "title": "Simple string",
+                    "type": "string"
+                  },
+                  "defaultSelect": {
+                    "title": "Default Select",
+                    "description": "Default Select Widget",
+                    "enum": [
+                      "option 1",
+                      "option 2",
+                      "option 3"
+                    ],
+                    "type": ["string"],
+                    "default": "option 1"
+                  },
+                  "uuid": {
+                    "id": "simple_string",
+                    "description": "Simple InputWidget string example",
+                    "permission": [
+                      "create"
+                    ],
+                    "title": "UUID",
+                    "format": "uuid",
+                    "type": "string"
+                  }
+                },
+                "propertiesOrder": [
+                  "simpleString",
+                  "defaultSelect",
+                  "uuid"
+                ],
+                "required": [
+                  "simpleString"
+                ]
+              },
+              "maxItems": 5,
+              "permission": [
+                "create",
+                "update"
+              ],
+              "title": "Nested Tabs",
+              "type": ["array"],
+              "view": [
+                "list",
+                "detail",
+                "create",
+                "update"
+              ]
+            }
+          },
+          "propertiesOrder": [
+            "simpleString",
+            "defaultSelect",
+            "uuid",
+            "nested_tabs"
+          ],
+          "required": [
+            "simpleString"
+          ]
+        },
+        "maxItems": 5,
+        "permission": [
+          "create",
+          "update"
+        ],
+        "title": "Tabs",
+        "type": ["array"],
+        "view": [
+          "list",
+          "detail",
+          "create",
+          "update"
+        ]
+      }
+    },
+    "propertiesOrder": [
+      "tabs"
+    ],
+    "required": [],
+    "type": ["object"]
+  },
+  "uiSchema": {},
+  "formData": {}
+}

@@ -28,15 +28,14 @@ export default class ObjectWidget extends React.Component<
     uiSchema: {},
     isRequired: false,
   };
-  private properties = {};
 
-  constructor(props, context) {
-    super(props, context);
-
-    this.state = {
-      value: this.props.value,
+  public static getDerivedStateFromProps(props) {
+    return {
+      value: props.value,
     };
   }
+
+  private properties = {};
 
   public get value() {
     const {properties} = this.props.schema;
@@ -122,7 +121,7 @@ export default class ObjectWidget extends React.Component<
       return (
         <SchemaField
           id={`${id}.${key}`}
-          key={key}
+          key={`${id}.${key}`}
           ref={c => {
             this.properties[key] = c;
           }}

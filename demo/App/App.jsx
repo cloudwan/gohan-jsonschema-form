@@ -40,7 +40,7 @@ export default class App extends Component {
                     <DemoPage
                       schema={item.schema}
                       uiSchema={item.uiSchema}
-                      data={item.data}
+                      formData={item.formData}
                     />
                   )}
                 />

@@ -46,6 +46,7 @@ export default class DemoPage extends Component {
   };
 
   handleSubmit = () => {
+    console.log('is valid?', this.form.isValid);
     this.setState({data: this.form.value});
   };
   handleValid = () => {

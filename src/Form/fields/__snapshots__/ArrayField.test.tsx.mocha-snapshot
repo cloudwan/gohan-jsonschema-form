@@ -1,0 +1,103 @@
+exports["should match snapshot for minimal number of props(0)"] = {
+  "node": {
+    "nodeType": "class",
+    "type": "ArrayWidget",
+    "props": {
+      "schema": {},
+      "uiSchema": {},
+      "isRequired": false
+    },
+    "ref": "ref"
+  },
+  "type": "ArrayWidget",
+  "props": {
+    "schema": {},
+    "uiSchema": {},
+    "isRequired": false
+  }
+};
+
+exports["should match snapshot for multiple select(0)"] = {
+  "node": {
+    "nodeType": "class",
+    "type": "SelectWidget",
+    "props": {
+      "schema": {
+        "uniqueItems": true,
+        "items": {
+          "enum": [
+            "foo",
+            "bar"
+          ],
+          "type": [
+            "string"
+          ]
+        },
+        "type": [
+          "array"
+        ]
+      },
+      "uiSchema": {},
+      "isRequired": false
+    },
+    "ref": "ref"
+  },
+  "type": "SelectWidget",
+  "props": {
+    "schema": {
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "foo",
+          "bar"
+        ],
+        "type": [
+          "string"
+        ]
+      },
+      "type": [
+        "array"
+      ]
+    },
+    "uiSchema": {},
+    "isRequired": false
+  }
+};
+
+exports["should match snapshot for object array(0)"] = {
+  "node": {
+    "nodeType": "class",
+    "type": "TabsWidget",
+    "props": {
+      "schema": {
+        "items": {
+          "type": [
+            "object"
+          ]
+        },
+        "type": [
+          "array"
+        ]
+      },
+      "uiSchema": {},
+      "isRequired": false
+    },
+    "ref": "ref"
+  },
+  "type": "TabsWidget",
+  "props": {
+    "schema": {
+      "items": {
+        "type": [
+          "object"
+        ]
+      },
+      "type": [
+        "array"
+      ]
+    },
+    "uiSchema": {},
+    "isRequired": false
+  }
+};
+
