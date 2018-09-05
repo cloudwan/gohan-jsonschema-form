@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {Map} from 'react-leaflet';
 
 import {IWidget} from '../../../typings/IWidget';
 import Errors from '../../components/Errors';
@@ -10,6 +11,11 @@ export default class GeoWidget extends React.Component<IWidget> {
   }
 
   public render() {
-    return <div>geo widget</div>;
+    return (
+      <div>
+        <div>geo widget</div>
+        <Map />
+      </div>
+    );
   }
 }
