@@ -123,6 +123,14 @@ export default class DemoPage extends Component {
                   this.form = c;
                 }}
                 formData={data}
+                fetcher={() =>
+                  new Promise(resolve =>
+                    setTimeout(
+                      () => resolve([{label: 'Foo', value: 'foo'}]),
+                      5000,
+                    ),
+                  )
+                }
               />
               <Button.Group>
                 <Button type="primary" onClick={this.handleSubmit}>

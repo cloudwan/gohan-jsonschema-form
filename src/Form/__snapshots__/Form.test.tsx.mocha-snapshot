@@ -1,59 +1,23 @@
 exports["should match snapshot for minimal number of props(0)"] = {
   "node": {
-    "nodeType": "host",
-    "type": "form",
+    "nodeType": "class",
+    "type": "SchemaField",
     "props": {
-      "children": {
-        "type": "SchemaField",
-        "ref": "ref",
-        "props": {
-          "schema": {},
-          "uiSchema": {},
-          "value": {},
-          "id": "#",
-          "isRequired": false
-        },
-        "_store": {}
-      }
+      "schema": {},
+      "uiSchema": {},
+      "value": {},
+      "id": "#",
+      "isRequired": false
     },
-    "rendered": {
-      "nodeType": "class",
-      "type": "SchemaField",
-      "props": {
-        "schema": {},
-        "uiSchema": {},
-        "value": {},
-        "id": "#",
-        "isRequired": false
-      },
-      "ref": "ref"
-    }
+    "ref": "ref"
   },
-  "type": "form",
-  "props": {},
-  "children": [
-    {
-      "node": {
-        "nodeType": "class",
-        "type": "SchemaField",
-        "props": {
-          "schema": {},
-          "uiSchema": {},
-          "value": {},
-          "id": "#",
-          "isRequired": false
-        },
-        "ref": "ref"
-      },
-      "type": "SchemaField",
-      "props": {
-        "schema": {},
-        "uiSchema": {},
-        "value": {},
-        "id": "#",
-        "isRequired": false
-      }
-    }
-  ]
+  "type": "SchemaField",
+  "props": {
+    "schema": {},
+    "uiSchema": {},
+    "value": {},
+    "id": "#",
+    "isRequired": false
+  }
 };
 

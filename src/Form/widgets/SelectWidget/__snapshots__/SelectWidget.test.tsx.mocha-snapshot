@@ -7,6 +7,7 @@ exports["should match snapshot(0)"] = {
           "type": "Select",
           "props": {
             "mode": "default",
+            "onFocus": "[function]",
             "onChange": "[function]",
             "options": [
               {
@@ -42,6 +43,7 @@ exports["should match snapshot(0)"] = {
         "type": "Select",
         "props": {
           "mode": "default",
+          "onFocus": "[function]",
           "onChange": "[function]",
           "options": [
             {
@@ -79,6 +81,7 @@ exports["should match snapshot(0)"] = {
         "type": "Select",
         "props": {
           "mode": "default",
+          "onFocus": "[function]",
           "onChange": "[function]",
           "options": [
             {
@@ -101,6 +104,7 @@ exports["should match snapshot(0)"] = {
       "type": "Select",
       "props": {
         "mode": "default",
+        "onFocus": "[function]",
         "onChange": "[function]",
         "options": [
           {
@@ -145,6 +149,7 @@ exports["should render elements for multiple choice select(0)"] = {
           "type": "Select",
           "props": {
             "mode": "multiple",
+            "onFocus": "[function]",
             "onChange": "[function]",
             "options": [
               {
@@ -180,6 +185,7 @@ exports["should render elements for multiple choice select(0)"] = {
         "type": "Select",
         "props": {
           "mode": "multiple",
+          "onFocus": "[function]",
           "onChange": "[function]",
           "options": [
             {
@@ -217,6 +223,7 @@ exports["should render elements for multiple choice select(0)"] = {
         "type": "Select",
         "props": {
           "mode": "multiple",
+          "onFocus": "[function]",
           "onChange": "[function]",
           "options": [
             {
@@ -239,6 +246,7 @@ exports["should render elements for multiple choice select(0)"] = {
       "type": "Select",
       "props": {
         "mode": "multiple",
+        "onFocus": "[function]",
         "onChange": "[function]",
         "options": [
           {
@@ -283,6 +291,7 @@ exports["should render elements with custom labels(0)"] = {
           "type": "Select",
           "props": {
             "mode": "multiple",
+            "onFocus": "[function]",
             "onChange": "[function]",
             "options": [
               {
@@ -318,6 +327,7 @@ exports["should render elements with custom labels(0)"] = {
         "type": "Select",
         "props": {
           "mode": "multiple",
+          "onFocus": "[function]",
           "onChange": "[function]",
           "options": [
             {
@@ -355,6 +365,7 @@ exports["should render elements with custom labels(0)"] = {
         "type": "Select",
         "props": {
           "mode": "multiple",
+          "onFocus": "[function]",
           "onChange": "[function]",
           "options": [
             {
@@ -377,6 +388,7 @@ exports["should render elements with custom labels(0)"] = {
       "type": "Select",
       "props": {
         "mode": "multiple",
+        "onFocus": "[function]",
         "onChange": "[function]",
         "options": [
           {
@@ -394,6 +406,284 @@ exports["should render elements with custom labels(0)"] = {
         ],
         "showSearch": false,
         "optionFilterProp": "children"
+      }
+    },
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "Errors",
+        "props": {
+          "errors": []
+        }
+      },
+      "type": "Errors",
+      "props": {
+        "errors": []
+      }
+    }
+  ]
+};
+
+exports["shouldn't change state(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "props": {
+      "children": [
+        {
+          "type": "Select",
+          "props": {
+            "mode": "default",
+            "onFocus": "[function]",
+            "onChange": "[function]",
+            "options": [],
+            "showSearch": false,
+            "optionFilterProp": "children"
+          },
+          "_store": {}
+        },
+        {
+          "type": "Errors",
+          "props": {
+            "errors": []
+          },
+          "_store": {}
+        }
+      ]
+    },
+    "rendered": [
+      {
+        "nodeType": "function",
+        "type": "Select",
+        "props": {
+          "mode": "default",
+          "onFocus": "[function]",
+          "onChange": "[function]",
+          "options": [],
+          "showSearch": false,
+          "optionFilterProp": "children"
+        }
+      },
+      {
+        "nodeType": "function",
+        "type": "Errors",
+        "props": {
+          "errors": []
+        }
+      }
+    ]
+  },
+  "type": "React.Fragment",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "Select",
+        "props": {
+          "mode": "default",
+          "onFocus": "[function]",
+          "onChange": "[function]",
+          "options": [],
+          "showSearch": false,
+          "optionFilterProp": "children"
+        }
+      },
+      "type": "Select",
+      "props": {
+        "mode": "default",
+        "onFocus": "[function]",
+        "onChange": "[function]",
+        "options": [],
+        "showSearch": false,
+        "optionFilterProp": "children"
+      }
+    },
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "Errors",
+        "props": {
+          "errors": []
+        }
+      },
+      "type": "Errors",
+      "props": {
+        "errors": []
+      }
+    }
+  ]
+};
+
+exports["should update options in state(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "props": {
+      "children": [
+        {
+          "type": "Select",
+          "props": {
+            "mode": "default",
+            "onFocus": "[function]",
+            "onChange": "[function]",
+            "options": [],
+            "showSearch": false,
+            "optionFilterProp": "children",
+            "notFoundContent": "Loading..."
+          },
+          "_store": {}
+        },
+        {
+          "type": "Errors",
+          "props": {
+            "errors": []
+          },
+          "_store": {}
+        }
+      ]
+    },
+    "rendered": [
+      {
+        "nodeType": "function",
+        "type": "Select",
+        "props": {
+          "mode": "default",
+          "onFocus": "[function]",
+          "onChange": "[function]",
+          "options": [],
+          "showSearch": false,
+          "optionFilterProp": "children",
+          "notFoundContent": "Loading..."
+        }
+      },
+      {
+        "nodeType": "function",
+        "type": "Errors",
+        "props": {
+          "errors": []
+        }
+      }
+    ]
+  },
+  "type": "React.Fragment",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "Select",
+        "props": {
+          "mode": "default",
+          "onFocus": "[function]",
+          "onChange": "[function]",
+          "options": [],
+          "showSearch": false,
+          "optionFilterProp": "children",
+          "notFoundContent": "Loading..."
+        }
+      },
+      "type": "Select",
+      "props": {
+        "mode": "default",
+        "onFocus": "[function]",
+        "onChange": "[function]",
+        "options": [],
+        "showSearch": false,
+        "optionFilterProp": "children",
+        "notFoundContent": "Loading..."
+      }
+    },
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "Errors",
+        "props": {
+          "errors": []
+        }
+      },
+      "type": "Errors",
+      "props": {
+        "errors": []
+      }
+    }
+  ]
+};
+
+exports["should handle error message state(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "props": {
+      "children": [
+        {
+          "type": "Select",
+          "props": {
+            "mode": "default",
+            "onFocus": "[function]",
+            "onChange": "[function]",
+            "options": [],
+            "showSearch": false,
+            "optionFilterProp": "children",
+            "notFoundContent": "Loading..."
+          },
+          "_store": {}
+        },
+        {
+          "type": "Errors",
+          "props": {
+            "errors": []
+          },
+          "_store": {}
+        }
+      ]
+    },
+    "rendered": [
+      {
+        "nodeType": "function",
+        "type": "Select",
+        "props": {
+          "mode": "default",
+          "onFocus": "[function]",
+          "onChange": "[function]",
+          "options": [],
+          "showSearch": false,
+          "optionFilterProp": "children",
+          "notFoundContent": "Loading..."
+        }
+      },
+      {
+        "nodeType": "function",
+        "type": "Errors",
+        "props": {
+          "errors": []
+        }
+      }
+    ]
+  },
+  "type": "React.Fragment",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "Select",
+        "props": {
+          "mode": "default",
+          "onFocus": "[function]",
+          "onChange": "[function]",
+          "options": [],
+          "showSearch": false,
+          "optionFilterProp": "children",
+          "notFoundContent": "Loading..."
+        }
+      },
+      "type": "Select",
+      "props": {
+        "mode": "default",
+        "onFocus": "[function]",
+        "onChange": "[function]",
+        "options": [],
+        "showSearch": false,
+        "optionFilterProp": "children",
+        "notFoundContent": "Loading..."
       }
     },
     {

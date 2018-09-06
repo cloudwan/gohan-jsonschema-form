@@ -9,10 +9,16 @@ import Select from './components/Select';
 interface TSelectWidgetState {
   errors: any[];
   value: any;
+  options: any[];
 }
 
+interface ISelectWidgetProps extends IWidget {
+  fetcher?: (
+    relation: string,
+  ) => Promise<Array<{label: string; value: string}>>;
+}
 export default class SelectWidget extends React.Component<
-  IWidget,
+  ISelectWidgetProps,
   TSelectWidgetState
 > {
   public static defaultProps = {
@@ -22,8 +28,16 @@ export default class SelectWidget extends React.Component<
 
   constructor(props, context) {
     super(props, context);
+    const {
+      schema,
+      schema: {options, items},
+    } = this.props;
 
     this.state = {
+      options:
+        options ||
+        schema.enum ||
+        (items ? items['options'] || items['enum'] : []), //tslint:disable-line
       value:
         props.value === null && props.schema.type.includes('null')
           ? null
@@ -80,20 +94,18 @@ export default class SelectWidget extends React.Component<
   public render(): React.ReactNode {
     // tslint:disable-line
     const {
-      schema,
-      schema: {type, options, items},
+      schema: {type, items},
     } = this.props;
     const {value, errors} = this.state;
     const mode =
       String.prototype.includes.call(type, 'array') && items !== undefined
         ? 'multiple'
         : 'default';
-    const enums = options || schema.enum || items['options'] || items['enum']; //tslint:disable-line
-    const haystack = Array.isArray(enums)
-      ? enums
-      : Object.keys(enums).map(i => ({
+    const haystack = Array.isArray(this.state.options)
+      ? this.state.options
+      : Object.keys(this.state.options).map(i => ({
           value: i,
-          label: enums[i],
+          label: this.state.options[i],
         }));
 
     const selectOptions = haystack.map((enumValue, i) => {
@@ -118,13 +130,36 @@ export default class SelectWidget extends React.Component<
         <Select
           value={value}
           mode={mode}
+          onFocus={this.handleFocus}
           onChange={this.handleChangeInput}
           options={selectOptions}
           showSearch={haystack.length >= 5}
           optionFilterProp="children"
+          notFoundContent={!this.props.fetcher ? undefined : 'Loading...'}
         />
         <Errors errors={errors} />
       </React.Fragment>
     );
   }
+
+  private handleFocus = async () => {
+    if (!this.props.fetcher) {
+      return;
+    }
+
+    const {
+      schema: {relation},
+    } = this.props;
+
+    try {
+      const options = await this.props.fetcher(relation);
+
+      this.setState({options});
+    } catch (error) {
+      console.error(error);
+      const errors = [{message: 'Cannot fetch data!'}];
+
+      this.setState({errors});
+    }
+  };
 }

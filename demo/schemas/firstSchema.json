@@ -15,7 +15,6 @@
           "create"
         ],
         "relation": "ese_device_flavor",
-        "relation_property": "ese_device_flavor",
         "title": "Flavor",
         "type": "string"
       },

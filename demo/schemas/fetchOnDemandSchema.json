@@ -1,0 +1,32 @@
+{
+  "id": "SelectOnDemand",
+  "title": "SelectOnDemand",
+  "schema": {
+    "permission": [
+      "create",
+      "read",
+      "update",
+      "delete"
+    ],
+    "properties": {
+      "name": {
+        "description": "Name",
+        "permission": [
+          "create"
+        ],
+        "relation": "ese_device_flavor",
+        "title": "Name",
+        "type": "string"
+      }
+    },
+    "propertiesOrder": [
+      "name"
+    ],
+    "required": [
+      "name"
+    ],
+    "type": "object"
+  },
+  "uiSchema": {},
+  "formData": {}
+}

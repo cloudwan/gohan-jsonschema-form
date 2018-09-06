@@ -8,7 +8,6 @@ import Select from './components/Select';
 import SelectWidget from './SelectWidget';
 
 chai.use(chaiEnzyme());
-chai.should();
 
 const should = chai.should();
 
@@ -152,6 +151,66 @@ describe('<SelectWidget />', () => {
         />,
       );
 
+      wrapper.should.to.matchSnapshot();
+    });
+  });
+
+  describe('listener handleFocus', () => {
+    it("shouldn't change state", async () => {
+      const wrapper = shallow(
+        <SelectWidget
+          schema={{
+            title: 'test string',
+            type: 'string',
+          }}
+        />,
+      );
+      const state = wrapper.state();
+      const instance = wrapper.instance() as SelectWidget;
+      await instance.handleFocus();
+      wrapper.state().should.deep.equal(state);
+      wrapper.should.to.matchSnapshot();
+    });
+
+    it('should update options in state', async () => {
+      const wrapper = shallow(
+        <SelectWidget
+          schema={{
+            title: 'test string',
+            type: 'string',
+          }}
+          fetcher={() => [{value: 'foo', label: 'Foo'}]}
+        />,
+      );
+      const state = {
+        ...wrapper.state(),
+        options: [{value: 'foo', label: 'Foo'}],
+      };
+      const instance = wrapper.instance() as SelectWidget;
+
+      await instance.handleFocus();
+      wrapper.state().should.deep.equal(state);
+      wrapper.should.to.matchSnapshot();
+    });
+
+    it('should handle error message state', async () => {
+      const wrapper = shallow(
+        <SelectWidget
+          schema={{
+            title: 'test string',
+            type: 'string',
+          }}
+          fetcher={async () => new Promise((undefined, reject) => reject())}
+        />,
+      );
+      const state = {
+        ...wrapper.state(),
+        errors: [{message: 'Cannot fetch data!'}],
+      };
+      const instance = wrapper.instance() as SelectWidget;
+
+      await instance.handleFocus();
+      wrapper.state().should.deep.equal(state);
       wrapper.should.to.matchSnapshot();
     });
   });

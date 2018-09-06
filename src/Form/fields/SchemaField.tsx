@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import {JSONSchema4TypeName} from 'json-schema';
 import {IWidget} from '../../typings/IWidget';
 import {selectField} from './';
 import Template from './Template';
@@ -65,6 +66,8 @@ export default class SchemaField extends React.Component<IWidget> {
         Field = selectField('Array');
       } else if (type.includes('boolean')) {
         Field = selectField('Boolean');
+      } else if (schema.enum || schema.relation) {
+        Field = selectField('Select');
       } else if (type.includes('string')) {
         Field = selectField('String');
       } else if (type.includes('integer') || type.includes('number')) {
