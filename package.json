@@ -58,6 +58,7 @@
     "@types/lodash": "^4.14.113",
     "@types/react": "^16.4.2",
     "@types/react-dom": "^16.0.6",
+    "@types/react-leaflet": "^1.1.6",
     "@types/react-sortable-hoc": "^0.6.3",
     "ajv": "^6.5.1",
     "antd": "^3.6.4",
