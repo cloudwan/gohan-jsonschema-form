@@ -101,7 +101,7 @@ export default class CodeEditorWidget extends React.Component<
     const {value, errors} = this.state;
 
     return (
-      <div>
+      <React.Fragment>
         <AceEditor
           mode={this.getFormat()}
           value={value}
@@ -111,7 +111,7 @@ export default class CodeEditorWidget extends React.Component<
           editorProps={{$blockScrolling: true}}
         />
         <Errors errors={errors} />
-      </div>
+      </React.Fragment>
     );
   }
 

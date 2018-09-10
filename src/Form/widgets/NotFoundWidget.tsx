@@ -1,4 +1,5 @@
 import * as React from 'react';
+import WidgetError from './../components/WidgetError';
 
 interface TNotFoundWidget {
   uiSchema: any;
@@ -19,11 +20,12 @@ export default class NotFoundWidget extends React.Component<TNotFoundWidget> {
 
   public render(): JSX.Element {
     return (
-      <div style={{background: '#ff0000'}}>
-        <p>{'Not Found widget'}</p>
-        <p>{JSON.stringify(this.props.schema)}</p>
-        <p>{JSON.stringify(this.props.uiSchema)}</p>
-      </div>
+      <WidgetError
+        messages={[
+          JSON.stringify(this.props.schema),
+          JSON.stringify(this.props.uiSchema),
+        ]}
+      />
     );
   }
 }

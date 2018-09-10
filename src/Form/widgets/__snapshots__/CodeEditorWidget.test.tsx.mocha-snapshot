@@ -1,7 +1,6 @@
 exports["should match snapshot for minimal number of props(0)"] = {
   "node": {
-    "nodeType": "host",
-    "type": "div",
+    "nodeType": "function",
     "props": {
       "children": [
         {
@@ -93,7 +92,7 @@ exports["should match snapshot for minimal number of props(0)"] = {
       }
     ]
   },
-  "type": "div",
+  "type": "React.Fragment",
   "props": {},
   "children": [
     {

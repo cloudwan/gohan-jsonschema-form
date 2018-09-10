@@ -1,0 +1,126 @@
+exports["should match snapshot(0)"] = {
+  "node": {
+    "nodeType": "host",
+    "type": "div",
+    "props": {
+      "style": {
+        "background": "#ff0000"
+      },
+      "children": [
+        {
+          "type": "p",
+          "props": {
+            "children": "Not Found widget"
+          },
+          "_store": {}
+        },
+        [
+          {
+            "type": "p",
+            "key": "0",
+            "props": {
+              "children": "foo"
+            },
+            "_store": {}
+          },
+          {
+            "type": "p",
+            "key": "1",
+            "props": {
+              "children": "bar"
+            },
+            "_store": {}
+          }
+        ]
+      ]
+    },
+    "rendered": [
+      {
+        "nodeType": "host",
+        "type": "p",
+        "props": {
+          "children": "Not Found widget"
+        },
+        "rendered": "Not Found widget"
+      },
+      {
+        "nodeType": "host",
+        "type": "p",
+        "props": {
+          "children": "foo"
+        },
+        "key": "0",
+        "rendered": "foo"
+      },
+      {
+        "nodeType": "host",
+        "type": "p",
+        "props": {
+          "children": "bar"
+        },
+        "key": "1",
+        "rendered": "bar"
+      }
+    ]
+  },
+  "type": "div",
+  "props": {
+    "style": {
+      "background": "#ff0000"
+    }
+  },
+  "children": [
+    {
+      "node": {
+        "nodeType": "host",
+        "type": "p",
+        "props": {
+          "children": "Not Found widget"
+        },
+        "rendered": "Not Found widget"
+      },
+      "type": "p",
+      "props": {},
+      "children": [
+        "Not Found widget"
+      ]
+    },
+    {
+      "node": {
+        "nodeType": "host",
+        "type": "p",
+        "props": {
+          "children": "foo"
+        },
+        "key": "0",
+        "rendered": "foo"
+      },
+      "type": "p",
+      "props": {
+        "key": "0"
+      },
+      "children": [
+        "foo"
+      ]
+    },
+    {
+      "node": {
+        "nodeType": "host",
+        "type": "p",
+        "props": {
+          "children": "bar"
+        },
+        "key": "1",
+        "rendered": "bar"
+      },
+      "type": "p",
+      "props": {
+        "key": "1"
+      },
+      "children": [
+        "bar"
+      ]
+    }
+  ]
+};
+
