@@ -34,7 +34,7 @@ module.exports = {
   cache: true,
   context: __dirname,
   entry: {
-    polyfill: 'babel-polyfill',
+    //polyfill: 'babel-polyfill', // react-leaflet-search contains it
     index: './demo/index',
   },
   mode: ENV,

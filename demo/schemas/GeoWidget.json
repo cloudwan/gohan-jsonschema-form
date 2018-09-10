@@ -22,7 +22,7 @@
         "title": "Latitude",
         "type": "float"
       },
-      "lon": {
+      "lng": {
         "default": 0,
         "description": "Longitude in degrees",
         "minimum": 0,
@@ -33,9 +33,9 @@
     },
     "propertiesOrder": [
       "lat",
-      "lon"
+      "lng"
     ],
-    "required": []
+    "required": ["lat", "lng"]
   },
   "uiSchema": {
     "ui:widget": "Geo"
