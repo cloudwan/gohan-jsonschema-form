@@ -1,4 +1,5 @@
 import CodeEditorWidget from './CodeEditorWidget';
+import DateTimeWidget from './DateTimeWidget';
 import InputWidget from './InputWidget';
 import NotFoundWidget from './NotFoundWidget';
 import ObjectWidget from './ObjectWidget';
@@ -14,6 +15,7 @@ const widgets = {
   Switch: SwitchWidget,
   Input: InputWidget,
   'password-confirm': PasswordConfirmWidget,
+  'date-time': DateTimeWidget,
   uuid: UUIDWidget,
 };
 
@@ -33,4 +35,5 @@ export {
   SwitchWidget,
   InputWidget,
   PasswordConfirmWidget,
+  DateTimeWidget,
 };

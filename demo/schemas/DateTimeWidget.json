@@ -1,0 +1,85 @@
+{
+  "id": "date_time",
+  "title": "Date-Time Examples",
+  "schema": {
+    "permission": [
+      "create",
+      "read",
+      "update",
+      "delete"
+    ],
+    "properties": {
+      "dateTime": {
+        "id": "simple_date_time",
+        "description": "Simple Date-Time Widget example description",
+        "permission": [
+          "create"
+        ],
+        "title": "Simple Date-Time Widget",
+        "type": ["string"],
+        "format": "date-time",
+        "maxLength": 255
+      },
+      "defaultDateTime": {
+        "id": "default_date_time",
+        "description": "Default Date-Time Widget example description",
+        "default": "2017-09-07T18:10:58Z",
+        "permission": [
+          "create"
+        ],
+        "title": "Default Date-Time Widget",
+        "type": ["string"],
+        "format": "date-time",
+        "maxLength": 255
+      },
+      "requiredDateTime": {
+        "id": "required_date_time",
+        "description": "Required Date-Time Widget example description",
+        "permission": [
+          "create"
+        ],
+        "title": "Required Date-Time Widget",
+        "type": ["string"],
+        "format": "date-time",
+        "maxLength": 255
+      },
+      "nullDateTime": {
+        "id": "null_date_time",
+        "description": "Null Date-Time Widget example description",
+        "permission": [
+          "create"
+        ],
+        "title": "Null Date-Time Widget",
+        "type": ["string", "null"],
+        "format": "date-time",
+        "maxLength": 255
+      },
+      "dataDateTime": {
+        "id": "data_date_time",
+        "description": "Data Date-Time Widget example description",
+        "permission": [
+          "create"
+        ],
+        "title": "Data Date-Time Widget",
+        "type": ["string"],
+        "format": "date-time",
+        "maxLength": 255
+      }
+    },
+    "propertiesOrder": [
+      "dateTime",
+      "defaultDateTime",
+      "requiredDateTime",
+      "nullDateTime",
+      "dataDateTime"
+    ],
+    "required": [
+      "requiredDateTime"
+    ],
+    "type": "object"
+  },
+  "uiSchema": {},
+  "formData": {
+    "dataDateTime": "2018-09-07T18:10:58Z"
+  }
+}

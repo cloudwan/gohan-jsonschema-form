@@ -1,0 +1,34 @@
+exports["should match snapshot for minimal number of props(0)"] = {
+  "node": {
+    "nodeType": "class",
+    "type": "PickerWrapper",
+    "props": {
+      "showTime": true,
+      "format": "YYYY-MM-DD HH:mm:ss",
+      "placeholder": "Select Time",
+      "onChange": "onChange",
+      "onOk": "onOk",
+      "transitionName": "slide-up",
+      "popupStyle": {},
+      "onOpenChange": "onOpenChange",
+      "locale": {},
+      "prefixCls": "ant-calendar",
+      "inputPrefixCls": "ant-input"
+    }
+  },
+  "type": "PickerWrapper",
+  "props": {
+    "showTime": true,
+    "format": "YYYY-MM-DD HH:mm:ss",
+    "placeholder": "Select Time",
+    "onChange": "onChange",
+    "onOk": "onOk",
+    "transitionName": "slide-up",
+    "popupStyle": {},
+    "onOpenChange": "onOpenChange",
+    "locale": {},
+    "prefixCls": "ant-calendar",
+    "inputPrefixCls": "ant-input"
+  }
+};
+
