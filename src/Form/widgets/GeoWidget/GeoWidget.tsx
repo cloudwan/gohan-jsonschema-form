@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import {latLng, latLngBounds} from 'leaflet';
-import {Map, Marker, Popup, TileLayer} from 'react-leaflet';
+import {Map, Marker, Popup, TileLayer, withLeaflet} from 'react-leaflet'; // tslint:disable-line
 import {ReactLeafletSearch} from 'react-leaflet-search';
 
 import 'leaflet/dist/leaflet.css';
@@ -15,14 +15,9 @@ import validator from '../../Validator';
 const boundsPadding = 5;
 
 export default class GeoWidget extends React.Component<IWidget> {
-  private mapRef = null;
-  private map = null;
-
-  public componentDidMount() {
-    this.map = this.mapRef.leafletElement;
-  }
-
   public render() {
+    const SearchBox = withLeaflet(ReactLeafletSearch);
+
     return (
       <div>
         <Map
@@ -39,21 +34,21 @@ export default class GeoWidget extends React.Component<IWidget> {
           viewport={{
             center: {lat: 52, lng: 21},
           }}
-          ref={c => {
-            this.mapRef = c;
-          }}
         >
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-          <ReactLeafletSearch
-            position="topleft"
+          <SearchBox
+            position="bottomleft"
             inputPlaceholder="Search for address"
-            leaflet={{map: this.map}}
+            search={[52, 21]}
+            showPopup={false}
+            showMarker={true}
+            closeResultsOnClick={false}
           />
-          <Marker position={{lat: 52, lng: 21}}>
+          {/*<Marker position={{lat: 52, lng: 21}}>
             <Popup>
               A pretty CSS3 popup.<br />Easily customizable.
             </Popup>
-          </Marker>
+          </Marker>*/}
         </Map>
       </div>
     );
