@@ -1,1 +1,0 @@
-export const switchComponent: string;

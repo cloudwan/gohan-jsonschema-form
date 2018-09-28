@@ -1,7 +1,0 @@
---require ./test/helpers/babelRegisterConfig.js
---require mocha-snapshots
---require ignore-styles
---require ./test/helpers/dom.js
---require ./test/helpers/setup.js
---watch-extensions tsx,ts
---reporter spec

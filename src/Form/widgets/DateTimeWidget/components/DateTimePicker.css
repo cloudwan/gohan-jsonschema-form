@@ -1,8 +1,0 @@
-.dateTimePicker {
-  width: 100%;
-  margin-bottom: 0.625rem;
-}
-
-.dateTimePicker :global .ant-calendar .ant-calendar-ok-btn {
-  display: none;
-}
