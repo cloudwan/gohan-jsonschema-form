@@ -1,9 +1,10 @@
-import {Tabs as AntTabs} from 'antd';
+import {Button, Icon, Tabs as AntTabs} from 'antd';
 import * as React from 'react';
 
 import {JSONSchema4} from 'json-schema';
 import {IWidget} from '../../../typings/IWidget';
 import Errors from '../../components/Errors';
+import Tabs from '../../components/Tabs';
 import SchemaField from '../../fields/SchemaField';
 import validator from '../../Validator';
 import List from './components/List';
@@ -11,7 +12,6 @@ import ListAddButton from './components/ListAddButton';
 import ListItem from './components/ListItem';
 import TabBar from './components/TabBar';
 import TabBarButton from './components/TabBarButton';
-import Tabs from './components/Tabs';
 
 interface TTabsWidgetProps extends IWidget {
   value?: any[] | null;
@@ -285,9 +285,19 @@ export class ArrayField extends React.Component<
         <Errors errors={errors} />
         <Tabs
           activeTabKey={activeTabKey}
-          onAddTab={this.handleAddButtonClick}
           onChangeTab={this.handleTabChange}
           onEditTab={this.handleTabEdit}
+          type={'editable-card'}
+          tabBarExtraContent={
+            <Button
+              size="small"
+              type="primary"
+              onClick={this.handleAddButtonClick}
+              ghost={true}
+            >
+              <Icon type="plus-circle" />
+            </Button>
+          }
         >
           {value &&
             value.map((item, index) => (

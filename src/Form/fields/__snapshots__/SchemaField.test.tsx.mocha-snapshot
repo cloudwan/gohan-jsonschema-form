@@ -177,7 +177,7 @@ exports["should match snapshot when schema type is object(0)"] = {
       "isRequired": false,
       "id": "#",
       "children": {
-        "type": "ObjectWidget",
+        "type": "ObjectField",
         "ref": "ref",
         "props": {
           "id": "#",
@@ -191,15 +191,14 @@ exports["should match snapshot when schema type is object(0)"] = {
             }
           },
           "uiSchema": {},
-          "isRequired": false,
-          "value": {}
+          "isRequired": false
         },
         "_store": {}
       }
     },
     "rendered": {
       "nodeType": "class",
-      "type": "ObjectWidget",
+      "type": "ObjectField",
       "props": {
         "id": "#",
         "schema": {
@@ -212,8 +211,7 @@ exports["should match snapshot when schema type is object(0)"] = {
           }
         },
         "uiSchema": {},
-        "isRequired": false,
-        "value": {}
+        "isRequired": false
       },
       "ref": "ref"
     }
@@ -228,7 +226,7 @@ exports["should match snapshot when schema type is object(0)"] = {
     {
       "node": {
         "nodeType": "class",
-        "type": "ObjectWidget",
+        "type": "ObjectField",
         "props": {
           "id": "#",
           "schema": {
@@ -241,12 +239,11 @@ exports["should match snapshot when schema type is object(0)"] = {
             }
           },
           "uiSchema": {},
-          "isRequired": false,
-          "value": {}
+          "isRequired": false
         },
         "ref": "ref"
       },
-      "type": "ObjectWidget",
+      "type": "ObjectField",
       "props": {
         "id": "#",
         "schema": {
@@ -259,8 +256,7 @@ exports["should match snapshot when schema type is object(0)"] = {
           }
         },
         "uiSchema": {},
-        "isRequired": false,
-        "value": {}
+        "isRequired": false
       }
     }
   ]

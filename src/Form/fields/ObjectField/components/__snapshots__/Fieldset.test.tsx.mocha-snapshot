@@ -1,0 +1,61 @@
+exports["should match snapshot(0)"] = {
+  "node": {
+    "nodeType": "host",
+    "type": "fieldset",
+    "props": {
+      "id": "test",
+      "className": "",
+      "children": "test"
+    },
+    "rendered": "test"
+  },
+  "type": "fieldset",
+  "props": {
+    "id": "test",
+    "className": ""
+  },
+  "children": [
+    "test"
+  ]
+};
+
+exports["should match snapshot when Fieldset is tab(0)"] = {
+  "node": {
+    "nodeType": "host",
+    "type": "fieldset",
+    "props": {
+      "id": "test",
+      "className": "",
+      "children": "test"
+    },
+    "rendered": "test"
+  },
+  "type": "fieldset",
+  "props": {
+    "id": "test",
+    "className": ""
+  },
+  "children": [
+    "test"
+  ]
+};
+
+exports["should match snapshot when Fieldset isn't tab(0)"] = {
+  "node": {
+    "nodeType": "host",
+    "type": "fieldset",
+    "props": {
+      "id": "test",
+      "children": "test"
+    },
+    "rendered": "test"
+  },
+  "type": "fieldset",
+  "props": {
+    "id": "test"
+  },
+  "children": [
+    "test"
+  ]
+};
+

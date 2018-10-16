@@ -1,0 +1,215 @@
+{
+  "id": "objectField",
+  "title": "Object Field",
+  "schema": {
+    "properties": {
+      "name": {
+        "type": "string",
+        "title": "Name",
+        "description": "Description of the object name field."
+      },
+      "id": {
+        "type": "string",
+        "title": "Id",
+        "description": "Description of the object id field."
+      },
+      "object_nested": {
+        "description": "Description of the nested object field.",
+        "title": "Nested Object",
+        "type": [
+          "object"
+        ],
+        "propertiesOrder": [
+          "object_nested_id",
+          "object_nested_name",
+          "object_child"
+        ],
+        "properties": {
+          "object_nested_name": {
+            "type": "string",
+            "title": "Name",
+            "description": "Description of the object name field.",
+            "format": "ipv4"
+          },
+          "object_nested_id": {
+            "type": "string",
+            "title": "Id",
+            "description": "Description of the object id field."
+          },
+          "object_child": {
+            "description": "Description of the child object.",
+            "title": "Child object",
+            "type": [
+              "object"
+            ],
+            "propertiesOrder": [
+              "object_child_name",
+              "object_grandchild"
+            ],
+            "properties": {
+              "object_child_name": {
+                "type": "string",
+                "title": "Name",
+                "description": "Description of the child object name field."
+              },
+              "object_grandchild": {
+                "description": "Description of the grandchild object.",
+                "title": "Grandchild object",
+                "type": [
+                  "object"
+                ],
+                "required": [
+                  "object_grandchild_name"
+                ],
+                "propertiesOrder": [
+                  "object_grandchild_name",
+                  "object_grand-grandchild"
+                ],
+                "properties": {
+                  "object_grandchild_name": {
+                    "type": "string",
+                    "title": "Name",
+                    "description": "Description of the grandchild object name field."
+                  },
+                  "object_grand-grandchild": {
+                    "description": "Description of the grand-grandchild object.",
+                    "title": "Grand-grandchild object",
+                    "type": [
+                      "object"
+                    ],
+                    "propertiesOrder": [
+                      "object_grand-grandchild_name"
+                    ],
+                    "properties": {
+                      "object_grand-grandchild_name": {
+                        "type": "string",
+                        "title": "Name",
+                        "description": "Description of the grand-grandchild name field."
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "object_initial_data": {
+        "description": "Description of the object with initial data.",
+        "title": "Object with data",
+        "type": [
+          "object"
+        ],
+        "propertiesOrder": [
+          "object_initial_data_id",
+          "object_initial_data_name"
+        ],
+        "properties": {
+          "object_initial_data_name": {
+            "type": "string",
+            "title": "Name",
+            "description": "Description of the object with initial data name field."
+          },
+          "object_initial_data_id": {
+            "type": "string",
+            "title": "Id",
+            "description": "Description of the object witch initial data id field."
+          }
+        }
+      },
+      "object_required": {
+        "description": "Description of the required object field.",
+        "title": "Required Object",
+        "type": [
+          "object"
+        ],
+        "propertiesOrder": [
+          "object_required_id",
+          "object_required_name"
+        ],
+        "properties": {
+          "object_required_name": {
+            "type": "string",
+            "title": "Name",
+            "description": "Description of the required object name field."
+          },
+          "object_required_id": {
+            "type": "string",
+            "title": "Id",
+            "description": "Description of the required object id field."
+          }
+        }
+      },
+      "object_null": {
+        "description": "Description of the nullable object field.",
+        "title": "Nullable Object",
+        "type": [
+          "object",
+          "null"
+        ],
+        "propertiesOrder": [
+          "object_null_id",
+          "object_null_name"
+        ],
+        "properties": {
+          "object_null_name": {
+            "type": "string",
+            "title": "Name",
+            "description": "Description of the nullable object name field."
+          },
+          "object_null_id": {
+            "type": "string",
+            "title": "Id",
+            "description": "Description of the nullable object id field"
+          }
+        }
+      },
+      "object_default": {
+        "description": "Description of the object field with default value.",
+        "title": "Default Object",
+        "type": [
+          "object"
+        ],
+        "default": {
+          "object_default_name": "Foo",
+          "object_default_id": "bar"
+        },
+        "propertiesOrder": [
+          "object_default_id",
+          "object_default_name"
+        ],
+        "properties": {
+          "object_default_name": {
+            "type": "string",
+            "title": "Name",
+            "description": "Description of the object with default value name field."
+          },
+          "object_default_id": {
+            "type": "string",
+            "title": "Id",
+            "description": "Description of the object with default value id field"
+          }
+        }
+      }
+    },
+    "propertiesOrder": [
+      "id",
+      "name",
+      "object_null",
+      "object_default",
+      "object_nested",
+      "object_initial_data",
+      "object_required"
+    ],
+    "required": [
+      "object_required"
+    ],
+    "type": "object"
+  },
+  "uiSchema": {},
+  "formData": {
+    "object_initial_data": {
+      "object_initial_data_id": "foz"
+    }
+  }
+}

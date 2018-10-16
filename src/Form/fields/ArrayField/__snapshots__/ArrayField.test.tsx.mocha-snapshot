@@ -549,9 +549,28 @@ exports["should match snapshot when array items are objects(0)"] = {
           "type": "Tabs",
           "props": {
             "activeTabKey": "0",
-            "onAddTab": "[function]",
             "onChangeTab": "[function]",
             "onEditTab": "[function]",
+            "type": "editable-card",
+            "tabBarExtraContent": {
+              "type": "Button",
+              "props": {
+                "size": "small",
+                "type": "primary",
+                "onClick": "[function]",
+                "ghost": true,
+                "children": {
+                  "type": "Icon",
+                  "props": {
+                    "type": "plus-circle"
+                  },
+                  "_store": {}
+                },
+                "prefixCls": "ant-btn",
+                "loading": false
+              },
+              "_store": {}
+            },
             "children": [
               {
                 "type": "[function]",
@@ -636,9 +655,28 @@ exports["should match snapshot when array items are objects(0)"] = {
         "type": "Tabs",
         "props": {
           "activeTabKey": "0",
-          "onAddTab": "[function]",
           "onChangeTab": "[function]",
           "onEditTab": "[function]",
+          "type": "editable-card",
+          "tabBarExtraContent": {
+            "type": "Button",
+            "props": {
+              "size": "small",
+              "type": "primary",
+              "onClick": "[function]",
+              "ghost": true,
+              "children": {
+                "type": "Icon",
+                "props": {
+                  "type": "plus-circle"
+                },
+                "_store": {}
+              },
+              "prefixCls": "ant-btn",
+              "loading": false
+            },
+            "_store": {}
+          },
           "children": [
             {
               "type": "[function]",
@@ -875,9 +913,28 @@ exports["should match snapshot when array items are objects(0)"] = {
         "type": "Tabs",
         "props": {
           "activeTabKey": "0",
-          "onAddTab": "[function]",
           "onChangeTab": "[function]",
           "onEditTab": "[function]",
+          "type": "editable-card",
+          "tabBarExtraContent": {
+            "type": "Button",
+            "props": {
+              "size": "small",
+              "type": "primary",
+              "onClick": "[function]",
+              "ghost": true,
+              "children": {
+                "type": "Icon",
+                "props": {
+                  "type": "plus-circle"
+                },
+                "_store": {}
+              },
+              "prefixCls": "ant-btn",
+              "loading": false
+            },
+            "_store": {}
+          },
           "children": [
             {
               "type": "[function]",
@@ -1093,9 +1150,28 @@ exports["should match snapshot when array items are objects(0)"] = {
       "type": "Tabs",
       "props": {
         "activeTabKey": "0",
-        "onAddTab": "[function]",
         "onChangeTab": "[function]",
-        "onEditTab": "[function]"
+        "onEditTab": "[function]",
+        "type": "editable-card",
+        "tabBarExtraContent": {
+          "type": "Button",
+          "props": {
+            "size": "small",
+            "type": "primary",
+            "onClick": "[function]",
+            "ghost": true,
+            "children": {
+              "type": "Icon",
+              "props": {
+                "type": "plus-circle"
+              },
+              "_store": {}
+            },
+            "prefixCls": "ant-btn",
+            "loading": false
+          },
+          "_store": {}
+        }
       },
       "children": [
         {

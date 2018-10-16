@@ -27,7 +27,8 @@
     },
     "propertiesOrder": [
       "basicSwitch",
-      "requiredSwitch"
+      "requiredSwitch",
+      "disabledSwitch"
     ],
     "required": [
       "requiredSwitch"

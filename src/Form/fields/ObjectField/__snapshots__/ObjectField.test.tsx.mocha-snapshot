@@ -1,0 +1,2250 @@
+exports["should match snapshot(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "type": "Fieldset",
+    "props": {
+      "id": "test",
+      "children": [
+        false,
+        [
+          {
+            "type": "Tabs",
+            "key": "tabs",
+            "props": {
+              "children": [
+                {
+                  "type": "[function]",
+                  "key": "test.bar",
+                  "props": {
+                    "tab": {
+                      "props": {
+                        "children": [
+                          "Bar",
+                          {
+                            "type": "Asterisk",
+                            "props": {},
+                            "_store": {}
+                          }
+                        ]
+                      },
+                      "_store": {}
+                    },
+                    "forceRender": true,
+                    "children": {
+                      "type": "SchemaField",
+                      "ref": "ref",
+                      "props": {
+                        "id": "test.bar",
+                        "schema": {
+                          "title": "Bar",
+                          "type": [
+                            "object",
+                            "null"
+                          ],
+                          "properties": {
+                            "foz": {
+                              "title": "Foz",
+                              "type": [
+                                "number"
+                              ]
+                            }
+                          },
+                          "propertiesOrder": [
+                            "foz"
+                          ]
+                        },
+                        "isRequired": true,
+                        "uiSchema": {
+                          "ui:title": "",
+                          "ui:description": "",
+                          "ui:options": {
+                            "isTab": true
+                          }
+                        }
+                      },
+                      "_store": {}
+                    }
+                  },
+                  "_store": {}
+                },
+                {
+                  "type": "[function]",
+                  "key": "test.foo",
+                  "props": {
+                    "tab": {
+                      "props": {
+                        "children": [
+                          "Foo",
+                          false
+                        ]
+                      },
+                      "_store": {}
+                    },
+                    "forceRender": true,
+                    "children": {
+                      "type": "SchemaField",
+                      "ref": "ref",
+                      "props": {
+                        "id": "test.foo",
+                        "schema": {
+                          "title": "Foo",
+                          "type": [
+                            "array"
+                          ],
+                          "items": {
+                            "title": "Foo array item",
+                            "type": [
+                              "string"
+                            ]
+                          }
+                        },
+                        "isRequired": false,
+                        "uiSchema": {
+                          "ui:title": "",
+                          "ui:description": "",
+                          "ui:options": {
+                            "isTab": true
+                          }
+                        }
+                      },
+                      "_store": {}
+                    }
+                  },
+                  "_store": {}
+                }
+              ],
+              "type": "card"
+            },
+            "_store": {}
+          }
+        ]
+      ]
+    },
+    "rendered": [
+      false,
+      {
+        "nodeType": "class",
+        "type": "Tabs",
+        "props": {
+          "children": [
+            {
+              "type": "[function]",
+              "key": "test.bar",
+              "props": {
+                "tab": {
+                  "props": {
+                    "children": [
+                      "Bar",
+                      {
+                        "type": "Asterisk",
+                        "props": {},
+                        "_store": {}
+                      }
+                    ]
+                  },
+                  "_store": {}
+                },
+                "forceRender": true,
+                "children": {
+                  "type": "SchemaField",
+                  "ref": "ref",
+                  "props": {
+                    "id": "test.bar",
+                    "schema": {
+                      "title": "Bar",
+                      "type": [
+                        "object",
+                        "null"
+                      ],
+                      "properties": {
+                        "foz": {
+                          "title": "Foz",
+                          "type": [
+                            "number"
+                          ]
+                        }
+                      },
+                      "propertiesOrder": [
+                        "foz"
+                      ]
+                    },
+                    "isRequired": true,
+                    "uiSchema": {
+                      "ui:title": "",
+                      "ui:description": "",
+                      "ui:options": {
+                        "isTab": true
+                      }
+                    }
+                  },
+                  "_store": {}
+                }
+              },
+              "_store": {}
+            },
+            {
+              "type": "[function]",
+              "key": "test.foo",
+              "props": {
+                "tab": {
+                  "props": {
+                    "children": [
+                      "Foo",
+                      false
+                    ]
+                  },
+                  "_store": {}
+                },
+                "forceRender": true,
+                "children": {
+                  "type": "SchemaField",
+                  "ref": "ref",
+                  "props": {
+                    "id": "test.foo",
+                    "schema": {
+                      "title": "Foo",
+                      "type": [
+                        "array"
+                      ],
+                      "items": {
+                        "title": "Foo array item",
+                        "type": [
+                          "string"
+                        ]
+                      }
+                    },
+                    "isRequired": false,
+                    "uiSchema": {
+                      "ui:title": "",
+                      "ui:description": "",
+                      "ui:options": {
+                        "isTab": true
+                      }
+                    }
+                  },
+                  "_store": {}
+                }
+              },
+              "_store": {}
+            }
+          ],
+          "type": "card"
+        },
+        "key": "tabs",
+        "rendered": [
+          {
+            "nodeType": "class",
+            "type": "[function]",
+            "props": {
+              "tab": {
+                "props": {
+                  "children": [
+                    "Bar",
+                    {
+                      "type": "Asterisk",
+                      "props": {},
+                      "_store": {}
+                    }
+                  ]
+                },
+                "_store": {}
+              },
+              "forceRender": true,
+              "children": {
+                "type": "SchemaField",
+                "ref": "ref",
+                "props": {
+                  "id": "test.bar",
+                  "schema": {
+                    "title": "Bar",
+                    "type": [
+                      "object",
+                      "null"
+                    ],
+                    "properties": {
+                      "foz": {
+                        "title": "Foz",
+                        "type": [
+                          "number"
+                        ]
+                      }
+                    },
+                    "propertiesOrder": [
+                      "foz"
+                    ]
+                  },
+                  "isRequired": true,
+                  "uiSchema": {
+                    "ui:title": "",
+                    "ui:description": "",
+                    "ui:options": {
+                      "isTab": true
+                    }
+                  }
+                },
+                "_store": {}
+              }
+            },
+            "key": "test.bar",
+            "rendered": {
+              "nodeType": "class",
+              "type": "SchemaField",
+              "props": {
+                "id": "test.bar",
+                "schema": {
+                  "title": "Bar",
+                  "type": [
+                    "object",
+                    "null"
+                  ],
+                  "properties": {
+                    "foz": {
+                      "title": "Foz",
+                      "type": [
+                        "number"
+                      ]
+                    }
+                  },
+                  "propertiesOrder": [
+                    "foz"
+                  ]
+                },
+                "isRequired": true,
+                "uiSchema": {
+                  "ui:title": "",
+                  "ui:description": "",
+                  "ui:options": {
+                    "isTab": true
+                  }
+                }
+              },
+              "ref": "ref"
+            }
+          },
+          {
+            "nodeType": "class",
+            "type": "[function]",
+            "props": {
+              "tab": {
+                "props": {
+                  "children": [
+                    "Foo",
+                    false
+                  ]
+                },
+                "_store": {}
+              },
+              "forceRender": true,
+              "children": {
+                "type": "SchemaField",
+                "ref": "ref",
+                "props": {
+                  "id": "test.foo",
+                  "schema": {
+                    "title": "Foo",
+                    "type": [
+                      "array"
+                    ],
+                    "items": {
+                      "title": "Foo array item",
+                      "type": [
+                        "string"
+                      ]
+                    }
+                  },
+                  "isRequired": false,
+                  "uiSchema": {
+                    "ui:title": "",
+                    "ui:description": "",
+                    "ui:options": {
+                      "isTab": true
+                    }
+                  }
+                },
+                "_store": {}
+              }
+            },
+            "key": "test.foo",
+            "rendered": {
+              "nodeType": "class",
+              "type": "SchemaField",
+              "props": {
+                "id": "test.foo",
+                "schema": {
+                  "title": "Foo",
+                  "type": [
+                    "array"
+                  ],
+                  "items": {
+                    "title": "Foo array item",
+                    "type": [
+                      "string"
+                    ]
+                  }
+                },
+                "isRequired": false,
+                "uiSchema": {
+                  "ui:title": "",
+                  "ui:description": "",
+                  "ui:options": {
+                    "isTab": true
+                  }
+                }
+              },
+              "ref": "ref"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "type": "Fieldset",
+  "props": {
+    "id": "test"
+  },
+  "children": [
+    {
+      "node": {
+        "nodeType": "class",
+        "type": "Tabs",
+        "props": {
+          "children": [
+            {
+              "type": "[function]",
+              "key": "test.bar",
+              "props": {
+                "tab": {
+                  "props": {
+                    "children": [
+                      "Bar",
+                      {
+                        "type": "Asterisk",
+                        "props": {},
+                        "_store": {}
+                      }
+                    ]
+                  },
+                  "_store": {}
+                },
+                "forceRender": true,
+                "children": {
+                  "type": "SchemaField",
+                  "ref": "ref",
+                  "props": {
+                    "id": "test.bar",
+                    "schema": {
+                      "title": "Bar",
+                      "type": [
+                        "object",
+                        "null"
+                      ],
+                      "properties": {
+                        "foz": {
+                          "title": "Foz",
+                          "type": [
+                            "number"
+                          ]
+                        }
+                      },
+                      "propertiesOrder": [
+                        "foz"
+                      ]
+                    },
+                    "isRequired": true,
+                    "uiSchema": {
+                      "ui:title": "",
+                      "ui:description": "",
+                      "ui:options": {
+                        "isTab": true
+                      }
+                    }
+                  },
+                  "_store": {}
+                }
+              },
+              "_store": {}
+            },
+            {
+              "type": "[function]",
+              "key": "test.foo",
+              "props": {
+                "tab": {
+                  "props": {
+                    "children": [
+                      "Foo",
+                      false
+                    ]
+                  },
+                  "_store": {}
+                },
+                "forceRender": true,
+                "children": {
+                  "type": "SchemaField",
+                  "ref": "ref",
+                  "props": {
+                    "id": "test.foo",
+                    "schema": {
+                      "title": "Foo",
+                      "type": [
+                        "array"
+                      ],
+                      "items": {
+                        "title": "Foo array item",
+                        "type": [
+                          "string"
+                        ]
+                      }
+                    },
+                    "isRequired": false,
+                    "uiSchema": {
+                      "ui:title": "",
+                      "ui:description": "",
+                      "ui:options": {
+                        "isTab": true
+                      }
+                    }
+                  },
+                  "_store": {}
+                }
+              },
+              "_store": {}
+            }
+          ],
+          "type": "card"
+        },
+        "key": "tabs",
+        "rendered": [
+          {
+            "nodeType": "class",
+            "type": "[function]",
+            "props": {
+              "tab": {
+                "props": {
+                  "children": [
+                    "Bar",
+                    {
+                      "type": "Asterisk",
+                      "props": {},
+                      "_store": {}
+                    }
+                  ]
+                },
+                "_store": {}
+              },
+              "forceRender": true,
+              "children": {
+                "type": "SchemaField",
+                "ref": "ref",
+                "props": {
+                  "id": "test.bar",
+                  "schema": {
+                    "title": "Bar",
+                    "type": [
+                      "object",
+                      "null"
+                    ],
+                    "properties": {
+                      "foz": {
+                        "title": "Foz",
+                        "type": [
+                          "number"
+                        ]
+                      }
+                    },
+                    "propertiesOrder": [
+                      "foz"
+                    ]
+                  },
+                  "isRequired": true,
+                  "uiSchema": {
+                    "ui:title": "",
+                    "ui:description": "",
+                    "ui:options": {
+                      "isTab": true
+                    }
+                  }
+                },
+                "_store": {}
+              }
+            },
+            "key": "test.bar",
+            "rendered": {
+              "nodeType": "class",
+              "type": "SchemaField",
+              "props": {
+                "id": "test.bar",
+                "schema": {
+                  "title": "Bar",
+                  "type": [
+                    "object",
+                    "null"
+                  ],
+                  "properties": {
+                    "foz": {
+                      "title": "Foz",
+                      "type": [
+                        "number"
+                      ]
+                    }
+                  },
+                  "propertiesOrder": [
+                    "foz"
+                  ]
+                },
+                "isRequired": true,
+                "uiSchema": {
+                  "ui:title": "",
+                  "ui:description": "",
+                  "ui:options": {
+                    "isTab": true
+                  }
+                }
+              },
+              "ref": "ref"
+            }
+          },
+          {
+            "nodeType": "class",
+            "type": "[function]",
+            "props": {
+              "tab": {
+                "props": {
+                  "children": [
+                    "Foo",
+                    false
+                  ]
+                },
+                "_store": {}
+              },
+              "forceRender": true,
+              "children": {
+                "type": "SchemaField",
+                "ref": "ref",
+                "props": {
+                  "id": "test.foo",
+                  "schema": {
+                    "title": "Foo",
+                    "type": [
+                      "array"
+                    ],
+                    "items": {
+                      "title": "Foo array item",
+                      "type": [
+                        "string"
+                      ]
+                    }
+                  },
+                  "isRequired": false,
+                  "uiSchema": {
+                    "ui:title": "",
+                    "ui:description": "",
+                    "ui:options": {
+                      "isTab": true
+                    }
+                  }
+                },
+                "_store": {}
+              }
+            },
+            "key": "test.foo",
+            "rendered": {
+              "nodeType": "class",
+              "type": "SchemaField",
+              "props": {
+                "id": "test.foo",
+                "schema": {
+                  "title": "Foo",
+                  "type": [
+                    "array"
+                  ],
+                  "items": {
+                    "title": "Foo array item",
+                    "type": [
+                      "string"
+                    ]
+                  }
+                },
+                "isRequired": false,
+                "uiSchema": {
+                  "ui:title": "",
+                  "ui:description": "",
+                  "ui:options": {
+                    "isTab": true
+                  }
+                }
+              },
+              "ref": "ref"
+            }
+          }
+        ]
+      },
+      "type": "Tabs",
+      "props": {
+        "type": "card",
+        "key": "tabs"
+      },
+      "children": [
+        {
+          "node": {
+            "nodeType": "class",
+            "type": "[function]",
+            "props": {
+              "tab": {
+                "props": {
+                  "children": [
+                    "Bar",
+                    {
+                      "type": "Asterisk",
+                      "props": {},
+                      "_store": {}
+                    }
+                  ]
+                },
+                "_store": {}
+              },
+              "forceRender": true,
+              "children": {
+                "type": "SchemaField",
+                "ref": "ref",
+                "props": {
+                  "id": "test.bar",
+                  "schema": {
+                    "title": "Bar",
+                    "type": [
+                      "object",
+                      "null"
+                    ],
+                    "properties": {
+                      "foz": {
+                        "title": "Foz",
+                        "type": [
+                          "number"
+                        ]
+                      }
+                    },
+                    "propertiesOrder": [
+                      "foz"
+                    ]
+                  },
+                  "isRequired": true,
+                  "uiSchema": {
+                    "ui:title": "",
+                    "ui:description": "",
+                    "ui:options": {
+                      "isTab": true
+                    }
+                  }
+                },
+                "_store": {}
+              }
+            },
+            "key": "test.bar",
+            "rendered": {
+              "nodeType": "class",
+              "type": "SchemaField",
+              "props": {
+                "id": "test.bar",
+                "schema": {
+                  "title": "Bar",
+                  "type": [
+                    "object",
+                    "null"
+                  ],
+                  "properties": {
+                    "foz": {
+                      "title": "Foz",
+                      "type": [
+                        "number"
+                      ]
+                    }
+                  },
+                  "propertiesOrder": [
+                    "foz"
+                  ]
+                },
+                "isRequired": true,
+                "uiSchema": {
+                  "ui:title": "",
+                  "ui:description": "",
+                  "ui:options": {
+                    "isTab": true
+                  }
+                }
+              },
+              "ref": "ref"
+            }
+          },
+          "type": "TabPane",
+          "props": {
+            "tab": {
+              "props": {
+                "children": [
+                  "Bar",
+                  {
+                    "type": "Asterisk",
+                    "props": {},
+                    "_store": {}
+                  }
+                ]
+              },
+              "_store": {}
+            },
+            "forceRender": true,
+            "key": "test.bar"
+          },
+          "children": [
+            {
+              "node": {
+                "nodeType": "class",
+                "type": "SchemaField",
+                "props": {
+                  "id": "test.bar",
+                  "schema": {
+                    "title": "Bar",
+                    "type": [
+                      "object",
+                      "null"
+                    ],
+                    "properties": {
+                      "foz": {
+                        "title": "Foz",
+                        "type": [
+                          "number"
+                        ]
+                      }
+                    },
+                    "propertiesOrder": [
+                      "foz"
+                    ]
+                  },
+                  "isRequired": true,
+                  "uiSchema": {
+                    "ui:title": "",
+                    "ui:description": "",
+                    "ui:options": {
+                      "isTab": true
+                    }
+                  }
+                },
+                "ref": "ref"
+              },
+              "type": "SchemaField",
+              "props": {
+                "id": "test.bar",
+                "schema": {
+                  "title": "Bar",
+                  "type": [
+                    "object",
+                    "null"
+                  ],
+                  "properties": {
+                    "foz": {
+                      "title": "Foz",
+                      "type": [
+                        "number"
+                      ]
+                    }
+                  },
+                  "propertiesOrder": [
+                    "foz"
+                  ]
+                },
+                "isRequired": true,
+                "uiSchema": {
+                  "ui:title": "",
+                  "ui:description": "",
+                  "ui:options": {
+                    "isTab": true
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "node": {
+            "nodeType": "class",
+            "type": "[function]",
+            "props": {
+              "tab": {
+                "props": {
+                  "children": [
+                    "Foo",
+                    false
+                  ]
+                },
+                "_store": {}
+              },
+              "forceRender": true,
+              "children": {
+                "type": "SchemaField",
+                "ref": "ref",
+                "props": {
+                  "id": "test.foo",
+                  "schema": {
+                    "title": "Foo",
+                    "type": [
+                      "array"
+                    ],
+                    "items": {
+                      "title": "Foo array item",
+                      "type": [
+                        "string"
+                      ]
+                    }
+                  },
+                  "isRequired": false,
+                  "uiSchema": {
+                    "ui:title": "",
+                    "ui:description": "",
+                    "ui:options": {
+                      "isTab": true
+                    }
+                  }
+                },
+                "_store": {}
+              }
+            },
+            "key": "test.foo",
+            "rendered": {
+              "nodeType": "class",
+              "type": "SchemaField",
+              "props": {
+                "id": "test.foo",
+                "schema": {
+                  "title": "Foo",
+                  "type": [
+                    "array"
+                  ],
+                  "items": {
+                    "title": "Foo array item",
+                    "type": [
+                      "string"
+                    ]
+                  }
+                },
+                "isRequired": false,
+                "uiSchema": {
+                  "ui:title": "",
+                  "ui:description": "",
+                  "ui:options": {
+                    "isTab": true
+                  }
+                }
+              },
+              "ref": "ref"
+            }
+          },
+          "type": "TabPane",
+          "props": {
+            "tab": {
+              "props": {
+                "children": [
+                  "Foo",
+                  false
+                ]
+              },
+              "_store": {}
+            },
+            "forceRender": true,
+            "key": "test.foo"
+          },
+          "children": [
+            {
+              "node": {
+                "nodeType": "class",
+                "type": "SchemaField",
+                "props": {
+                  "id": "test.foo",
+                  "schema": {
+                    "title": "Foo",
+                    "type": [
+                      "array"
+                    ],
+                    "items": {
+                      "title": "Foo array item",
+                      "type": [
+                        "string"
+                      ]
+                    }
+                  },
+                  "isRequired": false,
+                  "uiSchema": {
+                    "ui:title": "",
+                    "ui:description": "",
+                    "ui:options": {
+                      "isTab": true
+                    }
+                  }
+                },
+                "ref": "ref"
+              },
+              "type": "SchemaField",
+              "props": {
+                "id": "test.foo",
+                "schema": {
+                  "title": "Foo",
+                  "type": [
+                    "array"
+                  ],
+                  "items": {
+                    "title": "Foo array item",
+                    "type": [
+                      "string"
+                    ]
+                  }
+                },
+                "isRequired": false,
+                "uiSchema": {
+                  "ui:title": "",
+                  "ui:description": "",
+                  "ui:options": {
+                    "isTab": true
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+};
+
+exports["should match snapshot with data passed by props(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "type": "Fieldset",
+    "props": {
+      "id": "test",
+      "children": [
+        false,
+        [
+          {
+            "type": "SchemaField",
+            "key": "test.bar",
+            "ref": "ref",
+            "props": {
+              "id": "test.bar",
+              "schema": {
+                "title": "Bar",
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "foz": {
+                    "title": "Foz",
+                    "type": [
+                      "number"
+                    ]
+                  }
+                },
+                "propertiesOrder": [
+                  "foz"
+                ]
+              },
+              "isRequired": false,
+              "uiSchema": {}
+            },
+            "_store": {}
+          },
+          {
+            "type": "SchemaField",
+            "key": "test.foo",
+            "ref": "ref",
+            "props": {
+              "id": "test.foo",
+              "schema": {
+                "title": "Foo",
+                "type": [
+                  "string"
+                ]
+              },
+              "isRequired": false,
+              "value": "test",
+              "uiSchema": {}
+            },
+            "_store": {}
+          }
+        ]
+      ]
+    },
+    "rendered": [
+      false,
+      {
+        "nodeType": "class",
+        "type": "SchemaField",
+        "props": {
+          "id": "test.bar",
+          "schema": {
+            "title": "Bar",
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "foz": {
+                "title": "Foz",
+                "type": [
+                  "number"
+                ]
+              }
+            },
+            "propertiesOrder": [
+              "foz"
+            ]
+          },
+          "isRequired": false,
+          "uiSchema": {}
+        },
+        "key": "test.bar",
+        "ref": "ref"
+      },
+      {
+        "nodeType": "class",
+        "type": "SchemaField",
+        "props": {
+          "id": "test.foo",
+          "schema": {
+            "title": "Foo",
+            "type": [
+              "string"
+            ]
+          },
+          "isRequired": false,
+          "value": "test",
+          "uiSchema": {}
+        },
+        "key": "test.foo",
+        "ref": "ref"
+      }
+    ]
+  },
+  "type": "Fieldset",
+  "props": {
+    "id": "test"
+  },
+  "children": [
+    {
+      "node": {
+        "nodeType": "class",
+        "type": "SchemaField",
+        "props": {
+          "id": "test.bar",
+          "schema": {
+            "title": "Bar",
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "foz": {
+                "title": "Foz",
+                "type": [
+                  "number"
+                ]
+              }
+            },
+            "propertiesOrder": [
+              "foz"
+            ]
+          },
+          "isRequired": false,
+          "uiSchema": {}
+        },
+        "key": "test.bar",
+        "ref": "ref"
+      },
+      "type": "SchemaField",
+      "props": {
+        "id": "test.bar",
+        "schema": {
+          "title": "Bar",
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "foz": {
+              "title": "Foz",
+              "type": [
+                "number"
+              ]
+            }
+          },
+          "propertiesOrder": [
+            "foz"
+          ]
+        },
+        "isRequired": false,
+        "uiSchema": {},
+        "key": "test.bar"
+      }
+    },
+    {
+      "node": {
+        "nodeType": "class",
+        "type": "SchemaField",
+        "props": {
+          "id": "test.foo",
+          "schema": {
+            "title": "Foo",
+            "type": [
+              "string"
+            ]
+          },
+          "isRequired": false,
+          "value": "test",
+          "uiSchema": {}
+        },
+        "key": "test.foo",
+        "ref": "ref"
+      },
+      "type": "SchemaField",
+      "props": {
+        "id": "test.foo",
+        "schema": {
+          "title": "Foo",
+          "type": [
+            "string"
+          ]
+        },
+        "isRequired": false,
+        "value": "test",
+        "uiSchema": {},
+        "key": "test.foo"
+      }
+    }
+  ]
+};
+
+exports["should match snapshot with tabs(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "type": "Fieldset",
+    "props": {
+      "id": "test",
+      "children": [
+        false,
+        [
+          {
+            "type": "Tabs",
+            "key": "tabs",
+            "props": {
+              "children": [
+                {
+                  "type": "[function]",
+                  "key": "test.bar",
+                  "props": {
+                    "tab": {
+                      "props": {
+                        "children": [
+                          "Bar",
+                          false
+                        ]
+                      },
+                      "_store": {}
+                    },
+                    "forceRender": true,
+                    "children": {
+                      "type": "SchemaField",
+                      "ref": "ref",
+                      "props": {
+                        "id": "test.bar",
+                        "schema": {
+                          "title": "Bar",
+                          "type": [
+                            "object"
+                          ],
+                          "properties": {
+                            "baz": {
+                              "title": "Baz",
+                              "type": [
+                                "number"
+                              ]
+                            }
+                          },
+                          "propertiesOrder": [
+                            "baz"
+                          ]
+                        },
+                        "isRequired": false,
+                        "uiSchema": {
+                          "ui:title": "",
+                          "ui:description": "",
+                          "ui:options": {
+                            "isTab": true
+                          }
+                        }
+                      },
+                      "_store": {}
+                    }
+                  },
+                  "_store": {}
+                },
+                {
+                  "type": "[function]",
+                  "key": "test.foo",
+                  "props": {
+                    "tab": {
+                      "props": {
+                        "children": [
+                          "Foo",
+                          false
+                        ]
+                      },
+                      "_store": {}
+                    },
+                    "forceRender": true,
+                    "children": {
+                      "type": "SchemaField",
+                      "ref": "ref",
+                      "props": {
+                        "id": "test.foo",
+                        "schema": {
+                          "title": "Foo",
+                          "type": [
+                            "object"
+                          ],
+                          "properties": {
+                            "foz": {
+                              "title": "Foz",
+                              "type": [
+                                "number"
+                              ]
+                            }
+                          },
+                          "propertiesOrder": [
+                            "foz"
+                          ]
+                        },
+                        "isRequired": false,
+                        "uiSchema": {
+                          "ui:title": "",
+                          "ui:description": "",
+                          "ui:options": {
+                            "isTab": true
+                          }
+                        }
+                      },
+                      "_store": {}
+                    }
+                  },
+                  "_store": {}
+                }
+              ],
+              "type": "card"
+            },
+            "_store": {}
+          }
+        ]
+      ]
+    },
+    "rendered": [
+      false,
+      {
+        "nodeType": "class",
+        "type": "Tabs",
+        "props": {
+          "children": [
+            {
+              "type": "[function]",
+              "key": "test.bar",
+              "props": {
+                "tab": {
+                  "props": {
+                    "children": [
+                      "Bar",
+                      false
+                    ]
+                  },
+                  "_store": {}
+                },
+                "forceRender": true,
+                "children": {
+                  "type": "SchemaField",
+                  "ref": "ref",
+                  "props": {
+                    "id": "test.bar",
+                    "schema": {
+                      "title": "Bar",
+                      "type": [
+                        "object"
+                      ],
+                      "properties": {
+                        "baz": {
+                          "title": "Baz",
+                          "type": [
+                            "number"
+                          ]
+                        }
+                      },
+                      "propertiesOrder": [
+                        "baz"
+                      ]
+                    },
+                    "isRequired": false,
+                    "uiSchema": {
+                      "ui:title": "",
+                      "ui:description": "",
+                      "ui:options": {
+                        "isTab": true
+                      }
+                    }
+                  },
+                  "_store": {}
+                }
+              },
+              "_store": {}
+            },
+            {
+              "type": "[function]",
+              "key": "test.foo",
+              "props": {
+                "tab": {
+                  "props": {
+                    "children": [
+                      "Foo",
+                      false
+                    ]
+                  },
+                  "_store": {}
+                },
+                "forceRender": true,
+                "children": {
+                  "type": "SchemaField",
+                  "ref": "ref",
+                  "props": {
+                    "id": "test.foo",
+                    "schema": {
+                      "title": "Foo",
+                      "type": [
+                        "object"
+                      ],
+                      "properties": {
+                        "foz": {
+                          "title": "Foz",
+                          "type": [
+                            "number"
+                          ]
+                        }
+                      },
+                      "propertiesOrder": [
+                        "foz"
+                      ]
+                    },
+                    "isRequired": false,
+                    "uiSchema": {
+                      "ui:title": "",
+                      "ui:description": "",
+                      "ui:options": {
+                        "isTab": true
+                      }
+                    }
+                  },
+                  "_store": {}
+                }
+              },
+              "_store": {}
+            }
+          ],
+          "type": "card"
+        },
+        "key": "tabs",
+        "rendered": [
+          {
+            "nodeType": "class",
+            "type": "[function]",
+            "props": {
+              "tab": {
+                "props": {
+                  "children": [
+                    "Bar",
+                    false
+                  ]
+                },
+                "_store": {}
+              },
+              "forceRender": true,
+              "children": {
+                "type": "SchemaField",
+                "ref": "ref",
+                "props": {
+                  "id": "test.bar",
+                  "schema": {
+                    "title": "Bar",
+                    "type": [
+                      "object"
+                    ],
+                    "properties": {
+                      "baz": {
+                        "title": "Baz",
+                        "type": [
+                          "number"
+                        ]
+                      }
+                    },
+                    "propertiesOrder": [
+                      "baz"
+                    ]
+                  },
+                  "isRequired": false,
+                  "uiSchema": {
+                    "ui:title": "",
+                    "ui:description": "",
+                    "ui:options": {
+                      "isTab": true
+                    }
+                  }
+                },
+                "_store": {}
+              }
+            },
+            "key": "test.bar",
+            "rendered": {
+              "nodeType": "class",
+              "type": "SchemaField",
+              "props": {
+                "id": "test.bar",
+                "schema": {
+                  "title": "Bar",
+                  "type": [
+                    "object"
+                  ],
+                  "properties": {
+                    "baz": {
+                      "title": "Baz",
+                      "type": [
+                        "number"
+                      ]
+                    }
+                  },
+                  "propertiesOrder": [
+                    "baz"
+                  ]
+                },
+                "isRequired": false,
+                "uiSchema": {
+                  "ui:title": "",
+                  "ui:description": "",
+                  "ui:options": {
+                    "isTab": true
+                  }
+                }
+              },
+              "ref": "ref"
+            }
+          },
+          {
+            "nodeType": "class",
+            "type": "[function]",
+            "props": {
+              "tab": {
+                "props": {
+                  "children": [
+                    "Foo",
+                    false
+                  ]
+                },
+                "_store": {}
+              },
+              "forceRender": true,
+              "children": {
+                "type": "SchemaField",
+                "ref": "ref",
+                "props": {
+                  "id": "test.foo",
+                  "schema": {
+                    "title": "Foo",
+                    "type": [
+                      "object"
+                    ],
+                    "properties": {
+                      "foz": {
+                        "title": "Foz",
+                        "type": [
+                          "number"
+                        ]
+                      }
+                    },
+                    "propertiesOrder": [
+                      "foz"
+                    ]
+                  },
+                  "isRequired": false,
+                  "uiSchema": {
+                    "ui:title": "",
+                    "ui:description": "",
+                    "ui:options": {
+                      "isTab": true
+                    }
+                  }
+                },
+                "_store": {}
+              }
+            },
+            "key": "test.foo",
+            "rendered": {
+              "nodeType": "class",
+              "type": "SchemaField",
+              "props": {
+                "id": "test.foo",
+                "schema": {
+                  "title": "Foo",
+                  "type": [
+                    "object"
+                  ],
+                  "properties": {
+                    "foz": {
+                      "title": "Foz",
+                      "type": [
+                        "number"
+                      ]
+                    }
+                  },
+                  "propertiesOrder": [
+                    "foz"
+                  ]
+                },
+                "isRequired": false,
+                "uiSchema": {
+                  "ui:title": "",
+                  "ui:description": "",
+                  "ui:options": {
+                    "isTab": true
+                  }
+                }
+              },
+              "ref": "ref"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "type": "Fieldset",
+  "props": {
+    "id": "test"
+  },
+  "children": [
+    {
+      "node": {
+        "nodeType": "class",
+        "type": "Tabs",
+        "props": {
+          "children": [
+            {
+              "type": "[function]",
+              "key": "test.bar",
+              "props": {
+                "tab": {
+                  "props": {
+                    "children": [
+                      "Bar",
+                      false
+                    ]
+                  },
+                  "_store": {}
+                },
+                "forceRender": true,
+                "children": {
+                  "type": "SchemaField",
+                  "ref": "ref",
+                  "props": {
+                    "id": "test.bar",
+                    "schema": {
+                      "title": "Bar",
+                      "type": [
+                        "object"
+                      ],
+                      "properties": {
+                        "baz": {
+                          "title": "Baz",
+                          "type": [
+                            "number"
+                          ]
+                        }
+                      },
+                      "propertiesOrder": [
+                        "baz"
+                      ]
+                    },
+                    "isRequired": false,
+                    "uiSchema": {
+                      "ui:title": "",
+                      "ui:description": "",
+                      "ui:options": {
+                        "isTab": true
+                      }
+                    }
+                  },
+                  "_store": {}
+                }
+              },
+              "_store": {}
+            },
+            {
+              "type": "[function]",
+              "key": "test.foo",
+              "props": {
+                "tab": {
+                  "props": {
+                    "children": [
+                      "Foo",
+                      false
+                    ]
+                  },
+                  "_store": {}
+                },
+                "forceRender": true,
+                "children": {
+                  "type": "SchemaField",
+                  "ref": "ref",
+                  "props": {
+                    "id": "test.foo",
+                    "schema": {
+                      "title": "Foo",
+                      "type": [
+                        "object"
+                      ],
+                      "properties": {
+                        "foz": {
+                          "title": "Foz",
+                          "type": [
+                            "number"
+                          ]
+                        }
+                      },
+                      "propertiesOrder": [
+                        "foz"
+                      ]
+                    },
+                    "isRequired": false,
+                    "uiSchema": {
+                      "ui:title": "",
+                      "ui:description": "",
+                      "ui:options": {
+                        "isTab": true
+                      }
+                    }
+                  },
+                  "_store": {}
+                }
+              },
+              "_store": {}
+            }
+          ],
+          "type": "card"
+        },
+        "key": "tabs",
+        "rendered": [
+          {
+            "nodeType": "class",
+            "type": "[function]",
+            "props": {
+              "tab": {
+                "props": {
+                  "children": [
+                    "Bar",
+                    false
+                  ]
+                },
+                "_store": {}
+              },
+              "forceRender": true,
+              "children": {
+                "type": "SchemaField",
+                "ref": "ref",
+                "props": {
+                  "id": "test.bar",
+                  "schema": {
+                    "title": "Bar",
+                    "type": [
+                      "object"
+                    ],
+                    "properties": {
+                      "baz": {
+                        "title": "Baz",
+                        "type": [
+                          "number"
+                        ]
+                      }
+                    },
+                    "propertiesOrder": [
+                      "baz"
+                    ]
+                  },
+                  "isRequired": false,
+                  "uiSchema": {
+                    "ui:title": "",
+                    "ui:description": "",
+                    "ui:options": {
+                      "isTab": true
+                    }
+                  }
+                },
+                "_store": {}
+              }
+            },
+            "key": "test.bar",
+            "rendered": {
+              "nodeType": "class",
+              "type": "SchemaField",
+              "props": {
+                "id": "test.bar",
+                "schema": {
+                  "title": "Bar",
+                  "type": [
+                    "object"
+                  ],
+                  "properties": {
+                    "baz": {
+                      "title": "Baz",
+                      "type": [
+                        "number"
+                      ]
+                    }
+                  },
+                  "propertiesOrder": [
+                    "baz"
+                  ]
+                },
+                "isRequired": false,
+                "uiSchema": {
+                  "ui:title": "",
+                  "ui:description": "",
+                  "ui:options": {
+                    "isTab": true
+                  }
+                }
+              },
+              "ref": "ref"
+            }
+          },
+          {
+            "nodeType": "class",
+            "type": "[function]",
+            "props": {
+              "tab": {
+                "props": {
+                  "children": [
+                    "Foo",
+                    false
+                  ]
+                },
+                "_store": {}
+              },
+              "forceRender": true,
+              "children": {
+                "type": "SchemaField",
+                "ref": "ref",
+                "props": {
+                  "id": "test.foo",
+                  "schema": {
+                    "title": "Foo",
+                    "type": [
+                      "object"
+                    ],
+                    "properties": {
+                      "foz": {
+                        "title": "Foz",
+                        "type": [
+                          "number"
+                        ]
+                      }
+                    },
+                    "propertiesOrder": [
+                      "foz"
+                    ]
+                  },
+                  "isRequired": false,
+                  "uiSchema": {
+                    "ui:title": "",
+                    "ui:description": "",
+                    "ui:options": {
+                      "isTab": true
+                    }
+                  }
+                },
+                "_store": {}
+              }
+            },
+            "key": "test.foo",
+            "rendered": {
+              "nodeType": "class",
+              "type": "SchemaField",
+              "props": {
+                "id": "test.foo",
+                "schema": {
+                  "title": "Foo",
+                  "type": [
+                    "object"
+                  ],
+                  "properties": {
+                    "foz": {
+                      "title": "Foz",
+                      "type": [
+                        "number"
+                      ]
+                    }
+                  },
+                  "propertiesOrder": [
+                    "foz"
+                  ]
+                },
+                "isRequired": false,
+                "uiSchema": {
+                  "ui:title": "",
+                  "ui:description": "",
+                  "ui:options": {
+                    "isTab": true
+                  }
+                }
+              },
+              "ref": "ref"
+            }
+          }
+        ]
+      },
+      "type": "Tabs",
+      "props": {
+        "type": "card",
+        "key": "tabs"
+      },
+      "children": [
+        {
+          "node": {
+            "nodeType": "class",
+            "type": "[function]",
+            "props": {
+              "tab": {
+                "props": {
+                  "children": [
+                    "Bar",
+                    false
+                  ]
+                },
+                "_store": {}
+              },
+              "forceRender": true,
+              "children": {
+                "type": "SchemaField",
+                "ref": "ref",
+                "props": {
+                  "id": "test.bar",
+                  "schema": {
+                    "title": "Bar",
+                    "type": [
+                      "object"
+                    ],
+                    "properties": {
+                      "baz": {
+                        "title": "Baz",
+                        "type": [
+                          "number"
+                        ]
+                      }
+                    },
+                    "propertiesOrder": [
+                      "baz"
+                    ]
+                  },
+                  "isRequired": false,
+                  "uiSchema": {
+                    "ui:title": "",
+                    "ui:description": "",
+                    "ui:options": {
+                      "isTab": true
+                    }
+                  }
+                },
+                "_store": {}
+              }
+            },
+            "key": "test.bar",
+            "rendered": {
+              "nodeType": "class",
+              "type": "SchemaField",
+              "props": {
+                "id": "test.bar",
+                "schema": {
+                  "title": "Bar",
+                  "type": [
+                    "object"
+                  ],
+                  "properties": {
+                    "baz": {
+                      "title": "Baz",
+                      "type": [
+                        "number"
+                      ]
+                    }
+                  },
+                  "propertiesOrder": [
+                    "baz"
+                  ]
+                },
+                "isRequired": false,
+                "uiSchema": {
+                  "ui:title": "",
+                  "ui:description": "",
+                  "ui:options": {
+                    "isTab": true
+                  }
+                }
+              },
+              "ref": "ref"
+            }
+          },
+          "type": "TabPane",
+          "props": {
+            "tab": {
+              "props": {
+                "children": [
+                  "Bar",
+                  false
+                ]
+              },
+              "_store": {}
+            },
+            "forceRender": true,
+            "key": "test.bar"
+          },
+          "children": [
+            {
+              "node": {
+                "nodeType": "class",
+                "type": "SchemaField",
+                "props": {
+                  "id": "test.bar",
+                  "schema": {
+                    "title": "Bar",
+                    "type": [
+                      "object"
+                    ],
+                    "properties": {
+                      "baz": {
+                        "title": "Baz",
+                        "type": [
+                          "number"
+                        ]
+                      }
+                    },
+                    "propertiesOrder": [
+                      "baz"
+                    ]
+                  },
+                  "isRequired": false,
+                  "uiSchema": {
+                    "ui:title": "",
+                    "ui:description": "",
+                    "ui:options": {
+                      "isTab": true
+                    }
+                  }
+                },
+                "ref": "ref"
+              },
+              "type": "SchemaField",
+              "props": {
+                "id": "test.bar",
+                "schema": {
+                  "title": "Bar",
+                  "type": [
+                    "object"
+                  ],
+                  "properties": {
+                    "baz": {
+                      "title": "Baz",
+                      "type": [
+                        "number"
+                      ]
+                    }
+                  },
+                  "propertiesOrder": [
+                    "baz"
+                  ]
+                },
+                "isRequired": false,
+                "uiSchema": {
+                  "ui:title": "",
+                  "ui:description": "",
+                  "ui:options": {
+                    "isTab": true
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "node": {
+            "nodeType": "class",
+            "type": "[function]",
+            "props": {
+              "tab": {
+                "props": {
+                  "children": [
+                    "Foo",
+                    false
+                  ]
+                },
+                "_store": {}
+              },
+              "forceRender": true,
+              "children": {
+                "type": "SchemaField",
+                "ref": "ref",
+                "props": {
+                  "id": "test.foo",
+                  "schema": {
+                    "title": "Foo",
+                    "type": [
+                      "object"
+                    ],
+                    "properties": {
+                      "foz": {
+                        "title": "Foz",
+                        "type": [
+                          "number"
+                        ]
+                      }
+                    },
+                    "propertiesOrder": [
+                      "foz"
+                    ]
+                  },
+                  "isRequired": false,
+                  "uiSchema": {
+                    "ui:title": "",
+                    "ui:description": "",
+                    "ui:options": {
+                      "isTab": true
+                    }
+                  }
+                },
+                "_store": {}
+              }
+            },
+            "key": "test.foo",
+            "rendered": {
+              "nodeType": "class",
+              "type": "SchemaField",
+              "props": {
+                "id": "test.foo",
+                "schema": {
+                  "title": "Foo",
+                  "type": [
+                    "object"
+                  ],
+                  "properties": {
+                    "foz": {
+                      "title": "Foz",
+                      "type": [
+                        "number"
+                      ]
+                    }
+                  },
+                  "propertiesOrder": [
+                    "foz"
+                  ]
+                },
+                "isRequired": false,
+                "uiSchema": {
+                  "ui:title": "",
+                  "ui:description": "",
+                  "ui:options": {
+                    "isTab": true
+                  }
+                }
+              },
+              "ref": "ref"
+            }
+          },
+          "type": "TabPane",
+          "props": {
+            "tab": {
+              "props": {
+                "children": [
+                  "Foo",
+                  false
+                ]
+              },
+              "_store": {}
+            },
+            "forceRender": true,
+            "key": "test.foo"
+          },
+          "children": [
+            {
+              "node": {
+                "nodeType": "class",
+                "type": "SchemaField",
+                "props": {
+                  "id": "test.foo",
+                  "schema": {
+                    "title": "Foo",
+                    "type": [
+                      "object"
+                    ],
+                    "properties": {
+                      "foz": {
+                        "title": "Foz",
+                        "type": [
+                          "number"
+                        ]
+                      }
+                    },
+                    "propertiesOrder": [
+                      "foz"
+                    ]
+                  },
+                  "isRequired": false,
+                  "uiSchema": {
+                    "ui:title": "",
+                    "ui:description": "",
+                    "ui:options": {
+                      "isTab": true
+                    }
+                  }
+                },
+                "ref": "ref"
+              },
+              "type": "SchemaField",
+              "props": {
+                "id": "test.foo",
+                "schema": {
+                  "title": "Foo",
+                  "type": [
+                    "object"
+                  ],
+                  "properties": {
+                    "foz": {
+                      "title": "Foz",
+                      "type": [
+                        "number"
+                      ]
+                    }
+                  },
+                  "propertiesOrder": [
+                    "foz"
+                  ]
+                },
+                "isRequired": false,
+                "uiSchema": {
+                  "ui:title": "",
+                  "ui:description": "",
+                  "ui:options": {
+                    "isTab": true
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+};
+

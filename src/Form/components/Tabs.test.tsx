@@ -13,7 +13,6 @@ describe('<Tabs/>', () => {
     const wrapper = shallow(
       <Tabs
         activeTabKey="key0"
-        onAddTab={() => 'foo'}
         onChangeTab={() => 'bar'}
         onEditTab={() => 'baz'}
       >

@@ -1,0 +1,117 @@
+exports["should match snapshot(0)"] = {
+  "node": {
+    "nodeType": "host",
+    "type": "div",
+    "props": {
+      "className": "card",
+      "children": {
+        "type": "Tabs",
+        "props": {
+          "type": "card",
+          "onEdit": "onEditTab",
+          "hideAdd": true,
+          "activeKey": "key0",
+          "onChange": "onChangeTab",
+          "children": {
+            "type": "span",
+            "props": {
+              "children": "Test"
+            },
+            "_store": {}
+          },
+          "prefixCls": "ant-tabs"
+        },
+        "_store": {}
+      }
+    },
+    "rendered": {
+      "nodeType": "class",
+      "type": "Tabs",
+      "props": {
+        "type": "card",
+        "onEdit": "onEditTab",
+        "hideAdd": true,
+        "activeKey": "key0",
+        "onChange": "onChangeTab",
+        "children": {
+          "type": "span",
+          "props": {
+            "children": "Test"
+          },
+          "_store": {}
+        },
+        "prefixCls": "ant-tabs"
+      },
+      "rendered": {
+        "nodeType": "host",
+        "type": "span",
+        "props": {
+          "children": "Test"
+        },
+        "rendered": "Test"
+      }
+    }
+  },
+  "type": "div",
+  "props": {
+    "className": "card"
+  },
+  "children": [
+    {
+      "node": {
+        "nodeType": "class",
+        "type": "Tabs",
+        "props": {
+          "type": "card",
+          "onEdit": "onEditTab",
+          "hideAdd": true,
+          "activeKey": "key0",
+          "onChange": "onChangeTab",
+          "children": {
+            "type": "span",
+            "props": {
+              "children": "Test"
+            },
+            "_store": {}
+          },
+          "prefixCls": "ant-tabs"
+        },
+        "rendered": {
+          "nodeType": "host",
+          "type": "span",
+          "props": {
+            "children": "Test"
+          },
+          "rendered": "Test"
+        }
+      },
+      "type": "Tabs",
+      "props": {
+        "type": "card",
+        "onEdit": "onEditTab",
+        "hideAdd": true,
+        "activeKey": "key0",
+        "onChange": "onChangeTab",
+        "prefixCls": "ant-tabs"
+      },
+      "children": [
+        {
+          "node": {
+            "nodeType": "host",
+            "type": "span",
+            "props": {
+              "children": "Test"
+            },
+            "rendered": "Test"
+          },
+          "type": "span",
+          "props": {},
+          "children": [
+            "Test"
+          ]
+        }
+      ]
+    }
+  ]
+};
+

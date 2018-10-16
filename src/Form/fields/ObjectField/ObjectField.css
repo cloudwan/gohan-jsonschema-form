@@ -1,0 +1,8 @@
+.toggleButton {
+  width: 100%;
+  margin-bottom: 0.625rem;
+}
+
+:global(.card-container > .ant-tabs-card > .ant-tabs-content) > .tab {
+  padding-top: 0.625rem;
+}

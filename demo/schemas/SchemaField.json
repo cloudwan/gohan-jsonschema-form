@@ -2,6 +2,16 @@
   "id": "schemaField",
   "title": "Schema field select widgets",
   "schema": {
+    "propertiesOrder": [
+      "test1",
+      "test2",
+      "test3",
+      "test4",
+      "test5",
+      "test6",
+      "test7",
+      "test8"
+    ],
     "properties": {
       "test1": {
         "description": "UISchema Hidden field",
@@ -22,6 +32,7 @@
         "description": "object field",
         "title": "object field",
         "type": "object",
+        "propertiesOrder": ["name"],
         "properties": {
           "name": {
             "title": "name",

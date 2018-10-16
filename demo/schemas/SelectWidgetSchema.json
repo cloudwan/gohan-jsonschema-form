@@ -128,7 +128,9 @@
       "defaultSelect",
       "optionsSelect",
       "requiredSelect",
-      "nullSelect"
+      "nullSelect",
+      "multipleSelect",
+      "multipleSelectLabels"
     ],
     "required": [
       "requiredSelect"

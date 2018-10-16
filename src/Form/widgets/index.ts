@@ -3,7 +3,6 @@ import DateTimeWidget from './DateTimeWidget';
 import GeoWidget from './GeoWidget';
 import InputWidget from './InputWidget';
 import NotFoundWidget from './NotFoundWidget';
-import ObjectWidget from './ObjectWidget';
 import PasswordConfirmWidget from './PasswordConfirmWidget';
 import SelectWidget from './SelectWidget';
 import SwitchWidget from './SwitchWidget';
@@ -11,7 +10,6 @@ import UUIDWidget from './UUIDWidget';
 
 const widgets = {
   CodeEditor: CodeEditorWidget,
-  Object: ObjectWidget,
   Select: SelectWidget,
   Switch: SwitchWidget,
   Input: InputWidget,
@@ -32,7 +30,6 @@ export const selectWidget = (name: string) => {
 
 export {
   CodeEditorWidget,
-  ObjectWidget,
   SelectWidget,
   SwitchWidget,
   InputWidget,
