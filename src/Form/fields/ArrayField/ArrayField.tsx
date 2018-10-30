@@ -56,18 +56,24 @@ export class ArrayField extends React.Component<
     super(props);
 
     const items = this.props.schema.items as JSONSchema4;
+    const type: string | string[] = this.props.schema.type;
+    let value;
+
     if (items && items.type) {
-      const type: string | string[] = items.type;
-      this.isObjectArray = type.includes('object');
+      const itemType: string | string[] = items.type;
+      this.isObjectArray = itemType.includes('object');
     }
 
-    const value =
-      this.props.value === undefined
+    if (this.props.value === null && type.includes('null')) {
+      value = null;
+    } else {
+      value = !this.props.value
         ? []
         : this.props.value.map((v, i) => ({
             value: v,
             key: `${i}${new Date().valueOf()}`,
           }));
+    }
 
     this.state = {
       errors: [],
@@ -78,10 +84,16 @@ export class ArrayField extends React.Component<
 
   public get value(): any[] | null | undefined {
     const previousValue = this.props.value;
+    const type: string | string[] = this.props.schema.type;
     const {
       state: {value},
       items,
     } = this;
+
+    if ((!items || items.length === 0) && type.includes('null')) {
+      return null;
+    }
+
     const currentValue =
       value === undefined
         ? value
@@ -154,9 +166,10 @@ export class ArrayField extends React.Component<
 
   private handleAddButtonClick = (): void => {
     const items = this.props.schema.items as JSONSchema4;
-    const key = `${this.state.value.length}${new Date().valueOf()}`;
+    const currentValue = this.state.value ? this.state.value : [];
+    const key = `${currentValue.length}${new Date().valueOf()}`;
     const newState: {value: any[]; activeTabKey?: string} = {
-      value: this.state.value.concat([
+      value: currentValue.concat([
         {
           value: items.default,
           key,
@@ -276,35 +289,36 @@ export class ArrayField extends React.Component<
           onChangeTab={this.handleTabChange}
           onEditTab={this.handleTabEdit}
         >
-          {value.map((item, index) => (
-            <AntTabs.TabPane key={item.key} tab={`Item ${index + 1}`}>
-              <TabBar>
-                <TabBarButton
-                  disabled={index === 0}
-                  iconType="left"
-                  postfix="Move Left"
-                  onClick={this.handleReorderClick(index, index - 1)}
+          {value &&
+            value.map((item, index) => (
+              <AntTabs.TabPane key={item.key} tab={`Item ${index + 1}`}>
+                <TabBar>
+                  <TabBarButton
+                    disabled={index === 0}
+                    iconType="left"
+                    postfix="Move Left"
+                    onClick={this.handleReorderClick(index, index - 1)}
+                  />
+                  <TabBarButton
+                    disabled={index === value.length - 1}
+                    iconType="right"
+                    postfix="Move Right"
+                    onClick={this.handleReorderClick(index, index + 1)}
+                  />
+                </TabBar>
+                <SchemaField
+                  ref={c => {
+                    if (c) {
+                      this.items.push(c);
+                    }
+                  }}
+                  id={`${id}.${index}`}
+                  schema={schema.items}
+                  value={item.value}
+                  uiSchema={{}} // TODO
                 />
-                <TabBarButton
-                  disabled={index === value.length - 1}
-                  iconType="right"
-                  postfix="Move Right"
-                  onClick={this.handleReorderClick(index, index + 1)}
-                />
-              </TabBar>
-              <SchemaField
-                ref={c => {
-                  if (c) {
-                    this.items.push(c);
-                  }
-                }}
-                id={`${id}.${index}`}
-                schema={schema.items}
-                value={item.value}
-                uiSchema={{}} // TODO
-              />
-            </AntTabs.TabPane>
-          ))}
+              </AntTabs.TabPane>
+            ))}
         </Tabs>
       </React.Fragment>
     );

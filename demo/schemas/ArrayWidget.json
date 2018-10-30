@@ -119,6 +119,26 @@
           "create",
           "update"
         ]
+      },
+      "nullArray": {
+        "description": "Null Array Description",
+        "items": {
+          "description": "Null Array Item Description",
+          "title": "Null Array Item",
+          "type": ["string"]
+        },
+        "permission": [
+          "create",
+          "update"
+        ],
+        "title": "Null Array",
+        "type": ["array", "null"],
+        "view": [
+          "list",
+          "detail",
+          "create",
+          "update"
+        ]
       }
     },
     "propertiesOrder": [
@@ -126,7 +146,8 @@
       "defaultArrayInput",
       "requiredArrayInput",
       "normalArrayWithData",
-      "normalArraySelect"
+      "normalArraySelect",
+      "nullArray"
     ],
     "required": [
       "requiredArrayInput"
@@ -135,6 +156,7 @@
   },
   "uiSchema": {},
   "formData": {
-    "normalArrayWithData": ["bar"]
+    "normalArrayWithData": ["bar"],
+    "nullArray": null
   }
 }

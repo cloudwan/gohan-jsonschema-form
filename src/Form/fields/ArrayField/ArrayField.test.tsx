@@ -118,6 +118,23 @@ describe('<ArrayField />', () => {
       instance.value.should.deep.equal(['foo']);
     });
 
+    it('should return null', () => {
+      const wrapper = shallow(
+        <ArrayField
+          schema={{
+            items: {
+              type: 'string',
+            },
+            type: ['array', 'null'],
+          }}
+          value={null}
+        />,
+      );
+      const instance = wrapper.instance() as ArrayField;
+
+      should.equal(instance.value, null);
+    });
+
     it('should return undefined when value was not changed', () => {
       const wrapper = shallow(
         <ArrayField
