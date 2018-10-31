@@ -17,7 +17,12 @@ export const Select = ({
   placeholder = 'Not selected',
   ...props
 }: TSelectProps) => (
-  <AntSelect className={styles.select} placeholder={placeholder} {...props}>
+  <AntSelect
+    className={styles.select}
+    placeholder={placeholder}
+    getPopupContainer={() => document.getElementById('goha-jsonschema-form')}
+    {...props}
+  >
     {options.map((option, i) => (
       <Option key={i} value={option.value}>
         {option.label}

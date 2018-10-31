@@ -35,7 +35,7 @@ export class Form extends React.Component<TFormPorps> {
 
   public render(): JSX.Element {
     return (
-      <form>
+      <form id="goha-jsonschema-form">
         <FormContext.Provider value={this.props.fetcher}>
           <SchemaField
             ref={c => {

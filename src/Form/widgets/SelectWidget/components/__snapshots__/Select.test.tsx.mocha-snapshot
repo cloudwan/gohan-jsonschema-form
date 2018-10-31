@@ -4,6 +4,7 @@ exports["should match snapshot for minimal number of props(0)"] = {
     "type": "Select",
     "props": {
       "placeholder": "Not selected",
+      "getPopupContainer": "getPopupContainer",
       "children": [
         {
           "type": "Option",
@@ -74,6 +75,7 @@ exports["should match snapshot for minimal number of props(0)"] = {
   "type": "Select",
   "props": {
     "placeholder": "Not selected",
+    "getPopupContainer": "getPopupContainer",
     "prefixCls": "ant-select",
     "showSearch": false,
     "transitionName": "slide-up",
