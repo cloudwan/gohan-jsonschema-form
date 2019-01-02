@@ -1,34 +1,23 @@
+import {JSONSchema4} from 'json-schema';
 import * as React from 'react';
 
-import {IWidget} from '../../typings/IWidget';
+import {IUiSchema} from '../../typings/IUiSchema';
 import {selectField} from './';
 import Template from './Template';
 
-export default class SchemaField extends React.Component<IWidget> {
+interface IFieldProps {
+  id?: string;
+  schema: JSONSchema4;
+  uiSchema?: IUiSchema;
+  isRequired?: boolean;
+}
+
+export default class SchemaField extends React.Component<IFieldProps> {
   public static defaultProps = {
-    value: undefined,
-    id: '#',
+    id: '',
     uiSchema: {},
     isRequired: false,
   };
-
-  private field;
-
-  public get value() {
-    if (this.props.uiSchema['ui:widget'] === 'Hidden') {
-      return undefined;
-    }
-
-    return this.field.value;
-  }
-
-  public get isValid(): boolean {
-    if (this.props.uiSchema['ui:widget'] === 'Hidden') {
-      return true;
-    }
-
-    return this.field.isValid;
-  }
 
   public render(): React.ReactNode {
     const {
@@ -36,7 +25,6 @@ export default class SchemaField extends React.Component<IWidget> {
       uiSchema,
       uiSchema: {'ui:title': uiTitle, 'ui:description': uiDescription},
       isRequired,
-      value,
       id,
     } = this.props;
     const type: string | string[] = schema.type;
@@ -92,14 +80,10 @@ export default class SchemaField extends React.Component<IWidget> {
         id={id}
       >
         <Field
-          ref={c => {
-            this.field = c;
-          }}
           id={id}
           schema={schema}
           uiSchema={uiSchema}
           isRequired={isRequired}
-          value={value}
         />
       </Template>
     );

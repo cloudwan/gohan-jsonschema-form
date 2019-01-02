@@ -45,12 +45,8 @@ export default class DemoPage extends Component {
     }
   };
 
-  handleSubmit = () => {
-    console.log('is valid?', this.form.isValid);
-    this.setState({data: this.form.value});
-  };
-  handleValid = () => {
-    console.log('is valid?', this.form.isValid);
+  handleSubmit = values => {
+    this.setState({data: values});
   };
 
   handleTabChange = key => {
@@ -119,9 +115,6 @@ export default class DemoPage extends Component {
               <Form
                 schema={schema}
                 uiSchema={uiSchema}
-                ref={c => {
-                  this.form = c;
-                }}
                 formData={data}
                 fetcher={() =>
                   new Promise(resolve =>
@@ -131,15 +124,8 @@ export default class DemoPage extends Component {
                     ),
                   )
                 }
+                onSubmit={this.handleSubmit}
               />
-              <Button.Group>
-                <Button type="primary" onClick={this.handleSubmit}>
-                  Submit
-                </Button>
-                <Button type="primary" onClick={this.handleValid}>
-                  Valid
-                </Button>
-              </Button.Group>
             </div>
           </Card>
         </Col>
