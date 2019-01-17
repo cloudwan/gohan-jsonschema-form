@@ -1,19 +1,70 @@
 exports["should match snapshot for minimal number of props(0)"] = {
   "node": {
-    "nodeType": "class",
-    "type": "SelectWidget",
+    "nodeType": "function",
     "props": {
-      "schema": {},
-      "uiSchema": {},
-      "isRequired": false
+      "children": [
+        {
+          "type": "C",
+          "props": {},
+          "_store": {}
+        },
+        {
+          "type": "C",
+          "props": {
+            "schema": {},
+            "validate": "[function]",
+            "component": "SelectWidget"
+          },
+          "_store": {}
+        }
+      ]
     },
-    "ref": "ref"
+    "rendered": [
+      {
+        "nodeType": "function",
+        "type": "C",
+        "props": {}
+      },
+      {
+        "nodeType": "function",
+        "type": "C",
+        "props": {
+          "schema": {},
+          "validate": "[function]",
+          "component": "SelectWidget"
+        }
+      }
+    ]
   },
-  "type": "SelectWidget",
-  "props": {
-    "schema": {},
-    "uiSchema": {},
-    "isRequired": false
-  }
+  "type": "React.Fragment",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "C",
+        "props": {}
+      },
+      "type": "FormikConnect(ErrorMessageImpl)",
+      "props": {}
+    },
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "C",
+        "props": {
+          "schema": {},
+          "validate": "[function]",
+          "component": "SelectWidget"
+        }
+      },
+      "type": "FormikConnect(FieldInner)",
+      "props": {
+        "schema": {},
+        "validate": "[function]",
+        "component": "SelectWidget"
+      }
+    }
+  ]
 };
 

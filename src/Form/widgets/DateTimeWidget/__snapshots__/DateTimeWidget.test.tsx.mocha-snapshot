@@ -72,80 +72,6 @@ exports["should match snapshot(0)"] = {
   ]
 };
 
-exports["should match snapshot when value is null(0)"] = {
-  "node": {
-    "nodeType": "function",
-    "props": {
-      "children": [
-        {
-          "type": "Errors",
-          "props": {
-            "errors": []
-          },
-          "_store": {}
-        },
-        {
-          "type": "DateTimePicker",
-          "props": {
-            "onChange": "[function]",
-            "onOk": "[function]"
-          },
-          "_store": {}
-        }
-      ]
-    },
-    "rendered": [
-      {
-        "nodeType": "function",
-        "type": "Errors",
-        "props": {
-          "errors": []
-        }
-      },
-      {
-        "nodeType": "function",
-        "type": "DateTimePicker",
-        "props": {
-          "onChange": "[function]",
-          "onOk": "[function]"
-        }
-      }
-    ]
-  },
-  "type": "React.Fragment",
-  "props": {},
-  "children": [
-    {
-      "node": {
-        "nodeType": "function",
-        "type": "Errors",
-        "props": {
-          "errors": []
-        }
-      },
-      "type": "Errors",
-      "props": {
-        "errors": []
-      }
-    },
-    {
-      "node": {
-        "nodeType": "function",
-        "type": "DateTimePicker",
-        "props": {
-          "onChange": "[function]",
-          "onOk": "[function]"
-        }
-      },
-      "type": "DateTimePicker",
-      "props": {
-        "onChange": "[function]",
-        "onOk": "[function]"
-      }
-    }
-  ]
-};
-
 exports["should match snapshot when widget has default value(0)"] = {
   "node": {
     "nodeType": "function",
@@ -1123,6 +1049,80 @@ exports["should match snapshot when widget has default value(0)"] = {
           "_d": {},
           "_isValid": true
         }
+      }
+    }
+  ]
+};
+
+exports["should match snapshot when value is null(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "props": {
+      "children": [
+        {
+          "type": "Errors",
+          "props": {
+            "errors": []
+          },
+          "_store": {}
+        },
+        {
+          "type": "DateTimePicker",
+          "props": {
+            "onChange": "[function]",
+            "onOk": "[function]"
+          },
+          "_store": {}
+        }
+      ]
+    },
+    "rendered": [
+      {
+        "nodeType": "function",
+        "type": "Errors",
+        "props": {
+          "errors": []
+        }
+      },
+      {
+        "nodeType": "function",
+        "type": "DateTimePicker",
+        "props": {
+          "onChange": "[function]",
+          "onOk": "[function]"
+        }
+      }
+    ]
+  },
+  "type": "React.Fragment",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "Errors",
+        "props": {
+          "errors": []
+        }
+      },
+      "type": "Errors",
+      "props": {
+        "errors": []
+      }
+    },
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "DateTimePicker",
+        "props": {
+          "onChange": "[function]",
+          "onOk": "[function]"
+        }
+      },
+      "type": "DateTimePicker",
+      "props": {
+        "onChange": "[function]",
+        "onOk": "[function]"
       }
     }
   ]

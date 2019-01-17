@@ -3,17 +3,11 @@ exports["should match snapshot when schema type is string(0)"] = {
     "nodeType": "function",
     "props": {
       "children": [
-        {
-          "type": "Errors",
-          "props": {
-            "errors": []
-          },
-          "_store": {}
-        },
         false,
         {
           "type": "Input",
           "props": {
+            "value": "",
             "onChange": "[function]"
           },
           "_store": {}
@@ -21,18 +15,12 @@ exports["should match snapshot when schema type is string(0)"] = {
       ]
     },
     "rendered": [
-      {
-        "nodeType": "function",
-        "type": "Errors",
-        "props": {
-          "errors": []
-        }
-      },
       false,
       {
         "nodeType": "function",
         "type": "Input",
         "props": {
+          "value": "",
           "onChange": "[function]"
         }
       }
@@ -44,26 +32,15 @@ exports["should match snapshot when schema type is string(0)"] = {
     {
       "node": {
         "nodeType": "function",
-        "type": "Errors",
-        "props": {
-          "errors": []
-        }
-      },
-      "type": "Errors",
-      "props": {
-        "errors": []
-      }
-    },
-    {
-      "node": {
-        "nodeType": "function",
         "type": "Input",
         "props": {
+          "value": "",
           "onChange": "[function]"
         }
       },
       "type": "Input",
       "props": {
+        "value": "",
         "onChange": "[function]"
       }
     }
@@ -75,13 +52,6 @@ exports["should match snapshot when schema type is number(0)"] = {
     "nodeType": "function",
     "props": {
       "children": [
-        {
-          "type": "Errors",
-          "props": {
-            "errors": []
-          },
-          "_store": {}
-        },
         {
           "type": "InputNumber",
           "props": {
@@ -95,13 +65,6 @@ exports["should match snapshot when schema type is number(0)"] = {
     "rendered": [
       {
         "nodeType": "function",
-        "type": "Errors",
-        "props": {
-          "errors": []
-        }
-      },
-      {
-        "nodeType": "function",
         "type": "InputNumber",
         "props": {
           "onChange": "[function]"
@@ -113,19 +76,6 @@ exports["should match snapshot when schema type is number(0)"] = {
   "type": "React.Fragment",
   "props": {},
   "children": [
-    {
-      "node": {
-        "nodeType": "function",
-        "type": "Errors",
-        "props": {
-          "errors": []
-        }
-      },
-      "type": "Errors",
-      "props": {
-        "errors": []
-      }
-    },
     {
       "node": {
         "nodeType": "function",

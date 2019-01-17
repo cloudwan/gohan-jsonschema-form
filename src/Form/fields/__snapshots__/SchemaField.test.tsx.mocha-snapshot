@@ -5,12 +5,11 @@ exports["should match snapshot when uischema widget defined as function(0)"] = {
     "props": {
       "title": "test string",
       "isRequired": false,
-      "id": "#",
+      "id": "",
       "children": {
         "type": "ui:widget",
-        "ref": "ref",
         "props": {
-          "id": "#",
+          "id": "",
           "schema": {
             "title": "test string",
             "type": "string"
@@ -27,7 +26,7 @@ exports["should match snapshot when uischema widget defined as function(0)"] = {
       "nodeType": "function",
       "type": "ui:widget",
       "props": {
-        "id": "#",
+        "id": "",
         "schema": {
           "title": "test string",
           "type": "string"
@@ -36,15 +35,14 @@ exports["should match snapshot when uischema widget defined as function(0)"] = {
           "ui:widget": "ui:widget"
         },
         "isRequired": false
-      },
-      "ref": "ref"
+      }
     }
   },
   "type": "Template",
   "props": {
     "title": "test string",
     "isRequired": false,
-    "id": "#"
+    "id": ""
   },
   "children": [
     {
@@ -52,7 +50,7 @@ exports["should match snapshot when uischema widget defined as function(0)"] = {
         "nodeType": "function",
         "type": "ui:widget",
         "props": {
-          "id": "#",
+          "id": "",
           "schema": {
             "title": "test string",
             "type": "string"
@@ -61,12 +59,11 @@ exports["should match snapshot when uischema widget defined as function(0)"] = {
             "ui:widget": "ui:widget"
           },
           "isRequired": false
-        },
-        "ref": "ref"
+        }
       },
       "type": "ui:widget",
       "props": {
-        "id": "#",
+        "id": "",
         "schema": {
           "title": "test string",
           "type": "string"
@@ -89,12 +86,11 @@ exports["should match snapshot when uischema widget defined as string(0)"] = {
     "props": {
       "title": "test string",
       "isRequired": false,
-      "id": "#",
+      "id": "",
       "children": {
         "type": "CodeEditorWidget",
-        "ref": "ref",
         "props": {
-          "id": "#",
+          "id": "",
           "schema": {
             "title": "test string",
             "type": "string"
@@ -112,7 +108,7 @@ exports["should match snapshot when uischema widget defined as string(0)"] = {
       "nodeType": "class",
       "type": "CodeEditorWidget",
       "props": {
-        "id": "#",
+        "id": "",
         "schema": {
           "title": "test string",
           "type": "string"
@@ -122,15 +118,14 @@ exports["should match snapshot when uischema widget defined as string(0)"] = {
         },
         "isRequired": false,
         "format": "text"
-      },
-      "ref": "ref"
+      }
     }
   },
   "type": "Template",
   "props": {
     "title": "test string",
     "isRequired": false,
-    "id": "#"
+    "id": ""
   },
   "children": [
     {
@@ -138,7 +133,7 @@ exports["should match snapshot when uischema widget defined as string(0)"] = {
         "nodeType": "class",
         "type": "CodeEditorWidget",
         "props": {
-          "id": "#",
+          "id": "",
           "schema": {
             "title": "test string",
             "type": "string"
@@ -148,12 +143,11 @@ exports["should match snapshot when uischema widget defined as string(0)"] = {
           },
           "isRequired": false,
           "format": "text"
-        },
-        "ref": "ref"
+        }
       },
       "type": "CodeEditorWidget",
       "props": {
-        "id": "#",
+        "id": "",
         "schema": {
           "title": "test string",
           "type": "string"
@@ -175,12 +169,11 @@ exports["should match snapshot when schema type is object(0)"] = {
     "props": {
       "title": "test string",
       "isRequired": false,
-      "id": "#",
+      "id": "",
       "children": {
         "type": "ObjectField",
-        "ref": "ref",
         "props": {
-          "id": "#",
+          "id": "",
           "schema": {
             "title": "test string",
             "type": "object",
@@ -200,7 +193,7 @@ exports["should match snapshot when schema type is object(0)"] = {
       "nodeType": "class",
       "type": "ObjectField",
       "props": {
-        "id": "#",
+        "id": "",
         "schema": {
           "title": "test string",
           "type": "object",
@@ -212,15 +205,14 @@ exports["should match snapshot when schema type is object(0)"] = {
         },
         "uiSchema": {},
         "isRequired": false
-      },
-      "ref": "ref"
+      }
     }
   },
   "type": "Template",
   "props": {
     "title": "test string",
     "isRequired": false,
-    "id": "#"
+    "id": ""
   },
   "children": [
     {
@@ -228,7 +220,7 @@ exports["should match snapshot when schema type is object(0)"] = {
         "nodeType": "class",
         "type": "ObjectField",
         "props": {
-          "id": "#",
+          "id": "",
           "schema": {
             "title": "test string",
             "type": "object",
@@ -240,12 +232,11 @@ exports["should match snapshot when schema type is object(0)"] = {
           },
           "uiSchema": {},
           "isRequired": false
-        },
-        "ref": "ref"
+        }
       },
       "type": "ObjectField",
       "props": {
-        "id": "#",
+        "id": "",
         "schema": {
           "title": "test string",
           "type": "object",
@@ -269,12 +260,11 @@ exports["should match snapshot when schema type is object w/o properties(0)"] = 
     "props": {
       "title": "test string",
       "isRequired": false,
-      "id": "#",
+      "id": "",
       "children": {
         "type": "CodeEditorWidget",
-        "ref": "ref",
         "props": {
-          "id": "#",
+          "id": "",
           "schema": {
             "title": "test string",
             "type": "object"
@@ -290,7 +280,7 @@ exports["should match snapshot when schema type is object w/o properties(0)"] = 
       "nodeType": "class",
       "type": "CodeEditorWidget",
       "props": {
-        "id": "#",
+        "id": "",
         "schema": {
           "title": "test string",
           "type": "object"
@@ -298,15 +288,14 @@ exports["should match snapshot when schema type is object w/o properties(0)"] = 
         "uiSchema": {},
         "isRequired": false,
         "format": "text"
-      },
-      "ref": "ref"
+      }
     }
   },
   "type": "Template",
   "props": {
     "title": "test string",
     "isRequired": false,
-    "id": "#"
+    "id": ""
   },
   "children": [
     {
@@ -314,7 +303,7 @@ exports["should match snapshot when schema type is object w/o properties(0)"] = 
         "nodeType": "class",
         "type": "CodeEditorWidget",
         "props": {
-          "id": "#",
+          "id": "",
           "schema": {
             "title": "test string",
             "type": "object"
@@ -322,12 +311,11 @@ exports["should match snapshot when schema type is object w/o properties(0)"] = 
           "uiSchema": {},
           "isRequired": false,
           "format": "text"
-        },
-        "ref": "ref"
+        }
       },
       "type": "CodeEditorWidget",
       "props": {
-        "id": "#",
+        "id": "",
         "schema": {
           "title": "test string",
           "type": "object"
@@ -347,11 +335,10 @@ exports["should match snapshot when schema type is array(0)"] = {
     "props": {
       "title": "test string",
       "isRequired": false,
-      "id": "#",
+      "id": "",
       "children": {
-        "ref": "ref",
         "props": {
-          "id": "#",
+          "id": "",
           "schema": {
             "title": "test string",
             "type": "array"
@@ -365,22 +352,21 @@ exports["should match snapshot when schema type is array(0)"] = {
     "rendered": {
       "nodeType": "function",
       "props": {
-        "id": "#",
+        "id": "",
         "schema": {
           "title": "test string",
           "type": "array"
         },
         "uiSchema": {},
         "isRequired": false
-      },
-      "ref": "ref"
+      }
     }
   },
   "type": "Template",
   "props": {
     "title": "test string",
     "isRequired": false,
-    "id": "#"
+    "id": ""
   }
 };
 
@@ -391,12 +377,11 @@ exports["should match snapshot when schema type is boolean(0)"] = {
     "props": {
       "title": "test string",
       "isRequired": false,
-      "id": "#",
+      "id": "",
       "children": {
         "type": "BooleanField",
-        "ref": "ref",
         "props": {
-          "id": "#",
+          "id": "",
           "schema": {
             "title": "test string",
             "type": "boolean"
@@ -411,22 +396,21 @@ exports["should match snapshot when schema type is boolean(0)"] = {
       "nodeType": "class",
       "type": "BooleanField",
       "props": {
-        "id": "#",
+        "id": "",
         "schema": {
           "title": "test string",
           "type": "boolean"
         },
         "uiSchema": {},
         "isRequired": false
-      },
-      "ref": "ref"
+      }
     }
   },
   "type": "Template",
   "props": {
     "title": "test string",
     "isRequired": false,
-    "id": "#"
+    "id": ""
   },
   "children": [
     {
@@ -434,19 +418,18 @@ exports["should match snapshot when schema type is boolean(0)"] = {
         "nodeType": "class",
         "type": "BooleanField",
         "props": {
-          "id": "#",
+          "id": "",
           "schema": {
             "title": "test string",
             "type": "boolean"
           },
           "uiSchema": {},
           "isRequired": false
-        },
-        "ref": "ref"
+        }
       },
       "type": "BooleanField",
       "props": {
-        "id": "#",
+        "id": "",
         "schema": {
           "title": "test string",
           "type": "boolean"
@@ -465,12 +448,11 @@ exports["should match snapshot when schema has enum(0)"] = {
     "props": {
       "title": "test string",
       "isRequired": false,
-      "id": "#",
+      "id": "",
       "children": {
         "type": "SelectField",
-        "ref": "ref",
         "props": {
-          "id": "#",
+          "id": "",
           "schema": {
             "title": "test string",
             "type": "string",
@@ -489,7 +471,7 @@ exports["should match snapshot when schema has enum(0)"] = {
       "nodeType": "class",
       "type": "SelectField",
       "props": {
-        "id": "#",
+        "id": "",
         "schema": {
           "title": "test string",
           "type": "string",
@@ -500,15 +482,14 @@ exports["should match snapshot when schema has enum(0)"] = {
         },
         "uiSchema": {},
         "isRequired": false
-      },
-      "ref": "ref"
+      }
     }
   },
   "type": "Template",
   "props": {
     "title": "test string",
     "isRequired": false,
-    "id": "#"
+    "id": ""
   },
   "children": [
     {
@@ -516,7 +497,7 @@ exports["should match snapshot when schema has enum(0)"] = {
         "nodeType": "class",
         "type": "SelectField",
         "props": {
-          "id": "#",
+          "id": "",
           "schema": {
             "title": "test string",
             "type": "string",
@@ -527,12 +508,11 @@ exports["should match snapshot when schema has enum(0)"] = {
           },
           "uiSchema": {},
           "isRequired": false
-        },
-        "ref": "ref"
+        }
       },
       "type": "SelectField",
       "props": {
-        "id": "#",
+        "id": "",
         "schema": {
           "title": "test string",
           "type": "string",
@@ -555,12 +535,11 @@ exports["should match snapshot when schema type is string(0)"] = {
     "props": {
       "title": "test string",
       "isRequired": false,
-      "id": "#",
+      "id": "",
       "children": {
         "type": "StringField",
-        "ref": "ref",
         "props": {
-          "id": "#",
+          "id": "",
           "schema": {
             "title": "test string",
             "type": "string"
@@ -575,22 +554,21 @@ exports["should match snapshot when schema type is string(0)"] = {
       "nodeType": "class",
       "type": "StringField",
       "props": {
-        "id": "#",
+        "id": "",
         "schema": {
           "title": "test string",
           "type": "string"
         },
         "uiSchema": {},
         "isRequired": false
-      },
-      "ref": "ref"
+      }
     }
   },
   "type": "Template",
   "props": {
     "title": "test string",
     "isRequired": false,
-    "id": "#"
+    "id": ""
   },
   "children": [
     {
@@ -598,19 +576,18 @@ exports["should match snapshot when schema type is string(0)"] = {
         "nodeType": "class",
         "type": "StringField",
         "props": {
-          "id": "#",
+          "id": "",
           "schema": {
             "title": "test string",
             "type": "string"
           },
           "uiSchema": {},
           "isRequired": false
-        },
-        "ref": "ref"
+        }
       },
       "type": "StringField",
       "props": {
-        "id": "#",
+        "id": "",
         "schema": {
           "title": "test string",
           "type": "string"
@@ -629,12 +606,11 @@ exports["should match snapshot when schema type is integer(0)"] = {
     "props": {
       "title": "test string",
       "isRequired": false,
-      "id": "#",
+      "id": "",
       "children": {
         "type": "NumberField",
-        "ref": "ref",
         "props": {
-          "id": "#",
+          "id": "",
           "schema": {
             "title": "test string",
             "type": "integer"
@@ -649,22 +625,21 @@ exports["should match snapshot when schema type is integer(0)"] = {
       "nodeType": "class",
       "type": "NumberField",
       "props": {
-        "id": "#",
+        "id": "",
         "schema": {
           "title": "test string",
           "type": "integer"
         },
         "uiSchema": {},
         "isRequired": false
-      },
-      "ref": "ref"
+      }
     }
   },
   "type": "Template",
   "props": {
     "title": "test string",
     "isRequired": false,
-    "id": "#"
+    "id": ""
   },
   "children": [
     {
@@ -672,19 +647,18 @@ exports["should match snapshot when schema type is integer(0)"] = {
         "nodeType": "class",
         "type": "NumberField",
         "props": {
-          "id": "#",
+          "id": "",
           "schema": {
             "title": "test string",
             "type": "integer"
           },
           "uiSchema": {},
           "isRequired": false
-        },
-        "ref": "ref"
+        }
       },
       "type": "NumberField",
       "props": {
-        "id": "#",
+        "id": "",
         "schema": {
           "title": "test string",
           "type": "integer"
@@ -703,12 +677,11 @@ exports["should match snapshot when schema type is number(0)"] = {
     "props": {
       "title": "test string",
       "isRequired": false,
-      "id": "#",
+      "id": "",
       "children": {
         "type": "NumberField",
-        "ref": "ref",
         "props": {
-          "id": "#",
+          "id": "",
           "schema": {
             "title": "test string",
             "type": "integer"
@@ -723,22 +696,21 @@ exports["should match snapshot when schema type is number(0)"] = {
       "nodeType": "class",
       "type": "NumberField",
       "props": {
-        "id": "#",
+        "id": "",
         "schema": {
           "title": "test string",
           "type": "integer"
         },
         "uiSchema": {},
         "isRequired": false
-      },
-      "ref": "ref"
+      }
     }
   },
   "type": "Template",
   "props": {
     "title": "test string",
     "isRequired": false,
-    "id": "#"
+    "id": ""
   },
   "children": [
     {
@@ -746,19 +718,18 @@ exports["should match snapshot when schema type is number(0)"] = {
         "nodeType": "class",
         "type": "NumberField",
         "props": {
-          "id": "#",
+          "id": "",
           "schema": {
             "title": "test string",
             "type": "integer"
           },
           "uiSchema": {},
           "isRequired": false
-        },
-        "ref": "ref"
+        }
       },
       "type": "NumberField",
       "props": {
-        "id": "#",
+        "id": "",
         "schema": {
           "title": "test string",
           "type": "integer"
@@ -777,12 +748,11 @@ exports["should match snapshot when schema type is incorrect(0)"] = {
     "props": {
       "title": "test string",
       "isRequired": false,
-      "id": "#",
+      "id": "",
       "children": {
         "type": "NotFoundWidget",
-        "ref": "ref",
         "props": {
-          "id": "#",
+          "id": "",
           "schema": {
             "title": "test string",
             "type": "void"
@@ -797,22 +767,21 @@ exports["should match snapshot when schema type is incorrect(0)"] = {
       "nodeType": "class",
       "type": "NotFoundWidget",
       "props": {
-        "id": "#",
+        "id": "",
         "schema": {
           "title": "test string",
           "type": "void"
         },
         "uiSchema": {},
         "isRequired": false
-      },
-      "ref": "ref"
+      }
     }
   },
   "type": "Template",
   "props": {
     "title": "test string",
     "isRequired": false,
-    "id": "#"
+    "id": ""
   },
   "children": [
     {
@@ -820,19 +789,18 @@ exports["should match snapshot when schema type is incorrect(0)"] = {
         "nodeType": "class",
         "type": "NotFoundWidget",
         "props": {
-          "id": "#",
+          "id": "",
           "schema": {
             "title": "test string",
             "type": "void"
           },
           "uiSchema": {},
           "isRequired": false
-        },
-        "ref": "ref"
+        }
       },
       "type": "NotFoundWidget",
       "props": {
-        "id": "#",
+        "id": "",
         "schema": {
           "title": "test string",
           "type": "void"

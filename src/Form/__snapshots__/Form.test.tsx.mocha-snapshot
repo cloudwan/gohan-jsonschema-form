@@ -5,18 +5,15 @@ exports["should match snapshot for minimal number of props(0)"] = {
     "props": {
       "schema": {},
       "uiSchema": {},
-      "value": {},
-      "id": "#",
+      "id": "",
       "isRequired": false
-    },
-    "ref": "ref"
+    }
   },
   "type": "SchemaField",
   "props": {
     "schema": {},
     "uiSchema": {},
-    "value": {},
-    "id": "#",
+    "id": "",
     "isRequired": false
   }
 };

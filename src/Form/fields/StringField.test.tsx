@@ -1,6 +1,6 @@
 import * as chai from 'chai';
 import chaiEnzyme from 'chai-enzyme';
-import {shallow, mount} from 'enzyme';
+import {shallow} from 'enzyme';
 import * as React from 'react';
 import sinonChai from 'sinon-chai';
 
@@ -9,6 +9,8 @@ import StringField from './StringField';
 chai.should();
 chai.use(chaiEnzyme());
 chai.use(sinonChai);
+
+const should = chai.should();
 
 describe('<StringField/>', () => {
   describe('render', () => {
@@ -25,25 +27,66 @@ describe('<StringField/>', () => {
     });
   });
 
-  describe('get value', () => {
-    it('should calls get value on ref element', () => {
-      const wrapper = shallow(<StringField schema={{}} />);
-      const instance = wrapper.instance() as StringField;
+  describe('validate', () => {
+    it('should return undefined when value passed validation', () => {
+      const wrapper = shallow(
+        <StringField
+          id="foo"
+          schema={{type: ['string']}}
+          uiSchema={{}}
+          isRequired={false}
+        />,
+      );
 
-      instance.field = {value: 'foo'};
-
-      instance.value.should.equal('foo');
+      should.equal(wrapper.instance().validate('bar'), undefined);
     });
-  });
 
-  describe('get isValid', () => {
-    it('should calls get isValid on ref element', () => {
-      const wrapper = shallow(<StringField schema={{}} />);
-      const instance = wrapper.instance() as StringField;
+    it('should return component with errors when value is required and it is undefined', () => {
+      const wrapper = shallow(
+        <StringField
+          id="foo"
+          schema={{type: ['string']}}
+          uiSchema={{}}
+          isRequired={true}
+        />,
+      );
 
-      instance.field = {isValid: true};
+      const errorsWrapper = shallow(wrapper.instance().validate(undefined));
+      errorsWrapper.type().should.equal('div');
+    });
 
-      instance.isValid.should.equal(true);
+    it('should return component with errors when value is invalid', () => {
+      const wrapper = shallow(
+        <StringField
+          id="foo"
+          schema={{type: ['string']}}
+          uiSchema={{}}
+          isRequired={false}
+        />,
+      );
+
+      const errorsWrapper = shallow(wrapper.instance().validate(null));
+      errorsWrapper.type().should.equal('div');
+    });
+
+    it('should return component with errors when widget has errors', () => {
+      const wrapper = shallow(
+        <StringField
+          id="foo"
+          schema={{type: ['string']}}
+          uiSchema={{}}
+          isRequired={false}
+        />,
+      );
+
+      wrapper.instance().widget = {
+        get errors() {
+          return [{message: 'Bar error'}];
+        },
+      };
+
+      const errorsWrapper = shallow(wrapper.instance().validate('bar'));
+      errorsWrapper.type().should.equal('div');
     });
   });
 });
