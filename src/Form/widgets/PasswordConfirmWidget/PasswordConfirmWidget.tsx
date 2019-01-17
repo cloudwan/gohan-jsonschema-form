@@ -1,17 +1,16 @@
+import {FieldProps} from 'formik';
 import * as React from 'react';
 
 import {IWidget} from '../../../typings/IWidget';
-import Errors from '../../components/Errors';
-
+import Input from '../../components/Input';
 import Template from '../../fields/Template';
-import InputWidget from './../InputWidget';
 
 interface TInputWidgetState {
-  errors: any[];
+  confirmValue: string;
 }
 
 export class PasswordConfirmWidget extends React.Component<
-  IWidget,
+  IWidget & FieldProps,
   TInputWidgetState
 > {
   public static defaultProps = {
@@ -19,85 +18,75 @@ export class PasswordConfirmWidget extends React.Component<
     isRequired: false,
   };
 
-  private fieldA = undefined;
-  private fieldB = undefined;
-
   constructor(props) {
     super(props);
 
     this.state = {
-      errors: [],
+      confirmValue: '',
     };
   }
 
-  public get value() {
-    const valueA = this.fieldA.value;
-    const valueB = this.fieldB.value;
-
-    if (valueA !== valueB) {
-      throw new Error(`These ${this.props.schema.title} don't match`);
-    }
-
-    return valueA;
-  }
-
-  public get isValid() {
-    const valueA = this.fieldA.value;
-    const valueB = this.fieldB.value;
-    const aValid = this.fieldA.isValid;
-    const bValid = this.fieldB.isValid;
-
+  public get errors() {
+    const {
+      field: {value},
+    } = this.props;
+    const {confirmValue} = this.state;
     const errors = [];
 
-    if (valueA !== valueB) {
+    if (value !== confirmValue) {
       errors.push({
-        message: `These ${this.props.schema.title} don't match`,
+        message: `These ${this.props.schema.title} values don't match`,
       });
     }
 
-    this.setState({errors});
-    return errors.length === 0 && aValid && bValid;
+    return errors;
   }
 
   public render() {
-    const {schema, uiSchema, isRequired, value} = this.props;
+    const {
+      schema,
+      uiSchema,
+      field: {value},
+    } = this.props;
+    const restProps = {
+      ...uiSchema['ui:options'],
+      type: 'password',
+    };
 
     return (
       <React.Fragment>
-        <Errors errors={this.state.errors} />
-        <React.Fragment>
-          <InputWidget
-            ref={c => {
-              this.fieldA = c;
-            }}
-            schema={schema}
-            uiSchema={{
-              'ui:options': {...uiSchema['ui:options'], type: 'password'},
-            }}
-            isRequired={isRequired}
-            value={value}
+        <Input
+          value={value}
+          onChange={this.handleChangePassword}
+          {...restProps}
+        />
+        <Template
+          title={`Confirm ${schema.title}`}
+          isRequired={this.props.isRequired}
+          id={`${this.props.id}.confirm`}
+        >
+          <Input
+            value={this.state.confirmValue}
+            onChange={this.handleChangeConfirmPassword}
+            minLength={schema.minLength}
+            maxLength={schema.maxLength}
+            disabled={uiSchema['ui:disabled']}
+            {...restProps}
           />
-          <Template
-            title={`Confirm ${schema.title}`}
-            isRequired={this.props.isRequired}
-            id={`${this.props.id}.confirm`}
-          >
-            <InputWidget
-              ref={c => {
-                this.fieldB = c;
-              }}
-              schema={schema}
-              uiSchema={{
-                'ui:options': {...uiSchema['ui:options'], type: 'password'},
-              }}
-              isRequired={isRequired}
-              value={value}
-            />
-          </Template>
-        </React.Fragment>
+        </Template>
       </React.Fragment>
     );
   }
+
+  private handleChangePassword = event => {
+    this.props.form.setFieldValue(this.props.field.name, event.target.value);
+  };
+
+  private handleChangeConfirmPassword = event => {
+    this.setState({
+      confirmValue: event.target.value,
+    });
+  };
 }
 
 export default PasswordConfirmWidget;
