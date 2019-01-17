@@ -1,40 +1,134 @@
 exports["should match snapshot for minimal number of props(0)"] = {
   "node": {
-    "nodeType": "class",
-    "type": "InputWidget",
+    "nodeType": "function",
     "props": {
-      "schema": {},
-      "uiSchema": {},
-      "isRequired": false
+      "children": [
+        {
+          "type": "C",
+          "props": {},
+          "_store": {}
+        },
+        {
+          "type": "C",
+          "props": {
+            "validate": "[function]",
+            "children": "[function]"
+          },
+          "_store": {}
+        }
+      ]
     },
-    "ref": "ref"
+    "rendered": [
+      {
+        "nodeType": "function",
+        "type": "C",
+        "props": {}
+      },
+      {
+        "nodeType": "function",
+        "type": "C",
+        "props": {
+          "validate": "[function]",
+          "children": "[function]"
+        },
+        "rendered": "[function]"
+      }
+    ]
   },
-  "type": "InputWidget",
-  "props": {
-    "schema": {},
-    "uiSchema": {},
-    "isRequired": false
-  }
+  "type": "React.Fragment",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "C",
+        "props": {}
+      },
+      "type": "FormikConnect(ErrorMessageImpl)",
+      "props": {}
+    },
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "C",
+        "props": {
+          "validate": "[function]",
+          "children": "[function]"
+        },
+        "rendered": "[function]"
+      },
+      "type": "FormikConnect(FieldInner)",
+      "props": {
+        "validate": "[function]"
+      }
+    }
+  ]
 };
 
 exports["should match snapshot for defined schema format(0)"] = {
   "node": {
-    "nodeType": "class",
-    "type": "NotFoundWidget",
+    "nodeType": "function",
     "props": {
-      "schema": {
-        "format": "ipv4"
+      "children": [
+        {
+          "type": "C",
+          "props": {},
+          "_store": {}
+        },
+        {
+          "type": "C",
+          "props": {
+            "validate": "[function]",
+            "children": "[function]"
+          },
+          "_store": {}
+        }
+      ]
+    },
+    "rendered": [
+      {
+        "nodeType": "function",
+        "type": "C",
+        "props": {}
       },
-      "uiSchema": {}
-    },
-    "ref": "ref"
+      {
+        "nodeType": "function",
+        "type": "C",
+        "props": {
+          "validate": "[function]",
+          "children": "[function]"
+        },
+        "rendered": "[function]"
+      }
+    ]
   },
-  "type": "NotFoundWidget",
-  "props": {
-    "schema": {
-      "format": "ipv4"
+  "type": "React.Fragment",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "C",
+        "props": {}
+      },
+      "type": "FormikConnect(ErrorMessageImpl)",
+      "props": {}
     },
-    "uiSchema": {}
-  }
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "C",
+        "props": {
+          "validate": "[function]",
+          "children": "[function]"
+        },
+        "rendered": "[function]"
+      },
+      "type": "FormikConnect(FieldInner)",
+      "props": {
+        "validate": "[function]"
+      }
+    }
+  ]
 };
 

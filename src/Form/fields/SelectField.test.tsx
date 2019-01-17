@@ -1,6 +1,6 @@
 import * as chai from 'chai';
 import chaiEnzyme from 'chai-enzyme';
-import {shallow, mount} from 'enzyme';
+import {shallow} from 'enzyme';
 import * as React from 'react';
 import sinonChai from 'sinon-chai';
 
@@ -10,6 +10,8 @@ chai.should();
 chai.use(chaiEnzyme());
 chai.use(sinonChai);
 
+const should = chai.should();
+
 describe('<SelectField/>', () => {
   describe('render', () => {
     it('should match snapshot for minimal number of props', () => {
@@ -17,27 +19,58 @@ describe('<SelectField/>', () => {
 
       wrapper.should.to.matchSnapshot();
     });
-  });
 
-  describe('get value', () => {
-    it('should calls get value on ref element', () => {
-      const wrapper = shallow(<SelectField schema={{}} />);
-      const instance = wrapper.instance() as SelectField;
-
-      instance.field = {value: 'foo'};
-
-      instance.value.should.equal('foo');
+    it('should match snapshot when schema has relation', () => {
+      const wrapper = shallow(
+        <SelectField
+          schema={{
+            relation: 'foo',
+          }}
+        />,
+      );
     });
   });
 
-  describe('get isValid', () => {
-    it('should calls get isValid on ref element', () => {
-      const wrapper = shallow(<SelectField schema={{}} />);
-      const instance = wrapper.instance() as SelectField;
+  describe('validate', () => {
+    it('should return undefined when value passed validation', () => {
+      const wrapper = shallow(
+        <SelectField
+          id="foo"
+          schema={{type: ['string']}}
+          uiSchema={{}}
+          isRequired={false}
+        />,
+      );
 
-      instance.field = {isValid: true};
+      should.equal(wrapper.instance().validate('bar'), undefined);
+    });
 
-      instance.isValid.should.equal(true);
+    it('should return component with errors when value is required and it is undefined', () => {
+      const wrapper = shallow(
+        <SelectField
+          id="foo"
+          schema={{type: ['string']}}
+          uiSchema={{}}
+          isRequired={true}
+        />,
+      );
+
+      const errorsWrapper = shallow(wrapper.instance().validate(undefined));
+      errorsWrapper.type().should.equal('div');
+    });
+
+    it('should return component with errors when value is invalid', () => {
+      const wrapper = shallow(
+        <SelectField
+          id="foo"
+          schema={{type: ['string']}}
+          uiSchema={{}}
+          isRequired={false}
+        />,
+      );
+
+      const errorsWrapper = shallow(wrapper.instance().validate(null));
+      errorsWrapper.type().should.equal('div');
     });
   });
 });

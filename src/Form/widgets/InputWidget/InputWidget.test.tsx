@@ -2,121 +2,169 @@ import * as chai from 'chai';
 import chaiEnzyme from 'chai-enzyme';
 import {shallow} from 'enzyme';
 import * as React from 'react';
+import sinon from 'sinon';
 
-import Input from './components/Input';
+import Input from '../../components/Input';
 import InputNumber from './components/InputNumber';
 import InputWidget from './InputWidget';
 
 chai.use(chaiEnzyme());
 chai.should();
 
-const should = chai.should();
-
 describe('<InputWidget />', () => {
+  const formikFormProps = {
+    dirty: false,
+    errors: {},
+    handleBlur: () => null,
+    handleChange: () => null,
+    handleReset: () => null,
+    handleSubmit: () => null,
+    initialValues: {},
+    isSubmitting: false,
+    isValid: false,
+    isValidating: false,
+    registerField: () => null,
+    resetForm: () => null,
+    setError: () => null,
+    setErrors: () => null,
+    setFieldError: () => null,
+    setFieldTouched: () => null,
+    setFieldValue: () => null,
+    setFormikState: () => null,
+    setStatus: () => null,
+    setSubmitting: () => null,
+    setTouched: () => null,
+    setValues: () => null,
+    submitCount: 0,
+    submitForm: () => null,
+    touched: {},
+    unregisterField: () => null,
+    validateField: () => null,
+    validateForm: () => null,
+    validateOnBlur: true,
+    validateOnChange: true,
+    values: {},
+  };
   it('should match snapshot when schema type is string', () => {
-    const wrapper = shallow(<InputWidget schema={{type: ['string']}} />);
+    const wrapper = shallow(
+      <InputWidget
+        schema={{type: ['string']}}
+        form={formikFormProps}
+        field={{
+          value: '',
+          onChange: () => null,
+          onBlur: () => null,
+          name: 'foo',
+        }}
+      />,
+    );
 
     wrapper.should.to.matchSnapshot();
   });
 
   it('should match snapshot when schema type is number', () => {
-    const wrapper = shallow(<InputWidget schema={{type: ['number']}} />);
+    const wrapper = shallow(
+      <InputWidget
+        schema={{type: ['number']}}
+        form={formikFormProps}
+        field={{
+          value: undefined,
+          onChange: () => null,
+          onBlur: () => null,
+          name: 'foo',
+        }}
+      />,
+    );
 
     wrapper.should.to.matchSnapshot();
   });
 
-  it('should set state value when it is passed by props', () => {
-    const wrapper = shallow(
-      <InputWidget schema={{type: ['string']}} value={'foo'} />,
-    );
-    const instance = wrapper.instance() as InputWidget;
-    should.equal(wrapper.state().value, 'foo');
-  });
-
-  it('should set state value to null when null is passed by props', () => {
-    const wrapper = shallow(
-      <InputWidget schema={{type: ['string', 'null']}} value={null} />,
-    );
-    const instance = wrapper.instance() as InputWidget;
-    should.equal(wrapper.state().value, null);
-  });
-
-  describe('get method', () => {
-    it('should return value when it is valid', () => {
-      const wrapper = shallow(<InputWidget schema={{type: ['string']}} />);
-      const instance = wrapper.instance() as InputWidget;
-      wrapper.setState({value: 'foo'});
-      instance.value.should.equal('foo');
-    });
-
-    it('should return null when input was cleared and it includes type null', () => {
-      const wrapper = shallow(
-        <InputWidget schema={{type: ['string', 'null']}} />,
-      );
-      const instance = wrapper.instance() as InputWidget;
-      wrapper.setState({value: ''});
-      should.equal(instance.value, null);
-    });
-  });
-
-  describe('isValid method', () => {
-    let wrapper;
-    let instance;
-
-    beforeEach(() => {
-      wrapper = shallow(<InputWidget schema={{type: ['string']}} />);
-      instance = wrapper.instance() as InputWidget;
-    });
-
-    const testIsValid = (value, expected, isRequired = false) => {
-      wrapper.setProps({isRequired});
-      wrapper.setState({value});
-      instance.isValid.should.equal(expected);
-    };
-
-    it('should be true for initial value', () => {
-      testIsValid(undefined, true);
-    });
-
-    it('should be true if value is valid', () => {
-      testIsValid('foo', true);
-    });
-
-    it('should be false if value is invalid', () => {
-      testIsValid(0, false);
-    });
-
-    it('should be false when input was cleared and value is required', () => {
-      testIsValid('', false, true);
-    });
-  });
-
   describe('render method', () => {
     it('should render elements', () => {
-      const wrapper = shallow(<InputWidget schema={{type: ['string']}} />);
+      const wrapper = shallow(
+        <InputWidget
+          schema={{type: ['string']}}
+          form={formikFormProps}
+          field={{
+            value: undefined,
+            onChange: () => null,
+            onBlur: () => null,
+            name: 'foo',
+          }}
+        />,
+      );
+
       wrapper.should.not.equal(undefined);
     });
   });
 
   describe('handleChangeInput', () => {
-    it('should have been called and changed state value', () => {
-      const wrapper = shallow(<InputWidget schema={{type: ['string']}} />);
-      wrapper.find(Input).simulate('change', {target: {value: 'foo'}});
-      wrapper.state().value.should.equal('foo');
+    it('should have been called and changed field value', () => {
+      const setFieldValue = sinon.spy();
+      const wrapper = shallow(
+        <InputWidget
+          schema={{type: ['string']}}
+          form={{
+            ...formikFormProps,
+            setFieldValue,
+          }}
+          field={{
+            value: undefined,
+            onChange: () => null,
+            onBlur: () => null,
+            name: 'foo',
+          }}
+        />,
+      );
+
+      wrapper.find(Input).simulate('change', {target: {value: 'bar'}});
+      setFieldValue.should.calledWith('foo', 'bar');
     });
   });
 
   describe('handleChangeInputNumber', () => {
-    it('should have been called and changed state value', () => {
-      const wrapper = shallow(<InputWidget schema={{type: ['number']}} />);
+    it('should have been called and changed field value', () => {
+      const setFieldValue = sinon.spy();
+      const wrapper = shallow(
+        <InputWidget
+          schema={{type: ['number']}}
+          form={{
+            ...formikFormProps,
+            setFieldValue,
+          }}
+          field={{
+            value: undefined,
+            onChange: () => null,
+            onBlur: () => null,
+            name: 'foo',
+          }}
+        />,
+      );
+
       wrapper.find(InputNumber).simulate('change', 1);
-      wrapper.state().value.should.equal(1);
+      setFieldValue.should.calledWith('foo', 1);
     });
 
-    it('should have been called and changed state value to null when input is cleared', () => {
-      const wrapper = shallow(<InputWidget schema={{type: ['number']}} />);
+    it('should have been called and changed field value to null when input is cleared', () => {
+      const setFieldValue = sinon.spy();
+      const wrapper = shallow(
+        <InputWidget
+          schema={{type: ['number']}}
+          form={{
+            ...formikFormProps,
+            setFieldValue,
+          }}
+          field={{
+            value: undefined,
+            onChange: () => null,
+            onBlur: () => null,
+            name: 'foo',
+          }}
+        />,
+      );
+
       wrapper.find(InputNumber).simulate('change', undefined);
-      should.equal(wrapper.state().value, null);
+      setFieldValue.should.calledWith('foo', null);
     });
   });
 });

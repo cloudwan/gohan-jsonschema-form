@@ -19,26 +19,4 @@ describe('<Form/>', () => {
       wrapper.find(SchemaField).should.to.matchSnapshot();
     });
   });
-
-  describe('get value', () => {
-    it('should calls get value on ref element', () => {
-      const wrapper = shallow(<Form schema={{}} />);
-      const instance = wrapper.instance() as Form;
-
-      instance.field = {value: 'foo'};
-
-      instance.value.should.equal('foo');
-    });
-  });
-
-  describe('get isValid', () => {
-    it('should calls get isValid on ref element', () => {
-      const wrapper = shallow(<Form schema={{}} />);
-      const instance = wrapper.instance() as Form;
-
-      instance.field = {isValid: true};
-
-      instance.isValid.should.equal(true);
-    });
-  });
 });
