@@ -1,43 +1,65 @@
+import {ErrorMessage, Field} from 'formik';
 import * as React from 'react';
 
 import {IWidget} from '../../typings/IWidget';
-
+import Errors from '../components/Errors';
+import validator from '../Validator';
 import {selectWidget} from '../widgets';
 
 export class StringField extends React.Component<IWidget> {
-  private field = undefined;
-
-  public get value(): string | null | undefined {
-    return this.field.value;
-  }
-
-  public get isValid(): boolean {
-    return this.field.isValid;
-  }
-
+  private widgets;
   public render(): React.ReactNode {
     const {
       schema,
       schema: {format},
       uiSchema,
-      isRequired,
-      value,
+      id,
     } = this.props;
 
     const Widget = selectWidget(format || 'Input');
 
     return (
-      <Widget
-        ref={c => {
-          this.field = c;
-        }}
-        schema={schema}
-        uiSchema={uiSchema}
-        isRequired={isRequired}
-        value={value}
-      />
+      <React.Fragment>
+        <ErrorMessage name={id} />
+        <Field name={id} validate={this.validate}>
+          {({field, form}) => (
+            <Widget
+              schema={schema}
+              uiSchema={uiSchema}
+              ref={c => {
+                this.widget = c;
+              }}
+              field={field}
+              form={form}
+            />
+          )}
+        </Field>
+      </React.Fragment>
     );
   }
+
+  private validate = value => {
+    const {schema, isRequired} = this.props;
+    const errors = [];
+
+    if (isRequired && !value) {
+      errors.push({message: 'Required'});
+    }
+
+    if (value !== undefined) {
+      validator.validate(schema, value);
+    }
+
+    if (this.widget && this.widget.errors && this.widget.errors.length > 0) {
+      errors.push(...this.widget.errors);
+    }
+
+    if (validator.errors) {
+      errors.push(...validator.errors);
+    }
+
+    return errors.length > 0 ? <Errors errors={errors} /> : undefined;
+  };
 }
 
 export default StringField;
