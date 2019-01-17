@@ -20,7 +20,7 @@ export const Select = ({
   <AntSelect
     className={styles.select}
     placeholder={placeholder}
-    getPopupContainer={() => document.getElementById('goha-jsonschema-form')}
+    getPopupContainer={() => document.getElementById('gohan-jsonschema-form')}
     {...props}
   >
     {options.map((option, i) => (
