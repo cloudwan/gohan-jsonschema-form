@@ -1,6 +1,9 @@
+import {ErrorMessage, Field} from 'formik';
 import * as React from 'react';
 
 import {IWidget} from '../../typings/IWidget';
+import Errors from '../components/Errors';
+import validator from '../Validator';
 import SelectWidget from '../widgets/SelectWidget';
 import FormContext from './../FormContext';
 
@@ -10,18 +13,16 @@ interface ISelectFieldProps extends IWidget {
   ) => Promise<Array<{label: string; value: string}>>;
 }
 export class SelectField extends React.Component<ISelectFieldProps> {
-  private field = undefined;
-
-  public get value(): string | number | any[] | null | undefined {
-    return this.field.value;
-  }
-
-  public get isValid(): boolean {
-    return this.field.isValid;
-  }
-
   public render(): React.ReactNode {
-    const {schema, uiSchema, isRequired, value} = this.props;
+    const {schema, uiSchema, id} = this.props;
+
+    const commonProps = {
+      name: id,
+      schema,
+      uiSchema,
+      validate: this.validate,
+      component: SelectWidget,
+    };
 
     if (!schema.enum && schema.relation) {
       return (
@@ -31,33 +32,41 @@ export class SelectField extends React.Component<ISelectFieldProps> {
               relation: string,
             ) => Promise<Array<{label: string; value: string}>>,
           ) => (
-            <SelectWidget
-              ref={c => {
-                this.field = c;
-              }}
-              schema={schema}
-              uiSchema={uiSchema}
-              isRequired={isRequired}
-              value={value}
-              fetcher={fetcher}
-            />
+            <React.Fragment>
+              <ErrorMessage name={id} />
+              <Field {...commonProps} fetcher={fetcher} />
+            </React.Fragment>
           )}
         </FormContext.Consumer>
       );
     }
 
     return (
-      <SelectWidget
-        ref={c => {
-          this.field = c;
-        }}
-        schema={schema}
-        uiSchema={uiSchema}
-        isRequired={isRequired}
-        value={value}
-      />
+      <React.Fragment>
+        <ErrorMessage name={id} />
+        <Field {...commonProps} />
+      </React.Fragment>
     );
   }
+
+  private validate = value => {
+    const {isRequired, schema} = this.props;
+    const errors = [];
+
+    if (isRequired && !value) {
+      errors.push({message: 'Required'});
+    }
+
+    if (value !== undefined) {
+      validator.validate(schema, value);
+    }
+
+    if (validator.errors) {
+      errors.push(...validator.errors);
+    }
+
+    return errors.length > 0 ? <Errors errors={errors} /> : undefined;
+  };
 }
 
 export default SelectField;
