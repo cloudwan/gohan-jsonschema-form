@@ -2,79 +2,7 @@ exports["should match snapshot(0)"] = {
   "node": {
     "nodeType": "function",
     "props": {
-      "children": [
-        {
-          "type": "C",
-          "props": {
-            "name": "test"
-          },
-          "_store": {}
-        },
-        {
-          "type": "C",
-          "props": {
-            "name": "test",
-            "schema": {
-              "type": [
-                "object"
-              ],
-              "properties": {
-                "foo": {
-                  "title": "Foo",
-                  "type": [
-                    "array"
-                  ],
-                  "items": {
-                    "title": "Foo array item",
-                    "type": [
-                      "string"
-                    ]
-                  }
-                },
-                "bar": {
-                  "title": "Bar",
-                  "type": [
-                    "object",
-                    "null"
-                  ],
-                  "properties": {
-                    "foz": {
-                      "title": "Foz",
-                      "type": [
-                        "number"
-                      ]
-                    }
-                  },
-                  "propertiesOrder": [
-                    "foz"
-                  ]
-                }
-              },
-              "propertiesOrder": [
-                "bar",
-                "foo"
-              ],
-              "required": [
-                "bar"
-              ]
-            },
-            "validate": "[function]",
-            "component": "Fieldset"
-          },
-          "_store": {}
-        }
-      ]
-    },
-    "rendered": [
-      {
-        "nodeType": "function",
-        "type": "C",
-        "props": {
-          "name": "test"
-        }
-      },
-      {
-        "nodeType": "function",
+      "children": {
         "type": "C",
         "props": {
           "name": "test",
@@ -122,11 +50,63 @@ exports["should match snapshot(0)"] = {
               "bar"
             ]
           },
-          "validate": "[function]",
           "component": "Fieldset"
-        }
+        },
+        "_store": {}
       }
-    ]
+    },
+    "rendered": {
+      "nodeType": "function",
+      "type": "C",
+      "props": {
+        "name": "test",
+        "schema": {
+          "type": [
+            "object"
+          ],
+          "properties": {
+            "foo": {
+              "title": "Foo",
+              "type": [
+                "array"
+              ],
+              "items": {
+                "title": "Foo array item",
+                "type": [
+                  "string"
+                ]
+              }
+            },
+            "bar": {
+              "title": "Bar",
+              "type": [
+                "object",
+                "null"
+              ],
+              "properties": {
+                "foz": {
+                  "title": "Foz",
+                  "type": [
+                    "number"
+                  ]
+                }
+              },
+              "propertiesOrder": [
+                "foz"
+              ]
+            }
+          },
+          "propertiesOrder": [
+            "bar",
+            "foo"
+          ],
+          "required": [
+            "bar"
+          ]
+        },
+        "component": "Fieldset"
+      }
+    }
   },
   "type": "React.Fragment",
   "props": {},
@@ -136,19 +116,6 @@ exports["should match snapshot(0)"] = {
         "nodeType": "function",
         "type": "C",
         "props": {
-          "name": "test"
-        }
-      },
-      "type": "FormikConnect(ErrorMessageImpl)",
-      "props": {
-        "name": "test"
-      }
-    },
-    {
-      "node": {
-        "nodeType": "function",
-        "type": "C",
-        "props": {
           "name": "test",
           "schema": {
             "type": [
@@ -194,7 +161,6 @@ exports["should match snapshot(0)"] = {
               "bar"
             ]
           },
-          "validate": "[function]",
           "component": "Fieldset"
         }
       },
@@ -245,187 +211,73 @@ exports["should match snapshot(0)"] = {
             "bar"
           ]
         },
-        "validate": "[function]",
         "component": "Fieldset"
       }
     }
   ]
 };
 
-exports["should match snapshot with data passed by props(0)"] = {
+exports["should match snapshot with tabs(0)"] = {
   "node": {
     "nodeType": "function",
     "props": {
-      "children": [
-        {
-          "type": "C",
-          "props": {
-            "name": "test"
+      "children": {
+        "type": "C",
+        "props": {
+          "name": "test",
+          "schema": {
+            "type": [
+              "object"
+            ],
+            "properties": {
+              "foo": {
+                "title": "Foo",
+                "type": [
+                  "object"
+                ],
+                "properties": {
+                  "foz": {
+                    "title": "Foz",
+                    "type": [
+                      "number"
+                    ]
+                  }
+                },
+                "propertiesOrder": [
+                  "foz"
+                ]
+              },
+              "bar": {
+                "title": "Bar",
+                "type": [
+                  "object"
+                ],
+                "properties": {
+                  "baz": {
+                    "title": "Baz",
+                    "type": [
+                      "number"
+                    ]
+                  }
+                },
+                "propertiesOrder": [
+                  "baz"
+                ]
+              }
+            },
+            "propertiesOrder": [
+              "bar",
+              "foo"
+            ]
           },
-          "_store": {}
+          "component": "Fieldset"
         },
-        {
-          "type": "C",
-          "props": {
-            "name": "test",
-            "schema": {
-              "type": [
-                "object"
-              ],
-              "properties": {
-                "foo": {
-                  "title": "Foo",
-                  "type": [
-                    "string"
-                  ]
-                },
-                "bar": {
-                  "title": "Bar",
-                  "type": [
-                    "object",
-                    "null"
-                  ],
-                  "properties": {
-                    "foz": {
-                      "title": "Foz",
-                      "type": [
-                        "number"
-                      ]
-                    }
-                  },
-                  "propertiesOrder": [
-                    "foz"
-                  ]
-                }
-              },
-              "propertiesOrder": [
-                "bar",
-                "foo"
-              ]
-            },
-            "validate": "[function]",
-            "component": "Fieldset"
-          },
-          "_store": {}
-        }
-      ]
-    },
-    "rendered": [
-      {
-        "nodeType": "function",
-        "type": "C",
-        "props": {
-          "name": "test"
-        }
-      },
-      {
-        "nodeType": "function",
-        "type": "C",
-        "props": {
-          "name": "test",
-          "schema": {
-            "type": [
-              "object"
-            ],
-            "properties": {
-              "foo": {
-                "title": "Foo",
-                "type": [
-                  "string"
-                ]
-              },
-              "bar": {
-                "title": "Bar",
-                "type": [
-                  "object",
-                  "null"
-                ],
-                "properties": {
-                  "foz": {
-                    "title": "Foz",
-                    "type": [
-                      "number"
-                    ]
-                  }
-                },
-                "propertiesOrder": [
-                  "foz"
-                ]
-              }
-            },
-            "propertiesOrder": [
-              "bar",
-              "foo"
-            ]
-          },
-          "validate": "[function]",
-          "component": "Fieldset"
-        }
-      }
-    ]
-  },
-  "type": "React.Fragment",
-  "props": {},
-  "children": [
-    {
-      "node": {
-        "nodeType": "function",
-        "type": "C",
-        "props": {
-          "name": "test"
-        }
-      },
-      "type": "FormikConnect(ErrorMessageImpl)",
-      "props": {
-        "name": "test"
+        "_store": {}
       }
     },
-    {
-      "node": {
-        "nodeType": "function",
-        "type": "C",
-        "props": {
-          "name": "test",
-          "schema": {
-            "type": [
-              "object"
-            ],
-            "properties": {
-              "foo": {
-                "title": "Foo",
-                "type": [
-                  "string"
-                ]
-              },
-              "bar": {
-                "title": "Bar",
-                "type": [
-                  "object",
-                  "null"
-                ],
-                "properties": {
-                  "foz": {
-                    "title": "Foz",
-                    "type": [
-                      "number"
-                    ]
-                  }
-                },
-                "propertiesOrder": [
-                  "foz"
-                ]
-              }
-            },
-            "propertiesOrder": [
-              "bar",
-              "foo"
-            ]
-          },
-          "validate": "[function]",
-          "component": "Fieldset"
-        }
-      },
-      "type": "FormikConnect(FieldInner)",
+    "rendered": {
+      "nodeType": "function",
+      "type": "C",
       "props": {
         "name": "test",
         "schema": {
@@ -436,14 +288,7 @@ exports["should match snapshot with data passed by props(0)"] = {
             "foo": {
               "title": "Foo",
               "type": [
-                "string"
-              ]
-            },
-            "bar": {
-              "title": "Bar",
-              "type": [
-                "object",
-                "null"
+                "object"
               ],
               "properties": {
                 "foz": {
@@ -456,6 +301,23 @@ exports["should match snapshot with data passed by props(0)"] = {
               "propertiesOrder": [
                 "foz"
               ]
+            },
+            "bar": {
+              "title": "Bar",
+              "type": [
+                "object"
+              ],
+              "properties": {
+                "baz": {
+                  "title": "Baz",
+                  "type": [
+                    "number"
+                  ]
+                }
+              },
+              "propertiesOrder": [
+                "baz"
+              ]
             }
           },
           "propertiesOrder": [
@@ -463,144 +325,9 @@ exports["should match snapshot with data passed by props(0)"] = {
             "foo"
           ]
         },
-        "validate": "[function]",
         "component": "Fieldset"
       }
     }
-  ]
-};
-
-exports["should match snapshot with tabs(0)"] = {
-  "node": {
-    "nodeType": "function",
-    "props": {
-      "children": [
-        {
-          "type": "C",
-          "props": {
-            "name": "test"
-          },
-          "_store": {}
-        },
-        {
-          "type": "C",
-          "props": {
-            "name": "test",
-            "schema": {
-              "type": [
-                "object"
-              ],
-              "properties": {
-                "foo": {
-                  "title": "Foo",
-                  "type": [
-                    "object"
-                  ],
-                  "properties": {
-                    "foz": {
-                      "title": "Foz",
-                      "type": [
-                        "number"
-                      ]
-                    }
-                  },
-                  "propertiesOrder": [
-                    "foz"
-                  ]
-                },
-                "bar": {
-                  "title": "Bar",
-                  "type": [
-                    "object"
-                  ],
-                  "properties": {
-                    "baz": {
-                      "title": "Baz",
-                      "type": [
-                        "number"
-                      ]
-                    }
-                  },
-                  "propertiesOrder": [
-                    "baz"
-                  ]
-                }
-              },
-              "propertiesOrder": [
-                "bar",
-                "foo"
-              ]
-            },
-            "validate": "[function]",
-            "component": "Fieldset"
-          },
-          "_store": {}
-        }
-      ]
-    },
-    "rendered": [
-      {
-        "nodeType": "function",
-        "type": "C",
-        "props": {
-          "name": "test"
-        }
-      },
-      {
-        "nodeType": "function",
-        "type": "C",
-        "props": {
-          "name": "test",
-          "schema": {
-            "type": [
-              "object"
-            ],
-            "properties": {
-              "foo": {
-                "title": "Foo",
-                "type": [
-                  "object"
-                ],
-                "properties": {
-                  "foz": {
-                    "title": "Foz",
-                    "type": [
-                      "number"
-                    ]
-                  }
-                },
-                "propertiesOrder": [
-                  "foz"
-                ]
-              },
-              "bar": {
-                "title": "Bar",
-                "type": [
-                  "object"
-                ],
-                "properties": {
-                  "baz": {
-                    "title": "Baz",
-                    "type": [
-                      "number"
-                    ]
-                  }
-                },
-                "propertiesOrder": [
-                  "baz"
-                ]
-              }
-            },
-            "propertiesOrder": [
-              "bar",
-              "foo"
-            ]
-          },
-          "validate": "[function]",
-          "component": "Fieldset"
-        }
-      }
-    ]
   },
   "type": "React.Fragment",
   "props": {},
@@ -610,19 +337,6 @@ exports["should match snapshot with tabs(0)"] = {
         "nodeType": "function",
         "type": "C",
         "props": {
-          "name": "test"
-        }
-      },
-      "type": "FormikConnect(ErrorMessageImpl)",
-      "props": {
-        "name": "test"
-      }
-    },
-    {
-      "node": {
-        "nodeType": "function",
-        "type": "C",
-        "props": {
           "name": "test",
           "schema": {
             "type": [
@@ -669,7 +383,6 @@ exports["should match snapshot with tabs(0)"] = {
               "foo"
             ]
           },
-          "validate": "[function]",
           "component": "Fieldset"
         }
       },
@@ -721,7 +434,6 @@ exports["should match snapshot with tabs(0)"] = {
             "foo"
           ]
         },
-        "validate": "[function]",
         "component": "Fieldset"
       }
     }

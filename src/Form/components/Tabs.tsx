@@ -19,6 +19,12 @@ export class Tabs extends React.Component<TTabsProps> {
     type: 'card',
   };
 
+  public shouldComponentUpdate(nextProps) {
+    const nextChildrenCount = React.Children.count(nextProps.children);
+    const previousChildrenCount = React.Children.count(this.props.children);
+    return nextChildrenCount !== previousChildrenCount;
+  }
+
   public render(): React.ReactNode {
     const {
       activeTabKey,

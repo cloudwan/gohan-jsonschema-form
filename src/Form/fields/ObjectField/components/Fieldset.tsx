@@ -13,7 +13,6 @@ import styles from './Fieldset.css';
 
 interface TFieldsetProps extends FieldProps, IWidget {
   children: React.ReactNode;
-  id: string;
   isTab?: boolean;
 }
 
@@ -48,7 +47,7 @@ class Fieldset extends React.Component<TFieldsetProps, TFieldsetState> {
     const {
       schema,
       schema: {type, properties, propertiesOrder},
-      id,
+      field: {name},
       isTab = false,
     } = this.props;
     const {areFieldsVisible} = this.state;
@@ -60,7 +59,7 @@ class Fieldset extends React.Component<TFieldsetProps, TFieldsetState> {
     const tabProperties = this.getTabProperties(orderedProperties);
 
     return (
-      <fieldset id={id} className={isTab ? '' : styles.fieldset}>
+      <React.Fragment>
         {type.includes('null') && (
           <Button
             type="primary"
@@ -72,15 +71,18 @@ class Fieldset extends React.Component<TFieldsetProps, TFieldsetState> {
             {`${!areFieldsVisible ? 'Add' : 'Remove'} ${schema.title}`}
           </Button>
         )}
-        {areFieldsVisible &&
-          primitiveProperties.concat(
-            tabProperties.length > 0 ? (
-              <Tabs key="tabs">{tabProperties}</Tabs>
-            ) : (
-              []
-            ),
-          )}
-      </fieldset>
+        {areFieldsVisible && (
+          <fieldset id={name} className={isTab ? '' : styles.fieldset}>
+            {primitiveProperties.concat(
+              tabProperties.length > 0 ? (
+                <Tabs key="tabs">{tabProperties}</Tabs>
+              ) : (
+                []
+              ),
+            )}
+          </fieldset>
+        )}
+      </React.Fragment>
     );
   }
 
@@ -100,7 +102,6 @@ class Fieldset extends React.Component<TFieldsetProps, TFieldsetState> {
 
   private getPrimitiveProperties = (orderedProperties: any): any[] => {
     const {
-      id,
       schema: {properties, required},
       field: {name},
     } = this.props;

@@ -7,7 +7,7 @@ import validator from '../Validator';
 import {selectWidget} from '../widgets';
 
 export class StringField extends React.Component<IWidget> {
-  private widgets;
+  private widget;
   public render(): React.ReactNode {
     const {
       schema,

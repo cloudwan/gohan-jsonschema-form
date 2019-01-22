@@ -1,6 +1,5 @@
 import {Form as FormikForm, Formik} from 'formik';
 import {JSONSchema4} from 'json-schema';
-import defaults from 'json-schema-defaults';
 import isEmpty from 'lodash/isEmpty';
 import * as React from 'react';
 
@@ -10,6 +9,7 @@ import {IUiSchema} from '../typings/IUiSchema';
 import FormActionButtons from './components/FormActionButtons';
 import FormTemplate, {FormTemplateProps} from './components/FormTemplate';
 import SchemaField from './fields/SchemaField';
+import {getInitialValues} from './utils';
 
 interface TFormProps {
   uiSchema?: {
@@ -20,8 +20,8 @@ interface TFormProps {
   fetcher?: (
     relation: string,
   ) => Promise<Array<{label: string; value: string}>>;
-  Template: (props: FormTemplateProps) => JSX.Element;
-  ActionButtons: () => JSX.Element;
+  Template?: (props: FormTemplateProps) => JSX.Element;
+  ActionButtons?: () => JSX.Element;
   onSubmit: (values: any) => void;
 }
 
@@ -48,7 +48,7 @@ export class Form extends React.Component<TFormProps> {
     } = this.props;
 
     const initialValues =
-      formData && !isEmpty(formData) ? formData : defaults(schema);
+      formData && !isEmpty(formData) ? formData : getInitialValues(schema);
 
     return (
       <FormContext.Provider value={fetcher}>

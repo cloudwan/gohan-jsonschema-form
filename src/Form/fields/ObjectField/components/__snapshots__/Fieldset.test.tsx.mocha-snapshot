@@ -1,0 +1,562 @@
+exports["should match snapshot when Fieldset is tab(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "props": {
+      "children": [
+        false,
+        {
+          "type": "fieldset",
+          "props": {
+            "id": "foo",
+            "className": "",
+            "children": [
+              {
+                "type": "SchemaField",
+                "key": "foo.bar",
+                "props": {
+                  "id": "foo.bar",
+                  "schema": {
+                    "title": "Bar",
+                    "type": [
+                      "number"
+                    ]
+                  },
+                  "isRequired": false,
+                  "uiSchema": {}
+                },
+                "_store": {}
+              },
+              {
+                "type": "SchemaField",
+                "key": "foo.baz",
+                "props": {
+                  "id": "foo.baz",
+                  "schema": {
+                    "title": "Baz",
+                    "type": [
+                      "string"
+                    ]
+                  },
+                  "isRequired": true,
+                  "uiSchema": {}
+                },
+                "_store": {}
+              }
+            ]
+          },
+          "_store": {}
+        }
+      ]
+    },
+    "rendered": [
+      false,
+      {
+        "nodeType": "host",
+        "type": "fieldset",
+        "props": {
+          "id": "foo",
+          "className": "",
+          "children": [
+            {
+              "type": "SchemaField",
+              "key": "foo.bar",
+              "props": {
+                "id": "foo.bar",
+                "schema": {
+                  "title": "Bar",
+                  "type": [
+                    "number"
+                  ]
+                },
+                "isRequired": false,
+                "uiSchema": {}
+              },
+              "_store": {}
+            },
+            {
+              "type": "SchemaField",
+              "key": "foo.baz",
+              "props": {
+                "id": "foo.baz",
+                "schema": {
+                  "title": "Baz",
+                  "type": [
+                    "string"
+                  ]
+                },
+                "isRequired": true,
+                "uiSchema": {}
+              },
+              "_store": {}
+            }
+          ]
+        },
+        "rendered": [
+          {
+            "nodeType": "class",
+            "type": "SchemaField",
+            "props": {
+              "id": "foo.bar",
+              "schema": {
+                "title": "Bar",
+                "type": [
+                  "number"
+                ]
+              },
+              "isRequired": false,
+              "uiSchema": {}
+            },
+            "key": "foo.bar"
+          },
+          {
+            "nodeType": "class",
+            "type": "SchemaField",
+            "props": {
+              "id": "foo.baz",
+              "schema": {
+                "title": "Baz",
+                "type": [
+                  "string"
+                ]
+              },
+              "isRequired": true,
+              "uiSchema": {}
+            },
+            "key": "foo.baz"
+          }
+        ]
+      }
+    ]
+  },
+  "type": "React.Fragment",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "host",
+        "type": "fieldset",
+        "props": {
+          "id": "foo",
+          "className": "",
+          "children": [
+            {
+              "type": "SchemaField",
+              "key": "foo.bar",
+              "props": {
+                "id": "foo.bar",
+                "schema": {
+                  "title": "Bar",
+                  "type": [
+                    "number"
+                  ]
+                },
+                "isRequired": false,
+                "uiSchema": {}
+              },
+              "_store": {}
+            },
+            {
+              "type": "SchemaField",
+              "key": "foo.baz",
+              "props": {
+                "id": "foo.baz",
+                "schema": {
+                  "title": "Baz",
+                  "type": [
+                    "string"
+                  ]
+                },
+                "isRequired": true,
+                "uiSchema": {}
+              },
+              "_store": {}
+            }
+          ]
+        },
+        "rendered": [
+          {
+            "nodeType": "class",
+            "type": "SchemaField",
+            "props": {
+              "id": "foo.bar",
+              "schema": {
+                "title": "Bar",
+                "type": [
+                  "number"
+                ]
+              },
+              "isRequired": false,
+              "uiSchema": {}
+            },
+            "key": "foo.bar"
+          },
+          {
+            "nodeType": "class",
+            "type": "SchemaField",
+            "props": {
+              "id": "foo.baz",
+              "schema": {
+                "title": "Baz",
+                "type": [
+                  "string"
+                ]
+              },
+              "isRequired": true,
+              "uiSchema": {}
+            },
+            "key": "foo.baz"
+          }
+        ]
+      },
+      "type": "fieldset",
+      "props": {
+        "id": "foo",
+        "className": ""
+      },
+      "children": [
+        {
+          "node": {
+            "nodeType": "class",
+            "type": "SchemaField",
+            "props": {
+              "id": "foo.bar",
+              "schema": {
+                "title": "Bar",
+                "type": [
+                  "number"
+                ]
+              },
+              "isRequired": false,
+              "uiSchema": {}
+            },
+            "key": "foo.bar"
+          },
+          "type": "SchemaField",
+          "props": {
+            "id": "foo.bar",
+            "schema": {
+              "title": "Bar",
+              "type": [
+                "number"
+              ]
+            },
+            "isRequired": false,
+            "uiSchema": {},
+            "key": "foo.bar"
+          }
+        },
+        {
+          "node": {
+            "nodeType": "class",
+            "type": "SchemaField",
+            "props": {
+              "id": "foo.baz",
+              "schema": {
+                "title": "Baz",
+                "type": [
+                  "string"
+                ]
+              },
+              "isRequired": true,
+              "uiSchema": {}
+            },
+            "key": "foo.baz"
+          },
+          "type": "SchemaField",
+          "props": {
+            "id": "foo.baz",
+            "schema": {
+              "title": "Baz",
+              "type": [
+                "string"
+              ]
+            },
+            "isRequired": true,
+            "uiSchema": {},
+            "key": "foo.baz"
+          }
+        }
+      ]
+    }
+  ]
+};
+
+exports["should match snapshot when Fieldset isn't tab(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "props": {
+      "children": [
+        false,
+        {
+          "type": "fieldset",
+          "props": {
+            "id": "foo",
+            "children": [
+              {
+                "type": "SchemaField",
+                "key": "foo.bar",
+                "props": {
+                  "id": "foo.bar",
+                  "schema": {
+                    "title": "Bar",
+                    "type": [
+                      "number"
+                    ]
+                  },
+                  "isRequired": false,
+                  "uiSchema": {}
+                },
+                "_store": {}
+              },
+              {
+                "type": "SchemaField",
+                "key": "foo.baz",
+                "props": {
+                  "id": "foo.baz",
+                  "schema": {
+                    "title": "Baz",
+                    "type": [
+                      "string"
+                    ]
+                  },
+                  "isRequired": true,
+                  "uiSchema": {}
+                },
+                "_store": {}
+              }
+            ]
+          },
+          "_store": {}
+        }
+      ]
+    },
+    "rendered": [
+      false,
+      {
+        "nodeType": "host",
+        "type": "fieldset",
+        "props": {
+          "id": "foo",
+          "children": [
+            {
+              "type": "SchemaField",
+              "key": "foo.bar",
+              "props": {
+                "id": "foo.bar",
+                "schema": {
+                  "title": "Bar",
+                  "type": [
+                    "number"
+                  ]
+                },
+                "isRequired": false,
+                "uiSchema": {}
+              },
+              "_store": {}
+            },
+            {
+              "type": "SchemaField",
+              "key": "foo.baz",
+              "props": {
+                "id": "foo.baz",
+                "schema": {
+                  "title": "Baz",
+                  "type": [
+                    "string"
+                  ]
+                },
+                "isRequired": true,
+                "uiSchema": {}
+              },
+              "_store": {}
+            }
+          ]
+        },
+        "rendered": [
+          {
+            "nodeType": "class",
+            "type": "SchemaField",
+            "props": {
+              "id": "foo.bar",
+              "schema": {
+                "title": "Bar",
+                "type": [
+                  "number"
+                ]
+              },
+              "isRequired": false,
+              "uiSchema": {}
+            },
+            "key": "foo.bar"
+          },
+          {
+            "nodeType": "class",
+            "type": "SchemaField",
+            "props": {
+              "id": "foo.baz",
+              "schema": {
+                "title": "Baz",
+                "type": [
+                  "string"
+                ]
+              },
+              "isRequired": true,
+              "uiSchema": {}
+            },
+            "key": "foo.baz"
+          }
+        ]
+      }
+    ]
+  },
+  "type": "React.Fragment",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "host",
+        "type": "fieldset",
+        "props": {
+          "id": "foo",
+          "children": [
+            {
+              "type": "SchemaField",
+              "key": "foo.bar",
+              "props": {
+                "id": "foo.bar",
+                "schema": {
+                  "title": "Bar",
+                  "type": [
+                    "number"
+                  ]
+                },
+                "isRequired": false,
+                "uiSchema": {}
+              },
+              "_store": {}
+            },
+            {
+              "type": "SchemaField",
+              "key": "foo.baz",
+              "props": {
+                "id": "foo.baz",
+                "schema": {
+                  "title": "Baz",
+                  "type": [
+                    "string"
+                  ]
+                },
+                "isRequired": true,
+                "uiSchema": {}
+              },
+              "_store": {}
+            }
+          ]
+        },
+        "rendered": [
+          {
+            "nodeType": "class",
+            "type": "SchemaField",
+            "props": {
+              "id": "foo.bar",
+              "schema": {
+                "title": "Bar",
+                "type": [
+                  "number"
+                ]
+              },
+              "isRequired": false,
+              "uiSchema": {}
+            },
+            "key": "foo.bar"
+          },
+          {
+            "nodeType": "class",
+            "type": "SchemaField",
+            "props": {
+              "id": "foo.baz",
+              "schema": {
+                "title": "Baz",
+                "type": [
+                  "string"
+                ]
+              },
+              "isRequired": true,
+              "uiSchema": {}
+            },
+            "key": "foo.baz"
+          }
+        ]
+      },
+      "type": "fieldset",
+      "props": {
+        "id": "foo"
+      },
+      "children": [
+        {
+          "node": {
+            "nodeType": "class",
+            "type": "SchemaField",
+            "props": {
+              "id": "foo.bar",
+              "schema": {
+                "title": "Bar",
+                "type": [
+                  "number"
+                ]
+              },
+              "isRequired": false,
+              "uiSchema": {}
+            },
+            "key": "foo.bar"
+          },
+          "type": "SchemaField",
+          "props": {
+            "id": "foo.bar",
+            "schema": {
+              "title": "Bar",
+              "type": [
+                "number"
+              ]
+            },
+            "isRequired": false,
+            "uiSchema": {},
+            "key": "foo.bar"
+          }
+        },
+        {
+          "node": {
+            "nodeType": "class",
+            "type": "SchemaField",
+            "props": {
+              "id": "foo.baz",
+              "schema": {
+                "title": "Baz",
+                "type": [
+                  "string"
+                ]
+              },
+              "isRequired": true,
+              "uiSchema": {}
+            },
+            "key": "foo.baz"
+          },
+          "type": "SchemaField",
+          "props": {
+            "id": "foo.baz",
+            "schema": {
+              "title": "Baz",
+              "type": [
+                "string"
+              ]
+            },
+            "isRequired": true,
+            "uiSchema": {},
+            "key": "foo.baz"
+          }
+        }
+      ]
+    }
+  ]
+};
+
