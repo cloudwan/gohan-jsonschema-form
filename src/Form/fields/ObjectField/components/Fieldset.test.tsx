@@ -9,10 +9,69 @@ chai.use(chaiEnzyme());
 chai.should();
 
 describe('<Fieldset/>', () => {
+  const formikFormProps = {
+    dirty: false,
+    errors: {},
+    handleBlur: () => null,
+    handleChange: () => null,
+    handleReset: () => null,
+    handleSubmit: () => null,
+    initialValues: {},
+    isSubmitting: false,
+    isValid: false,
+    isValidating: false,
+    registerField: () => null,
+    resetForm: () => null,
+    setError: () => null,
+    setErrors: () => null,
+    setFieldError: () => null,
+    setFieldTouched: () => null,
+    setFieldValue: () => null,
+    setFormikState: () => null,
+    setStatus: () => null,
+    setSubmitting: () => null,
+    setTouched: () => null,
+    setValues: () => null,
+    submitCount: 0,
+    submitForm: () => null,
+    touched: {},
+    unregisterField: () => null,
+    validateField: () => null,
+    validateForm: () => null,
+    validateOnBlur: true,
+    validateOnChange: true,
+    values: {},
+  };
+
   describe('render', () => {
     it('should match snapshot when Fieldset is tab', () => {
       const wrapper = shallow(
-        <Fieldset id="test" isTab={true}>
+        <Fieldset
+          isTab={true}
+          form={formikFormProps}
+          field={{
+            value: '',
+            onChange: () => null,
+            onBlur: () => null,
+            name: 'foo',
+          }}
+          schema={{
+            type: ['object'],
+            properties: {
+              baz: {
+                title: 'Baz',
+                type: ['string'],
+              },
+              bar: {
+                title: 'Bar',
+                type: ['number'],
+              },
+            },
+            required: ['baz'],
+            propertiesOrder: ['bar', 'baz'],
+          }}
+          isRequired={false}
+        >
           test
         </Fieldset>,
       );
@@ -21,7 +80,36 @@ describe('<Fieldset/>', () => {
     });
 
     it("should match snapshot when Fieldset isn't tab", () => {
-      const wrapper = shallow(<Fieldset id="test">test</Fieldset>);
+      const wrapper = shallow(
+        <Fieldset
+          isTab={false}
+          form={formikFormProps}
+          field={{
+            value: '',
+            onChange: () => null,
+            onBlur: () => null,
+            name: 'foo',
+          }}
+          schema={{
+            type: ['object'],
+            properties: {
+              baz: {
+                title: 'Baz',
+                type: ['string'],
+              },
+              bar: {
+                title: 'Bar',
+                type: ['number'],
+              },
+            },
+            required: ['baz'],
+            propertiesOrder: ['bar', 'baz'],
+          }}
+          isRequired={false}
+        >
+          test
+        </Fieldset>,
+      );
 
       wrapper.should.to.matchSnapshot();
     });

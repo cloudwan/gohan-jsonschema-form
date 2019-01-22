@@ -1,0 +1,70 @@
+exports["should match snapshot(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "props": {
+      "children": [
+        {
+          "type": "ListAddButton",
+          "props": {
+            "onClick": "[function]"
+          },
+          "_store": {}
+        },
+        {
+          "type": "ul",
+          "props": {
+            "children": []
+          },
+          "_store": {}
+        }
+      ]
+    },
+    "rendered": [
+      {
+        "nodeType": "function",
+        "type": "ListAddButton",
+        "props": {
+          "onClick": "[function]"
+        }
+      },
+      {
+        "nodeType": "host",
+        "type": "ul",
+        "props": {
+          "children": []
+        },
+        "rendered": []
+      }
+    ]
+  },
+  "type": "React.Fragment",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "ListAddButton",
+        "props": {
+          "onClick": "[function]"
+        }
+      },
+      "type": "ListAddButton",
+      "props": {
+        "onClick": "[function]"
+      }
+    },
+    {
+      "node": {
+        "nodeType": "host",
+        "type": "ul",
+        "props": {
+          "children": []
+        },
+        "rendered": []
+      },
+      "type": "ul",
+      "props": {}
+    }
+  ]
+};
+

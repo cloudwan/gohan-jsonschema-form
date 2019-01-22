@@ -11,10 +11,10 @@ export class ArrayField extends React.Component<IWidget> {
   constructor(props) {
     super(props);
     const {items} = this.props.schema;
+    const type: string | string[] = items.type;
 
-    if (items && items.type) {
-      const itemType: string | string[] = items.type;
-      this.isObjectArray = itemType.includes('object');
+    if (items && type) {
+      this.isObjectArray = type.includes('object');
     }
   }
 

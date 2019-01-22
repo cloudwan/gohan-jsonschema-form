@@ -14,6 +14,12 @@ interface TListProps {
 }
 
 class List extends React.Component<FieldArrayRenderProps & IWidget> {
+  public shouldComponentUpdate(nextProps) {
+    const nextValues = getIn(nextProps.form.values, nextProps.name) || [];
+    const previousValues = getIn(this.props.form.values, this.props.name) || [];
+    return nextValues.length !== previousValues.length;
+  }
+
   public render() {
     const {form, name, schema} = this.props;
 
