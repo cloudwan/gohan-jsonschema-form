@@ -1,94 +1,50 @@
-import {isEmpty} from 'lodash';
+import {FieldProps} from 'formik';
+import isEmpty from 'lodash/isEmpty';
 import * as React from 'react';
 
 import {IWidget} from '../../../typings/IWidget';
-import Errors from '../../components/Errors';
-import validator from '../../Validator';
-
 import Range from './components/Range';
 
-interface TRangeWidgetState {
-  value?: number[] | undefined | null;
-  errors: any[];
-}
-
-export default class RangeWidget extends React.Component<
-  IWidget,
-  TRangeWidgetState
-> {
-  constructor(props) {
-    super(props);
-
-    const {
-      value,
-      schema: {properties},
-      uiSchema: {
-        'ui:options': {minKey, maxKey},
-      },
-    } = props;
-
-    if (!isEmpty(value)) {
-      this.state = {
-        errors: [],
-        value: [value[minKey], value[maxKey]],
-      };
-    } else {
-      this.state = {
-        errors: [],
-        value: [
-          properties[minKey].default || properties[minKey].minimum,
-          properties[maxKey].default || properties[maxKey].maximum,
-        ],
-      };
-    }
-  }
-
-  public get value(): object {
-    const {value} = this.state;
-
-    return {
-      [this.props.uiSchema['ui:options'].minKey]: value[0],
-      [this.props.uiSchema['ui:options'].maxKey]: value[1],
-    };
-  }
-
-  public get isValid(): boolean {
-    const {schema} = this.props;
-    const errors = [];
-
-    validator.validate(schema, this.value);
-
-    if (validator.errors) {
-      errors.push(...validator.errors);
-    }
-
-    this.setState({errors});
-
-    return errors.length === 0;
-  }
+export class RangeWidget extends React.Component<IWidget & FieldProps> {
+  public static defaultProps = {
+    uiSchema: {},
+  };
 
   public render() {
     const {
       schema: {properties},
-      uiSchema: {
-        'ui:options': {minKey, maxKey},
-      },
+      uiSchema,
+      field: {value},
     } = this.props;
+    const uiOptions = uiSchema['ui:options'] || {};
+    const {minKey, maxKey} = uiOptions;
+    const currentValues = !isEmpty(value)
+      ? [value[minKey], value[maxKey]]
+      : [
+          properties[minKey].default || properties[minKey].minimum,
+          properties[maxKey].default || properties[maxKey].maximum,
+        ];
 
     return (
-      <React.Fragment>
-        <Errors errors={this.state.errors} />
-        <Range
-          onChange={this.handleChange}
-          value={this.state.value}
-          min={properties[minKey].minimum}
-          max={properties[maxKey].maximum}
-        />
-      </React.Fragment>
+      <Range
+        onChange={this.handleChange}
+        value={currentValues}
+        min={properties[minKey].minimum}
+        max={properties[maxKey].maximum}
+      />
     );
   }
 
-  private handleChange = (value: number[]): void => {
-    this.setState({value});
+  private handleChange = value => {
+    this.props.form.setFieldValue(
+      this.props.uiSchema['ui:options'].minKey,
+      value[0],
+    );
+    this.props.form.setFieldValue(
+      this.props.uiSchema['ui:options'].maxKey,
+      value[1],
+    );
   };
 }
+
+export default RangeWidget;
