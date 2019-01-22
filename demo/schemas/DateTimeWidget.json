@@ -78,8 +78,5 @@
     ],
     "type": "object"
   },
-  "uiSchema": {},
-  "formData": {
-    "dataDateTime": "2018-09-07T18:10:58Z"
-  }
+  "uiSchema": {}
 }
