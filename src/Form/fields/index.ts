@@ -1,11 +1,11 @@
 import CodeEditorWidget from '../widgets/CodeEditorWidget';
 import GeoWidget from '../widgets/GeoWidget';
 import NotFoundWidget from '../widgets/NotFoundWidget';
-import RangeWidget from '../widgets/RangeWidget';
 import ArrayField from './ArrayField';
 import BooleanField from './BooleanField';
 import NumberField from './NumberField';
 import ObjectField from './ObjectField';
+import RangeField from './RangeField';
 import SelectField from './SelectField';
 import StringField from './StringField';
 
@@ -18,7 +18,7 @@ const fields = {
   Object: ObjectField,
   Select: SelectField,
   NotFound: NotFoundWidget,
-  Range: RangeWidget,
+  Range: RangeField,
   Geo: GeoWidget,
 };
 
