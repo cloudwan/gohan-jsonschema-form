@@ -1,8 +1,8 @@
 import CodeEditorWidget from '../widgets/CodeEditorWidget';
-import GeoWidget from '../widgets/GeoWidget';
 import NotFoundWidget from '../widgets/NotFoundWidget';
 import ArrayField from './ArrayField';
 import BooleanField from './BooleanField';
+import GeoField from './GeoField';
 import NumberField from './NumberField';
 import ObjectField from './ObjectField';
 import RangeField from './RangeField';
@@ -19,7 +19,7 @@ const fields = {
   Select: SelectField,
   NotFound: NotFoundWidget,
   Range: RangeField,
-  Geo: GeoWidget,
+  Geo: GeoField,
 };
 
 export default fields;
