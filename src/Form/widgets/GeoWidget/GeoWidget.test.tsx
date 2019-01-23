@@ -2,6 +2,7 @@ import * as chai from 'chai';
 import chaiEnzyme from 'chai-enzyme';
 import {shallow} from 'enzyme';
 import * as React from 'react';
+import sinon from 'sinon';
 
 import GeoWidget from './GeoWidget';
 
@@ -9,8 +10,42 @@ chai.use(chaiEnzyme());
 chai.should();
 
 describe('<GeoWidget />', () => {
+  const formikFormProps = {
+    dirty: false,
+    errors: {},
+    handleBlur: () => null,
+    handleChange: () => null,
+    handleReset: () => null,
+    handleSubmit: () => null,
+    initialValues: {},
+    isSubmitting: false,
+    isValid: false,
+    isValidating: false,
+    registerField: () => null,
+    resetForm: () => null,
+    setError: () => null,
+    setErrors: () => null,
+    setFieldError: () => null,
+    setFieldTouched: () => null,
+    setFieldValue: () => null,
+    setFormikState: () => null,
+    setStatus: () => null,
+    setSubmitting: () => null,
+    setTouched: () => null,
+    setValues: () => null,
+    submitCount: 0,
+    submitForm: () => null,
+    touched: {},
+    unregisterField: () => null,
+    validateField: () => null,
+    validateForm: () => null,
+    validateOnBlur: true,
+    validateOnChange: true,
+    values: {},
+  };
+
   const schema = {
-    type: 'object',
+    type: ['object'],
     properties: {
       lat: {
         type: ['number'],
@@ -33,93 +68,41 @@ describe('<GeoWidget />', () => {
   describe('render()', () => {
     it('should match snapshot', () => {
       const wrapper = shallow(
-        <GeoWidget schema={schema} uiSchema={uiSchema} />,
-      );
-
-      wrapper.should.matchSnapshot();
-    });
-
-    it('should match snapchot with default values', () => {
-      const wrapper = shallow(
-        <GeoWidget
-          schema={{
-            ...schema,
-            properties: {
-              lat: {
-                ...schema.properties.lat,
-                default: 52,
-              },
-              lng: {
-                ...schema.properties.lng,
-                default: 21,
-              },
-            },
-          }}
-          uiSchema={uiSchema}
-        />,
-      );
-
-      wrapper.should.matchSnapshot();
-    });
-
-    it('should match snapshot with value passed by props', () => {
-      const wrapper = shallow(
         <GeoWidget
           schema={schema}
           uiSchema={uiSchema}
-          value={{
-            lat: 60,
-            lng: 20,
+          form={formikFormProps}
+          field={{
+            value: {lat: 1, lng: 0},
+            onChange: () => null,
+            onBlur: () => null,
+            name: 'foo',
           }}
         />,
       );
 
       wrapper.should.matchSnapshot();
-    });
-  });
-
-  describe('get value()', () => {
-    it('should return value when is valid', () => {
-      const wrapper = shallow(
-        <GeoWidget schema={schema} uiSchema={uiSchema} />,
-      );
-      const instance = wrapper.instance() as GeoWidget;
-      wrapper.setState({
-        value: {
-          lat: 90,
-          lng: 100,
-        },
-      });
-
-      instance.value.should.deep.equal({
-        lat: 90,
-        lng: 100,
-      });
-    });
-  });
-
-  describe('get isValid()', () => {
-    it('should return true if value is valid', () => {
-      const wrapper = shallow(
-        <GeoWidget
-          schema={schema}
-          uiSchema={uiSchema}
-          value={{
-            lat: 51,
-            lng: 21,
-          }}
-        />,
-      );
-      const instance = wrapper.instance() as GeoWidget;
-
-      instance.isValid.should.equal(true);
     });
   });
 
   describe('handleChange()', () => {
     it('should change state value', () => {
+      const setFieldValue = sinon.spy();
       const wrapper = shallow(
-        <GeoWidget schema={schema} uiSchema={uiSchema} />,
+        <GeoWidget
+          schema={schema}
+          uiSchema={uiSchema}
+          form={{
+            ...formikFormProps,
+            setFieldValue,
+          }}
+          field={{
+            value: {lat: 1, lng: 0},
+            onChange: () => null,
+            onBlur: () => null,
+            name: 'foo',
+          }}
+        />,
       );
 
       const instance = wrapper.instance() as GeoWidget;
@@ -129,10 +112,8 @@ describe('<GeoWidget />', () => {
         lng: 30,
       });
 
-      wrapper.state().value.should.deep.equal({
-        lat: 20,
-        lng: 30,
-      });
+      setFieldValue.should.calledWith('lat', 20);
+      setFieldValue.should.calledWith('lng', 30);
     });
   });
 });
