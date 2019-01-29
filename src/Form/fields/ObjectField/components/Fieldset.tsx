@@ -103,6 +103,7 @@ class Fieldset extends React.Component<TFieldsetProps, TFieldsetState> {
   private getPrimitiveProperties = (orderedProperties: any): any[] => {
     const {
       schema: {properties, required},
+      uiSchema = {},
       field: {name},
     } = this.props;
 
@@ -121,6 +122,7 @@ class Fieldset extends React.Component<TFieldsetProps, TFieldsetState> {
           id={!name ? key : `${name}.${key}`}
           key={!name ? key : `${name}.${key}`}
           schema={properties[key]}
+          uiSchema={uiSchema[key]}
           isRequired={Array.isArray(required) && required.includes(key)}
         />
       ));
@@ -129,6 +131,7 @@ class Fieldset extends React.Component<TFieldsetProps, TFieldsetState> {
   private getTabProperties = (orderedProperties: any): any[] => {
     const {
       schema: {properties, required},
+      uiSchema = {},
       field: {name},
     } = this.props;
     return orderedProperties
@@ -161,6 +164,7 @@ class Fieldset extends React.Component<TFieldsetProps, TFieldsetState> {
             schema={properties[key]}
             isRequired={Array.isArray(required) && required.includes(key)}
             uiSchema={{
+              ...(uiSchema[key] || {}),
               'ui:title': '',
               'ui:description': '',
               'ui:options': {

@@ -4,27 +4,18 @@ import * as React from 'react';
 import {IWidget} from '../../../typings/IWidget';
 import Fieldset from './components/Fieldset';
 
-interface TObjectFieldState {
-  errors: any[];
-  isNull?: boolean;
-}
-
-export default class ObjectField extends React.Component<
-  IWidget,
-  TObjectFieldState
-> {
+export default class ObjectField extends React.Component<IWidget> {
   public render(): JSX.Element {
-    const {id, schema, isRequired} = this.props;
+    const {id, schema, uiSchema, isRequired} = this.props;
 
     return (
-      <React.Fragment>
-        <Field
-          name={id}
-          schema={schema}
-          isRequired={isRequired}
-          component={Fieldset}
-        />
-      </React.Fragment>
+      <Field
+        name={id}
+        schema={schema}
+        uiSchema={uiSchema}
+        isRequired={isRequired}
+        component={Fieldset}
+      />
     );
   }
 }

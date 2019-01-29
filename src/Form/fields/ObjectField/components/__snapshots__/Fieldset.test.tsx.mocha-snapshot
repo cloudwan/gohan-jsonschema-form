@@ -21,8 +21,8 @@ exports["should match snapshot when Fieldset is tab(0)"] = {
                       "number"
                     ]
                   },
-                  "isRequired": false,
-                  "uiSchema": {}
+                  "uiSchema": {},
+                  "isRequired": false
                 },
                 "_store": {}
               },
@@ -37,8 +37,8 @@ exports["should match snapshot when Fieldset is tab(0)"] = {
                       "string"
                     ]
                   },
-                  "isRequired": true,
-                  "uiSchema": {}
+                  "uiSchema": {},
+                  "isRequired": true
                 },
                 "_store": {}
               }
@@ -68,8 +68,8 @@ exports["should match snapshot when Fieldset is tab(0)"] = {
                     "number"
                   ]
                 },
-                "isRequired": false,
-                "uiSchema": {}
+                "uiSchema": {},
+                "isRequired": false
               },
               "_store": {}
             },
@@ -84,8 +84,8 @@ exports["should match snapshot when Fieldset is tab(0)"] = {
                     "string"
                   ]
                 },
-                "isRequired": true,
-                "uiSchema": {}
+                "uiSchema": {},
+                "isRequired": true
               },
               "_store": {}
             }
@@ -103,8 +103,8 @@ exports["should match snapshot when Fieldset is tab(0)"] = {
                   "number"
                 ]
               },
-              "isRequired": false,
-              "uiSchema": {}
+              "uiSchema": {},
+              "isRequired": false
             },
             "key": "foo.bar"
           },
@@ -119,8 +119,8 @@ exports["should match snapshot when Fieldset is tab(0)"] = {
                   "string"
                 ]
               },
-              "isRequired": true,
-              "uiSchema": {}
+              "uiSchema": {},
+              "isRequired": true
             },
             "key": "foo.baz"
           }
@@ -150,8 +150,8 @@ exports["should match snapshot when Fieldset is tab(0)"] = {
                     "number"
                   ]
                 },
-                "isRequired": false,
-                "uiSchema": {}
+                "uiSchema": {},
+                "isRequired": false
               },
               "_store": {}
             },
@@ -166,8 +166,8 @@ exports["should match snapshot when Fieldset is tab(0)"] = {
                     "string"
                   ]
                 },
-                "isRequired": true,
-                "uiSchema": {}
+                "uiSchema": {},
+                "isRequired": true
               },
               "_store": {}
             }
@@ -185,8 +185,8 @@ exports["should match snapshot when Fieldset is tab(0)"] = {
                   "number"
                 ]
               },
-              "isRequired": false,
-              "uiSchema": {}
+              "uiSchema": {},
+              "isRequired": false
             },
             "key": "foo.bar"
           },
@@ -201,8 +201,8 @@ exports["should match snapshot when Fieldset is tab(0)"] = {
                   "string"
                 ]
               },
-              "isRequired": true,
-              "uiSchema": {}
+              "uiSchema": {},
+              "isRequired": true
             },
             "key": "foo.baz"
           }
@@ -226,8 +226,8 @@ exports["should match snapshot when Fieldset is tab(0)"] = {
                   "number"
                 ]
               },
-              "isRequired": false,
-              "uiSchema": {}
+              "uiSchema": {},
+              "isRequired": false
             },
             "key": "foo.bar"
           },
@@ -240,8 +240,8 @@ exports["should match snapshot when Fieldset is tab(0)"] = {
                 "number"
               ]
             },
-            "isRequired": false,
             "uiSchema": {},
+            "isRequired": false,
             "key": "foo.bar"
           }
         },
@@ -257,8 +257,8 @@ exports["should match snapshot when Fieldset is tab(0)"] = {
                   "string"
                 ]
               },
-              "isRequired": true,
-              "uiSchema": {}
+              "uiSchema": {},
+              "isRequired": true
             },
             "key": "foo.baz"
           },
@@ -271,8 +271,8 @@ exports["should match snapshot when Fieldset is tab(0)"] = {
                 "string"
               ]
             },
-            "isRequired": true,
             "uiSchema": {},
+            "isRequired": true,
             "key": "foo.baz"
           }
         }
@@ -303,8 +303,8 @@ exports["should match snapshot when Fieldset isn't tab(0)"] = {
                       "number"
                     ]
                   },
-                  "isRequired": false,
-                  "uiSchema": {}
+                  "uiSchema": {},
+                  "isRequired": false
                 },
                 "_store": {}
               },
@@ -319,8 +319,8 @@ exports["should match snapshot when Fieldset isn't tab(0)"] = {
                       "string"
                     ]
                   },
-                  "isRequired": true,
-                  "uiSchema": {}
+                  "uiSchema": {},
+                  "isRequired": true
                 },
                 "_store": {}
               }
@@ -349,8 +349,8 @@ exports["should match snapshot when Fieldset isn't tab(0)"] = {
                     "number"
                   ]
                 },
-                "isRequired": false,
-                "uiSchema": {}
+                "uiSchema": {},
+                "isRequired": false
               },
               "_store": {}
             },
@@ -365,8 +365,8 @@ exports["should match snapshot when Fieldset isn't tab(0)"] = {
                     "string"
                   ]
                 },
-                "isRequired": true,
-                "uiSchema": {}
+                "uiSchema": {},
+                "isRequired": true
               },
               "_store": {}
             }
@@ -384,8 +384,8 @@ exports["should match snapshot when Fieldset isn't tab(0)"] = {
                   "number"
                 ]
               },
-              "isRequired": false,
-              "uiSchema": {}
+              "uiSchema": {},
+              "isRequired": false
             },
             "key": "foo.bar"
           },
@@ -400,8 +400,8 @@ exports["should match snapshot when Fieldset isn't tab(0)"] = {
                   "string"
                 ]
               },
-              "isRequired": true,
-              "uiSchema": {}
+              "uiSchema": {},
+              "isRequired": true
             },
             "key": "foo.baz"
           }
@@ -430,8 +430,8 @@ exports["should match snapshot when Fieldset isn't tab(0)"] = {
                     "number"
                   ]
                 },
-                "isRequired": false,
-                "uiSchema": {}
+                "uiSchema": {},
+                "isRequired": false
               },
               "_store": {}
             },
@@ -446,8 +446,8 @@ exports["should match snapshot when Fieldset isn't tab(0)"] = {
                     "string"
                   ]
                 },
-                "isRequired": true,
-                "uiSchema": {}
+                "uiSchema": {},
+                "isRequired": true
               },
               "_store": {}
             }
@@ -465,8 +465,8 @@ exports["should match snapshot when Fieldset isn't tab(0)"] = {
                   "number"
                 ]
               },
-              "isRequired": false,
-              "uiSchema": {}
+              "uiSchema": {},
+              "isRequired": false
             },
             "key": "foo.bar"
           },
@@ -481,8 +481,8 @@ exports["should match snapshot when Fieldset isn't tab(0)"] = {
                   "string"
                 ]
               },
-              "isRequired": true,
-              "uiSchema": {}
+              "uiSchema": {},
+              "isRequired": true
             },
             "key": "foo.baz"
           }
@@ -505,8 +505,8 @@ exports["should match snapshot when Fieldset isn't tab(0)"] = {
                   "number"
                 ]
               },
-              "isRequired": false,
-              "uiSchema": {}
+              "uiSchema": {},
+              "isRequired": false
             },
             "key": "foo.bar"
           },
@@ -519,8 +519,8 @@ exports["should match snapshot when Fieldset isn't tab(0)"] = {
                 "number"
               ]
             },
-            "isRequired": false,
             "uiSchema": {},
+            "isRequired": false,
             "key": "foo.bar"
           }
         },
@@ -536,8 +536,8 @@ exports["should match snapshot when Fieldset isn't tab(0)"] = {
                   "string"
                 ]
               },
-              "isRequired": true,
-              "uiSchema": {}
+              "uiSchema": {},
+              "isRequired": true
             },
             "key": "foo.baz"
           },
@@ -550,8 +550,8 @@ exports["should match snapshot when Fieldset isn't tab(0)"] = {
                 "string"
               ]
             },
-            "isRequired": true,
             "uiSchema": {},
+            "isRequired": true,
             "key": "foo.baz"
           }
         }
