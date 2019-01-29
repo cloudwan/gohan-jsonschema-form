@@ -1,4 +1,5 @@
 import Ajv from 'ajv';
+import {safeLoad} from 'js-yaml';
 
 import cidrFormat from './cidrFormat';
 import emailFormat from './emailFormat';
@@ -17,6 +18,8 @@ const ajv = new Ajv({
     ipv4: ipV4Format,
     ipv6: ipV6Format,
     'password-confirm': () => true,
+    text: data => typeof data === 'string',
+    js: data => typeof data === 'string',
   },
 });
 

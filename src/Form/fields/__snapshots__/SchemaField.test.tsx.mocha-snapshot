@@ -88,7 +88,7 @@ exports["should match snapshot when uischema widget defined as string(0)"] = {
       "isRequired": false,
       "id": "",
       "children": {
-        "type": "CodeEditorWidget",
+        "type": "NotFoundWidget",
         "props": {
           "id": "",
           "schema": {
@@ -96,17 +96,16 @@ exports["should match snapshot when uischema widget defined as string(0)"] = {
             "type": "string"
           },
           "uiSchema": {
-            "ui:widget": "Code"
+            "ui:widget": "CodeEditor"
           },
-          "isRequired": false,
-          "format": "text"
+          "isRequired": false
         },
         "_store": {}
       }
     },
     "rendered": {
       "nodeType": "class",
-      "type": "CodeEditorWidget",
+      "type": "NotFoundWidget",
       "props": {
         "id": "",
         "schema": {
@@ -114,10 +113,9 @@ exports["should match snapshot when uischema widget defined as string(0)"] = {
           "type": "string"
         },
         "uiSchema": {
-          "ui:widget": "Code"
+          "ui:widget": "CodeEditor"
         },
-        "isRequired": false,
-        "format": "text"
+        "isRequired": false
       }
     }
   },
@@ -131,7 +129,7 @@ exports["should match snapshot when uischema widget defined as string(0)"] = {
     {
       "node": {
         "nodeType": "class",
-        "type": "CodeEditorWidget",
+        "type": "NotFoundWidget",
         "props": {
           "id": "",
           "schema": {
@@ -139,13 +137,12 @@ exports["should match snapshot when uischema widget defined as string(0)"] = {
             "type": "string"
           },
           "uiSchema": {
-            "ui:widget": "Code"
+            "ui:widget": "CodeEditor"
           },
-          "isRequired": false,
-          "format": "text"
+          "isRequired": false
         }
       },
-      "type": "CodeEditorWidget",
+      "type": "NotFoundWidget",
       "props": {
         "id": "",
         "schema": {
@@ -153,10 +150,9 @@ exports["should match snapshot when uischema widget defined as string(0)"] = {
           "type": "string"
         },
         "uiSchema": {
-          "ui:widget": "Code"
+          "ui:widget": "CodeEditor"
         },
-        "isRequired": false,
-        "format": "text"
+        "isRequired": false
       }
     }
   ]
@@ -270,8 +266,7 @@ exports["should match snapshot when schema type is object w/o properties(0)"] = 
             "type": "object"
           },
           "uiSchema": {},
-          "isRequired": false,
-          "format": "text"
+          "isRequired": false
         },
         "_store": {}
       }
@@ -286,8 +281,7 @@ exports["should match snapshot when schema type is object w/o properties(0)"] = 
           "type": "object"
         },
         "uiSchema": {},
-        "isRequired": false,
-        "format": "text"
+        "isRequired": false
       }
     }
   },
@@ -309,8 +303,7 @@ exports["should match snapshot when schema type is object w/o properties(0)"] = 
             "type": "object"
           },
           "uiSchema": {},
-          "isRequired": false,
-          "format": "text"
+          "isRequired": false
         }
       },
       "type": "CodeEditorWidget",
@@ -321,8 +314,7 @@ exports["should match snapshot when schema type is object w/o properties(0)"] = 
           "type": "object"
         },
         "uiSchema": {},
-        "isRequired": false,
-        "format": "text"
+        "isRequired": false
       }
     }
   ]

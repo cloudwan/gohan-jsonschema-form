@@ -17,6 +17,8 @@ const widgets = {
   'date-time': DateTimeWidget,
   uuid: UUIDWidget,
   Geo: GeoWidget,
+  text: CodeEditorWidget,
+  js: CodeEditorWidget,
 };
 
 export const selectWidget = (name: string) => {

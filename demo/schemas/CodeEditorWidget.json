@@ -1,0 +1,26 @@
+{
+  "id": "code_editor",
+  "title": "Code Editor Schema",
+  "schema": {
+    "permission": [
+      "create",
+      "read",
+      "update",
+      "delete"
+    ],
+    "properties": {
+      "codeEditor": {
+        "id": "code_editor_widget",
+        "description": "Code Editor Widget example",
+        "format": "text",
+        "title": "Code Editor",
+        "type": "string"
+      }
+    },
+    "propertiesOrder": ["codeEditor"],
+    "required": ["codeEditor"],
+    "type": "object"
+  },
+  "uiSchema": {},
+  "formData": {}
+}

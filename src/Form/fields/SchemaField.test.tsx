@@ -51,7 +51,7 @@ describe('<SchemaField />', () => {
             type: 'string',
           }}
           uiSchema={{
-            'ui:widget': 'Code',
+            'ui:widget': 'CodeEditor',
           }}
         />,
       );
