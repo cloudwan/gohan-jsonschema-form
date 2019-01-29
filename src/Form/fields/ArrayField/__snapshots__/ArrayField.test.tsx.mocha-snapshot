@@ -2,58 +2,27 @@ exports["should match snapshot(0)"] = {
   "node": {
     "nodeType": "function",
     "props": {
-      "children": [
-        {
-          "type": "C",
-          "props": {
-            "name": "test"
-          },
-          "_store": {}
-        },
-        {
-          "type": "C",
-          "props": {
-            "name": "test",
-            "component": "component"
-          },
-          "_store": {}
-        }
-      ]
-    },
-    "rendered": [
-      {
-        "nodeType": "function",
-        "type": "C",
-        "props": {
-          "name": "test"
-        }
-      },
-      {
-        "nodeType": "function",
+      "children": {
         "type": "C",
         "props": {
           "name": "test",
           "component": "component"
-        }
+        },
+        "_store": {}
       }
-    ]
+    },
+    "rendered": {
+      "nodeType": "function",
+      "type": "C",
+      "props": {
+        "name": "test",
+        "component": "component"
+      }
+    }
   },
   "type": "React.Fragment",
   "props": {},
   "children": [
-    {
-      "node": {
-        "nodeType": "function",
-        "type": "C",
-        "props": {
-          "name": "test"
-        }
-      },
-      "type": "FormikConnect(ErrorMessageImpl)",
-      "props": {
-        "name": "test"
-      }
-    },
     {
       "node": {
         "nodeType": "function",
@@ -76,58 +45,27 @@ exports["should match snapshot with default value(0)"] = {
   "node": {
     "nodeType": "function",
     "props": {
-      "children": [
-        {
-          "type": "C",
-          "props": {
-            "name": "test"
-          },
-          "_store": {}
-        },
-        {
-          "type": "C",
-          "props": {
-            "name": "test",
-            "component": "component"
-          },
-          "_store": {}
-        }
-      ]
-    },
-    "rendered": [
-      {
-        "nodeType": "function",
-        "type": "C",
-        "props": {
-          "name": "test"
-        }
-      },
-      {
-        "nodeType": "function",
+      "children": {
         "type": "C",
         "props": {
           "name": "test",
           "component": "component"
-        }
+        },
+        "_store": {}
       }
-    ]
+    },
+    "rendered": {
+      "nodeType": "function",
+      "type": "C",
+      "props": {
+        "name": "test",
+        "component": "component"
+      }
+    }
   },
   "type": "React.Fragment",
   "props": {},
   "children": [
-    {
-      "node": {
-        "nodeType": "function",
-        "type": "C",
-        "props": {
-          "name": "test"
-        }
-      },
-      "type": "FormikConnect(ErrorMessageImpl)",
-      "props": {
-        "name": "test"
-      }
-    },
     {
       "node": {
         "nodeType": "function",
@@ -150,58 +88,27 @@ exports["should match snapshot with value passed by props(0)"] = {
   "node": {
     "nodeType": "function",
     "props": {
-      "children": [
-        {
-          "type": "C",
-          "props": {
-            "name": "test"
-          },
-          "_store": {}
-        },
-        {
-          "type": "C",
-          "props": {
-            "name": "test",
-            "component": "component"
-          },
-          "_store": {}
-        }
-      ]
-    },
-    "rendered": [
-      {
-        "nodeType": "function",
-        "type": "C",
-        "props": {
-          "name": "test"
-        }
-      },
-      {
-        "nodeType": "function",
+      "children": {
         "type": "C",
         "props": {
           "name": "test",
           "component": "component"
-        }
+        },
+        "_store": {}
       }
-    ]
+    },
+    "rendered": {
+      "nodeType": "function",
+      "type": "C",
+      "props": {
+        "name": "test",
+        "component": "component"
+      }
+    }
   },
   "type": "React.Fragment",
   "props": {},
   "children": [
-    {
-      "node": {
-        "nodeType": "function",
-        "type": "C",
-        "props": {
-          "name": "test"
-        }
-      },
-      "type": "FormikConnect(ErrorMessageImpl)",
-      "props": {
-        "name": "test"
-      }
-    },
     {
       "node": {
         "nodeType": "function",
@@ -224,58 +131,27 @@ exports["should match snapshot when array items are objects(0)"] = {
   "node": {
     "nodeType": "function",
     "props": {
-      "children": [
-        {
-          "type": "C",
-          "props": {
-            "name": "test"
-          },
-          "_store": {}
-        },
-        {
-          "type": "C",
-          "props": {
-            "name": "test",
-            "component": "component"
-          },
-          "_store": {}
-        }
-      ]
-    },
-    "rendered": [
-      {
-        "nodeType": "function",
-        "type": "C",
-        "props": {
-          "name": "test"
-        }
-      },
-      {
-        "nodeType": "function",
+      "children": {
         "type": "C",
         "props": {
           "name": "test",
           "component": "component"
-        }
+        },
+        "_store": {}
       }
-    ]
+    },
+    "rendered": {
+      "nodeType": "function",
+      "type": "C",
+      "props": {
+        "name": "test",
+        "component": "component"
+      }
+    }
   },
   "type": "React.Fragment",
   "props": {},
   "children": [
-    {
-      "node": {
-        "nodeType": "function",
-        "type": "C",
-        "props": {
-          "name": "test"
-        }
-      },
-      "type": "FormikConnect(ErrorMessageImpl)",
-      "props": {
-        "name": "test"
-      }
-    },
     {
       "node": {
         "nodeType": "function",

@@ -13,16 +13,15 @@ export class InputWidget extends React.Component<IWidget & FieldProps> {
   public render() {
     const {
       schema,
-      schema: {type},
       uiSchema,
       field: {value},
     } = this.props;
     const uiOptions = uiSchema['ui:options'] || {};
+    const type: string | string[] = schema.type;
 
     return (
       <React.Fragment>
-        {(String.prototype.includes.call(type, 'number') ||
-          String.prototype.includes.call(type, 'integer')) && (
+        {(type.includes('number') || type.includes('integer')) && (
           <InputNumber
             value={value}
             onChange={this.handleChangeInputNumber}
@@ -33,7 +32,7 @@ export class InputWidget extends React.Component<IWidget & FieldProps> {
             {...uiOptions}
           />
         )}
-        {String.prototype.includes.call(type, 'string') && (
+        {type.includes('string') && (
           <Input
             value={value}
             onChange={this.handleChangeInput}

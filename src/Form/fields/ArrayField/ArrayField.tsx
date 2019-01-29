@@ -23,7 +23,6 @@ export class ArrayField extends React.Component<IWidget> {
 
     return (
       <React.Fragment>
-        <ErrorMessage name={id} />
         <FieldArray
           name={id}
           component={props =>

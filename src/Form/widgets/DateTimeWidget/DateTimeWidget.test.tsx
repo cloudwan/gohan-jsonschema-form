@@ -4,10 +4,12 @@ import {shallow} from 'enzyme';
 import moment from 'moment';
 import * as React from 'react';
 import sinon from 'sinon';
+import sinonChai from 'sinon-chai';
 
 import DateTimeWidget from './DateTimeWidget';
 
 chai.use(chaiEnzyme());
+chai.use(sinonChai);
 chai.should();
 
 describe('<DateTimeWidget />', () => {
@@ -107,7 +109,7 @@ describe('<DateTimeWidget />', () => {
   });
 
   describe('handleInputChange', () => {
-    it('should change state value', () => {
+    it('should change form state value', () => {
       const setFieldValue = sinon.spy();
       const wrapper = shallow(
         <DateTimeWidget
