@@ -18,7 +18,9 @@ export default class GeoWidget extends React.Component<IWidget & FieldProps> {
   }
 
   private handleChange = (value: LatLngExpression): void => {
-    this.props.form.setFieldValue('lat', value.lat);
-    this.props.form.setFieldValue('lng', value.lng);
+    if (!Array.isArray(value)) {
+      this.props.form.setFieldValue('lat', value.lat);
+      this.props.form.setFieldValue('lng', value.lng);
+    }
   };
 }

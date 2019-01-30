@@ -46,10 +46,11 @@ class Fieldset extends React.Component<TFieldsetProps, TFieldsetState> {
   public render(): JSX.Element {
     const {
       schema,
-      schema: {type, properties, propertiesOrder},
+      schema: {properties, propertiesOrder},
       field: {name},
       isTab = false,
     } = this.props;
+    const type: string | string[] = schema.type;
     const {areFieldsVisible} = this.state;
     const orderedProperties = this.orderProperties(
       Object.keys(properties),

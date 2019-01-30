@@ -1,4 +1,4 @@
-import {ErrorMessage, FieldArray} from 'formik';
+import {FieldArray, FieldArrayRenderProps} from 'formik';
 import * as React from 'react';
 
 import {IWidget} from '../../../typings/IWidget';
@@ -11,25 +11,25 @@ export class ArrayField extends React.Component<IWidget> {
   constructor(props) {
     super(props);
     const {items} = this.props.schema;
-    const type: string | string[] = items.type;
 
-    if (items && type) {
+    if (items && !Array.isArray(items) && items.type) {
+      const type: string | string[] = items.type;
       this.isObjectArray = type.includes('object');
     }
   }
 
   public render(): React.ReactNode {
-    const {id, schema} = this.props;
+    const {id, schema, uiSchema} = this.props;
 
     return (
       <React.Fragment>
         <FieldArray
           name={id}
-          component={props =>
+          component={(props: FieldArrayRenderProps) =>
             this.isObjectArray ? (
-              <Tabs schema={schema} {...props} />
+              <Tabs schema={schema} uiSchema={uiSchema} {...props} />
             ) : (
-              <List schema={schema} {...props} />
+              <List schema={schema} uiSchema={uiSchema} {...props} />
             )
           }
         />

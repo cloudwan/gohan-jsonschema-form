@@ -35,9 +35,7 @@ export class DateTimeWidget extends React.Component<
   }
 
   private handleInputChange = (value: moment.Moment): void => {
-    const {
-      schema: {type},
-    } = this.props;
+    const type: string | string[] = this.props.schema.type;
     const fieldValue = value
       ? value.format()
       : type.includes('null') && value === null

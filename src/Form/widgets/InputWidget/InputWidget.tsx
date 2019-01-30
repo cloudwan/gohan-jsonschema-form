@@ -47,10 +47,9 @@ export class InputWidget extends React.Component<IWidget & FieldProps> {
   }
 
   private handleChangeInput = event => {
+    const type: string | string[] = this.props.schema.type;
     const value =
-      this.props.schema.type.includes('null') && !event.target.value
-        ? null
-        : event.target.value;
+      type.includes('null') && !event.target.value ? null : event.target.value;
 
     this.props.form.setFieldValue(this.props.field.name, value);
   };
