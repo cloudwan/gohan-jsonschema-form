@@ -7,7 +7,7 @@
     "precommit": "pretty-quick --staged && ./hooks/precommit.js",
     "prettier": "prettier --write \"src/**/*.{ts,tsx}\"",
     "build:lib": "tsc --emitDeclarationOnly && NODE_ENV=lib babel src --out-dir lib --extensions \".ts,.tsx\"",
-    "build": "rm -rf ./dist/ && NODE_ENV=production webpack -p --colors --progress --bail",
+    "build": "rm -rf ./dist/ && NODE_ENV=production webpack -p --colors --progress --bail && npm run build:lib",
     "build-dev": "rm -rf NODE_ENV=development ./dist/ && webpack -d --colors --display-reasons --progress --bail",
     "dev-server": "rm -rf ./dist/ && NODE_ENV=development webpack-dev-server --hot --inline --colors --progress",
     "doc": "esdoc -c .esdoc.json",
