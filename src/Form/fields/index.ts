@@ -1,7 +1,7 @@
-import CodeEditorWidget from '../widgets/CodeEditorWidget';
 import NotFoundWidget from '../widgets/NotFoundWidget';
 import ArrayField from './ArrayField';
 import BooleanField from './BooleanField';
+import CodeEditorField from './CodeEditorField';
 import GeoField from './GeoField';
 import NumberField from './NumberField';
 import ObjectField from './ObjectField';
@@ -12,7 +12,7 @@ import StringField from './StringField';
 const fields = {
   Array: ArrayField,
   Boolean: BooleanField,
-  Code: CodeEditorWidget,
+  Code: CodeEditorField,
   String: StringField,
   Number: NumberField,
   Object: ObjectField,
