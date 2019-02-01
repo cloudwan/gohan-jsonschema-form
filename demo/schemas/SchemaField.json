@@ -45,10 +45,8 @@
         "title": "array field",
         "type": "array",
         "items": {
-          "name": {
-            "title": "name",
-            "type": "string"
-          }
+          "title": "name",
+          "type": "string"
         }
       },
       "test6": {

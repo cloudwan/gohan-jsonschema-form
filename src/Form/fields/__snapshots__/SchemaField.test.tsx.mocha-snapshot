@@ -258,7 +258,7 @@ exports["should match snapshot when schema type is object w/o properties(0)"] = 
       "isRequired": false,
       "id": "",
       "children": {
-        "type": "CodeEditorWidget",
+        "type": "CodeField",
         "props": {
           "id": "",
           "schema": {
@@ -273,7 +273,7 @@ exports["should match snapshot when schema type is object w/o properties(0)"] = 
     },
     "rendered": {
       "nodeType": "class",
-      "type": "CodeEditorWidget",
+      "type": "CodeField",
       "props": {
         "id": "",
         "schema": {
@@ -295,7 +295,7 @@ exports["should match snapshot when schema type is object w/o properties(0)"] = 
     {
       "node": {
         "nodeType": "class",
-        "type": "CodeEditorWidget",
+        "type": "CodeField",
         "props": {
           "id": "",
           "schema": {
@@ -306,7 +306,7 @@ exports["should match snapshot when schema type is object w/o properties(0)"] = 
           "isRequired": false
         }
       },
-      "type": "CodeEditorWidget",
+      "type": "CodeField",
       "props": {
         "id": "",
         "schema": {

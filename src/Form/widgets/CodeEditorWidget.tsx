@@ -1,4 +1,6 @@
 import {FieldProps} from 'formik';
+import {safeDump} from 'js-yaml';
+import {isPlainObject} from 'lodash';
 import * as React from 'react';
 import AceEditor from 'react-ace';
 
@@ -25,7 +27,7 @@ export default class CodeEditorWidget extends React.Component<
     return (
       <AceEditor
         mode={this.getFormat()}
-        value={value}
+        value={isPlainObject(value) ? safeDump(value) : value}
         theme="github"
         name={title}
         onChange={this.handleChangeCodeEditor}
