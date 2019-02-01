@@ -15,7 +15,8 @@
     "test-watch": "npm test -- --watch",
     "test-cover": "NODE_ENV=test istanbul cover _mocha \"src/**/*.test.{ts,tsx}\"",
     "lint": "tslint -p tsconfig.json -t codeFrame -c tslint.json \"src/**/*.{ts,tsx}\" -e \"**/*.test.{ts,tsx}\"",
-    "publish-to-npm": "npm run build:lib && npm publish"
+    "publish-to-npm": "npm run build:lib && npm publish",
+    "postinstall": "npm run build:lib && cp -a ./node_modules/leaflet/dist/images ./lib"
   },
   "files": [
     "lib"
@@ -119,6 +120,7 @@
     "html-webpack-plugin": "^3.2.0",
     "husky": "^0.14.3",
     "ignore-styles": "^5.0.1",
+    "image-webpack-loader": "^4.6.0",
     "isparta": "^4.0.0",
     "istanbul": "^1.1.0-alpha.1",
     "jsdom": "^11.0.0",
