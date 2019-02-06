@@ -64,7 +64,6 @@ describe('<ArrayField />', () => {
           type: 'array',
           default: ['baz'],
         }}
-        value={['foo']}
         id={'test'}
       />,
     );
@@ -91,7 +90,24 @@ describe('<ArrayField />', () => {
           },
           type: ['array'],
         }}
-        value={['foo']}
+        id={'test'}
+      />,
+    );
+
+    wrapper.should.to.matchSnapshot();
+  });
+
+  it('should match snapshot when array has uniqueItems', () => {
+    const wrapper = shallow(
+      <ArrayField
+        schema={{
+          items: {
+            type: ['string'],
+            enum: ['foo', 'bar', 'baz'],
+          },
+          uniqueItems: true,
+          type: ['array'],
+        }}
         id={'test'}
       />,
     );

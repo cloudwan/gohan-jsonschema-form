@@ -7,6 +7,7 @@ import Select from './components/Select';
 interface TSelectWidgetState {
   errors: any[];
   options: any[];
+  isLoading: boolean;
 }
 
 interface ISelectWidgetProps extends IWidget, FieldProps {
@@ -24,17 +25,11 @@ export default class SelectWidget extends React.Component<
 
   constructor(props, context) {
     super(props, context);
-    const {
-      schema,
-      schema: {options, items},
-    } = this.props;
 
     this.state = {
-      options:
-        options ||
-        schema.enum ||
-        (items ? items['options'] || items['enum'] : []), //tslint:disable-line
+      options: [],
       errors: [],
+      isLoading: false,
     };
   }
 
@@ -43,18 +38,24 @@ export default class SelectWidget extends React.Component<
   }
 
   public render(): React.ReactNode {
-    const {
-      schema: {type, items},
-    } = this.props;
-    const mode =
-      String.prototype.includes.call(type, 'array') && items !== undefined
-        ? 'multiple'
-        : 'default';
-    const haystack = Array.isArray(this.state.options)
-      ? this.state.options
-      : Object.keys(this.state.options).map(i => ({
+    const {schema} = this.props;
+    const type: string | string[] = schema.type;
+    let options = [];
+
+    if (this.state.options && this.state.options.length > 0) {
+      options = this.state.options;
+    } else {
+      if (schema.enum) {
+        options = schema.enum;
+      } else if (schema.items && !Array.isArray(schema.items)) {
+        options = schema.items.options || schema.items.enum;
+      }
+    }
+    const haystack = Array.isArray(options)
+      ? options
+      : Object.keys(options).map(i => ({
           value: i,
-          label: this.state.options[i],
+          label: options[i],
         }));
 
     const selectOptions = haystack.map((enumValue, i) => {
@@ -77,13 +78,13 @@ export default class SelectWidget extends React.Component<
     return (
       <Select
         value={this.props.field.value}
-        mode={mode}
+        mode={type.includes('array') ? 'multiple' : 'default'}
         onFocus={this.handleFocus}
         onChange={this.handleChangeInput}
-        options={selectOptions}
+        options={this.state.isLoading ? [] : selectOptions}
         showSearch={haystack.length >= 5}
         optionFilterProp="children"
-        notFoundContent={!this.props.fetcher ? undefined : 'Loading...'}
+        notFoundContent={this.state.isLoading ? 'Loading...' : undefined}
       />
     );
   }
@@ -106,13 +107,18 @@ export default class SelectWidget extends React.Component<
     } = this.props;
 
     try {
-      const options = await this.props.fetcher(relation);
-      this.setState({options});
+      if (!this.state.options || this.state.options.length === 0) {
+        this.setState({isLoading: true});
+        const options = await this.props.fetcher(relation);
+        this.setState({options, isLoading: false});
+      } else {
+        return;
+      }
     } catch (error) {
       console.error(error);
       const errors = [{message: 'Cannot fetch data!'}];
 
-      this.setState({errors});
+      this.setState({errors, isLoading: false});
     }
   };
 }

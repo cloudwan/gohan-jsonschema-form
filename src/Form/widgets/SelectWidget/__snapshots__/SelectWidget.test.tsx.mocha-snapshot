@@ -132,8 +132,7 @@ exports["should update options in state(0)"] = {
       "onChange": "[function]",
       "options": [],
       "showSearch": false,
-      "optionFilterProp": "children",
-      "notFoundContent": "Loading..."
+      "optionFilterProp": "children"
     }
   },
   "type": "Select",
@@ -143,8 +142,7 @@ exports["should update options in state(0)"] = {
     "onChange": "[function]",
     "options": [],
     "showSearch": false,
-    "optionFilterProp": "children",
-    "notFoundContent": "Loading..."
+    "optionFilterProp": "children"
   }
 };
 
@@ -158,8 +156,7 @@ exports["should handle error message state(0)"] = {
       "onChange": "[function]",
       "options": [],
       "showSearch": false,
-      "optionFilterProp": "children",
-      "notFoundContent": "Loading..."
+      "optionFilterProp": "children"
     }
   },
   "type": "Select",
@@ -169,8 +166,7 @@ exports["should handle error message state(0)"] = {
     "onChange": "[function]",
     "options": [],
     "showSearch": false,
-    "optionFilterProp": "children",
-    "notFoundContent": "Loading..."
+    "optionFilterProp": "children"
   }
 };
 

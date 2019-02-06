@@ -119,7 +119,11 @@ export default class DemoPage extends Component {
                 fetcher={() =>
                   new Promise(resolve =>
                     setTimeout(
-                      () => resolve([{label: 'Foo', value: 'foo'}]),
+                      () =>
+                        resolve([
+                          {label: 'Foo', value: 'foo'},
+                          {label: 'Bar', value: 'bar'},
+                        ]),
                       5000,
                     ),
                   )

@@ -1,9 +1,12 @@
-import {FieldArray, FieldArrayRenderProps} from 'formik';
+import {Field, FieldArray, FieldArrayRenderProps} from 'formik';
 import * as React from 'react';
 
 import {IWidget} from '../../../typings/IWidget';
 import List from './components/List';
 import Tabs from './components/Tabs';
+
+import FormContext from '../../FormContext';
+import SelectWidget from '../../widgets/SelectWidget';
 
 export class ArrayField extends React.Component<IWidget> {
   private isObjectArray = false;
@@ -20,22 +23,49 @@ export class ArrayField extends React.Component<IWidget> {
 
   public render(): React.ReactNode {
     const {id, schema, uiSchema} = this.props;
+    const commonProps = {
+      name: id,
+      schema,
+      uiSchema,
+      component: SelectWidget,
+    };
+
+    if (this.isMultiSelect(this.props.schema)) {
+      if (schema.relation) {
+        return (
+          <FormContext.Consumer>
+            {(
+              fetcher: (
+                relation: string,
+              ) => Promise<Array<{label: string; value: string}>>,
+            ) => <Field {...commonProps} fetcher={fetcher} />}
+          </FormContext.Consumer>
+        );
+      }
+
+      return <Field {...commonProps} />;
+    }
 
     return (
-      <React.Fragment>
-        <FieldArray
-          name={id}
-          component={(props: FieldArrayRenderProps) =>
-            this.isObjectArray ? (
-              <Tabs schema={schema} uiSchema={uiSchema} {...props} />
-            ) : (
-              <List schema={schema} uiSchema={uiSchema} {...props} />
-            )
-          }
-        />
-      </React.Fragment>
+      <FieldArray
+        name={id}
+        component={(props: FieldArrayRenderProps) =>
+          this.isObjectArray ? (
+            <Tabs schema={schema} uiSchema={uiSchema} {...props} />
+          ) : (
+            <List schema={schema} uiSchema={uiSchema} {...props} />
+          )
+        }
+      />
     );
   }
+
+  private isMultiSelect = schema => {
+    if (!schema.uniqueItems || !schema.items) {
+      return false;
+    }
+    return Array.isArray(schema.items.enum);
+  };
 }
 
 export default ArrayField;
