@@ -54,11 +54,17 @@ export class InputWidget extends React.Component<IWidget & FieldProps> {
     this.props.form.setFieldValue(this.props.field.name, value);
   };
 
-  private handleChangeInputNumber = (value?: number) => {
-    this.props.form.setFieldValue(
-      this.props.field.name,
-      value === undefined ? null : value,
-    );
+  private handleChangeInputNumber = (value?: number | string) => {
+    const type: string | string[] = this.props.schema.type;
+    let inputValue = value;
+
+    if (type.includes('null') && typeof value !== 'number' && !value) {
+      inputValue = null;
+    } else if (value === undefined) {
+      inputValue = '';
+    }
+
+    this.props.form.setFieldValue(this.props.field.name, inputValue);
   };
 }
 

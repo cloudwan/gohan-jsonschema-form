@@ -1,9 +1,9 @@
-import {ErrorMessage, Field} from 'formik';
+import {Field} from 'formik';
 import * as React from 'react';
 
 import {IWidget} from '../../typings/IWidget';
-import Errors from '../components/Errors';
-import validator from '../Validator';
+import ErrorMessage from '../components/ErrorMessage';
+import {validateField} from '../utils';
 import InputWidget from '../widgets/InputWidget';
 
 export class NumberField extends React.Component<IWidget> {
@@ -24,24 +24,8 @@ export class NumberField extends React.Component<IWidget> {
     );
   }
 
-  private validate = value => {
-    const {isRequired, schema} = this.props;
-    const errors = [];
-
-    if (isRequired && !value) {
-      errors.push({message: 'Required'});
-    }
-
-    if (value !== undefined) {
-      validator.validate(schema, value);
-    }
-
-    if (validator.errors) {
-      errors.push(...validator.errors);
-    }
-
-    return errors.length > 0 ? <Errors errors={errors} /> : undefined;
-  };
+  private validate = value =>
+    validateField(value, this.props.schema, this.props.isRequired);
 }
 
 export default NumberField;

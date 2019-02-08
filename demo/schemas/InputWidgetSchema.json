@@ -19,7 +19,7 @@
         "type": "string"
       },
       "uuid": {
-        "id": "simple_string",
+        "id": "uuid",
         "description": "Simple InputWidget string example",
         "permission": [
           "create"

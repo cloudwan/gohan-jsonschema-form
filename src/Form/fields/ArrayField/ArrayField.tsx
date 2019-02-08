@@ -2,6 +2,7 @@ import {FieldArray, FieldArrayRenderProps} from 'formik';
 import * as React from 'react';
 
 import {IWidget} from '../../../typings/IWidget';
+import ErrorMessage from '../../components/ErrorMessage';
 import List from './components/List';
 import Tabs from './components/Tabs';
 
@@ -19,17 +20,28 @@ export class ArrayField extends React.Component<IWidget> {
   }
 
   public render(): React.ReactNode {
-    const {id, schema, uiSchema} = this.props;
+    const {id, schema, uiSchema, isRequired} = this.props;
 
     return (
       <React.Fragment>
+        <ErrorMessage name={id} />
         <FieldArray
           name={id}
           component={(props: FieldArrayRenderProps) =>
             this.isObjectArray ? (
-              <Tabs schema={schema} uiSchema={uiSchema} {...props} />
+              <Tabs
+                schema={schema}
+                uiSchema={uiSchema}
+                isRequired={isRequired}
+                {...props}
+              />
             ) : (
-              <List schema={schema} uiSchema={uiSchema} {...props} />
+              <List
+                schema={schema}
+                uiSchema={uiSchema}
+                isRequired={isRequired}
+                {...props}
+              />
             )
           }
         />

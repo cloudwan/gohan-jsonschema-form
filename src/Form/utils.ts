@@ -1,4 +1,6 @@
+import {JSONSchema4} from 'json-schema';
 import isPlainObject from 'lodash/isPlainObject';
+import validator from './Validator';
 
 export const isEmptyObject = obj => {
   let isEmpty = true;
@@ -69,4 +71,27 @@ export const getInitialValues = schema => {
       return values;
     }
   }
+};
+
+export const validateField = (
+  value: any,
+  schema: JSONSchema4,
+  isRequired: boolean,
+): object[] | undefined => {
+  const errors = [];
+
+  if (isRequired && !value) {
+    errors.push({message: 'Required'});
+  }
+
+  if (value !== undefined) {
+    validator.validate(schema, value);
+  }
+
+  if (validator.errors) {
+    errors.push(...validator.errors);
+    validator.errors = [];
+  }
+
+  return errors.length > 0 ? errors : undefined;
 };

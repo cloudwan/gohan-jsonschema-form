@@ -1,0 +1,99 @@
+{
+  "id": "errorTest",
+  "title": "Error Test",
+  "schema": {
+    "properties": {
+      "name": {
+        "type": "string",
+        "title": "Name",
+        "description": "Description of the object name field."
+      },
+      "id": {
+        "type": "string",
+        "title": "Id",
+        "description": "Description of the object id field."
+      },
+      "requiredArray": {
+        "description": "Required Array Description",
+        "items": {
+          "description": "Required Array Item Description",
+          "title": "Required Array Item",
+          "type": ["string"]
+        },
+        "maxItems": 5,
+        "permission": [
+          "create",
+          "update"
+        ],
+        "title": "Required Array",
+        "type": ["array"],
+        "view": [
+          "list",
+          "detail",
+          "create",
+          "update"
+        ]
+      },
+      "object_null": {
+        "description": "Description of the nullable object field.",
+        "title": "Nullable Object",
+        "type": [
+          "object",
+          "null"
+        ],
+        "propertiesOrder": [
+          "id",
+          "name",
+          "object_nested"
+        ],
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name",
+            "description": "Description of the nullable object name field."
+          },
+          "id": {
+            "type": "string",
+            "title": "Id",
+            "description": "Description of the nullable object id field"
+          },
+          "object_nested": {
+            "description": "Description of the nested object field.",
+            "title": "Nested Object",
+            "type": [
+              "object"
+            ],
+            "propertiesOrder": [
+              "id"
+            ],
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "title": "Id",
+                "description": "Description of the nullable object id field"
+              }
+            }
+          }
+        }
+      }
+    },
+    "propertiesOrder": [
+      "id",
+      "name",
+      "object_null",
+      "requiredArray"
+    ],
+    "required": [
+      "requiredArray"
+    ],
+    "type": "object"
+  },
+  "uiSchema": {},
+  "formData": {}
+}

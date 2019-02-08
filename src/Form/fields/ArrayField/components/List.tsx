@@ -60,7 +60,15 @@ class List extends React.Component<FieldArrayRenderProps & IWidget> {
   };
 
   private handleRemoveClick = (index: number) => () => {
-    this.props.remove(index);
+    const fieldValue = getIn(this.props.form.values, this.props.name);
+    if (fieldValue && fieldValue.length === 1) {
+      this.props.form.setFieldValue(this.props.name, undefined);
+      if (this.props.isRequired) {
+        this.props.form.setFieldError(this.props.name, 'Required');
+      }
+    } else {
+      this.props.remove(index);
+    }
   };
 }
 
