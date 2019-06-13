@@ -49,3 +49,56 @@ exports["should match snapshot(0)"] = {
   ]
 };
 
+exports["<ListAddButton/>/render/should match snapshot(0)"] = {
+  "node": {
+    "nodeType": "class",
+    "type": "Button",
+    "props": {
+      "type": "primary",
+      "onClick": "onClick",
+      "ghost": true,
+      "children": {
+        "type": "Icon",
+        "props": {
+          "type": "plus-circle"
+        },
+        "_store": {}
+      },
+      "loading": false,
+      "block": false,
+      "htmlType": "button"
+    },
+    "rendered": {
+      "nodeType": "function",
+      "type": "Icon",
+      "props": {
+        "type": "plus-circle"
+      }
+    }
+  },
+  "type": "Button",
+  "props": {
+    "type": "primary",
+    "onClick": "onClick",
+    "ghost": true,
+    "loading": false,
+    "block": false,
+    "htmlType": "button"
+  },
+  "children": [
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "Icon",
+        "props": {
+          "type": "plus-circle"
+        }
+      },
+      "type": "Icon",
+      "props": {
+        "type": "plus-circle"
+      }
+    }
+  ]
+};
+

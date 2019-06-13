@@ -14,3 +14,19 @@ exports["should match snapshot(0)"] = {
   ]
 };
 
+exports["<Asterisk/>/render/should match snapshot(0)"] = {
+  "node": {
+    "nodeType": "host",
+    "type": "span",
+    "props": {
+      "children": "*"
+    },
+    "rendered": "*"
+  },
+  "type": "span",
+  "props": {},
+  "children": [
+    "*"
+  ]
+};
+

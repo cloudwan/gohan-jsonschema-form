@@ -656,3 +656,682 @@ exports["should match snapshot(0)"] = {
   ]
 };
 
+exports["<ListItem/>/render/should match snapshot(0)"] = {
+  "node": {
+    "nodeType": "host",
+    "type": "li",
+    "props": {
+      "children": [
+        {
+          "type": "div",
+          "props": {
+            "children": {
+              "type": "Button",
+              "props": {
+                "onClick": "onRemoveButtonClick",
+                "type": "primary",
+                "size": "small",
+                "ghost": true,
+                "children": {
+                  "type": "Icon",
+                  "props": {
+                    "type": "minus-circle"
+                  },
+                  "_store": {}
+                },
+                "loading": false,
+                "block": false,
+                "htmlType": "button"
+              },
+              "_store": {}
+            }
+          },
+          "_store": {}
+        },
+        {
+          "type": "div",
+          "props": {
+            "children": "test"
+          },
+          "_store": {}
+        },
+        {
+          "type": "div",
+          "props": {
+            "children": [
+              {
+                "type": "Button",
+                "props": {
+                  "onClick": "onMoveUpButtonClick",
+                  "type": "primary",
+                  "size": "small",
+                  "ghost": true,
+                  "disabled": true,
+                  "children": [
+                    {
+                      "type": "Icon",
+                      "props": {
+                        "type": "up"
+                      },
+                      "_store": {}
+                    },
+                    "Up"
+                  ],
+                  "loading": false,
+                  "block": false,
+                  "htmlType": "button"
+                },
+                "_store": {}
+              },
+              {
+                "type": "Button",
+                "props": {
+                  "onClick": "onMoveDownButtonClick",
+                  "type": "primary",
+                  "size": "small",
+                  "ghost": true,
+                  "disabled": false,
+                  "children": [
+                    {
+                      "type": "Icon",
+                      "props": {
+                        "type": "down"
+                      },
+                      "_store": {}
+                    },
+                    "Down"
+                  ],
+                  "loading": false,
+                  "block": false,
+                  "htmlType": "button"
+                },
+                "_store": {}
+              }
+            ]
+          },
+          "_store": {}
+        }
+      ]
+    },
+    "rendered": [
+      {
+        "nodeType": "host",
+        "type": "div",
+        "props": {
+          "children": {
+            "type": "Button",
+            "props": {
+              "onClick": "onRemoveButtonClick",
+              "type": "primary",
+              "size": "small",
+              "ghost": true,
+              "children": {
+                "type": "Icon",
+                "props": {
+                  "type": "minus-circle"
+                },
+                "_store": {}
+              },
+              "loading": false,
+              "block": false,
+              "htmlType": "button"
+            },
+            "_store": {}
+          }
+        },
+        "rendered": {
+          "nodeType": "class",
+          "type": "Button",
+          "props": {
+            "onClick": "onRemoveButtonClick",
+            "type": "primary",
+            "size": "small",
+            "ghost": true,
+            "children": {
+              "type": "Icon",
+              "props": {
+                "type": "minus-circle"
+              },
+              "_store": {}
+            },
+            "loading": false,
+            "block": false,
+            "htmlType": "button"
+          },
+          "rendered": {
+            "nodeType": "function",
+            "type": "Icon",
+            "props": {
+              "type": "minus-circle"
+            }
+          }
+        }
+      },
+      {
+        "nodeType": "host",
+        "type": "div",
+        "props": {
+          "children": "test"
+        },
+        "rendered": "test"
+      },
+      {
+        "nodeType": "host",
+        "type": "div",
+        "props": {
+          "children": [
+            {
+              "type": "Button",
+              "props": {
+                "onClick": "onMoveUpButtonClick",
+                "type": "primary",
+                "size": "small",
+                "ghost": true,
+                "disabled": true,
+                "children": [
+                  {
+                    "type": "Icon",
+                    "props": {
+                      "type": "up"
+                    },
+                    "_store": {}
+                  },
+                  "Up"
+                ],
+                "loading": false,
+                "block": false,
+                "htmlType": "button"
+              },
+              "_store": {}
+            },
+            {
+              "type": "Button",
+              "props": {
+                "onClick": "onMoveDownButtonClick",
+                "type": "primary",
+                "size": "small",
+                "ghost": true,
+                "disabled": false,
+                "children": [
+                  {
+                    "type": "Icon",
+                    "props": {
+                      "type": "down"
+                    },
+                    "_store": {}
+                  },
+                  "Down"
+                ],
+                "loading": false,
+                "block": false,
+                "htmlType": "button"
+              },
+              "_store": {}
+            }
+          ]
+        },
+        "rendered": [
+          {
+            "nodeType": "class",
+            "type": "Button",
+            "props": {
+              "onClick": "onMoveUpButtonClick",
+              "type": "primary",
+              "size": "small",
+              "ghost": true,
+              "disabled": true,
+              "children": [
+                {
+                  "type": "Icon",
+                  "props": {
+                    "type": "up"
+                  },
+                  "_store": {}
+                },
+                "Up"
+              ],
+              "loading": false,
+              "block": false,
+              "htmlType": "button"
+            },
+            "rendered": [
+              {
+                "nodeType": "function",
+                "type": "Icon",
+                "props": {
+                  "type": "up"
+                }
+              },
+              "Up"
+            ]
+          },
+          {
+            "nodeType": "class",
+            "type": "Button",
+            "props": {
+              "onClick": "onMoveDownButtonClick",
+              "type": "primary",
+              "size": "small",
+              "ghost": true,
+              "disabled": false,
+              "children": [
+                {
+                  "type": "Icon",
+                  "props": {
+                    "type": "down"
+                  },
+                  "_store": {}
+                },
+                "Down"
+              ],
+              "loading": false,
+              "block": false,
+              "htmlType": "button"
+            },
+            "rendered": [
+              {
+                "nodeType": "function",
+                "type": "Icon",
+                "props": {
+                  "type": "down"
+                }
+              },
+              "Down"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "type": "li",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "host",
+        "type": "div",
+        "props": {
+          "children": {
+            "type": "Button",
+            "props": {
+              "onClick": "onRemoveButtonClick",
+              "type": "primary",
+              "size": "small",
+              "ghost": true,
+              "children": {
+                "type": "Icon",
+                "props": {
+                  "type": "minus-circle"
+                },
+                "_store": {}
+              },
+              "loading": false,
+              "block": false,
+              "htmlType": "button"
+            },
+            "_store": {}
+          }
+        },
+        "rendered": {
+          "nodeType": "class",
+          "type": "Button",
+          "props": {
+            "onClick": "onRemoveButtonClick",
+            "type": "primary",
+            "size": "small",
+            "ghost": true,
+            "children": {
+              "type": "Icon",
+              "props": {
+                "type": "minus-circle"
+              },
+              "_store": {}
+            },
+            "loading": false,
+            "block": false,
+            "htmlType": "button"
+          },
+          "rendered": {
+            "nodeType": "function",
+            "type": "Icon",
+            "props": {
+              "type": "minus-circle"
+            }
+          }
+        }
+      },
+      "type": "div",
+      "props": {},
+      "children": [
+        {
+          "node": {
+            "nodeType": "class",
+            "type": "Button",
+            "props": {
+              "onClick": "onRemoveButtonClick",
+              "type": "primary",
+              "size": "small",
+              "ghost": true,
+              "children": {
+                "type": "Icon",
+                "props": {
+                  "type": "minus-circle"
+                },
+                "_store": {}
+              },
+              "loading": false,
+              "block": false,
+              "htmlType": "button"
+            },
+            "rendered": {
+              "nodeType": "function",
+              "type": "Icon",
+              "props": {
+                "type": "minus-circle"
+              }
+            }
+          },
+          "type": "Button",
+          "props": {
+            "onClick": "onRemoveButtonClick",
+            "type": "primary",
+            "size": "small",
+            "ghost": true,
+            "loading": false,
+            "block": false,
+            "htmlType": "button"
+          },
+          "children": [
+            {
+              "node": {
+                "nodeType": "function",
+                "type": "Icon",
+                "props": {
+                  "type": "minus-circle"
+                }
+              },
+              "type": "Icon",
+              "props": {
+                "type": "minus-circle"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "node": {
+        "nodeType": "host",
+        "type": "div",
+        "props": {
+          "children": "test"
+        },
+        "rendered": "test"
+      },
+      "type": "div",
+      "props": {},
+      "children": [
+        "test"
+      ]
+    },
+    {
+      "node": {
+        "nodeType": "host",
+        "type": "div",
+        "props": {
+          "children": [
+            {
+              "type": "Button",
+              "props": {
+                "onClick": "onMoveUpButtonClick",
+                "type": "primary",
+                "size": "small",
+                "ghost": true,
+                "disabled": true,
+                "children": [
+                  {
+                    "type": "Icon",
+                    "props": {
+                      "type": "up"
+                    },
+                    "_store": {}
+                  },
+                  "Up"
+                ],
+                "loading": false,
+                "block": false,
+                "htmlType": "button"
+              },
+              "_store": {}
+            },
+            {
+              "type": "Button",
+              "props": {
+                "onClick": "onMoveDownButtonClick",
+                "type": "primary",
+                "size": "small",
+                "ghost": true,
+                "disabled": false,
+                "children": [
+                  {
+                    "type": "Icon",
+                    "props": {
+                      "type": "down"
+                    },
+                    "_store": {}
+                  },
+                  "Down"
+                ],
+                "loading": false,
+                "block": false,
+                "htmlType": "button"
+              },
+              "_store": {}
+            }
+          ]
+        },
+        "rendered": [
+          {
+            "nodeType": "class",
+            "type": "Button",
+            "props": {
+              "onClick": "onMoveUpButtonClick",
+              "type": "primary",
+              "size": "small",
+              "ghost": true,
+              "disabled": true,
+              "children": [
+                {
+                  "type": "Icon",
+                  "props": {
+                    "type": "up"
+                  },
+                  "_store": {}
+                },
+                "Up"
+              ],
+              "loading": false,
+              "block": false,
+              "htmlType": "button"
+            },
+            "rendered": [
+              {
+                "nodeType": "function",
+                "type": "Icon",
+                "props": {
+                  "type": "up"
+                }
+              },
+              "Up"
+            ]
+          },
+          {
+            "nodeType": "class",
+            "type": "Button",
+            "props": {
+              "onClick": "onMoveDownButtonClick",
+              "type": "primary",
+              "size": "small",
+              "ghost": true,
+              "disabled": false,
+              "children": [
+                {
+                  "type": "Icon",
+                  "props": {
+                    "type": "down"
+                  },
+                  "_store": {}
+                },
+                "Down"
+              ],
+              "loading": false,
+              "block": false,
+              "htmlType": "button"
+            },
+            "rendered": [
+              {
+                "nodeType": "function",
+                "type": "Icon",
+                "props": {
+                  "type": "down"
+                }
+              },
+              "Down"
+            ]
+          }
+        ]
+      },
+      "type": "div",
+      "props": {},
+      "children": [
+        {
+          "node": {
+            "nodeType": "class",
+            "type": "Button",
+            "props": {
+              "onClick": "onMoveUpButtonClick",
+              "type": "primary",
+              "size": "small",
+              "ghost": true,
+              "disabled": true,
+              "children": [
+                {
+                  "type": "Icon",
+                  "props": {
+                    "type": "up"
+                  },
+                  "_store": {}
+                },
+                "Up"
+              ],
+              "loading": false,
+              "block": false,
+              "htmlType": "button"
+            },
+            "rendered": [
+              {
+                "nodeType": "function",
+                "type": "Icon",
+                "props": {
+                  "type": "up"
+                }
+              },
+              "Up"
+            ]
+          },
+          "type": "Button",
+          "props": {
+            "onClick": "onMoveUpButtonClick",
+            "type": "primary",
+            "size": "small",
+            "ghost": true,
+            "disabled": true,
+            "loading": false,
+            "block": false,
+            "htmlType": "button"
+          },
+          "children": [
+            {
+              "node": {
+                "nodeType": "function",
+                "type": "Icon",
+                "props": {
+                  "type": "up"
+                }
+              },
+              "type": "Icon",
+              "props": {
+                "type": "up"
+              }
+            },
+            "Up"
+          ]
+        },
+        {
+          "node": {
+            "nodeType": "class",
+            "type": "Button",
+            "props": {
+              "onClick": "onMoveDownButtonClick",
+              "type": "primary",
+              "size": "small",
+              "ghost": true,
+              "disabled": false,
+              "children": [
+                {
+                  "type": "Icon",
+                  "props": {
+                    "type": "down"
+                  },
+                  "_store": {}
+                },
+                "Down"
+              ],
+              "loading": false,
+              "block": false,
+              "htmlType": "button"
+            },
+            "rendered": [
+              {
+                "nodeType": "function",
+                "type": "Icon",
+                "props": {
+                  "type": "down"
+                }
+              },
+              "Down"
+            ]
+          },
+          "type": "Button",
+          "props": {
+            "onClick": "onMoveDownButtonClick",
+            "type": "primary",
+            "size": "small",
+            "ghost": true,
+            "disabled": false,
+            "loading": false,
+            "block": false,
+            "htmlType": "button"
+          },
+          "children": [
+            {
+              "node": {
+                "nodeType": "function",
+                "type": "Icon",
+                "props": {
+                  "type": "down"
+                }
+              },
+              "type": "Icon",
+              "props": {
+                "type": "down"
+              }
+            },
+            "Down"
+          ]
+        }
+      ]
+    }
+  ]
+};
+

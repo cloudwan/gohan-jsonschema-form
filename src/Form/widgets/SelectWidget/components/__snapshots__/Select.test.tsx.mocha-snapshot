@@ -145,3 +145,148 @@ exports["should match snapshot for minimal number of props(0)"] = {
   ]
 };
 
+exports["Select/should match snapshot for minimal number of props(0)"] = {
+  "node": {
+    "nodeType": "class",
+    "type": "Select",
+    "props": {
+      "placeholder": "Not selected",
+      "getPopupContainer": "getPopupContainer",
+      "children": [
+        {
+          "type": "Option",
+          "key": "0",
+          "props": {
+            "value": "foo",
+            "children": "foo"
+          },
+          "_store": {}
+        },
+        {
+          "type": "Option",
+          "key": "1",
+          "props": {
+            "value": "bar",
+            "children": "bar"
+          },
+          "_store": {}
+        },
+        {
+          "type": "Option",
+          "key": "2",
+          "props": {
+            "value": "baz",
+            "children": "baz"
+          },
+          "_store": {}
+        }
+      ],
+      "showSearch": false,
+      "transitionName": "slide-up",
+      "choiceTransitionName": "zoom"
+    },
+    "rendered": [
+      {
+        "nodeType": "class",
+        "type": "Option",
+        "props": {
+          "value": "foo",
+          "children": "foo"
+        },
+        "key": "0",
+        "rendered": "foo"
+      },
+      {
+        "nodeType": "class",
+        "type": "Option",
+        "props": {
+          "value": "bar",
+          "children": "bar"
+        },
+        "key": "1",
+        "rendered": "bar"
+      },
+      {
+        "nodeType": "class",
+        "type": "Option",
+        "props": {
+          "value": "baz",
+          "children": "baz"
+        },
+        "key": "2",
+        "rendered": "baz"
+      }
+    ]
+  },
+  "type": "Select",
+  "props": {
+    "placeholder": "Not selected",
+    "getPopupContainer": "getPopupContainer",
+    "showSearch": false,
+    "transitionName": "slide-up",
+    "choiceTransitionName": "zoom"
+  },
+  "children": [
+    {
+      "node": {
+        "nodeType": "class",
+        "type": "Option",
+        "props": {
+          "value": "foo",
+          "children": "foo"
+        },
+        "key": "0",
+        "rendered": "foo"
+      },
+      "type": "Option",
+      "props": {
+        "value": "foo",
+        "key": "0"
+      },
+      "children": [
+        "foo"
+      ]
+    },
+    {
+      "node": {
+        "nodeType": "class",
+        "type": "Option",
+        "props": {
+          "value": "bar",
+          "children": "bar"
+        },
+        "key": "1",
+        "rendered": "bar"
+      },
+      "type": "Option",
+      "props": {
+        "value": "bar",
+        "key": "1"
+      },
+      "children": [
+        "bar"
+      ]
+    },
+    {
+      "node": {
+        "nodeType": "class",
+        "type": "Option",
+        "props": {
+          "value": "baz",
+          "children": "baz"
+        },
+        "key": "2",
+        "rendered": "baz"
+      },
+      "type": "Option",
+      "props": {
+        "value": "baz",
+        "key": "2"
+      },
+      "children": [
+        "baz"
+      ]
+    }
+  ]
+};
+

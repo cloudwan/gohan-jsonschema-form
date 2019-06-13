@@ -68,3 +68,75 @@ exports["should match snapshot for minimal number of props(0)"] = {
   }
 };
 
+exports["<CodeEditorWidget/>/render/should match snapshot for minimal number of props(0)"] = {
+  "node": {
+    "nodeType": "class",
+    "type": "ReactAce",
+    "props": {
+      "mode": "text",
+      "value": "",
+      "theme": "github",
+      "name": "brace-editor",
+      "onChange": "[function]",
+      "editorProps": {
+        "$blockScrolling": true
+      },
+      "height": "300px",
+      "focus": false,
+      "width": "500px",
+      "fontSize": 12,
+      "showGutter": true,
+      "readOnly": false,
+      "highlightActiveLine": true,
+      "showPrintMargin": true,
+      "tabSize": 4,
+      "cursorStart": 1,
+      "style": {},
+      "scrollMargin": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "setOptions": {},
+      "wrapEnabled": false,
+      "enableBasicAutocompletion": false,
+      "enableLiveAutocompletion": false,
+      "navigateToFileEnd": true
+    }
+  },
+  "type": "ReactAce",
+  "props": {
+    "mode": "text",
+    "value": "",
+    "theme": "github",
+    "name": "brace-editor",
+    "onChange": "[function]",
+    "editorProps": {
+      "$blockScrolling": true
+    },
+    "height": "300px",
+    "focus": false,
+    "width": "500px",
+    "fontSize": 12,
+    "showGutter": true,
+    "readOnly": false,
+    "highlightActiveLine": true,
+    "showPrintMargin": true,
+    "tabSize": 4,
+    "cursorStart": 1,
+    "style": {},
+    "scrollMargin": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "setOptions": {},
+    "wrapEnabled": false,
+    "enableBasicAutocompletion": false,
+    "enableLiveAutocompletion": false,
+    "navigateToFileEnd": true
+  }
+};
+

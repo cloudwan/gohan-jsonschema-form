@@ -56,3 +56,61 @@ exports["should match snapshot when schema type is string and widget value is nu
   }
 };
 
+exports["<UUIDWidget />/render/should match snapshot when schema type is string(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "type": "InputSearch",
+    "props": {
+      "value": "",
+      "enterButton": "Generate",
+      "onChange": "[function]",
+      "onSearch": "[function]"
+    }
+  },
+  "type": "InputSearch",
+  "props": {
+    "value": "",
+    "enterButton": "Generate",
+    "onChange": "[function]",
+    "onSearch": "[function]"
+  }
+};
+
+exports["<UUIDWidget />/render/should match snapshot when schema type is string and widget has value(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "type": "InputSearch",
+    "props": {
+      "value": "bar",
+      "enterButton": "Generate",
+      "onChange": "[function]",
+      "onSearch": "[function]"
+    }
+  },
+  "type": "InputSearch",
+  "props": {
+    "value": "bar",
+    "enterButton": "Generate",
+    "onChange": "[function]",
+    "onSearch": "[function]"
+  }
+};
+
+exports["<UUIDWidget />/render/should match snapshot when schema type is string and widget value is null(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "type": "InputSearch",
+    "props": {
+      "enterButton": "Generate",
+      "onChange": "[function]",
+      "onSearch": "[function]"
+    }
+  },
+  "type": "InputSearch",
+  "props": {
+    "enterButton": "Generate",
+    "onChange": "[function]",
+    "onSearch": "[function]"
+  }
+};
+

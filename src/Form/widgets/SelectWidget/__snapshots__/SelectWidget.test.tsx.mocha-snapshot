@@ -170,3 +170,185 @@ exports["should handle error message state(0)"] = {
   }
 };
 
+exports["<SelectWidget />/render/should match snapshot(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "type": "Select",
+    "props": {
+      "mode": "default",
+      "onFocus": "[function]",
+      "onChange": "[function]",
+      "options": [
+        {
+          "value": "foo",
+          "label": "foo"
+        },
+        {
+          "value": "bar",
+          "label": "bar"
+        },
+        {
+          "value": "baz",
+          "label": "baz"
+        }
+      ],
+      "showSearch": false,
+      "optionFilterProp": "children"
+    }
+  },
+  "type": "Select",
+  "props": {
+    "mode": "default",
+    "onFocus": "[function]",
+    "onChange": "[function]",
+    "options": [
+      {
+        "value": "foo",
+        "label": "foo"
+      },
+      {
+        "value": "bar",
+        "label": "bar"
+      },
+      {
+        "value": "baz",
+        "label": "baz"
+      }
+    ],
+    "showSearch": false,
+    "optionFilterProp": "children"
+  }
+};
+
+exports["<SelectWidget />/render/should render elements for multiple choice select(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "type": "Select",
+    "props": {
+      "mode": "multiple",
+      "onFocus": "[function]",
+      "onChange": "[function]",
+      "options": [
+        {
+          "value": "foo",
+          "label": "foo"
+        },
+        {
+          "value": "bar",
+          "label": "bar"
+        },
+        {
+          "value": "baz",
+          "label": "baz"
+        }
+      ],
+      "showSearch": false,
+      "optionFilterProp": "children"
+    }
+  },
+  "type": "Select",
+  "props": {
+    "mode": "multiple",
+    "onFocus": "[function]",
+    "onChange": "[function]",
+    "options": [
+      {
+        "value": "foo",
+        "label": "foo"
+      },
+      {
+        "value": "bar",
+        "label": "bar"
+      },
+      {
+        "value": "baz",
+        "label": "baz"
+      }
+    ],
+    "showSearch": false,
+    "optionFilterProp": "children"
+  }
+};
+
+exports["<SelectWidget />/listener handleFocus/shouldn't change state(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "type": "Select",
+    "props": {
+      "mode": "default",
+      "onFocus": "[function]",
+      "onChange": "[function]",
+      "options": [],
+      "showSearch": false,
+      "optionFilterProp": "children"
+    }
+  },
+  "type": "Select",
+  "props": {
+    "mode": "default",
+    "onFocus": "[function]",
+    "onChange": "[function]",
+    "options": [],
+    "showSearch": false,
+    "optionFilterProp": "children"
+  }
+};
+
+exports["<SelectWidget />/listener handleFocus/should update options in state(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "type": "Select",
+    "props": {
+      "mode": "default",
+      "onFocus": "[function]",
+      "onChange": "[function]",
+      "options": [
+        {
+          "value": "foo",
+          "label": "Foo"
+        }
+      ],
+      "showSearch": false,
+      "optionFilterProp": "children"
+    }
+  },
+  "type": "Select",
+  "props": {
+    "mode": "default",
+    "onFocus": "[function]",
+    "onChange": "[function]",
+    "options": [
+      {
+        "value": "foo",
+        "label": "Foo"
+      }
+    ],
+    "showSearch": false,
+    "optionFilterProp": "children"
+  }
+};
+
+exports["<SelectWidget />/listener handleFocus/should handle error message state(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "type": "Select",
+    "props": {
+      "mode": "default",
+      "onFocus": "[function]",
+      "onChange": "[function]",
+      "options": [],
+      "showSearch": false,
+      "optionFilterProp": "children"
+    }
+  },
+  "type": "Select",
+  "props": {
+    "mode": "default",
+    "onFocus": "[function]",
+    "onChange": "[function]",
+    "options": [],
+    "showSearch": false,
+    "optionFilterProp": "children"
+  }
+};
+

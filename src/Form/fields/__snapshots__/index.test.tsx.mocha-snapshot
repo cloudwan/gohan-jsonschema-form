@@ -4,3 +4,9 @@ exports["should return NotFound field for wrong firld name(0)"] = "NotFoundWidge
 
 exports["should return NotFound field for incorrect name(0)"] = "NotFoundWidget";
 
+exports["fields/index/selectField/should return String field(0)"] = "StringField";
+
+exports["fields/index/selectField/should return NotFound field for wrong firld name(0)"] = "NotFoundWidget";
+
+exports["fields/index/selectField/should return NotFound field for incorrect name(0)"] = "NotFoundWidget";
+

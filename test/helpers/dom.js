@@ -1,4 +1,3 @@
-require('mock-local-storage');
 const jsdom = require('jsdom');
 const {PerformanceObserver} = require('perf_hooks');
 
@@ -15,7 +14,6 @@ function propagateToGlobal(window) {
 
     global[key] = window[key];
   }
-  window.sessionStorage = global.sessionStorage;
 }
 
 // setup the simplest document possible

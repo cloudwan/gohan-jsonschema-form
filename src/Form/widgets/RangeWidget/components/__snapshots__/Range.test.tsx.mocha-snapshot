@@ -18,3 +18,19 @@ exports["should match snapshot for minimal number of props(0)"] = {
   }
 };
 
+exports["Select/should match snapshot for minimal number of props(0)"] = {
+  "node": {
+    "nodeType": "class",
+    "type": "Slider",
+    "props": {
+      "range": true,
+      "tipFormatter": "tipFormatter"
+    }
+  },
+  "type": "Slider",
+  "props": {
+    "range": true,
+    "tipFormatter": "tipFormatter"
+  }
+};
+

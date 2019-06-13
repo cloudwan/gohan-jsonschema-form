@@ -18,3 +18,23 @@ exports["should match snapshot for minimal number of props(0)"] = {
   }
 };
 
+exports["<Form/>/render/should match snapshot for minimal number of props(0)"] = {
+  "node": {
+    "nodeType": "class",
+    "type": "SchemaField",
+    "props": {
+      "schema": {},
+      "uiSchema": {},
+      "id": "",
+      "isRequired": false
+    }
+  },
+  "type": "SchemaField",
+  "props": {
+    "schema": {},
+    "uiSchema": {},
+    "id": "",
+    "isRequired": false
+  }
+};
+

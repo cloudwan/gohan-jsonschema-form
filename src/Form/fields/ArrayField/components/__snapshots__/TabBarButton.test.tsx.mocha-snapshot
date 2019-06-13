@@ -124,3 +124,133 @@ exports["should match snapshot(0)"] = {
   ]
 };
 
+exports["<TabBarButton/>/should match snapshot with minimal props(0)"] = {
+  "node": {
+    "nodeType": "class",
+    "type": "Button",
+    "props": {
+      "type": "primary",
+      "size": "small",
+      "disabled": false,
+      "ghost": true,
+      "children": [
+        "",
+        {
+          "type": "Icon",
+          "props": {
+            "type": "left"
+          },
+          "_store": {}
+        },
+        ""
+      ],
+      "loading": false,
+      "block": false,
+      "htmlType": "button"
+    },
+    "rendered": [
+      "",
+      {
+        "nodeType": "function",
+        "type": "Icon",
+        "props": {
+          "type": "left"
+        }
+      },
+      ""
+    ]
+  },
+  "type": "Button",
+  "props": {
+    "type": "primary",
+    "size": "small",
+    "disabled": false,
+    "ghost": true,
+    "loading": false,
+    "block": false,
+    "htmlType": "button"
+  },
+  "children": [
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "Icon",
+        "props": {
+          "type": "left"
+        }
+      },
+      "type": "Icon",
+      "props": {
+        "type": "left"
+      }
+    }
+  ]
+};
+
+exports["<TabBarButton/>/should match snapshot(0)"] = {
+  "node": {
+    "nodeType": "class",
+    "type": "Button",
+    "props": {
+      "type": "primary",
+      "size": "small",
+      "disabled": true,
+      "onClick": "onClick",
+      "ghost": true,
+      "children": [
+        "foo",
+        {
+          "type": "Icon",
+          "props": {
+            "type": "left"
+          },
+          "_store": {}
+        },
+        "bar"
+      ],
+      "loading": false,
+      "block": false,
+      "htmlType": "button"
+    },
+    "rendered": [
+      "foo",
+      {
+        "nodeType": "function",
+        "type": "Icon",
+        "props": {
+          "type": "left"
+        }
+      },
+      "bar"
+    ]
+  },
+  "type": "Button",
+  "props": {
+    "type": "primary",
+    "size": "small",
+    "disabled": true,
+    "onClick": "onClick",
+    "ghost": true,
+    "loading": false,
+    "block": false,
+    "htmlType": "button"
+  },
+  "children": [
+    "foo",
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "Icon",
+        "props": {
+          "type": "left"
+        }
+      },
+      "type": "Icon",
+      "props": {
+        "type": "left"
+      }
+    },
+    "bar"
+  ]
+};
+

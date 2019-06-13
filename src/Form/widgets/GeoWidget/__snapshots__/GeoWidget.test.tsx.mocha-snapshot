@@ -20,3 +20,25 @@ exports["should match snapshot(0)"] = {
   }
 };
 
+exports["<GeoWidget />/render()/should match snapshot(0)"] = {
+  "node": {
+    "nodeType": "class",
+    "type": "GeoMap",
+    "props": {
+      "onChange": "[function]",
+      "value": {
+        "lat": 1,
+        "lng": 0
+      }
+    }
+  },
+  "type": "GeoMap",
+  "props": {
+    "onChange": "[function]",
+    "value": {
+      "lat": 1,
+      "lng": 0
+    }
+  }
+};
+
