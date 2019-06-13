@@ -1,5 +1,4 @@
 import Ajv from 'ajv';
-import {safeLoad} from 'js-yaml';
 
 import cidrFormat from './cidrFormat';
 import emailFormat from './emailFormat';
@@ -16,6 +15,8 @@ const ajv = new Ajv({
     email: emailFormat,
     uuid: uuidFormat,
     ipv4: ipV4Format,
+    'ipv4-network': data => typeof data === 'string',
+    'ipv4-address-with-cidr': data => typeof data === 'string',
     ipv6: ipV6Format,
     'password-confirm': () => true,
     text: data => typeof data === 'string',

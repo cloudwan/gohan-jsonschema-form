@@ -1,0 +1,94 @@
+{
+  "id": "custom_formats",
+  "title": "Custom Formats",
+  "schema": {
+    "permission": [
+      "create",
+      "read",
+      "update",
+      "delete"
+    ],
+    "properties": {
+      "ipv4": {
+        "id": "ipv4",
+        "description": "IPv4 Format Example",
+        "format": "ipv4",
+        "title": "IPv4 Format",
+        "type": "string",
+        "permission": [
+          "create"
+        ],
+        "unique": true,
+        "view": [
+          "list",
+          "detail",
+          "create",
+          "update"
+        ]
+      },
+      "ipv4-network": {
+        "id": "ipv4-network",
+        "description": "IPv4 Network Example",
+        "format": "ipv4-network",
+        "permission": [
+          "create"
+        ],
+        "title": "IPv4 Network",
+        "type": "string"
+      },
+      "ipv4-address-with-cidr": {
+        "id": "ipv4-address-with-cidr",
+        "description": "IPv4 with Cidr example",
+        "format": "ipv4-address-with-cidr",
+        "title": "IPv4 with Cidr",
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "ipv6": {
+        "id": "ipv6",
+        "description": "IPv6 Format Example",
+        "format": "ipv6",
+        "title": "IPv6 Format",
+        "type": "string",
+        "permission": [
+          "create"
+        ],
+        "unique": true,
+        "view": [
+          "list",
+          "detail",
+          "create",
+          "update"
+        ]
+      },
+      "mac": {
+        "id": "mac",
+        "description": "MAC format example.",
+        "format": "mac",
+        "permission": [
+          "create",
+          "update"
+        ],
+        "title": "MAC format",
+        "type": [
+          "string",
+          "null"
+        ],
+        "unique": true
+      }
+    },
+    "propertiesOrder": [
+      "ipv4",
+      "ipv4-network",
+      "ipv4-address-with-cidr",
+      "ipv6",
+      "mac"
+    ],
+    "required": [],
+    "type": "object"
+  },
+  "uiSchema": {},
+  "formData": {}
+}
