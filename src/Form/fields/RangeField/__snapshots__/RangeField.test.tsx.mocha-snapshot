@@ -212,3 +212,147 @@ exports["should match snapshot with value passed by props(0)"] = {
   }
 };
 
+exports["<RangeField />/render method/should match snapshot(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "type": "C",
+    "props": {
+      "schema": {
+        "type": [
+          "object"
+        ],
+        "properties": {
+          "foo": {
+            "type": [
+              "integer"
+            ],
+            "minimum": 1,
+            "maximum": 10
+          },
+          "bar": {
+            "type": [
+              "integer"
+            ],
+            "minimum": 1,
+            "maximum": 10
+          }
+        }
+      },
+      "uiSchema": {
+        "ui:widget": "Range",
+        "ui:options": {
+          "minKey": "foo",
+          "maxKey": "bar"
+        }
+      },
+      "component": "RangeWidget"
+    }
+  },
+  "type": "FormikConnect(FieldInner)",
+  "props": {
+    "schema": {
+      "type": [
+        "object"
+      ],
+      "properties": {
+        "foo": {
+          "type": [
+            "integer"
+          ],
+          "minimum": 1,
+          "maximum": 10
+        },
+        "bar": {
+          "type": [
+            "integer"
+          ],
+          "minimum": 1,
+          "maximum": 10
+        }
+      }
+    },
+    "uiSchema": {
+      "ui:widget": "Range",
+      "ui:options": {
+        "minKey": "foo",
+        "maxKey": "bar"
+      }
+    },
+    "component": "RangeWidget"
+  }
+};
+
+exports["<RangeField />/render method/should match snapshot with default values(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "type": "C",
+    "props": {
+      "schema": {
+        "type": [
+          "object"
+        ],
+        "properties": {
+          "foo": {
+            "type": [
+              "integer"
+            ],
+            "minimum": 1,
+            "maximum": 10,
+            "default": 2
+          },
+          "bar": {
+            "type": [
+              "integer"
+            ],
+            "minimum": 1,
+            "maximum": 10,
+            "default": 3
+          }
+        }
+      },
+      "uiSchema": {
+        "ui:widget": "Range",
+        "ui:options": {
+          "minKey": "foo",
+          "maxKey": "bar"
+        }
+      },
+      "component": "RangeWidget"
+    }
+  },
+  "type": "FormikConnect(FieldInner)",
+  "props": {
+    "schema": {
+      "type": [
+        "object"
+      ],
+      "properties": {
+        "foo": {
+          "type": [
+            "integer"
+          ],
+          "minimum": 1,
+          "maximum": 10,
+          "default": 2
+        },
+        "bar": {
+          "type": [
+            "integer"
+          ],
+          "minimum": 1,
+          "maximum": 10,
+          "default": 3
+        }
+      }
+    },
+    "uiSchema": {
+      "ui:widget": "Range",
+      "ui:options": {
+        "minKey": "foo",
+        "maxKey": "bar"
+      }
+    },
+    "component": "RangeWidget"
+  }
+};
+

@@ -18,3 +18,23 @@ exports["should match snapshot for minimal number of props(0)"] = {
   }
 };
 
+exports["<NotFoundWidget/>/render/should match snapshot for minimal number of props(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "type": "WidgetError",
+    "props": {
+      "messages": [
+        "{}",
+        "{}"
+      ]
+    }
+  },
+  "type": "WidgetError",
+  "props": {
+    "messages": [
+      "{}",
+      "{}"
+    ]
+  }
+};
+

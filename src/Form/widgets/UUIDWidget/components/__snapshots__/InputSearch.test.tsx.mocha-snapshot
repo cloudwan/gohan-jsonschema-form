@@ -36,3 +36,33 @@ exports["should match snapshot(0)"] = {
   }
 };
 
+exports["<InputSearch/>/should match snapshot for minimal number of props(0)"] = {
+  "node": {
+    "nodeType": "class",
+    "type": "Search",
+    "props": {
+      "enterButton": false
+    }
+  },
+  "type": "Search",
+  "props": {
+    "enterButton": false
+  }
+};
+
+exports["<InputSearch/>/should match snapshot(0)"] = {
+  "node": {
+    "nodeType": "class",
+    "type": "Search",
+    "props": {
+      "value": "test",
+      "enterButton": false
+    }
+  },
+  "type": "Search",
+  "props": {
+    "value": "test",
+    "enterButton": false
+  }
+};
+

@@ -1,6 +1,7 @@
 --require ./test/helpers/babelRegisterConfig.js
 --require mocha-snapshots
 --require ignore-styles
+--require mock-local-storage
 --require ./test/helpers/dom.js
 --require ./test/helpers/setup.js
 --watch-extensions tsx,ts

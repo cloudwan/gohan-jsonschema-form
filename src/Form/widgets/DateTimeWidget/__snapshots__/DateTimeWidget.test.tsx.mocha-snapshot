@@ -46,3 +46,51 @@ exports["should match snapshot when value is null(0)"] = {
   }
 };
 
+exports["<DateTimeWidget />/should match snapshot(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "type": "DateTimePicker",
+    "props": {
+      "onChange": "[function]",
+      "onOk": "[function]"
+    }
+  },
+  "type": "DateTimePicker",
+  "props": {
+    "onChange": "[function]",
+    "onOk": "[function]"
+  }
+};
+
+exports["<DateTimeWidget />/should match snapshot when widget has default value(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "type": "DateTimePicker",
+    "props": {
+      "onChange": "[function]",
+      "onOk": "[function]"
+    }
+  },
+  "type": "DateTimePicker",
+  "props": {
+    "onChange": "[function]",
+    "onOk": "[function]"
+  }
+};
+
+exports["<DateTimeWidget />/should match snapshot when value is null(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "type": "DateTimePicker",
+    "props": {
+      "onChange": "[function]",
+      "onOk": "[function]"
+    }
+  },
+  "type": "DateTimePicker",
+  "props": {
+    "onChange": "[function]",
+    "onOk": "[function]"
+  }
+};
+

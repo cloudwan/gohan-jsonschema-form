@@ -92,3 +92,97 @@ exports["should match snapshot when schema type is number(0)"] = {
   ]
 };
 
+exports["<InputWidget />/should match snapshot when schema type is string(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "props": {
+      "children": [
+        false,
+        {
+          "type": "Input",
+          "props": {
+            "value": "",
+            "onChange": "[function]"
+          },
+          "_store": {}
+        }
+      ]
+    },
+    "rendered": [
+      false,
+      {
+        "nodeType": "function",
+        "type": "Input",
+        "props": {
+          "value": "",
+          "onChange": "[function]"
+        }
+      }
+    ]
+  },
+  "type": "Fragment",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "Input",
+        "props": {
+          "value": "",
+          "onChange": "[function]"
+        }
+      },
+      "type": "Input",
+      "props": {
+        "value": "",
+        "onChange": "[function]"
+      }
+    }
+  ]
+};
+
+exports["<InputWidget />/should match snapshot when schema type is number(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "props": {
+      "children": [
+        {
+          "type": "InputNumber",
+          "props": {
+            "onChange": "[function]"
+          },
+          "_store": {}
+        },
+        false
+      ]
+    },
+    "rendered": [
+      {
+        "nodeType": "function",
+        "type": "InputNumber",
+        "props": {
+          "onChange": "[function]"
+        }
+      },
+      false
+    ]
+  },
+  "type": "Fragment",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "InputNumber",
+        "props": {
+          "onChange": "[function]"
+        }
+      },
+      "type": "InputNumber",
+      "props": {
+        "onChange": "[function]"
+      }
+    }
+  ]
+};
+

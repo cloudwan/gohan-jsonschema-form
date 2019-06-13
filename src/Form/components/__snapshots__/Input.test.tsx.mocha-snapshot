@@ -42,3 +42,43 @@ exports["should match snapshot(0)"] = {
   }
 };
 
+exports["Input/should match snapshot for minimal number of props(0)"] = {
+  "node": {
+    "nodeType": "class",
+    "type": "Input",
+    "props": {
+      "type": "text",
+      "disabled": false
+    }
+  },
+  "type": "Input",
+  "props": {
+    "type": "text",
+    "disabled": false
+  }
+};
+
+exports["Input/should match snapshot(0)"] = {
+  "node": {
+    "nodeType": "class",
+    "type": "Input",
+    "props": {
+      "value": "test",
+      "onChange": "onChange",
+      "disabled": false,
+      "minLength": 2,
+      "maxLength": 100,
+      "type": "text"
+    }
+  },
+  "type": "Input",
+  "props": {
+    "value": "test",
+    "onChange": "onChange",
+    "disabled": false,
+    "minLength": 2,
+    "maxLength": 100,
+    "type": "text"
+  }
+};
+

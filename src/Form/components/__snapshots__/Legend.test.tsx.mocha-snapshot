@@ -46,3 +46,51 @@ exports["should match snapshot(0)"] = {
   ]
 };
 
+exports["<Legend/>/render/should match snapshot(0)"] = {
+  "node": {
+    "nodeType": "host",
+    "type": "legend",
+    "props": {
+      "children": {
+        "type": "span",
+        "props": {
+          "id": "foo",
+          "children": "test"
+        },
+        "_store": {}
+      }
+    },
+    "rendered": {
+      "nodeType": "host",
+      "type": "span",
+      "props": {
+        "id": "foo",
+        "children": "test"
+      },
+      "rendered": "test"
+    }
+  },
+  "type": "legend",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "host",
+        "type": "span",
+        "props": {
+          "id": "foo",
+          "children": "test"
+        },
+        "rendered": "test"
+      },
+      "type": "span",
+      "props": {
+        "id": "foo"
+      },
+      "children": [
+        "test"
+      ]
+    }
+  ]
+};
+

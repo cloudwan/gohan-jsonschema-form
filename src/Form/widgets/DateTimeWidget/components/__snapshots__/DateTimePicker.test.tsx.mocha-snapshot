@@ -120,3 +120,121 @@ exports["should match snapshot for minimal number of props(0)"] = {
   }
 };
 
+exports["DateTimePicker/should match snapshot for minimal number of props(0)"] = {
+  "node": {
+    "nodeType": "class",
+    "type": "PickerWrapper",
+    "props": {
+      "showTime": true,
+      "format": "YYYY-MM-DD HH:mm:ss",
+      "placeholder": "Select Time",
+      "schema": {
+        "type": [
+          "string"
+        ],
+        "format": "date-time"
+      },
+      "form": {
+        "dirty": false,
+        "errors": {},
+        "handleBlur": "handleBlur",
+        "handleChange": "handleChange",
+        "handleReset": "handleReset",
+        "handleSubmit": "handleSubmit",
+        "initialValues": {},
+        "isSubmitting": false,
+        "isValid": false,
+        "isValidating": false,
+        "registerField": "registerField",
+        "resetForm": "resetForm",
+        "setError": "setError",
+        "setErrors": "setErrors",
+        "setFieldError": "setFieldError",
+        "setFieldTouched": "setFieldTouched",
+        "setFieldValue": "setFieldValue",
+        "setFormikState": "setFormikState",
+        "setStatus": "setStatus",
+        "setSubmitting": "setSubmitting",
+        "setTouched": "setTouched",
+        "setValues": "setValues",
+        "submitCount": 0,
+        "submitForm": "submitForm",
+        "touched": {},
+        "unregisterField": "unregisterField",
+        "validateField": "validateField",
+        "validateForm": "validateForm",
+        "validateOnBlur": true,
+        "validateOnChange": true,
+        "values": {}
+      },
+      "field": {
+        "onChange": "onChange",
+        "onBlur": "onBlur",
+        "name": "foo"
+      },
+      "transitionName": "slide-up",
+      "popupStyle": {},
+      "onChange": "onChange",
+      "onOk": "onOk",
+      "onOpenChange": "onOpenChange",
+      "locale": {}
+    }
+  },
+  "type": "PickerWrapper",
+  "props": {
+    "showTime": true,
+    "format": "YYYY-MM-DD HH:mm:ss",
+    "placeholder": "Select Time",
+    "schema": {
+      "type": [
+        "string"
+      ],
+      "format": "date-time"
+    },
+    "form": {
+      "dirty": false,
+      "errors": {},
+      "handleBlur": "handleBlur",
+      "handleChange": "handleChange",
+      "handleReset": "handleReset",
+      "handleSubmit": "handleSubmit",
+      "initialValues": {},
+      "isSubmitting": false,
+      "isValid": false,
+      "isValidating": false,
+      "registerField": "registerField",
+      "resetForm": "resetForm",
+      "setError": "setError",
+      "setErrors": "setErrors",
+      "setFieldError": "setFieldError",
+      "setFieldTouched": "setFieldTouched",
+      "setFieldValue": "setFieldValue",
+      "setFormikState": "setFormikState",
+      "setStatus": "setStatus",
+      "setSubmitting": "setSubmitting",
+      "setTouched": "setTouched",
+      "setValues": "setValues",
+      "submitCount": 0,
+      "submitForm": "submitForm",
+      "touched": {},
+      "unregisterField": "unregisterField",
+      "validateField": "validateField",
+      "validateForm": "validateForm",
+      "validateOnBlur": true,
+      "validateOnChange": true,
+      "values": {}
+    },
+    "field": {
+      "onChange": "onChange",
+      "onBlur": "onBlur",
+      "name": "foo"
+    },
+    "transitionName": "slide-up",
+    "popupStyle": {},
+    "onChange": "onChange",
+    "onOk": "onOk",
+    "onOpenChange": "onOpenChange",
+    "locale": {}
+  }
+};
+

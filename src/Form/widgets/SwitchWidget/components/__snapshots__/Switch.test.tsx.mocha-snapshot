@@ -22,3 +22,25 @@ exports["should match snapshot(0)"] = {
   }
 };
 
+exports["Switch/should match snapshot(0)"] = {
+  "node": {
+    "nodeType": "class",
+    "type": "Switch",
+    "props": {
+      "schema": {
+        "type": [
+          "boolean"
+        ]
+      }
+    }
+  },
+  "type": "Switch",
+  "props": {
+    "schema": {
+      "type": [
+        "boolean"
+      ]
+    }
+  }
+};
+
