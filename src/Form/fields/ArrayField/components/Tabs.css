@@ -3,7 +3,6 @@
   border-right: 1px solid #e8e8e8;
   border-bottom: 1px solid #e8e8e8;
   padding: 0 0.625rem;
-  margin-bottom: 0.625rem;
 }
 
 :global .card-container > .ant-tabs-card > .ant-tabs-bar {

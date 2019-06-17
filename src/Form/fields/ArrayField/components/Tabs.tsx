@@ -14,13 +14,23 @@ import 'antd/lib/tabs/style';
 import './Tabs.css';
 
 interface TTabsProps extends IWidget, FieldArrayRenderProps {
-  onEditTab?: (targetKey: string, action: string) => void;
   type?: TabsType;
 }
 
 interface TTabsState {
   activeKey: string;
 }
+
+const getTargetIndex = (key: string) => {
+  if (key) {
+    const indexRegex = /\d+$/;
+    const results = key.match(indexRegex);
+
+    return results && results.length > 0 ? Number(results[0]) : undefined;
+  }
+
+  return undefined;
+};
 
 export class Tabs extends React.Component<TTabsProps, TTabsState> {
   constructor(props) {
@@ -32,7 +42,7 @@ export class Tabs extends React.Component<TTabsProps, TTabsState> {
   }
 
   public render(): React.ReactNode {
-    const {onEditTab, schema, name, form} = this.props;
+    const {schema, name, form} = this.props;
 
     const restProps: {
       activeKey?: string;
@@ -50,7 +60,7 @@ export class Tabs extends React.Component<TTabsProps, TTabsState> {
       <div className="card-container">
         <AntTabs
           type={'editable-card'}
-          onEdit={onEditTab}
+          onEdit={this.handleEdit}
           hideAdd={true}
           tabBarExtraContent={
             <Button
@@ -100,6 +110,37 @@ export class Tabs extends React.Component<TTabsProps, TTabsState> {
     this.props.push(items.default);
     this.setState({
       activeKey: `${this.props.name}.${index}`,
+    });
+  };
+
+  private handleEdit = (targetKey: string, action: string): void => {
+    if (action === 'remove') {
+      this.handleRemove(targetKey);
+    }
+  };
+
+  private handleRemove = (targetKey): void => {
+    const {activeKey} = this.state;
+    const tabs = getIn(this.props.form.values, this.props.name);
+    const targetIndex = getTargetIndex(targetKey);
+    const activeIndex = getTargetIndex(activeKey);
+    const lastIndex = tabs.length > 0 ? tabs.length - 1 : undefined;
+    let newActiveIndex;
+
+    if (targetIndex > activeIndex) {
+      newActiveIndex = activeIndex;
+    } else if (targetIndex === activeIndex) {
+      newActiveIndex =
+        activeIndex === lastIndex ? activeIndex - 1 : activeIndex;
+    } else if (targetIndex < activeIndex) {
+      newActiveIndex = activeIndex - 1;
+    }
+
+    this.props.remove(targetIndex);
+    this.setState({
+      activeKey: newActiveIndex
+        ? `${this.props.name}.${newActiveIndex}`
+        : undefined,
     });
   };
 
