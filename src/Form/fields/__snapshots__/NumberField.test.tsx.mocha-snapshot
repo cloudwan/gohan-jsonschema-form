@@ -1,73 +1,3 @@
-exports["should match snapshot for minimal number of props(0)"] = {
-  "node": {
-    "nodeType": "function",
-    "props": {
-      "children": [
-        {
-          "type": "C",
-          "props": {},
-          "_store": {}
-        },
-        {
-          "type": "C",
-          "props": {
-            "schema": {},
-            "validate": "[function]",
-            "component": "InputWidget"
-          },
-          "_store": {}
-        }
-      ]
-    },
-    "rendered": [
-      {
-        "nodeType": "function",
-        "type": "C",
-        "props": {}
-      },
-      {
-        "nodeType": "function",
-        "type": "C",
-        "props": {
-          "schema": {},
-          "validate": "[function]",
-          "component": "InputWidget"
-        }
-      }
-    ]
-  },
-  "type": "React.Fragment",
-  "props": {},
-  "children": [
-    {
-      "node": {
-        "nodeType": "function",
-        "type": "C",
-        "props": {}
-      },
-      "type": "FormikConnect(ErrorMessageImpl)",
-      "props": {}
-    },
-    {
-      "node": {
-        "nodeType": "function",
-        "type": "C",
-        "props": {
-          "schema": {},
-          "validate": "[function]",
-          "component": "InputWidget"
-        }
-      },
-      "type": "FormikConnect(FieldInner)",
-      "props": {
-        "schema": {},
-        "validate": "[function]",
-        "component": "InputWidget"
-      }
-    }
-  ]
-};
-
 exports["<NumberField/>/render/should match snapshot for minimal number of props(0)"] = {
   "node": {
     "nodeType": "function",
@@ -128,7 +58,7 @@ exports["<NumberField/>/render/should match snapshot for minimal number of props
           "component": "InputWidget"
         }
       },
-      "type": "FormikConnect(FieldInner)",
+      "type": "FormikConnect(FastFieldInner)",
       "props": {
         "schema": {},
         "validate": "[function]",

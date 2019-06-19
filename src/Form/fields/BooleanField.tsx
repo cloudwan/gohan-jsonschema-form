@@ -1,4 +1,4 @@
-import {ErrorMessage, Field} from 'formik';
+import {ErrorMessage, FastField} from 'formik';
 import * as React from 'react';
 
 import {IWidget} from '../../typings/IWidget';
@@ -13,7 +13,7 @@ export class BooleanField extends React.Component<IWidget> {
     return (
       <React.Fragment>
         <ErrorMessage name={id} />
-        <Field
+        <FastField
           name={id}
           schema={schema}
           uiSchema={uiSchema}

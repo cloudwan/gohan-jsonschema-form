@@ -41,6 +41,20 @@ export class Tabs extends React.Component<TTabsProps, TTabsState> {
     };
   }
 
+  public shouldComponentUpdate(nextProps, newState) {
+    const newFieldValue = getIn(nextProps.form.values, nextProps.name);
+    const oldFieldValue = getIn(this.props.form.values, this.props.name);
+
+    const newLength =
+      newFieldValue && Array.isArray(newFieldValue) ? newFieldValue.length : 0;
+    const oldLength =
+      newFieldValue && Array.isArray(oldFieldValue) ? oldFieldValue.length : 0;
+
+    return (
+      newLength !== oldLength || newState.activeKey !== this.state.activeKey
+    );
+  }
+
   public render(): React.ReactNode {
     const {schema, name, form} = this.props;
 

@@ -43,6 +43,13 @@ class Fieldset extends React.Component<TFieldsetProps, TFieldsetState> {
     this.hasTabs = this.countTabs(properties) > 1;
   }
 
+  public shouldComponentUpdate(nextProps, nextState) {
+    return (
+      nextProps.field.name !== this.props.field.name ||
+      nextState.areFieldsVisible !== this.state.areFieldsVisible
+    );
+  }
+
   public render(): JSX.Element {
     const {
       schema,
@@ -153,8 +160,9 @@ class Fieldset extends React.Component<TFieldsetProps, TFieldsetState> {
               {properties[key] && properties[key].title
                 ? properties[key].title
                 : key}
-              {Array.isArray(required) &&
-                required.includes(key) && <Asterisk />}
+              {Array.isArray(required) && required.includes(key) && (
+                <Asterisk />
+              )}
             </React.Fragment>
           }
           className={styles.tab}
