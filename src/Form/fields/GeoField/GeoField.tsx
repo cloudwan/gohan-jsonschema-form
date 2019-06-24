@@ -1,4 +1,4 @@
-import {Field} from 'formik';
+import {FastField} from 'formik';
 import * as React from 'react';
 
 import {IWidget} from '../../../typings/IWidget';
@@ -9,7 +9,7 @@ export default class GeoField extends React.Component<IWidget> {
     const {id, schema, isRequired} = this.props;
 
     return (
-      <Field
+      <FastField
         name={id}
         schema={schema}
         isRequired={isRequired}

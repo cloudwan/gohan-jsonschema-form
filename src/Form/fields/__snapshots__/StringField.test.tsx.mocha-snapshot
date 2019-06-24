@@ -1,137 +1,3 @@
-exports["should match snapshot for minimal number of props(0)"] = {
-  "node": {
-    "nodeType": "function",
-    "props": {
-      "children": [
-        {
-          "type": "C",
-          "props": {},
-          "_store": {}
-        },
-        {
-          "type": "C",
-          "props": {
-            "validate": "[function]",
-            "children": "[function]"
-          },
-          "_store": {}
-        }
-      ]
-    },
-    "rendered": [
-      {
-        "nodeType": "function",
-        "type": "C",
-        "props": {}
-      },
-      {
-        "nodeType": "function",
-        "type": "C",
-        "props": {
-          "validate": "[function]",
-          "children": "[function]"
-        },
-        "rendered": "[function]"
-      }
-    ]
-  },
-  "type": "React.Fragment",
-  "props": {},
-  "children": [
-    {
-      "node": {
-        "nodeType": "function",
-        "type": "C",
-        "props": {}
-      },
-      "type": "FormikConnect(ErrorMessageImpl)",
-      "props": {}
-    },
-    {
-      "node": {
-        "nodeType": "function",
-        "type": "C",
-        "props": {
-          "validate": "[function]",
-          "children": "[function]"
-        },
-        "rendered": "[function]"
-      },
-      "type": "FormikConnect(FieldInner)",
-      "props": {
-        "validate": "[function]"
-      }
-    }
-  ]
-};
-
-exports["should match snapshot for defined schema format(0)"] = {
-  "node": {
-    "nodeType": "function",
-    "props": {
-      "children": [
-        {
-          "type": "C",
-          "props": {},
-          "_store": {}
-        },
-        {
-          "type": "C",
-          "props": {
-            "validate": "[function]",
-            "children": "[function]"
-          },
-          "_store": {}
-        }
-      ]
-    },
-    "rendered": [
-      {
-        "nodeType": "function",
-        "type": "C",
-        "props": {}
-      },
-      {
-        "nodeType": "function",
-        "type": "C",
-        "props": {
-          "validate": "[function]",
-          "children": "[function]"
-        },
-        "rendered": "[function]"
-      }
-    ]
-  },
-  "type": "React.Fragment",
-  "props": {},
-  "children": [
-    {
-      "node": {
-        "nodeType": "function",
-        "type": "C",
-        "props": {}
-      },
-      "type": "FormikConnect(ErrorMessageImpl)",
-      "props": {}
-    },
-    {
-      "node": {
-        "nodeType": "function",
-        "type": "C",
-        "props": {
-          "validate": "[function]",
-          "children": "[function]"
-        },
-        "rendered": "[function]"
-      },
-      "type": "FormikConnect(FieldInner)",
-      "props": {
-        "validate": "[function]"
-      }
-    }
-  ]
-};
-
 exports["<StringField/>/render/should match snapshot for minimal number of props(0)"] = {
   "node": {
     "nodeType": "function",
@@ -191,7 +57,7 @@ exports["<StringField/>/render/should match snapshot for minimal number of props
         },
         "rendered": "[function]"
       },
-      "type": "FormikConnect(FieldInner)",
+      "type": "FormikConnect(FastFieldInner)",
       "props": {
         "validate": "[function]"
       },
@@ -265,7 +131,7 @@ exports["<StringField/>/render/should match snapshot for defined schema format(0
         },
         "rendered": "[function]"
       },
-      "type": "FormikConnect(FieldInner)",
+      "type": "FormikConnect(FastFieldInner)",
       "props": {
         "validate": "[function]"
       },

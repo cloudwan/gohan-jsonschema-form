@@ -1,4 +1,4 @@
-import {Field} from 'formik';
+import {FastField} from 'formik';
 import React from 'react';
 
 import {IWidget} from '../../../typings/IWidget';
@@ -9,7 +9,7 @@ export default class CodeField extends React.Component<IWidget> {
     const {schema, uiSchema, id} = this.props;
 
     return (
-      <Field
+      <FastField
         name={id}
         schema={schema}
         uiSchema={uiSchema}

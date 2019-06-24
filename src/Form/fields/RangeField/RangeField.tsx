@@ -1,4 +1,4 @@
-import {Field} from 'formik';
+import {FastField} from 'formik';
 import * as React from 'react';
 
 import {IWidget} from '../../../typings/IWidget';
@@ -17,7 +17,7 @@ export default class RangeField extends React.Component<
     const {id, schema, uiSchema} = this.props;
 
     return (
-      <Field
+      <FastField
         name={id}
         schema={schema}
         uiSchema={uiSchema}

@@ -1,4 +1,4 @@
-import {Field, FieldArray, FieldArrayRenderProps} from 'formik';
+import {FastField, FieldArray, FieldArrayRenderProps} from 'formik';
 import * as React from 'react';
 
 import {IWidget} from '../../../typings/IWidget';
@@ -38,17 +38,18 @@ export class ArrayField extends React.Component<IWidget> {
               fetcher: (
                 relation: string,
               ) => Promise<Array<{label: string; value: string}>>,
-            ) => <Field {...commonProps} fetcher={fetcher} />}
+            ) => <FastField {...commonProps} fetcher={fetcher} />}
           </FormContext.Consumer>
         );
       }
 
-      return <Field {...commonProps} />;
+      return <FastField {...commonProps} />;
     }
 
     return (
       <FieldArray
         name={id}
+        validateOnChange={false}
         component={(props: FieldArrayRenderProps) =>
           this.isObjectArray ? (
             <Tabs schema={schema} uiSchema={uiSchema} {...props} />

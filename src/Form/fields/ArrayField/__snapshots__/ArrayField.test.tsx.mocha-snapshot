@@ -1,127 +1,17 @@
-exports["should match snapshot(0)"] = {
-  "node": {
-    "nodeType": "function",
-    "type": "C",
-    "props": {
-      "name": "test",
-      "component": "component"
-    }
-  },
-  "type": "FormikConnect(FieldArrayInner)",
-  "props": {
-    "name": "test",
-    "component": "component"
-  }
-};
-
-exports["should match snapshot with default value(0)"] = {
-  "node": {
-    "nodeType": "function",
-    "type": "C",
-    "props": {
-      "name": "test",
-      "component": "component"
-    }
-  },
-  "type": "FormikConnect(FieldArrayInner)",
-  "props": {
-    "name": "test",
-    "component": "component"
-  }
-};
-
-exports["should match snapshot with value passed by props(0)"] = {
-  "node": {
-    "nodeType": "function",
-    "type": "C",
-    "props": {
-      "name": "test",
-      "component": "component"
-    }
-  },
-  "type": "FormikConnect(FieldArrayInner)",
-  "props": {
-    "name": "test",
-    "component": "component"
-  }
-};
-
-exports["should match snapshot when array items are objects(0)"] = {
-  "node": {
-    "nodeType": "function",
-    "type": "C",
-    "props": {
-      "name": "test",
-      "component": "component"
-    }
-  },
-  "type": "FormikConnect(FieldArrayInner)",
-  "props": {
-    "name": "test",
-    "component": "component"
-  }
-};
-
-exports["should match snapshot when array has uniqueItems(0)"] = {
-  "node": {
-    "nodeType": "function",
-    "type": "C",
-    "props": {
-      "name": "test",
-      "schema": {
-        "items": {
-          "type": [
-            "string"
-          ],
-          "enum": [
-            "foo",
-            "bar",
-            "baz"
-          ]
-        },
-        "uniqueItems": true,
-        "type": [
-          "array"
-        ]
-      },
-      "component": "SelectWidget"
-    }
-  },
-  "type": "FormikConnect(FieldInner)",
-  "props": {
-    "name": "test",
-    "schema": {
-      "items": {
-        "type": [
-          "string"
-        ],
-        "enum": [
-          "foo",
-          "bar",
-          "baz"
-        ]
-      },
-      "uniqueItems": true,
-      "type": [
-        "array"
-      ]
-    },
-    "component": "SelectWidget"
-  }
-};
-
 exports["<ArrayField />/should match snapshot(0)"] = {
   "node": {
     "nodeType": "function",
     "type": "C",
     "props": {
       "name": "test",
+      "validateOnChange": false,
       "component": "component"
     }
   },
   "type": "FormikConnect(FieldArrayInner)",
   "props": {
     "name": "test",
+    "validateOnChange": false,
     "component": "component"
   }
 };
@@ -132,12 +22,14 @@ exports["<ArrayField />/should match snapshot with default value(0)"] = {
     "type": "C",
     "props": {
       "name": "test",
+      "validateOnChange": false,
       "component": "component"
     }
   },
   "type": "FormikConnect(FieldArrayInner)",
   "props": {
     "name": "test",
+    "validateOnChange": false,
     "component": "component"
   }
 };
@@ -148,12 +40,14 @@ exports["<ArrayField />/should match snapshot with value passed by props(0)"] = 
     "type": "C",
     "props": {
       "name": "test",
+      "validateOnChange": false,
       "component": "component"
     }
   },
   "type": "FormikConnect(FieldArrayInner)",
   "props": {
     "name": "test",
+    "validateOnChange": false,
     "component": "component"
   }
 };
@@ -164,12 +58,14 @@ exports["<ArrayField />/should match snapshot when array items are objects(0)"] 
     "type": "C",
     "props": {
       "name": "test",
+      "validateOnChange": false,
       "component": "component"
     }
   },
   "type": "FormikConnect(FieldArrayInner)",
   "props": {
     "name": "test",
+    "validateOnChange": false,
     "component": "component"
   }
 };
@@ -199,7 +95,7 @@ exports["<ArrayField />/should match snapshot when array has uniqueItems(0)"] = 
       "component": "SelectWidget"
     }
   },
-  "type": "FormikConnect(FieldInner)",
+  "type": "FormikConnect(FastFieldInner)",
   "props": {
     "name": "test",
     "schema": {

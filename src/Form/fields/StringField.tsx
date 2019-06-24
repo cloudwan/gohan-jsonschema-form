@@ -1,4 +1,4 @@
-import {ErrorMessage, Field} from 'formik';
+import {ErrorMessage, FastField} from 'formik';
 import * as React from 'react';
 
 import {IWidget} from '../../typings/IWidget';
@@ -21,7 +21,7 @@ export class StringField extends React.Component<IWidget> {
     return (
       <React.Fragment>
         <ErrorMessage name={id} />
-        <Field name={id} validate={this.validate}>
+        <FastField name={id} validate={this.validate}>
           {({field, form}) => (
             <Widget
               schema={schema}
@@ -33,7 +33,7 @@ export class StringField extends React.Component<IWidget> {
               form={form}
             />
           )}
-        </Field>
+        </FastField>
       </React.Fragment>
     );
   }

@@ -1,4 +1,4 @@
-import {ErrorMessage, Field} from 'formik';
+import {ErrorMessage, FastField} from 'formik';
 import * as React from 'react';
 
 import {IWidget} from '../../typings/IWidget';
@@ -34,7 +34,7 @@ export class SelectField extends React.Component<ISelectFieldProps> {
           ) => (
             <React.Fragment>
               <ErrorMessage name={id} />
-              <Field {...commonProps} fetcher={fetcher} />
+              <FastField {...commonProps} fetcher={fetcher} />
             </React.Fragment>
           )}
         </FormContext.Consumer>
@@ -44,7 +44,7 @@ export class SelectField extends React.Component<ISelectFieldProps> {
     return (
       <React.Fragment>
         <ErrorMessage name={id} />
-        <Field {...commonProps} />
+        <FastField {...commonProps} />
       </React.Fragment>
     );
   }
