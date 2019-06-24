@@ -45,7 +45,9 @@ export default class SelectWidget extends React.Component<
     if (this.state.options && this.state.options.length > 0) {
       options = this.state.options;
     } else {
-      if (schema.enum) {
+      if (schema.options) {
+        options = schema.options;
+      } else if (schema.enum) {
         options = schema.enum;
       } else if (schema.items && !Array.isArray(schema.items)) {
         options = schema.items.options || schema.items.enum;

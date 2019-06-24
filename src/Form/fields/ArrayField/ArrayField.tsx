@@ -49,7 +49,6 @@ export class ArrayField extends React.Component<IWidget> {
     return (
       <FieldArray
         name={id}
-        validateOnChange={false}
         component={(props: FieldArrayRenderProps) =>
           this.isObjectArray ? (
             <Tabs schema={schema} uiSchema={uiSchema} {...props} />

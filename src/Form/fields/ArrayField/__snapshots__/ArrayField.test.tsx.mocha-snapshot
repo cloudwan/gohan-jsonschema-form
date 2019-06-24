@@ -4,14 +4,12 @@ exports["<ArrayField />/should match snapshot(0)"] = {
     "type": "C",
     "props": {
       "name": "test",
-      "validateOnChange": false,
       "component": "component"
     }
   },
   "type": "FormikConnect(FieldArrayInner)",
   "props": {
     "name": "test",
-    "validateOnChange": false,
     "component": "component"
   }
 };
@@ -22,14 +20,12 @@ exports["<ArrayField />/should match snapshot with default value(0)"] = {
     "type": "C",
     "props": {
       "name": "test",
-      "validateOnChange": false,
       "component": "component"
     }
   },
   "type": "FormikConnect(FieldArrayInner)",
   "props": {
     "name": "test",
-    "validateOnChange": false,
     "component": "component"
   }
 };
@@ -40,14 +36,12 @@ exports["<ArrayField />/should match snapshot with value passed by props(0)"] = 
     "type": "C",
     "props": {
       "name": "test",
-      "validateOnChange": false,
       "component": "component"
     }
   },
   "type": "FormikConnect(FieldArrayInner)",
   "props": {
     "name": "test",
-    "validateOnChange": false,
     "component": "component"
   }
 };
@@ -58,14 +52,12 @@ exports["<ArrayField />/should match snapshot when array items are objects(0)"] 
     "type": "C",
     "props": {
       "name": "test",
-      "validateOnChange": false,
       "component": "component"
     }
   },
   "type": "FormikConnect(FieldArrayInner)",
   "props": {
     "name": "test",
-    "validateOnChange": false,
     "component": "component"
   }
 };
