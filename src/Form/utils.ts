@@ -70,3 +70,32 @@ export const getInitialValues = schema => {
     }
   }
 };
+
+export const matchValue = (value, regex) => {
+  let result = false;
+
+  if (typeof value !== 'object') {
+    result = regex.test(value);
+  } else if (typeof value === 'object' && Array.isArray(value)) {
+    value.forEach(item => {
+      if (matchValue(item, regex)) {
+        result = true;
+      }
+    });
+  }
+
+  return result;
+};
+
+export const getFieldValue = (source, id, values, getValue) => {
+  if (source.startsWith('.')) {
+    const idPath = id.split('.');
+
+    idPath.pop();
+    idPath.push(source.replace('.', ''));
+
+    return getValue(values, idPath.join('.'));
+  }
+
+  return getValue(values, source);
+};

@@ -1,0 +1,171 @@
+{
+  "id": "hide",
+  "title": "UiSchema hide support",
+  "schema": {
+    "permission": [
+      "create",
+      "read",
+      "update",
+      "delete"
+    ],
+    "properties": {
+      "level1Select": {
+        "title": "Level 1 select",
+        "description": "Select field",
+        "enum": [
+          "foo",
+          "hide level 3 input",
+          "hide array field item level 2 number input"
+        ],
+        "type": ["string"]
+      },
+      "level1Input": {
+        "title": "Level 1 input",
+        "description": "Input field",
+        "type": ["string"]
+      },
+      "level1Object": {
+        "description": "Object field.",
+        "title": "Level 1 object",
+        "type": [
+          "object"
+        ],
+        "propertiesOrder": [
+          "level2Object"
+        ],
+        "properties": {
+          "level2Object": {
+            "description": "Object field.",
+            "title": "Level 2 object",
+            "type": [
+              "object"
+            ],
+            "propertiesOrder": [
+              "level3Object"
+            ],
+            "properties": {
+              "level3Object": {
+                "description": "Object field.",
+                "title": "Level 3 object",
+                "type": [
+                  "object"
+                ],
+                "propertiesOrder": [
+                  "level3Input",
+                  "level3Select"
+                ],
+                "properties": {
+                  "level3Input": {
+                    "type": "string",
+                    "title": "Level 3 Input",
+                    "description": "Input field."
+                  },
+                  "level3Select": {
+                    "title": "Level 3 Select",
+                    "description": "Select field.",
+                    "enum": [
+                      "foo",
+                      "show level 1 input"
+                    ],
+                    "type": ["string"]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "level1Array": {
+        "description": "Array field",
+        "items": {
+          "description": "Array field item",
+          "title": "Level 1 Array item",
+          "type": ["object"],
+          "properties": {
+            "level2Input": {
+              "description": "Input field",
+              "permission": [
+                "create"
+              ],
+              "title": "Level 2 Input",
+              "type": "string"
+            },
+            "level2Number": {
+              "description": "Number Input field",
+              "permission": [
+                "create"
+              ],
+              "title": "Level 2 Number Input",
+              "type": "number"
+            },
+            "level2Multiselect": {
+              "title": "Level 2 Multiselect",
+              "description": "Multiselect",
+              "type": ["array"],
+              "items": {
+                "type": "string",
+                "enum": [
+                  "bar",
+                  "hide array field item level 2 input"
+                ]
+              },
+              "uniqueItems": true
+            }
+          },
+          "propertiesOrder": [
+            "level2Input",
+            "level2Number",
+            "level2Multiselect"
+          ],
+          "required": []
+        },
+        "maxItems": 5,
+        "title": "Array field with objects",
+        "type": ["array"]
+      }
+    },
+    "propertiesOrder": [
+      "level1Select",
+      "level1Input",
+      "level1Object",
+      "level1Array"
+    ],
+    "required": [],
+    "type": ["object"]
+  },
+  "uiSchema": {
+    "level1Input": {
+      "ui:hide": {
+        "test": "^(?!show level 1 input$)",
+        "source": "level1Object.level2Object.level3Object.level3Select"
+      }
+    },
+    "level1Object": {
+      "level2Object": {
+        "level3Object" : {
+          "level3Input": {
+            "ui:hide": {
+              "test": "hide level 3 input",
+              "source": "level1Select"
+            }
+          }
+        }
+      }
+    },
+    "level1Array": {
+      "level2Input": {
+        "ui:hide": {
+          "test": "hide array field item level 2 input",
+          "source": ".level2Multiselect"
+        }
+      },
+      "level2Number": {
+        "ui:hide": {
+          "test": "hide array field item level 2 number input",
+          "source": "level1Select"
+        }
+      }
+    }
+  },
+  "formData": {}
+}

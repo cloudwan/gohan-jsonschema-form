@@ -56,7 +56,7 @@ export class Tabs extends React.Component<TTabsProps, TTabsState> {
   }
 
   public render(): React.ReactNode {
-    const {schema, name, form} = this.props;
+    const {schema, name, form, uiSchema} = this.props;
 
     const restProps: {
       activeKey?: string;
@@ -108,7 +108,11 @@ export class Tabs extends React.Component<TTabsProps, TTabsState> {
                     onClick={this.handleReorderClick(index, index + 1)}
                   />
                 </TabBar>
-                <SchemaField id={`${name}.${index}`} schema={schema.items} />
+                <SchemaField
+                  id={`${name}.${index}`}
+                  schema={schema.items}
+                  uiSchema={uiSchema}
+                />
               </AntTabs.TabPane>
             ))}
         </AntTabs>

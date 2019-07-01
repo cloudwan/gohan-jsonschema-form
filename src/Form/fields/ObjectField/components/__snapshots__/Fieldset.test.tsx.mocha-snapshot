@@ -1,565 +1,3 @@
-exports["should match snapshot when Fieldset is tab(0)"] = {
-  "node": {
-    "nodeType": "function",
-    "props": {
-      "children": [
-        false,
-        {
-          "type": "fieldset",
-          "props": {
-            "id": "foo",
-            "className": "",
-            "children": [
-              {
-                "type": "SchemaField",
-                "key": "foo.bar",
-                "props": {
-                  "id": "foo.bar",
-                  "schema": {
-                    "title": "Bar",
-                    "type": [
-                      "number"
-                    ]
-                  },
-                  "uiSchema": {},
-                  "isRequired": false
-                },
-                "_store": {}
-              },
-              {
-                "type": "SchemaField",
-                "key": "foo.baz",
-                "props": {
-                  "id": "foo.baz",
-                  "schema": {
-                    "title": "Baz",
-                    "type": [
-                      "string"
-                    ]
-                  },
-                  "uiSchema": {},
-                  "isRequired": true
-                },
-                "_store": {}
-              }
-            ]
-          },
-          "_store": {}
-        }
-      ]
-    },
-    "rendered": [
-      false,
-      {
-        "nodeType": "host",
-        "type": "fieldset",
-        "props": {
-          "id": "foo",
-          "className": "",
-          "children": [
-            {
-              "type": "SchemaField",
-              "key": "foo.bar",
-              "props": {
-                "id": "foo.bar",
-                "schema": {
-                  "title": "Bar",
-                  "type": [
-                    "number"
-                  ]
-                },
-                "uiSchema": {},
-                "isRequired": false
-              },
-              "_store": {}
-            },
-            {
-              "type": "SchemaField",
-              "key": "foo.baz",
-              "props": {
-                "id": "foo.baz",
-                "schema": {
-                  "title": "Baz",
-                  "type": [
-                    "string"
-                  ]
-                },
-                "uiSchema": {},
-                "isRequired": true
-              },
-              "_store": {}
-            }
-          ]
-        },
-        "rendered": [
-          {
-            "nodeType": "class",
-            "type": "SchemaField",
-            "props": {
-              "id": "foo.bar",
-              "schema": {
-                "title": "Bar",
-                "type": [
-                  "number"
-                ]
-              },
-              "uiSchema": {},
-              "isRequired": false
-            },
-            "key": "foo.bar"
-          },
-          {
-            "nodeType": "class",
-            "type": "SchemaField",
-            "props": {
-              "id": "foo.baz",
-              "schema": {
-                "title": "Baz",
-                "type": [
-                  "string"
-                ]
-              },
-              "uiSchema": {},
-              "isRequired": true
-            },
-            "key": "foo.baz"
-          }
-        ]
-      }
-    ]
-  },
-  "type": "React.Fragment",
-  "props": {},
-  "children": [
-    {
-      "node": {
-        "nodeType": "host",
-        "type": "fieldset",
-        "props": {
-          "id": "foo",
-          "className": "",
-          "children": [
-            {
-              "type": "SchemaField",
-              "key": "foo.bar",
-              "props": {
-                "id": "foo.bar",
-                "schema": {
-                  "title": "Bar",
-                  "type": [
-                    "number"
-                  ]
-                },
-                "uiSchema": {},
-                "isRequired": false
-              },
-              "_store": {}
-            },
-            {
-              "type": "SchemaField",
-              "key": "foo.baz",
-              "props": {
-                "id": "foo.baz",
-                "schema": {
-                  "title": "Baz",
-                  "type": [
-                    "string"
-                  ]
-                },
-                "uiSchema": {},
-                "isRequired": true
-              },
-              "_store": {}
-            }
-          ]
-        },
-        "rendered": [
-          {
-            "nodeType": "class",
-            "type": "SchemaField",
-            "props": {
-              "id": "foo.bar",
-              "schema": {
-                "title": "Bar",
-                "type": [
-                  "number"
-                ]
-              },
-              "uiSchema": {},
-              "isRequired": false
-            },
-            "key": "foo.bar"
-          },
-          {
-            "nodeType": "class",
-            "type": "SchemaField",
-            "props": {
-              "id": "foo.baz",
-              "schema": {
-                "title": "Baz",
-                "type": [
-                  "string"
-                ]
-              },
-              "uiSchema": {},
-              "isRequired": true
-            },
-            "key": "foo.baz"
-          }
-        ]
-      },
-      "type": "fieldset",
-      "props": {
-        "id": "foo",
-        "className": ""
-      },
-      "children": [
-        {
-          "node": {
-            "nodeType": "class",
-            "type": "SchemaField",
-            "props": {
-              "id": "foo.bar",
-              "schema": {
-                "title": "Bar",
-                "type": [
-                  "number"
-                ]
-              },
-              "uiSchema": {},
-              "isRequired": false
-            },
-            "key": "foo.bar"
-          },
-          "type": "SchemaField",
-          "props": {
-            "id": "foo.bar",
-            "schema": {
-              "title": "Bar",
-              "type": [
-                "number"
-              ]
-            },
-            "uiSchema": {},
-            "isRequired": false,
-            "key": "foo.bar"
-          }
-        },
-        {
-          "node": {
-            "nodeType": "class",
-            "type": "SchemaField",
-            "props": {
-              "id": "foo.baz",
-              "schema": {
-                "title": "Baz",
-                "type": [
-                  "string"
-                ]
-              },
-              "uiSchema": {},
-              "isRequired": true
-            },
-            "key": "foo.baz"
-          },
-          "type": "SchemaField",
-          "props": {
-            "id": "foo.baz",
-            "schema": {
-              "title": "Baz",
-              "type": [
-                "string"
-              ]
-            },
-            "uiSchema": {},
-            "isRequired": true,
-            "key": "foo.baz"
-          }
-        }
-      ]
-    }
-  ]
-};
-
-exports["should match snapshot when Fieldset isn't tab(0)"] = {
-  "node": {
-    "nodeType": "function",
-    "props": {
-      "children": [
-        false,
-        {
-          "type": "fieldset",
-          "props": {
-            "id": "foo",
-            "children": [
-              {
-                "type": "SchemaField",
-                "key": "foo.bar",
-                "props": {
-                  "id": "foo.bar",
-                  "schema": {
-                    "title": "Bar",
-                    "type": [
-                      "number"
-                    ]
-                  },
-                  "uiSchema": {},
-                  "isRequired": false
-                },
-                "_store": {}
-              },
-              {
-                "type": "SchemaField",
-                "key": "foo.baz",
-                "props": {
-                  "id": "foo.baz",
-                  "schema": {
-                    "title": "Baz",
-                    "type": [
-                      "string"
-                    ]
-                  },
-                  "uiSchema": {},
-                  "isRequired": true
-                },
-                "_store": {}
-              }
-            ]
-          },
-          "_store": {}
-        }
-      ]
-    },
-    "rendered": [
-      false,
-      {
-        "nodeType": "host",
-        "type": "fieldset",
-        "props": {
-          "id": "foo",
-          "children": [
-            {
-              "type": "SchemaField",
-              "key": "foo.bar",
-              "props": {
-                "id": "foo.bar",
-                "schema": {
-                  "title": "Bar",
-                  "type": [
-                    "number"
-                  ]
-                },
-                "uiSchema": {},
-                "isRequired": false
-              },
-              "_store": {}
-            },
-            {
-              "type": "SchemaField",
-              "key": "foo.baz",
-              "props": {
-                "id": "foo.baz",
-                "schema": {
-                  "title": "Baz",
-                  "type": [
-                    "string"
-                  ]
-                },
-                "uiSchema": {},
-                "isRequired": true
-              },
-              "_store": {}
-            }
-          ]
-        },
-        "rendered": [
-          {
-            "nodeType": "class",
-            "type": "SchemaField",
-            "props": {
-              "id": "foo.bar",
-              "schema": {
-                "title": "Bar",
-                "type": [
-                  "number"
-                ]
-              },
-              "uiSchema": {},
-              "isRequired": false
-            },
-            "key": "foo.bar"
-          },
-          {
-            "nodeType": "class",
-            "type": "SchemaField",
-            "props": {
-              "id": "foo.baz",
-              "schema": {
-                "title": "Baz",
-                "type": [
-                  "string"
-                ]
-              },
-              "uiSchema": {},
-              "isRequired": true
-            },
-            "key": "foo.baz"
-          }
-        ]
-      }
-    ]
-  },
-  "type": "React.Fragment",
-  "props": {},
-  "children": [
-    {
-      "node": {
-        "nodeType": "host",
-        "type": "fieldset",
-        "props": {
-          "id": "foo",
-          "children": [
-            {
-              "type": "SchemaField",
-              "key": "foo.bar",
-              "props": {
-                "id": "foo.bar",
-                "schema": {
-                  "title": "Bar",
-                  "type": [
-                    "number"
-                  ]
-                },
-                "uiSchema": {},
-                "isRequired": false
-              },
-              "_store": {}
-            },
-            {
-              "type": "SchemaField",
-              "key": "foo.baz",
-              "props": {
-                "id": "foo.baz",
-                "schema": {
-                  "title": "Baz",
-                  "type": [
-                    "string"
-                  ]
-                },
-                "uiSchema": {},
-                "isRequired": true
-              },
-              "_store": {}
-            }
-          ]
-        },
-        "rendered": [
-          {
-            "nodeType": "class",
-            "type": "SchemaField",
-            "props": {
-              "id": "foo.bar",
-              "schema": {
-                "title": "Bar",
-                "type": [
-                  "number"
-                ]
-              },
-              "uiSchema": {},
-              "isRequired": false
-            },
-            "key": "foo.bar"
-          },
-          {
-            "nodeType": "class",
-            "type": "SchemaField",
-            "props": {
-              "id": "foo.baz",
-              "schema": {
-                "title": "Baz",
-                "type": [
-                  "string"
-                ]
-              },
-              "uiSchema": {},
-              "isRequired": true
-            },
-            "key": "foo.baz"
-          }
-        ]
-      },
-      "type": "fieldset",
-      "props": {
-        "id": "foo"
-      },
-      "children": [
-        {
-          "node": {
-            "nodeType": "class",
-            "type": "SchemaField",
-            "props": {
-              "id": "foo.bar",
-              "schema": {
-                "title": "Bar",
-                "type": [
-                  "number"
-                ]
-              },
-              "uiSchema": {},
-              "isRequired": false
-            },
-            "key": "foo.bar"
-          },
-          "type": "SchemaField",
-          "props": {
-            "id": "foo.bar",
-            "schema": {
-              "title": "Bar",
-              "type": [
-                "number"
-              ]
-            },
-            "uiSchema": {},
-            "isRequired": false,
-            "key": "foo.bar"
-          }
-        },
-        {
-          "node": {
-            "nodeType": "class",
-            "type": "SchemaField",
-            "props": {
-              "id": "foo.baz",
-              "schema": {
-                "title": "Baz",
-                "type": [
-                  "string"
-                ]
-              },
-              "uiSchema": {},
-              "isRequired": true
-            },
-            "key": "foo.baz"
-          },
-          "type": "SchemaField",
-          "props": {
-            "id": "foo.baz",
-            "schema": {
-              "title": "Baz",
-              "type": [
-                "string"
-              ]
-            },
-            "uiSchema": {},
-            "isRequired": true,
-            "key": "foo.baz"
-          }
-        }
-      ]
-    }
-  ]
-};
-
 exports["<Fieldset/>/render/should match snapshot when Fieldset is tab(0)"] = {
   "node": {
     "nodeType": "function",
@@ -573,7 +11,7 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset is tab(0)"] = {
             "className": "",
             "children": [
               {
-                "type": "SchemaField",
+                "type": "C",
                 "key": "foo.bar",
                 "props": {
                   "id": "foo.bar",
@@ -583,13 +21,12 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset is tab(0)"] = {
                       "number"
                     ]
                   },
-                  "uiSchema": {},
                   "isRequired": false
                 },
                 "_store": {}
               },
               {
-                "type": "SchemaField",
+                "type": "C",
                 "key": "foo.baz",
                 "props": {
                   "id": "foo.baz",
@@ -599,7 +36,6 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset is tab(0)"] = {
                       "string"
                     ]
                   },
-                  "uiSchema": {},
                   "isRequired": true
                 },
                 "_store": {}
@@ -620,7 +56,7 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset is tab(0)"] = {
           "className": "",
           "children": [
             {
-              "type": "SchemaField",
+              "type": "C",
               "key": "foo.bar",
               "props": {
                 "id": "foo.bar",
@@ -630,13 +66,12 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset is tab(0)"] = {
                     "number"
                   ]
                 },
-                "uiSchema": {},
                 "isRequired": false
               },
               "_store": {}
             },
             {
-              "type": "SchemaField",
+              "type": "C",
               "key": "foo.baz",
               "props": {
                 "id": "foo.baz",
@@ -646,7 +81,6 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset is tab(0)"] = {
                     "string"
                   ]
                 },
-                "uiSchema": {},
                 "isRequired": true
               },
               "_store": {}
@@ -655,8 +89,8 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset is tab(0)"] = {
         },
         "rendered": [
           {
-            "nodeType": "class",
-            "type": "SchemaField",
+            "nodeType": "function",
+            "type": "C",
             "props": {
               "id": "foo.bar",
               "schema": {
@@ -665,14 +99,13 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset is tab(0)"] = {
                   "number"
                 ]
               },
-              "uiSchema": {},
               "isRequired": false
             },
             "key": "foo.bar"
           },
           {
-            "nodeType": "class",
-            "type": "SchemaField",
+            "nodeType": "function",
+            "type": "C",
             "props": {
               "id": "foo.baz",
               "schema": {
@@ -681,7 +114,6 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset is tab(0)"] = {
                   "string"
                 ]
               },
-              "uiSchema": {},
               "isRequired": true
             },
             "key": "foo.baz"
@@ -702,7 +134,7 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset is tab(0)"] = {
           "className": "",
           "children": [
             {
-              "type": "SchemaField",
+              "type": "C",
               "key": "foo.bar",
               "props": {
                 "id": "foo.bar",
@@ -712,13 +144,12 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset is tab(0)"] = {
                     "number"
                   ]
                 },
-                "uiSchema": {},
                 "isRequired": false
               },
               "_store": {}
             },
             {
-              "type": "SchemaField",
+              "type": "C",
               "key": "foo.baz",
               "props": {
                 "id": "foo.baz",
@@ -728,7 +159,6 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset is tab(0)"] = {
                     "string"
                   ]
                 },
-                "uiSchema": {},
                 "isRequired": true
               },
               "_store": {}
@@ -737,8 +167,8 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset is tab(0)"] = {
         },
         "rendered": [
           {
-            "nodeType": "class",
-            "type": "SchemaField",
+            "nodeType": "function",
+            "type": "C",
             "props": {
               "id": "foo.bar",
               "schema": {
@@ -747,14 +177,13 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset is tab(0)"] = {
                   "number"
                 ]
               },
-              "uiSchema": {},
               "isRequired": false
             },
             "key": "foo.bar"
           },
           {
-            "nodeType": "class",
-            "type": "SchemaField",
+            "nodeType": "function",
+            "type": "C",
             "props": {
               "id": "foo.baz",
               "schema": {
@@ -763,7 +192,6 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset is tab(0)"] = {
                   "string"
                 ]
               },
-              "uiSchema": {},
               "isRequired": true
             },
             "key": "foo.baz"
@@ -778,8 +206,8 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset is tab(0)"] = {
       "children": [
         {
           "node": {
-            "nodeType": "class",
-            "type": "SchemaField",
+            "nodeType": "function",
+            "type": "C",
             "props": {
               "id": "foo.bar",
               "schema": {
@@ -788,12 +216,11 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset is tab(0)"] = {
                   "number"
                 ]
               },
-              "uiSchema": {},
               "isRequired": false
             },
             "key": "foo.bar"
           },
-          "type": "SchemaField",
+          "type": "FormikConnect(SchemaField)",
           "props": {
             "id": "foo.bar",
             "schema": {
@@ -802,15 +229,14 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset is tab(0)"] = {
                 "number"
               ]
             },
-            "uiSchema": {},
             "isRequired": false,
             "key": "foo.bar"
           }
         },
         {
           "node": {
-            "nodeType": "class",
-            "type": "SchemaField",
+            "nodeType": "function",
+            "type": "C",
             "props": {
               "id": "foo.baz",
               "schema": {
@@ -819,12 +245,11 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset is tab(0)"] = {
                   "string"
                 ]
               },
-              "uiSchema": {},
               "isRequired": true
             },
             "key": "foo.baz"
           },
-          "type": "SchemaField",
+          "type": "FormikConnect(SchemaField)",
           "props": {
             "id": "foo.baz",
             "schema": {
@@ -833,7 +258,6 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset is tab(0)"] = {
                 "string"
               ]
             },
-            "uiSchema": {},
             "isRequired": true,
             "key": "foo.baz"
           }
@@ -855,7 +279,7 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset isn't tab(0)"] =
             "id": "foo",
             "children": [
               {
-                "type": "SchemaField",
+                "type": "C",
                 "key": "foo.bar",
                 "props": {
                   "id": "foo.bar",
@@ -865,13 +289,12 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset isn't tab(0)"] =
                       "number"
                     ]
                   },
-                  "uiSchema": {},
                   "isRequired": false
                 },
                 "_store": {}
               },
               {
-                "type": "SchemaField",
+                "type": "C",
                 "key": "foo.baz",
                 "props": {
                   "id": "foo.baz",
@@ -881,7 +304,6 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset isn't tab(0)"] =
                       "string"
                     ]
                   },
-                  "uiSchema": {},
                   "isRequired": true
                 },
                 "_store": {}
@@ -901,7 +323,7 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset isn't tab(0)"] =
           "id": "foo",
           "children": [
             {
-              "type": "SchemaField",
+              "type": "C",
               "key": "foo.bar",
               "props": {
                 "id": "foo.bar",
@@ -911,13 +333,12 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset isn't tab(0)"] =
                     "number"
                   ]
                 },
-                "uiSchema": {},
                 "isRequired": false
               },
               "_store": {}
             },
             {
-              "type": "SchemaField",
+              "type": "C",
               "key": "foo.baz",
               "props": {
                 "id": "foo.baz",
@@ -927,7 +348,6 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset isn't tab(0)"] =
                     "string"
                   ]
                 },
-                "uiSchema": {},
                 "isRequired": true
               },
               "_store": {}
@@ -936,8 +356,8 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset isn't tab(0)"] =
         },
         "rendered": [
           {
-            "nodeType": "class",
-            "type": "SchemaField",
+            "nodeType": "function",
+            "type": "C",
             "props": {
               "id": "foo.bar",
               "schema": {
@@ -946,14 +366,13 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset isn't tab(0)"] =
                   "number"
                 ]
               },
-              "uiSchema": {},
               "isRequired": false
             },
             "key": "foo.bar"
           },
           {
-            "nodeType": "class",
-            "type": "SchemaField",
+            "nodeType": "function",
+            "type": "C",
             "props": {
               "id": "foo.baz",
               "schema": {
@@ -962,7 +381,6 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset isn't tab(0)"] =
                   "string"
                 ]
               },
-              "uiSchema": {},
               "isRequired": true
             },
             "key": "foo.baz"
@@ -982,7 +400,7 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset isn't tab(0)"] =
           "id": "foo",
           "children": [
             {
-              "type": "SchemaField",
+              "type": "C",
               "key": "foo.bar",
               "props": {
                 "id": "foo.bar",
@@ -992,13 +410,12 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset isn't tab(0)"] =
                     "number"
                   ]
                 },
-                "uiSchema": {},
                 "isRequired": false
               },
               "_store": {}
             },
             {
-              "type": "SchemaField",
+              "type": "C",
               "key": "foo.baz",
               "props": {
                 "id": "foo.baz",
@@ -1008,7 +425,6 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset isn't tab(0)"] =
                     "string"
                   ]
                 },
-                "uiSchema": {},
                 "isRequired": true
               },
               "_store": {}
@@ -1017,8 +433,8 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset isn't tab(0)"] =
         },
         "rendered": [
           {
-            "nodeType": "class",
-            "type": "SchemaField",
+            "nodeType": "function",
+            "type": "C",
             "props": {
               "id": "foo.bar",
               "schema": {
@@ -1027,14 +443,13 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset isn't tab(0)"] =
                   "number"
                 ]
               },
-              "uiSchema": {},
               "isRequired": false
             },
             "key": "foo.bar"
           },
           {
-            "nodeType": "class",
-            "type": "SchemaField",
+            "nodeType": "function",
+            "type": "C",
             "props": {
               "id": "foo.baz",
               "schema": {
@@ -1043,7 +458,6 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset isn't tab(0)"] =
                   "string"
                 ]
               },
-              "uiSchema": {},
               "isRequired": true
             },
             "key": "foo.baz"
@@ -1057,8 +471,8 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset isn't tab(0)"] =
       "children": [
         {
           "node": {
-            "nodeType": "class",
-            "type": "SchemaField",
+            "nodeType": "function",
+            "type": "C",
             "props": {
               "id": "foo.bar",
               "schema": {
@@ -1067,12 +481,11 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset isn't tab(0)"] =
                   "number"
                 ]
               },
-              "uiSchema": {},
               "isRequired": false
             },
             "key": "foo.bar"
           },
-          "type": "SchemaField",
+          "type": "FormikConnect(SchemaField)",
           "props": {
             "id": "foo.bar",
             "schema": {
@@ -1081,15 +494,14 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset isn't tab(0)"] =
                 "number"
               ]
             },
-            "uiSchema": {},
             "isRequired": false,
             "key": "foo.bar"
           }
         },
         {
           "node": {
-            "nodeType": "class",
-            "type": "SchemaField",
+            "nodeType": "function",
+            "type": "C",
             "props": {
               "id": "foo.baz",
               "schema": {
@@ -1098,12 +510,11 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset isn't tab(0)"] =
                   "string"
                 ]
               },
-              "uiSchema": {},
               "isRequired": true
             },
             "key": "foo.baz"
           },
-          "type": "SchemaField",
+          "type": "FormikConnect(SchemaField)",
           "props": {
             "id": "foo.baz",
             "schema": {
@@ -1112,7 +523,6 @@ exports["<Fieldset/>/render/should match snapshot when Fieldset isn't tab(0)"] =
                 "string"
               ]
             },
-            "uiSchema": {},
             "isRequired": true,
             "key": "foo.baz"
           }
