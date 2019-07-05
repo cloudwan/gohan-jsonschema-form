@@ -32,6 +32,10 @@ export interface IItems {
   properties?: IProperties;
 }
 
+export interface ILabel {
+  template: string;
+}
+
 export interface IUiSchema {
   'ui:widget'?: string | React.Component;
   'ui:options'?: IOptions;
@@ -40,7 +44,7 @@ export interface IUiSchema {
   'ui:title'?: string;
   'ui:description'?: string;
   'ui:order'?: string[];
-  'ui:label'?: string;
+  'ui:label'?: ILabel;
   'ui:fetch'?: IFetch;
   'ui:helpLink'?: IHelpLink;
   'ui:disabled'?: boolean;

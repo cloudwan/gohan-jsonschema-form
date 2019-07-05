@@ -5,7 +5,10 @@ import * as React from 'react';
 import sinon from 'sinon';
 
 import Select from './components/Select';
-import SelectWidget from './SelectWidget';
+import SelectWidget, {
+  getSelectOptions,
+  parseLabelTemplate,
+} from './SelectWidget';
 
 chai.use(chaiEnzyme());
 const should = chai.should();
@@ -172,8 +175,9 @@ describe('<SelectWidget />', () => {
           schema={{
             title: 'test string',
             type: 'string',
+            relation: 'test',
           }}
-          fetcher={() => [{value: 'foo', label: 'Foo'}]}
+          fetcher={async () => ({test: [{id: 'foo', name: 'Foo'}]})}
           form={formikFormProps}
           field={{
             value: undefined,
@@ -221,5 +225,64 @@ describe('<SelectWidget />', () => {
       wrapper.state().should.deep.equal(state);
       wrapper.should.to.matchSnapshot();
     });
+  });
+});
+
+describe('getSelectOptions', () => {
+  it('should fetch options', async () => {
+    const result = await getSelectOptions(
+      'www.test.com',
+      {},
+      async () =>
+        new Promise(resolve => {
+          resolve({
+            test: [{name: 'Foo', id: 'foo'}, {name: 'Bar', id: 'bar'}],
+          });
+        }),
+    );
+
+    const expected = [
+      {label: 'Foo', value: 'foo'},
+      {label: 'Bar', value: 'bar'},
+    ];
+
+    result.should.deep.equal(expected);
+  });
+
+  it('should fetch options and adjust it to template', async () => {
+    const result = await getSelectOptions(
+      'www.test.com',
+      {},
+      async () =>
+        new Promise(resolve => {
+          resolve({
+            test: [
+              {name: 'Foo', number: 1, id: 'foo'},
+              {name: 'Bar', number: 2, id: 'bar'},
+            ],
+          });
+        }),
+      '<%name%> : <%id%> : <%number%>',
+    );
+
+    const expected = [
+      {label: 'Foo : foo : 1', value: 'foo'},
+      {label: 'Bar : bar : 2', value: 'bar'},
+    ];
+
+    result.should.deep.equal(expected);
+  });
+});
+
+describe('parseLabelTemplate', () => {
+  it('should parse label', () => {
+    const result = parseLabelTemplate('<%test1.name%>-<%test2.name%>', {
+      test1: {name: 'Foo'},
+      test2: {name: 'Bar'},
+    });
+
+    const expected = 'Foo-Bar';
+
+    result.should.equal(expected);
   });
 });

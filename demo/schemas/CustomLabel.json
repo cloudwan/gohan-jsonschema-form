@@ -1,0 +1,28 @@
+
+{
+  "id": "customLabel",
+  "title": "Select custom labels",
+  "schema": {
+    "properties": {
+      "customTemplate": {
+        "title": "Select - custom labels",
+        "description": "Select with custom labels",
+        "relation": "baseRel",
+        "type": ["string"]
+      }
+    },
+    "propertiesOrder": [
+      "customTemplate"
+    ],
+    "required": [],
+    "type": ["object"]
+  },
+  "uiSchema": {
+    "customTemplate": {
+      "ui:label": {
+        "template": "<%name%> : <%id%>"
+      }
+    }
+  },
+  "formData": {}
+}

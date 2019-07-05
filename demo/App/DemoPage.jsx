@@ -120,10 +120,12 @@ export default class DemoPage extends Component {
                   new Promise(resolve =>
                     setTimeout(
                       () =>
-                        resolve([
-                          {label: 'Foo', value: 'foo'},
-                          {label: 'Bar', value: 'bar'},
-                        ]),
+                        resolve({
+                          test: [
+                            {name: 'Foo', id: 'foo'},
+                            {name: 'Bar', id: 'bar'},
+                          ],
+                        }),
                       5000,
                     ),
                   )

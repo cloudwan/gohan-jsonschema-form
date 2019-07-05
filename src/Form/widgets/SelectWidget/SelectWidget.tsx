@@ -1,23 +1,89 @@
 import {FieldProps} from 'formik';
+import {get} from 'lodash';
 import * as React from 'react';
 
 import {IWidget} from '../../../typings/IWidget';
 import Select from './components/Select';
 
-interface TSelectWidgetState {
+const PROP_REGEX = /<%([^%>]+)?%>/g;
+const SYMBOL_REGEX = /^(<%)|(%>)$/g;
+
+type TFetcher = (
+  url: string,
+  query?: {[key: string]: any},
+) => Promise<{[key: string]: any}>;
+
+interface ISelectWidgetState {
   errors: any[];
   options: any[];
   isLoading: boolean;
 }
 
 interface ISelectWidgetProps extends IWidget, FieldProps {
-  fetcher?: (
-    relation: string,
-  ) => Promise<Array<{label: string; value: string}>>;
+  fetcher?: TFetcher;
 }
+
+export const getSelectOptions = async (
+  url: string,
+  baseQuery: {[key: string]: any},
+  fetcher: TFetcher,
+  template?: string,
+  propRegEx: RegExp = PROP_REGEX,
+  symbolRegEx: RegExp = SYMBOL_REGEX,
+): Promise<Array<{value: string; label: string}>> => {
+  let data;
+  let id;
+
+  if (template) {
+    const props = template
+      .match(propRegEx)
+      .map(matched => matched.replace(symbolRegEx, ''));
+
+    const query = {
+      ...baseQuery,
+      _fields: ['id', ...props],
+    };
+
+    data = await fetcher(url, query);
+
+    id = Object.keys(data)[0];
+
+    return data[id].map(option => ({
+      value: option.id,
+      label: parseLabelTemplate(template, option),
+    }));
+  }
+
+  data = await fetcher(url);
+
+  id = Object.keys(data)[0];
+
+  return data[id].map(option => ({
+    value: option.id,
+    label: option.name || option.id,
+  }));
+};
+
+export const parseLabelTemplate = (
+  template: string = '',
+  data: object = {},
+  propRegEx: RegExp = PROP_REGEX,
+  symbolRegEx: RegExp = SYMBOL_REGEX,
+): string =>
+  template.match(propRegEx).reduce((result, propTemplate) => {
+    if (propTemplate) {
+      return result.replace(
+        propTemplate,
+        get(data, propTemplate.replace(symbolRegEx, '').split('.')),
+      );
+    }
+
+    return result;
+  }, template);
+
 export default class SelectWidget extends React.Component<
   ISelectWidgetProps,
-  TSelectWidgetState
+  ISelectWidgetState
 > {
   public static defaultProps = {
     uiSchema: {},
@@ -105,13 +171,22 @@ export default class SelectWidget extends React.Component<
     }
 
     const {
-      schema: {relation},
+      schema: {request = {}},
+      uiSchema,
+      fetcher,
     } = this.props;
 
     try {
       if (!this.state.options || this.state.options.length === 0) {
         this.setState({isLoading: true});
-        const options = await this.props.fetcher(relation);
+
+        const options = await getSelectOptions(
+          request.url,
+          request.query,
+          fetcher,
+          uiSchema['ui:label'] ? uiSchema['ui:label'].template : undefined,
+        );
+
         this.setState({options, isLoading: false});
       } else {
         return;
