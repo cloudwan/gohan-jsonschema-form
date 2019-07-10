@@ -47,8 +47,7 @@ export class Form extends React.Component<TFormProps> {
       ActionButtons,
     } = this.props;
 
-    const initialValues =
-      formData && !isEmpty(formData) ? formData : getInitialValues(schema);
+    const initialValues = getInitialValues(schema, formData);
 
     return (
       <FormContext.Provider value={fetcher}>

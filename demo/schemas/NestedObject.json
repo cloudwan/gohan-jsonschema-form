@@ -1,0 +1,69 @@
+{
+  "id": "nestedObject",
+  "title": "Nested Object Field",
+  "schema": {
+    "properties": {
+      "name": {
+        "type": "string",
+        "title": "Name",
+        "description": "Description of the object name field."
+      },
+      "object_nested": {
+        "description": "Description of the nested object field.",
+        "title": "Nested Object",
+        "type": [
+          "object"
+        ],
+        "propertiesOrder": [
+          "object_nested_name",
+          "object_child"
+        ],
+        "required": [
+          "object_nested_name"
+        ],
+        "properties": {
+          "object_nested_name": {
+            "type": "string",
+            "title": "Name",
+            "description": "Description of the object name field."
+          },
+          "object_child": {
+            "description": "Description of the child object.",
+            "title": "Child object",
+            "type": [
+              "object"
+            ],
+            "propertiesOrder": [
+              "object_child_name"
+            ],
+            "required": [
+              "object_child_name"
+            ],
+            "properties": {
+              "object_child_name": {
+                "type": "string",
+                "title": "Name",
+                "description": "Description of the child object name field."
+              }
+            }
+          }
+        }
+      }
+    },
+    "propertiesOrder": [
+      "name",
+      "object_nested"
+    ],
+    "required": [],
+    "type": "object"
+  },
+  "uiSchema": {},
+  "formData": {
+    "name": "foo",
+    "object_nested": {
+      "object_child": {
+        "object_child_name": "bar"
+      }
+    }
+  }
+}
