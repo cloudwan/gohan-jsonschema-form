@@ -1,25 +1,3 @@
-exports["should match snapshot(0)"] = {
-  "node": {
-    "nodeType": "class",
-    "type": "GeoMap",
-    "props": {
-      "onChange": "[function]",
-      "value": {
-        "lat": 1,
-        "lng": 0
-      }
-    }
-  },
-  "type": "GeoMap",
-  "props": {
-    "onChange": "[function]",
-    "value": {
-      "lat": 1,
-      "lng": 0
-    }
-  }
-};
-
 exports["<GeoWidget />/render()/should match snapshot(0)"] = {
   "node": {
     "nodeType": "class",
@@ -27,8 +5,7 @@ exports["<GeoWidget />/render()/should match snapshot(0)"] = {
     "props": {
       "onChange": "[function]",
       "value": {
-        "lat": 1,
-        "lng": 0
+        "lat": 1
       }
     }
   },
@@ -36,8 +13,7 @@ exports["<GeoWidget />/render()/should match snapshot(0)"] = {
   "props": {
     "onChange": "[function]",
     "value": {
-      "lat": 1,
-      "lng": 0
+      "lat": 1
     }
   }
 };

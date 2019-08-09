@@ -76,7 +76,7 @@ describe('<GeoWidget />', () => {
             value: {lat: 1, lng: 0},
             onChange: () => null,
             onBlur: () => null,
-            name: 'foo',
+            name: 'geo',
           }}
         />,
       );
@@ -100,7 +100,6 @@ describe('<GeoWidget />', () => {
             value: {lat: 1, lng: 0},
             onChange: () => null,
             onBlur: () => null,
-            name: 'foo',
           }}
         />,
       );
@@ -112,8 +111,8 @@ describe('<GeoWidget />', () => {
         lng: 30,
       });
 
-      setFieldValue.should.calledWith('lat', 20);
-      setFieldValue.should.calledWith('lng', 30);
+      setFieldValue.calledWith('lat', 20);
+      setFieldValue.calledWith('lng', 30);
     });
   });
 });

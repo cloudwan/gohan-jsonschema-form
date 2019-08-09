@@ -12,15 +12,21 @@ export default class GeoWidget extends React.Component<IWidget & FieldProps> {
   };
 
   public render() {
-    return (
-      <GeoMap onChange={this.handleChange} value={this.props.field.value} />
-    );
+    const value = this.props.field.value
+      ? {
+          lat: this.props.field.value.lat,
+          lng: this.props.field.value.lon,
+        }
+      : this.props.field.value;
+
+    return <GeoMap onChange={this.handleChange} value={value} />;
   }
 
   private handleChange = (value: LatLngExpression): void => {
     if (!Array.isArray(value)) {
-      this.props.form.setFieldValue('lat', value.lat);
-      this.props.form.setFieldValue('lng', value.lng);
+      const path = this.props.field.name ? `${this.props.field.name}.` : '';
+      this.props.form.setFieldValue(`${path}lat`, value.lat);
+      this.props.form.setFieldValue(`${path}lon`, value.lng);
     }
   };
 }

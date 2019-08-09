@@ -21,7 +21,7 @@
         "title": "Latitude",
         "type": "number"
       },
-      "lng": {
+      "lon": {
         "default": 21,
         "description": "Longitude in degrees",
         "minimum": -180,
@@ -32,7 +32,7 @@
     },
     "propertiesOrder": [
       "lat",
-      "lng"
+      "lon"
     ],
     "required": []
   },
