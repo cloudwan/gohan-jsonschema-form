@@ -6,3 +6,4 @@ doc/
 .sass-cache
 coverage/
 .awcache/
+.vscode/

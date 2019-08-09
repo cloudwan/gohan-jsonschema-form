@@ -3,11 +3,12 @@
   "version": "0.0.7",
   "description": "Gohan jsonschema forms.",
   "main": "lib/index.js",
+  "style": "lib/style.css",
   "scripts": {
     "precommit": "pretty-quick --staged && ./hooks/precommit.js",
     "prettier": "prettier --write \"src/**/*.{ts,tsx}\"",
-    "build:lib": "tsc --emitDeclarationOnly && NODE_ENV=lib babel src --out-dir lib --extensions \".ts,.tsx\"",
-    "build": "rm -rf ./dist/ && NODE_ENV=production webpack -p --colors --progress --bail && npm run build:lib && cp -a ./node_modules/leaflet/dist/images ./lib",
+    "build:lib": "tsc --emitDeclarationOnly && NODE_ENV=lib babel ./src --out-dir lib --extensions \".ts,.tsx\"",
+    "build": "rm -rf ./dist/ && NODE_ENV=production webpack -p --colors --progress --bail && npm run build:lib",
     "build-dev": "rm -rf NODE_ENV=development ./dist/ && webpack -d --colors --display-reasons --progress --bail",
     "dev-server": "rm -rf ./dist/ && NODE_ENV=development webpack-dev-server --hot --inline --colors --progress",
     "doc": "esdoc -c .esdoc.json",
@@ -16,7 +17,7 @@
     "test-cover": "NODE_ENV=test istanbul cover _mocha \"src/**/*.test.{ts,tsx}\"",
     "lint": "tslint -p tsconfig.json -t codeFrame -c tslint.json \"src/**/*.{ts,tsx}\" -e \"**/*.test.{ts,tsx}\"",
     "publish-to-npm": "npm run build:lib && npm publish",
-    "postinstall": "npm run build:lib"
+    "prepare": "npm run build && cp -a ./node_modules/leaflet/dist/images ./lib"
   },
   "files": [
     "lib"
@@ -41,18 +42,8 @@
     "json-schema"
   ],
   "peerDependencies": {
-    "ajv": "^6.10.0",
-    "antd": "^3.19.5",
-    "brace": "^0.11.0",
-    "formik": "^1.5.7",
-    "js-yaml": "^3.10.0",
-    "lodash": "^4.17.11",
-    "prop-types": "^15.7.2",
     "react": "^16.8.6",
-    "react-ace": "^6.6.0",
-    "react-addons-css-transition-group": "^15.6.2",
-    "react-dom": "^16.8.6",
-    "react-sortable-hoc": "^0.8.4"
+    "react-dom": "^16.8.6"
   },
   "dependencies": {
     "@types/ajv": "^1.0.0",
@@ -72,6 +63,7 @@
     "leaflet-geosearch": "^2.7.0",
     "lodash": "^4.17.11",
     "lodash-es": "^4.17.11",
+    "moment": "^2.24.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-ace": "^6.6.0",
@@ -80,7 +72,8 @@
     "react-leaflet": "^2.4.0",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
-    "react-sortable-hoc": "^0.8.4"
+    "react-sortable-hoc": "^0.8.4",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
@@ -116,6 +109,7 @@
     "eslint-plugin-react": "^7.13.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.5",
+    "generic-names": "^2.0.1",
     "git-rev-sync": "^1.9.1",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^0.14.3",
@@ -134,7 +128,6 @@
     "node-sass": "^4.12.0",
     "prettier": "^1.18.2",
     "pretty-quick": "^1.11.1",
-    "react-inspector": "^2.3.1",
     "sass-loader": "^7.1.0",
     "simple-git": "^1.115.0",
     "sinon": "^6.3.5",
