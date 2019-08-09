@@ -29,7 +29,8 @@
             "extractCss": "./lib/style.css",
             "keepImport": false,
             "extensions": [".css", ".scss"],
-            "processCss": "./utils/processSass.js"
+            "processCss": "./utils/processSass.js",
+            "generateScopedName": "./utils/generateClassName",
           }
         ]
       ]
