@@ -3,7 +3,7 @@ import chaiEnzyme from 'chai-enzyme';
 import {shallow} from 'enzyme';
 import * as React from 'react';
 
-import Fieldset from './Fieldset';
+import Fieldset, {orderProperties} from './Fieldset';
 
 chai.use(chaiEnzyme());
 chai.should();
@@ -160,52 +160,40 @@ describe('<Fieldset/>', () => {
   //   });
   // });
 
-  // describe('orderProperties', () => {
-  //   it('should return return sorted properties', () => {
-  //     const wrapper = shallow(
-  //       <ObjectField
-  //         schema={{
-  //           type: ['object'],
-  //           properties: {
-  //             foo: {
-  //               type: ['string'],
-  //             },
-  //             bar: {
-  //               type: ['number'],
-  //             },
-  //           },
-  //           propertiesOrder: ['foo', 'bar'],
-  //         }}
-  //       />,
-  //     );
-  //     const instance = wrapper.instance() as ObjectField;
-  //     const properties = Object.keys(instance.props.schema.properties);
-  //     instance
-  //       .orderProperties(properties, instance.props.schema.propertiesOrder)
-  //       .should.deep.equal(properties);
-  //   });
+  describe('orderProperties', () => {
+    it('should return empty array when there are no properties', () => {
+      const result = orderProperties();
+      const expected = [];
 
-  //   it("should return return unsorted properties when order isn't defined", () => {
-  //     const wrapper = shallow(
-  //       <ObjectField
-  //         schema={{
-  //           type: ['object'],
-  //           properties: {
-  //             foo: {
-  //               type: ['string'],
-  //             },
-  //             bar: {
-  //               type: ['number'],
-  //             },
-  //           },
-  //         }}
-  //       />,
-  //     );
-  //     const instance = wrapper.instance() as ObjectField;
-  //     const properties = Object.keys(instance.props.schema.properties);
-  //     instance
-  //       .orderProperties(properties, instance.props.schema.propertiesOrder)
-  //       .should.deep.equal(properties);
-  //   });
-  // });
+      result.should.deep.equal(expected);
+    });
+
+    it('should return sorted properties', () => {
+      const result = orderProperties(['foo', 'bar', 'baz'], ['bar', 'baz']);
+      const expected = ['bar', 'baz', 'foo'];
+
+      result.should.deep.equal(expected);
+    });
+
+    it("should return return unsorted properties when order isn't defined", () => {
+      const result = orderProperties(['foz', 'foo', 'bar']);
+      const expected = ['foz', 'foo', 'bar'];
+
+      result.should.deep.equal(expected);
+    });
+
+    it('should throw an error when order contains property which is not included in properties passed to function', () => {
+      (() => orderProperties(['foz'], ['foo', 'foz'])).should.throw(
+        Error,
+        "uiSchema order list contains extraneous property 'foo'",
+      );
+    });
+
+    it('should throw an error when order contains properties which are not included in properties passed to function', () => {
+      (() => orderProperties([], ['foo', 'foz'])).should.throw(
+        Error,
+        "uiSchema order list contains extraneous properties 'foo, foz'",
+      );
+    });
+  });
 });

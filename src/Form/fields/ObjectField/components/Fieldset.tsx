@@ -20,6 +20,26 @@ interface TFieldsetState {
   areFieldsVisible: boolean;
 }
 
+export const orderProperties = (
+  properties: string[] = [],
+  order: string[] = [],
+): string[] => {
+  const extraneous = order.filter(prop => !properties.includes(prop));
+
+  if (extraneous.length) {
+    const errorPropList =
+      extraneous.length > 1
+        ? `properties '${extraneous.join(', ')}'`
+        : `property '${extraneous[0]}'`;
+
+    throw new Error(`uiSchema order list contains extraneous ${errorPropList}`);
+  }
+
+  const rest = properties.filter(prop => !order.includes(prop));
+
+  return [...order, ...rest];
+};
+
 class Fieldset extends React.Component<TFieldsetProps, TFieldsetState> {
   private hasTabs;
 
@@ -59,7 +79,7 @@ class Fieldset extends React.Component<TFieldsetProps, TFieldsetState> {
     } = this.props;
     const type: string | string[] = schema.type;
     const {areFieldsVisible} = this.state;
-    const orderedProperties = this.orderProperties(
+    const orderedProperties = orderProperties(
       Object.keys(properties),
       propertiesOrder,
     );
@@ -183,54 +203,6 @@ class Fieldset extends React.Component<TFieldsetProps, TFieldsetState> {
           />
         </AntdTabs.TabPane>
       ));
-  };
-
-  private orderProperties = (
-    properties: string[],
-    order: string[],
-  ): string[] => {
-    if (!Array.isArray(order)) {
-      return properties;
-    }
-
-    const arrayToHash = arr =>
-      arr.reduce((prev, curr) => {
-        prev[curr] = true;
-        return prev;
-      }, {});
-    const errorPropList = arr =>
-      arr.length > 1
-        ? `properties '${arr.join(', ')}'`
-        : `property '${arr[0]}'`;
-    const propertyHash = arrayToHash(properties);
-    const orderHash = arrayToHash(order);
-    const extraneous = order.filter(
-      prop => prop !== '*' && !propertyHash[prop],
-    );
-    if (extraneous.length) {
-      throw new Error(
-        `uiSchema order list contains extraneous ${errorPropList(extraneous)}`,
-      );
-    }
-    const rest = properties.filter(prop => !orderHash[prop]);
-    const restIndex = order.indexOf('*');
-    if (restIndex === -1) {
-      if (rest.length) {
-        throw new Error(
-          `uiSchema order list does not contain ${errorPropList(rest)}`,
-        );
-      }
-      return order;
-    }
-    if (restIndex !== order.lastIndexOf('*')) {
-      throw new Error(
-        'uiSchema order list contains more than one wildcard item',
-      );
-    }
-
-    const complete = [...order];
-    complete.splice(restIndex, 1, ...rest);
-    return complete;
   };
 
   private countTabs = (properties: {[k: string]: JSONSchema4} = {}): number =>
