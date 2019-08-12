@@ -4,7 +4,7 @@ import {shallow} from 'enzyme';
 import * as React from 'react';
 import sinonChai from 'sinon-chai';
 
-import CodeEditorWidget from './CodeEditorWidget';
+import CodeEditorWidget, {getStringValue, getMode} from './CodeEditorWidget';
 
 chai.should();
 chai.use(chaiEnzyme());
@@ -52,6 +52,7 @@ describe('<CodeEditorWidget/>', () => {
           schema={{
             format: 'text',
           }}
+          uiSchema={{}}
           form={formikFormProps}
           field={{
             value: '',
@@ -65,5 +66,68 @@ describe('<CodeEditorWidget/>', () => {
 
       wrapper.should.to.matchSnapshot();
     });
+  });
+});
+
+describe('getStringValue', () => {
+  it('should return unmodified string value', () => {
+    const result = getStringValue('test');
+    const expected = 'test';
+
+    result.should.equal(expected);
+  });
+
+  it('should return empty string for empty object value', () => {
+    const result = getStringValue({});
+    const expected = '';
+
+    result.should.equal(expected);
+  });
+
+  it('should return empty string for object with keys and undefined values', () => {
+    const result = getStringValue({
+      foo: undefined,
+      bar: {
+        baz: undefined,
+      },
+    });
+    const expected = '';
+
+    result.should.equal(expected);
+  });
+
+  it('should return parsed string for object value', () => {
+    const result = getStringValue({
+      foo: 'foz',
+      bar: {
+        baz: false,
+      },
+    });
+    const expected = 'bar:\n  baz: false\nfoo: foz\n';
+
+    result.should.equal(expected);
+  });
+});
+
+describe('getMode', () => {
+  it('should return text format', () => {
+    const result = getMode();
+    const expected = 'text';
+
+    result.should.equal(expected);
+  });
+
+  it('should return javascript format', () => {
+    const result = getMode('js');
+    const expected = 'javascript';
+
+    result.should.equal(expected);
+  });
+
+  it('should return yaml format', () => {
+    const result = getMode('yaml');
+    const expected = 'yaml';
+
+    result.should.equal(expected);
   });
 });

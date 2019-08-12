@@ -1,0 +1,171 @@
+exports["<SchemaHint/>/should match snapshot(0)"] = {
+  "node": {
+    "nodeType": "host",
+    "type": "div",
+    "props": {
+      "children": [
+        {
+          "type": "div",
+          "props": {
+            "className": "pt pt",
+            "children": {
+              "type": "Button",
+              "props": {
+                "size": "small",
+                "onClick": "[function]",
+                "children": [
+                  "Show",
+                  " schema definition"
+                ],
+                "loading": false,
+                "ghost": false,
+                "block": false,
+                "htmlType": "button"
+              },
+              "_store": {}
+            }
+          },
+          "_store": {}
+        },
+        false
+      ]
+    },
+    "rendered": [
+      {
+        "nodeType": "host",
+        "type": "div",
+        "props": {
+          "className": "pt pt",
+          "children": {
+            "type": "Button",
+            "props": {
+              "size": "small",
+              "onClick": "[function]",
+              "children": [
+                "Show",
+                " schema definition"
+              ],
+              "loading": false,
+              "ghost": false,
+              "block": false,
+              "htmlType": "button"
+            },
+            "_store": {}
+          }
+        },
+        "rendered": {
+          "nodeType": "class",
+          "type": "Button",
+          "props": {
+            "size": "small",
+            "onClick": "[function]",
+            "children": [
+              "Show",
+              " schema definition"
+            ],
+            "loading": false,
+            "ghost": false,
+            "block": false,
+            "htmlType": "button"
+          },
+          "rendered": [
+            "Show",
+            " schema definition"
+          ]
+        }
+      },
+      false
+    ]
+  },
+  "type": "div",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "host",
+        "type": "div",
+        "props": {
+          "className": "pt pt",
+          "children": {
+            "type": "Button",
+            "props": {
+              "size": "small",
+              "onClick": "[function]",
+              "children": [
+                "Show",
+                " schema definition"
+              ],
+              "loading": false,
+              "ghost": false,
+              "block": false,
+              "htmlType": "button"
+            },
+            "_store": {}
+          }
+        },
+        "rendered": {
+          "nodeType": "class",
+          "type": "Button",
+          "props": {
+            "size": "small",
+            "onClick": "[function]",
+            "children": [
+              "Show",
+              " schema definition"
+            ],
+            "loading": false,
+            "ghost": false,
+            "block": false,
+            "htmlType": "button"
+          },
+          "rendered": [
+            "Show",
+            " schema definition"
+          ]
+        }
+      },
+      "type": "div",
+      "props": {
+        "className": "pt pt"
+      },
+      "children": [
+        {
+          "node": {
+            "nodeType": "class",
+            "type": "Button",
+            "props": {
+              "size": "small",
+              "onClick": "[function]",
+              "children": [
+                "Show",
+                " schema definition"
+              ],
+              "loading": false,
+              "ghost": false,
+              "block": false,
+              "htmlType": "button"
+            },
+            "rendered": [
+              "Show",
+              " schema definition"
+            ]
+          },
+          "type": "Button",
+          "props": {
+            "size": "small",
+            "onClick": "[function]",
+            "loading": false,
+            "ghost": false,
+            "block": false,
+            "htmlType": "button"
+          },
+          "children": [
+            "Show",
+            " schema definition"
+          ]
+        }
+      ]
+    }
+  ]
+};
+

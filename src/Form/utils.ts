@@ -1,5 +1,5 @@
 import {JSONSchema4} from 'json-schema';
-import {isNil, isPlainObject} from 'lodash';
+import _, {isNil, isPlainObject} from 'lodash';
 
 export const isEmptyObject = obj => {
   let isEmpty = true;
@@ -19,6 +19,24 @@ export const isEmptyObject = obj => {
 
   return isEmpty;
 };
+
+export function omitByRecursively(value, iteratee = _.isUndefined) {
+  return _.isObject(value)
+    ? _(value)
+        .omitBy(iteratee)
+        .mapValues(v => omitByRecursively(v, iteratee))
+        .value()
+    : value;
+}
+
+export function removeEmptyObjects(obj) {
+  return _(obj)
+    .pickBy(_.isObject)
+    .mapValues(removeEmptyObjects)
+    .omitBy(_.isEmpty)
+    .assign(_.omitBy(obj, _.isObject))
+    .value();
+}
 
 export const getObjectTypeValue = (
   schema: JSONSchema4,
@@ -156,7 +174,7 @@ export const matchValue = (value, regex) => {
   let result = false;
 
   if (typeof value !== 'object') {
-    result = regex.test(value);
+    result = regex.test(isNil(value) ? '' : value);
   } else if (typeof value === 'object' && Array.isArray(value)) {
     value.forEach(item => {
       if (matchValue(item, regex)) {

@@ -49,6 +49,7 @@ export interface IUiSchema {
   'ui:helpLink'?: IHelpLink;
   'ui:disabled'?: boolean;
   'ui:readonly'?: boolean;
+  'ui:format'?: string;
   properties?: IProperties;
   items?: IItems;
 }

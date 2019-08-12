@@ -21,6 +21,7 @@ const ajv = new Ajv({
     'password-confirm': () => true,
     text: data => typeof data === 'string',
     js: data => typeof data === 'string',
+    yaml: data => typeof data === 'string',
   },
 });
 

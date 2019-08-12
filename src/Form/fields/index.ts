@@ -8,6 +8,7 @@ import ObjectField from './ObjectField';
 import RangeField from './RangeField';
 import SelectField from './SelectField';
 import StringField from './StringField';
+import YamlField from './YamlField';
 
 const fields = {
   Array: ArrayField,
@@ -20,6 +21,7 @@ const fields = {
   NotFound: NotFoundWidget,
   Range: RangeField,
   Geo: GeoField,
+  Yaml: YamlField,
 };
 
 export default fields;

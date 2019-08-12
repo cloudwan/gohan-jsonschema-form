@@ -66,8 +66,8 @@ export class SchemaField extends React.Component<IFieldProps, IFieldState> {
 
   public render(): React.ReactNode {
     const {
-      schema,
-      uiSchema,
+      schema = {},
+      uiSchema = {},
       uiSchema: {'ui:title': uiTitle, 'ui:description': uiDescription},
       isRequired,
       id,
@@ -114,6 +114,11 @@ export class SchemaField extends React.Component<IFieldProps, IFieldState> {
         Field = selectField('Object');
         if (!schema.properties) {
           Field = selectField('Code');
+        } else if (
+          schema.format === 'yaml' ||
+          uiSchema['ui:format'] === 'yaml'
+        ) {
+          Field = selectField('Yaml');
         }
       } else if (schema.enum) {
         Field = selectField('Select');
@@ -125,6 +130,10 @@ export class SchemaField extends React.Component<IFieldProps, IFieldState> {
         Field = selectField('Select');
       } else if (type.includes('string')) {
         Field = selectField('String');
+
+        if (schema.format === 'yaml' || uiSchema['ui:format'] === 'yaml') {
+          Field = selectField('Yaml');
+        }
       } else if (type.includes('integer') || type.includes('number')) {
         Field = selectField('Number');
       } else {

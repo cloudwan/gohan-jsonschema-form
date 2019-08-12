@@ -1,0 +1,67 @@
+{
+  "id": "yaml",
+  "title": "Yaml Field Schema",
+  "schema": {
+    "permission": [
+      "create",
+      "read",
+      "update",
+      "delete"
+    ],
+    "properties": {
+      "yamlObject": {
+        "id": "yaml_object",
+        "description": "Yaml Code Editor Widget example (object)",
+        "title": "Yaml Code Editor (object)",
+        "type": "object",
+        "format": "yaml",
+        "properties": {
+          "name": {
+            "title": "Name",
+            "description": "Your name.",
+            "type": "string"
+          },
+          "isDeveloper": {
+            "title": "Is developer?",
+            "description": "Test",
+            "type": "boolean"
+          },
+          "options": {
+            "title": "Options",
+            "type": "object",
+            "properties": {
+              "test": {
+                "title": "Test",
+                "type": "string"
+              }
+            },
+            "propertiesOrder": [
+              "test"
+            ]
+          }
+        },
+        "propertiesOrder": [
+          "name",
+          "isDeveloper",
+          "options"
+        ]
+      },
+      "yamlString": {
+        "id": "yaml_string",
+        "description": "Yaml Code Editor Widget example (string)",
+        "title": "Yaml Code Editor (string)",
+        "type": ["string"],
+        "format": "yaml"
+      }
+    },
+    "propertiesOrder": [
+      "yamlObject",
+      "yamlString"
+    ],
+    "required": [],
+    "type": "object"
+  },
+  "uiSchema": {},
+  "formData": {}
+}
+

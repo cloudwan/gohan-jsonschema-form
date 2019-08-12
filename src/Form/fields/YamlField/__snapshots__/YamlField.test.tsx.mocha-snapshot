@@ -1,0 +1,169 @@
+exports["<YamlField/>/render/should match snapshot for minimal number of props(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "props": {
+      "children": [
+        {
+          "type": "C",
+          "props": {},
+          "_store": {}
+        },
+        {
+          "type": "C",
+          "props": {
+            "validate": "[function]",
+            "children": "[function]"
+          },
+          "_store": {}
+        },
+        null
+      ]
+    },
+    "rendered": [
+      {
+        "nodeType": "function",
+        "type": "C",
+        "props": {}
+      },
+      {
+        "nodeType": "function",
+        "type": "C",
+        "props": {
+          "validate": "[function]",
+          "children": "[function]"
+        },
+        "rendered": "[function]"
+      },
+      null
+    ]
+  },
+  "type": "Fragment",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "C",
+        "props": {}
+      },
+      "type": "FormikConnect(ErrorMessageImpl)",
+      "props": {}
+    },
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "C",
+        "props": {
+          "validate": "[function]",
+          "children": "[function]"
+        },
+        "rendered": "[function]"
+      },
+      "type": "FormikConnect(FastFieldInner)",
+      "props": {
+        "validate": "[function]"
+      },
+      "children": [
+        {
+          "node": "[function]",
+          "type": "Component",
+          "props": {}
+        }
+      ]
+    }
+  ]
+};
+
+exports["<YamlField/>/render/should match snapshot with SchemaHint(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "props": {
+      "children": [
+        {
+          "type": "C",
+          "props": {},
+          "_store": {}
+        },
+        {
+          "type": "C",
+          "props": {
+            "validate": "[function]",
+            "children": "[function]"
+          },
+          "_store": {}
+        },
+        {
+          "type": "SchemaHint",
+          "props": {},
+          "_store": {}
+        }
+      ]
+    },
+    "rendered": [
+      {
+        "nodeType": "function",
+        "type": "C",
+        "props": {}
+      },
+      {
+        "nodeType": "function",
+        "type": "C",
+        "props": {
+          "validate": "[function]",
+          "children": "[function]"
+        },
+        "rendered": "[function]"
+      },
+      {
+        "nodeType": "class",
+        "type": "SchemaHint",
+        "props": {}
+      }
+    ]
+  },
+  "type": "Fragment",
+  "props": {},
+  "children": [
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "C",
+        "props": {}
+      },
+      "type": "FormikConnect(ErrorMessageImpl)",
+      "props": {}
+    },
+    {
+      "node": {
+        "nodeType": "function",
+        "type": "C",
+        "props": {
+          "validate": "[function]",
+          "children": "[function]"
+        },
+        "rendered": "[function]"
+      },
+      "type": "FormikConnect(FastFieldInner)",
+      "props": {
+        "validate": "[function]"
+      },
+      "children": [
+        {
+          "node": "[function]",
+          "type": "Component",
+          "props": {}
+        }
+      ]
+    },
+    {
+      "node": {
+        "nodeType": "class",
+        "type": "SchemaHint",
+        "props": {}
+      },
+      "type": "SchemaHint",
+      "props": {}
+    }
+  ]
+};
+
