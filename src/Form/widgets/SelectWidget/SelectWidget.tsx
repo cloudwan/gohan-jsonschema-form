@@ -23,64 +23,6 @@ interface ISelectWidgetProps extends IWidget, FieldProps {
   fetcher?: TFetcher;
 }
 
-export const getSelectOptions = async (
-  url: string,
-  baseQuery: {[key: string]: any},
-  fetcher: TFetcher,
-  template?: string,
-  propRegEx: RegExp = PROP_REGEX,
-  symbolRegEx: RegExp = SYMBOL_REGEX,
-): Promise<Array<{value: string; label: string}>> => {
-  let data;
-  let id;
-
-  if (template) {
-    const props = template
-      .match(propRegEx)
-      .map(matched => matched.replace(symbolRegEx, ''));
-
-    const query = {
-      ...baseQuery,
-      _fields: ['id', ...props],
-    };
-
-    data = await fetcher(url, query);
-
-    id = Object.keys(data)[0];
-
-    return data[id].map(option => ({
-      value: option.id,
-      label: parseLabelTemplate(template, option),
-    }));
-  }
-
-  data = await fetcher(url);
-
-  id = Object.keys(data)[0];
-
-  return data[id].map(option => ({
-    value: option.id,
-    label: option.name || option.id,
-  }));
-};
-
-export const parseLabelTemplate = (
-  template: string = '',
-  data: object = {},
-  propRegEx: RegExp = PROP_REGEX,
-  symbolRegEx: RegExp = SYMBOL_REGEX,
-): string =>
-  template.match(propRegEx).reduce((result, propTemplate) => {
-    if (propTemplate) {
-      return result.replace(
-        propTemplate,
-        get(data, propTemplate.replace(symbolRegEx, '').split('.')),
-      );
-    }
-
-    return result;
-  }, template);
-
 export default class SelectWidget extends React.Component<
   ISelectWidgetProps,
   ISelectWidgetState
@@ -147,12 +89,12 @@ export default class SelectWidget extends React.Component<
       <Select
         value={this.props.field.value}
         mode={type.includes('array') ? 'multiple' : 'default'}
-        onFocus={this.handleFocus}
         onChange={this.handleChangeInput}
         options={this.state.isLoading ? [] : selectOptions}
         showSearch={haystack.length >= 5}
         optionFilterProp="children"
         notFoundContent={this.state.isLoading ? 'Loading...' : undefined}
+        loading={this.state.isLoading}
       />
     );
   }
@@ -163,39 +105,5 @@ export default class SelectWidget extends React.Component<
       this.props.field.name,
       value === '' && type.includes('null') ? null : value,
     );
-  };
-
-  private handleFocus = async () => {
-    if (!this.props.fetcher) {
-      return;
-    }
-
-    const {
-      schema: {request = {}},
-      uiSchema,
-      fetcher,
-    } = this.props;
-
-    try {
-      if (!this.state.options || this.state.options.length === 0) {
-        this.setState({isLoading: true});
-
-        const options = await getSelectOptions(
-          request.url,
-          request.query,
-          fetcher,
-          uiSchema['ui:label'] ? uiSchema['ui:label'].template : undefined,
-        );
-
-        this.setState({options, isLoading: false});
-      } else {
-        return;
-      }
-    } catch (error) {
-      console.error(error);
-      const errors = [{message: 'Cannot fetch data!'}];
-
-      this.setState({errors, isLoading: false});
-    }
   };
 }

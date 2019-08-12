@@ -1,0 +1,192 @@
+exports["<SelectWidgetWithFetch />/render/should match snapshot(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "type": "Select",
+    "props": {
+      "mode": "default",
+      "onChange": "[function]",
+      "onFocus": "[function]",
+      "options": [
+        {
+          "value": "foo",
+          "label": "foo"
+        },
+        {
+          "value": "bar",
+          "label": "bar"
+        },
+        {
+          "value": "baz",
+          "label": "baz"
+        }
+      ],
+      "showSearch": false,
+      "optionFilterProp": "children",
+      "loading": false
+    }
+  },
+  "type": "Select",
+  "props": {
+    "mode": "default",
+    "onChange": "[function]",
+    "onFocus": "[function]",
+    "options": [
+      {
+        "value": "foo",
+        "label": "foo"
+      },
+      {
+        "value": "bar",
+        "label": "bar"
+      },
+      {
+        "value": "baz",
+        "label": "baz"
+      }
+    ],
+    "showSearch": false,
+    "optionFilterProp": "children",
+    "loading": false
+  }
+};
+
+exports["<SelectWidgetWithFetch />/render/should render elements for multiple choice select(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "type": "Select",
+    "props": {
+      "mode": "multiple",
+      "onChange": "[function]",
+      "onFocus": "[function]",
+      "options": [
+        {
+          "value": "foo",
+          "label": "foo"
+        },
+        {
+          "value": "bar",
+          "label": "bar"
+        },
+        {
+          "value": "baz",
+          "label": "baz"
+        }
+      ],
+      "showSearch": false,
+      "optionFilterProp": "children",
+      "loading": false
+    }
+  },
+  "type": "Select",
+  "props": {
+    "mode": "multiple",
+    "onChange": "[function]",
+    "onFocus": "[function]",
+    "options": [
+      {
+        "value": "foo",
+        "label": "foo"
+      },
+      {
+        "value": "bar",
+        "label": "bar"
+      },
+      {
+        "value": "baz",
+        "label": "baz"
+      }
+    ],
+    "showSearch": false,
+    "optionFilterProp": "children",
+    "loading": false
+  }
+};
+
+exports["<SelectWidgetWithFetch />/listener handleFocus/shouldn't change state(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "type": "Select",
+    "props": {
+      "mode": "default",
+      "onChange": "[function]",
+      "onFocus": "[function]",
+      "options": [],
+      "showSearch": false,
+      "optionFilterProp": "children",
+      "loading": false
+    }
+  },
+  "type": "Select",
+  "props": {
+    "mode": "default",
+    "onChange": "[function]",
+    "onFocus": "[function]",
+    "options": [],
+    "showSearch": false,
+    "optionFilterProp": "children",
+    "loading": false
+  }
+};
+
+exports["<SelectWidgetWithFetch />/listener handleFocus/should update options in state(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "type": "Select",
+    "props": {
+      "mode": "default",
+      "onChange": "[function]",
+      "onFocus": "[function]",
+      "options": [
+        {
+          "value": "foo",
+          "label": "Foo"
+        }
+      ],
+      "showSearch": false,
+      "optionFilterProp": "children",
+      "loading": false
+    }
+  },
+  "type": "Select",
+  "props": {
+    "mode": "default",
+    "onChange": "[function]",
+    "onFocus": "[function]",
+    "options": [
+      {
+        "value": "foo",
+        "label": "Foo"
+      }
+    ],
+    "showSearch": false,
+    "optionFilterProp": "children",
+    "loading": false
+  }
+};
+
+exports["<SelectWidgetWithFetch />/listener handleFocus/should handle error message state(0)"] = {
+  "node": {
+    "nodeType": "function",
+    "type": "Select",
+    "props": {
+      "mode": "default",
+      "onChange": "[function]",
+      "onFocus": "[function]",
+      "options": [],
+      "showSearch": false,
+      "optionFilterProp": "children",
+      "loading": false
+    }
+  },
+  "type": "Select",
+  "props": {
+    "mode": "default",
+    "onChange": "[function]",
+    "onFocus": "[function]",
+    "options": [],
+    "showSearch": false,
+    "optionFilterProp": "children",
+    "loading": false
+  }
+};
+
