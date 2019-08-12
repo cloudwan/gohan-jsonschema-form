@@ -111,7 +111,7 @@ export default class DemoPage extends Component {
         </Col>
         <Col xl={8} lg={12} md={24}>
           <Card title="Form component">
-            <div style={{height: 500, overflow: 'auto'}}>
+            <div style={{height: 800, overflow: 'auto'}}>
               <Form
                 schema={schema}
                 uiSchema={uiSchema}

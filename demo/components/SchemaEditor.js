@@ -43,6 +43,7 @@ export default class SchemaEditor extends Component {
         name={'schemaEditor'}
         onChange={this.handleChangeCodeEditor}
         editorProps={{$blockScrolling: true}}
+        height="800px"
       />
     );
   }
