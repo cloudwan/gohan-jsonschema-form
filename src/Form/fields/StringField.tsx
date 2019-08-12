@@ -48,6 +48,10 @@ export class StringField extends React.Component<IWidget> {
 
     if (value !== undefined) {
       validator.validate(schema, value);
+
+      if (validator.errors) {
+        errors.push(...validator.errors);
+      }
     }
 
     if (this.widget && this.widget.errors && this.widget.errors.length > 0) {

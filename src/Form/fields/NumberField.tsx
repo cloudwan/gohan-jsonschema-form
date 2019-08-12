@@ -34,10 +34,10 @@ export class NumberField extends React.Component<IWidget> {
 
     if (value !== undefined) {
       validator.validate(schema, value);
-    }
 
-    if (validator.errors) {
-      errors.push(...validator.errors);
+      if (validator.errors) {
+        errors.push(...validator.errors);
+      }
     }
 
     return errors.length > 0 ? <Errors errors={errors} /> : undefined;
