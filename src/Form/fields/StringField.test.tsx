@@ -43,7 +43,7 @@ describe('<StringField/>', () => {
       should.equal(wrapper.instance().validate('bar'), undefined);
     });
 
-    it('should return component with errors when value is required and it is undefined', () => {
+    it('should show one error when value is required and it is undefined', () => {
       const wrapper = shallow(
         <StringField
           id="foo"
@@ -53,11 +53,11 @@ describe('<StringField/>', () => {
         />,
       );
 
-      const errorsWrapper = shallow(wrapper.instance().validate(undefined));
-      errorsWrapper.type().should.equal('div');
+      const result = wrapper.instance().validate(undefined).length;
+      result.should.equal(1);
     });
 
-    it('should return component with errors when value is invalid', () => {
+    it('should should show one error when value is invalid', () => {
       const wrapper = shallow(
         <StringField
           id="foo"
@@ -67,11 +67,11 @@ describe('<StringField/>', () => {
         />,
       );
 
-      const errorsWrapper = shallow(wrapper.instance().validate(null));
-      errorsWrapper.type().should.equal('div');
+      const result = wrapper.instance().validate(null).length;
+      result.should.equal(1);
     });
 
-    it('should return component with errors when widget has errors', () => {
+    it('should show one error when widget has errors', () => {
       const wrapper = shallow(
         <StringField
           id="foo"
@@ -87,8 +87,8 @@ describe('<StringField/>', () => {
         },
       };
 
-      const errorsWrapper = shallow(wrapper.instance().validate('bar'));
-      errorsWrapper.type().should.equal('div');
+      const result = wrapper.instance().validate('bar').length;
+      result.should.equal(1);
     });
   });
 });

@@ -198,3 +198,11 @@ export const getFieldValue = (source, id, values, getValue) => {
 
   return getValue(values, source);
 };
+
+export const getFieldData = (id, data, getData) => {
+  if (!id || !data) {
+    return undefined;
+  }
+
+  return getData(data, id);
+};

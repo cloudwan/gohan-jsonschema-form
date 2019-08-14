@@ -35,7 +35,7 @@ describe('<NumberField/>', () => {
       should.equal(wrapper.instance().validate(5), undefined);
     });
 
-    it("should return component with errors when value is required and it's undefined", () => {
+    it("should show one error when value is required and it's undefined", () => {
       const wrapper = shallow(
         <NumberField
           id="foo"
@@ -45,11 +45,11 @@ describe('<NumberField/>', () => {
         />,
       );
 
-      const errorsWrapper = shallow(wrapper.instance().validate(undefined));
-      errorsWrapper.type().should.equal('div');
+      const result = wrapper.instance().validate(undefined).length;
+      result.should.equal(1);
     });
 
-    it('should return component with errors when value is invalid', () => {
+    it('should show one error when value is invalid', () => {
       const wrapper = shallow(
         <NumberField
           id="foo"
@@ -59,8 +59,8 @@ describe('<NumberField/>', () => {
         />,
       );
 
-      const errorsWrapper = shallow(wrapper.instance().validate(null));
-      errorsWrapper.type().should.equal('div');
+      const result = wrapper.instance().validate(null).length;
+      result.should.equal(1);
     });
   });
 });

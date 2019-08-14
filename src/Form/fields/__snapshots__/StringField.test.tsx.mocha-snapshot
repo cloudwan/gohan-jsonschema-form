@@ -2,51 +2,28 @@ exports["<StringField/>/render/should match snapshot for minimal number of props
   "node": {
     "nodeType": "function",
     "props": {
-      "children": [
-        {
-          "type": "C",
-          "props": {},
-          "_store": {}
-        },
-        {
-          "type": "C",
-          "props": {
-            "validate": "[function]",
-            "children": "[function]"
-          },
-          "_store": {}
-        }
-      ]
-    },
-    "rendered": [
-      {
-        "nodeType": "function",
-        "type": "C",
-        "props": {}
-      },
-      {
-        "nodeType": "function",
+      "children": {
         "type": "C",
         "props": {
           "validate": "[function]",
           "children": "[function]"
         },
-        "rendered": "[function]"
+        "_store": {}
       }
-    ]
+    },
+    "rendered": {
+      "nodeType": "function",
+      "type": "C",
+      "props": {
+        "validate": "[function]",
+        "children": "[function]"
+      },
+      "rendered": "[function]"
+    }
   },
   "type": "Fragment",
   "props": {},
   "children": [
-    {
-      "node": {
-        "nodeType": "function",
-        "type": "C",
-        "props": {}
-      },
-      "type": "FormikConnect(ErrorMessageImpl)",
-      "props": {}
-    },
     {
       "node": {
         "nodeType": "function",
@@ -76,51 +53,28 @@ exports["<StringField/>/render/should match snapshot for defined schema format(0
   "node": {
     "nodeType": "function",
     "props": {
-      "children": [
-        {
-          "type": "C",
-          "props": {},
-          "_store": {}
-        },
-        {
-          "type": "C",
-          "props": {
-            "validate": "[function]",
-            "children": "[function]"
-          },
-          "_store": {}
-        }
-      ]
-    },
-    "rendered": [
-      {
-        "nodeType": "function",
-        "type": "C",
-        "props": {}
-      },
-      {
-        "nodeType": "function",
+      "children": {
         "type": "C",
         "props": {
           "validate": "[function]",
           "children": "[function]"
         },
-        "rendered": "[function]"
+        "_store": {}
       }
-    ]
+    },
+    "rendered": {
+      "nodeType": "function",
+      "type": "C",
+      "props": {
+        "validate": "[function]",
+        "children": "[function]"
+      },
+      "rendered": "[function]"
+    }
   },
   "type": "Fragment",
   "props": {},
   "children": [
-    {
-      "node": {
-        "nodeType": "function",
-        "type": "C",
-        "props": {}
-      },
-      "type": "FormikConnect(ErrorMessageImpl)",
-      "props": {}
-    },
     {
       "node": {
         "nodeType": "function",

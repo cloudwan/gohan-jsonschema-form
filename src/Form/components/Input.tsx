@@ -4,8 +4,6 @@ import {Input as AntInput} from 'antd';
 
 import 'antd/lib/input/style';
 
-import styles from './Input.css';
-
-export const Input = props => <AntInput className={styles.input} {...props} />;
+export const Input = props => <AntInput {...props} />;
 
 export default Input;

@@ -2,52 +2,29 @@ exports["<SelectField/>/render/should match snapshot for minimal number of props
   "node": {
     "nodeType": "function",
     "props": {
-      "children": [
-        {
-          "type": "C",
-          "props": {},
-          "_store": {}
-        },
-        {
-          "type": "C",
-          "props": {
-            "schema": {},
-            "validate": "[function]",
-            "component": "SelectWidget"
-          },
-          "_store": {}
-        }
-      ]
-    },
-    "rendered": [
-      {
-        "nodeType": "function",
-        "type": "C",
-        "props": {}
-      },
-      {
-        "nodeType": "function",
+      "children": {
         "type": "C",
         "props": {
           "schema": {},
           "validate": "[function]",
           "component": "SelectWidget"
-        }
+        },
+        "_store": {}
       }
-    ]
+    },
+    "rendered": {
+      "nodeType": "function",
+      "type": "C",
+      "props": {
+        "schema": {},
+        "validate": "[function]",
+        "component": "SelectWidget"
+      }
+    }
   },
   "type": "Fragment",
   "props": {},
   "children": [
-    {
-      "node": {
-        "nodeType": "function",
-        "type": "C",
-        "props": {}
-      },
-      "type": "FormikConnect(ErrorMessageImpl)",
-      "props": {}
-    },
     {
       "node": {
         "nodeType": "function",

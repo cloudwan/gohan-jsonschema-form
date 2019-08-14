@@ -1,7 +1,10 @@
+import {Form as AntdForm} from 'antd';
+import {FormProps} from 'antd/lib/form';
 import {Form as FormikForm, Formik} from 'formik';
 import {JSONSchema4} from 'json-schema';
-import isEmpty from 'lodash/isEmpty';
 import * as React from 'react';
+
+import 'antd/lib/form/style';
 
 import FormContext from './FormContext';
 
@@ -11,7 +14,7 @@ import FormTemplate, {FormTemplateProps} from './components/FormTemplate';
 import SchemaField from './fields/SchemaField';
 import {getInitialValues} from './utils';
 
-interface TFormProps {
+interface TFormProps extends FormProps {
   uiSchema?: {
     [key: string]: IUiSchema;
   };
@@ -34,6 +37,7 @@ export class Form extends React.Component<TFormProps> {
     onSubmit: values => {
       console.log(values);
     },
+    layout: 'vertical',
   };
 
   public render(): JSX.Element {
@@ -45,20 +49,37 @@ export class Form extends React.Component<TFormProps> {
       onSubmit,
       Template,
       ActionButtons,
+      wrapperCol,
+      labelCol,
+      colon,
+      hideRequiredMark,
+      layout,
     } = this.props;
 
     const initialValues = getInitialValues(schema, formData);
 
     return (
       <FormContext.Provider value={fetcher}>
-        <Formik initialValues={initialValues} onSubmit={onSubmit}>
-          <Template>
-            <FormikForm id="gohan-jsonschema-form">
-              <SchemaField schema={schema} uiSchema={uiSchema} />
-              <ActionButtons />
-            </FormikForm>
-          </Template>
-        </Formik>
+        <Formik
+          initialValues={initialValues}
+          onSubmit={onSubmit}
+          render={({handleSubmit}) => (
+            <Template>
+              <AntdForm
+                id="gohan-jsonschema-form"
+                wrapperCol={wrapperCol}
+                labelCol={labelCol}
+                colon={colon}
+                hideRequiredMark={hideRequiredMark}
+                layout={layout}
+                onSubmit={handleSubmit}
+              >
+                <SchemaField schema={schema} uiSchema={uiSchema} />
+                <ActionButtons />
+              </AntdForm>
+            </Template>
+          )}
+        />
       </FormContext.Provider>
     );
   }

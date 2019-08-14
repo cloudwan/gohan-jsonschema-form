@@ -1,8 +1,7 @@
-import {ErrorMessage, FastField} from 'formik';
+import {FastField} from 'formik';
 import * as React from 'react';
 
 import {IWidget} from '../../../typings/IWidget';
-import Errors from '../../components/Errors';
 import validator from '../../Validator';
 import {CodeEditorWidget} from '../../widgets';
 
@@ -15,7 +14,6 @@ export class YamlField extends React.Component<IWidget> {
 
     return (
       <React.Fragment>
-        <ErrorMessage name={id} />
         <FastField name={id} validate={this.validate}>
           {({field, form}) => (
             <React.Fragment>
@@ -40,7 +38,7 @@ export class YamlField extends React.Component<IWidget> {
     const errors = [];
 
     if (isRequired && !value) {
-      errors.push({message: 'Required'});
+      errors.push({message: 'This field cannot be empty'});
     }
 
     if (value !== undefined) {
@@ -55,7 +53,7 @@ export class YamlField extends React.Component<IWidget> {
       errors.push(...this.widget.errors);
     }
 
-    return errors.length > 0 ? <Errors errors={errors} /> : undefined;
+    return errors.length > 0 ? errors : undefined;
   };
 }
 

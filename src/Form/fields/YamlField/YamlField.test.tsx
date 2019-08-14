@@ -41,7 +41,7 @@ describe('<YamlField/>', () => {
       should.equal(wrapper.instance().validate('test'), undefined);
     });
 
-    it("should return component with errors when value is required and it's undefined", () => {
+    it("should show one error when value is required and it's undefined", () => {
       const wrapper = shallow(
         <YamlField
           id="foo"
@@ -51,11 +51,11 @@ describe('<YamlField/>', () => {
         />,
       );
 
-      const errorsWrapper = shallow(wrapper.instance().validate(undefined));
-      errorsWrapper.type().should.equal('div');
+      const result = wrapper.instance().validate(undefined).length;
+      result.should.equal(1);
     });
 
-    it('should return component with errors when value is invalid', () => {
+    it('should show one error when value is invalid', () => {
       const wrapper = shallow(
         <YamlField
           id="foo"
@@ -65,8 +65,8 @@ describe('<YamlField/>', () => {
         />,
       );
 
-      const errorsWrapper = shallow(wrapper.instance().validate(null));
-      errorsWrapper.type().should.equal('div');
+      const result = wrapper.instance().validate(null).length;
+      result.should.equal(1);
     });
   });
 });

@@ -1,11 +1,10 @@
 import {connect, FormikProps, getIn} from 'formik';
 import {JSONSchema4} from 'json-schema';
-import {isEqual} from 'lodash';
 import * as React from 'react';
 
 import {IUiSchema} from '../../typings/IUiSchema';
 import {withHide} from '../components/withHide';
-import {getFieldValue, matchValue} from '../utils';
+import {getFieldData, getFieldValue, matchValue} from '../utils';
 import {selectField} from './';
 import Template from './Template';
 
@@ -34,34 +33,6 @@ export class SchemaField extends React.Component<IFieldProps, IFieldState> {
     this.state = {
       hidden: false,
     };
-  }
-
-  public shouldComponentUpdate(nextProps, nextState) {
-    if (this.props.uiSchema && this.props.uiSchema['ui:hide']) {
-      const prevHideSourceValue = getFieldValue(
-        this.props.uiSchema['ui:hide'].source,
-        this.props.id,
-        this.props.formik.values,
-        getIn,
-      );
-
-      const nextHideSourceValue = getFieldValue(
-        nextProps.uiSchema['ui:hide'].source,
-        nextProps.id,
-        nextProps.formik.values,
-        getIn,
-      );
-
-      const hasValueChanged = !isEqual(
-        prevHideSourceValue,
-        nextHideSourceValue,
-      );
-      const hasHiddenStateChanged = this.state.hidden !== nextState.hidden;
-
-      return hasValueChanged || hasHiddenStateChanged;
-    }
-
-    return false;
   }
 
   public render(): React.ReactNode {
@@ -145,12 +116,31 @@ export class SchemaField extends React.Component<IFieldProps, IFieldState> {
       Field = withHide(Field, this.handleComponentUnmount);
     }
 
+    const formikError = getFieldData(id, formik.errors, getIn);
+    const isFieldTouched = getFieldData(id, formik.touched, getIn);
+    const errors =
+      isFieldTouched && Array.isArray(formikError)
+        ? formikError.map(err => err.message).join(', ')
+        : '';
+
+    if (!id) {
+      return (
+        <Field
+          id={id}
+          schema={schema}
+          uiSchema={uiSchema}
+          isRequired={isRequired}
+        />
+      );
+    }
+
     return (
       <Template
         title={title}
         description={description}
         isRequired={isRequired}
         id={id}
+        errors={errors}
       >
         <Field
           id={id}

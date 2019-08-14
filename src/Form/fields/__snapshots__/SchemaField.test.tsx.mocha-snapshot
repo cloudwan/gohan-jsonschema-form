@@ -1,832 +1,288 @@
+exports["<SchemaField />/render/should match snapshot when uischema widget is hidden(0)"] = "";
+
 exports["<SchemaField />/render/should match snapshot when uischema widget defined as function(0)"] = {
   "node": {
-    "nodeType": "class",
-    "type": "Template",
+    "nodeType": "function",
+    "type": "ui:widget",
     "props": {
-      "title": "test string",
-      "isRequired": false,
       "id": "",
-      "children": {
-        "type": "ui:widget",
-        "props": {
-          "id": "",
-          "schema": {
-            "title": "test string",
-            "type": "string"
-          },
-          "uiSchema": {
-            "ui:widget": "ui:widget"
-          },
-          "isRequired": false
-        },
-        "_store": {}
-      }
-    },
-    "rendered": {
-      "nodeType": "function",
-      "type": "ui:widget",
-      "props": {
-        "id": "",
-        "schema": {
-          "title": "test string",
-          "type": "string"
-        },
-        "uiSchema": {
-          "ui:widget": "ui:widget"
-        },
-        "isRequired": false
-      }
-    }
-  },
-  "type": "Template",
-  "props": {
-    "title": "test string",
-    "isRequired": false,
-    "id": ""
-  },
-  "children": [
-    {
-      "node": {
-        "nodeType": "function",
-        "type": "ui:widget",
-        "props": {
-          "id": "",
-          "schema": {
-            "title": "test string",
-            "type": "string"
-          },
-          "uiSchema": {
-            "ui:widget": "ui:widget"
-          },
-          "isRequired": false
-        }
+      "schema": {
+        "title": "test string",
+        "type": "string"
       },
-      "type": "ui:widget",
-      "props": {
-        "id": "",
-        "schema": {
-          "title": "test string",
-          "type": "string"
-        },
-        "uiSchema": {
-          "ui:widget": "ui:widget"
-        },
-        "isRequired": false
-      }
+      "uiSchema": {
+        "ui:widget": "ui:widget"
+      },
+      "isRequired": false
     }
-  ]
+  },
+  "type": "ui:widget",
+  "props": {
+    "id": "",
+    "schema": {
+      "title": "test string",
+      "type": "string"
+    },
+    "uiSchema": {
+      "ui:widget": "ui:widget"
+    },
+    "isRequired": false
+  }
 };
-
-exports["<SchemaField />/render/should match snapshot when uischema widget is hidden(0)"] = "";
 
 exports["<SchemaField />/render/should match snapshot when uischema widget defined as string(0)"] = {
   "node": {
     "nodeType": "class",
-    "type": "Template",
+    "type": "NotFoundWidget",
     "props": {
-      "title": "test string",
-      "isRequired": false,
       "id": "",
-      "children": {
-        "type": "NotFoundWidget",
-        "props": {
-          "id": "",
-          "schema": {
-            "title": "test string",
-            "type": "string"
-          },
-          "uiSchema": {
-            "ui:widget": "CodeEditor"
-          },
-          "isRequired": false
-        },
-        "_store": {}
-      }
-    },
-    "rendered": {
-      "nodeType": "class",
-      "type": "NotFoundWidget",
-      "props": {
-        "id": "",
-        "schema": {
-          "title": "test string",
-          "type": "string"
-        },
-        "uiSchema": {
-          "ui:widget": "CodeEditor"
-        },
-        "isRequired": false
-      }
-    }
-  },
-  "type": "Template",
-  "props": {
-    "title": "test string",
-    "isRequired": false,
-    "id": ""
-  },
-  "children": [
-    {
-      "node": {
-        "nodeType": "class",
-        "type": "NotFoundWidget",
-        "props": {
-          "id": "",
-          "schema": {
-            "title": "test string",
-            "type": "string"
-          },
-          "uiSchema": {
-            "ui:widget": "CodeEditor"
-          },
-          "isRequired": false
-        }
+      "schema": {
+        "title": "test string",
+        "type": "string"
       },
-      "type": "NotFoundWidget",
-      "props": {
-        "id": "",
-        "schema": {
-          "title": "test string",
-          "type": "string"
-        },
-        "uiSchema": {
-          "ui:widget": "CodeEditor"
-        },
-        "isRequired": false
-      }
+      "uiSchema": {
+        "ui:widget": "CodeEditor"
+      },
+      "isRequired": false
     }
-  ]
+  },
+  "type": "NotFoundWidget",
+  "props": {
+    "id": "",
+    "schema": {
+      "title": "test string",
+      "type": "string"
+    },
+    "uiSchema": {
+      "ui:widget": "CodeEditor"
+    },
+    "isRequired": false
+  }
 };
 
 exports["<SchemaField />/render/should match snapshot when schema type is object(0)"] = {
   "node": {
     "nodeType": "class",
-    "type": "Template",
+    "type": "ObjectField",
     "props": {
-      "title": "test string",
-      "isRequired": false,
       "id": "",
-      "children": {
-        "type": "ObjectField",
-        "props": {
-          "id": "",
-          "schema": {
-            "title": "test string",
-            "type": "object",
-            "properties": {
-              "name": {
-                "type": "string"
-              }
-            }
-          },
-          "uiSchema": {},
-          "isRequired": false
-        },
-        "_store": {}
-      }
-    },
-    "rendered": {
-      "nodeType": "class",
-      "type": "ObjectField",
-      "props": {
-        "id": "",
-        "schema": {
-          "title": "test string",
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "string"
-            }
+      "schema": {
+        "title": "test string",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
           }
-        },
-        "uiSchema": {},
-        "isRequired": false
-      }
-    }
-  },
-  "type": "Template",
-  "props": {
-    "title": "test string",
-    "isRequired": false,
-    "id": ""
-  },
-  "children": [
-    {
-      "node": {
-        "nodeType": "class",
-        "type": "ObjectField",
-        "props": {
-          "id": "",
-          "schema": {
-            "title": "test string",
-            "type": "object",
-            "properties": {
-              "name": {
-                "type": "string"
-              }
-            }
-          },
-          "uiSchema": {},
-          "isRequired": false
         }
       },
-      "type": "ObjectField",
-      "props": {
-        "id": "",
-        "schema": {
-          "title": "test string",
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "string"
-            }
-          }
-        },
-        "uiSchema": {},
-        "isRequired": false
-      }
+      "uiSchema": {},
+      "isRequired": false
     }
-  ]
+  },
+  "type": "ObjectField",
+  "props": {
+    "id": "",
+    "schema": {
+      "title": "test string",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "uiSchema": {},
+    "isRequired": false
+  }
 };
 
 exports["<SchemaField />/render/should match snapshot when schema type is object w/o properties(0)"] = {
   "node": {
     "nodeType": "class",
-    "type": "Template",
+    "type": "CodeField",
     "props": {
-      "title": "test string",
-      "isRequired": false,
       "id": "",
-      "children": {
-        "type": "CodeField",
-        "props": {
-          "id": "",
-          "schema": {
-            "title": "test string",
-            "type": "object"
-          },
-          "uiSchema": {},
-          "isRequired": false
-        },
-        "_store": {}
-      }
-    },
-    "rendered": {
-      "nodeType": "class",
-      "type": "CodeField",
-      "props": {
-        "id": "",
-        "schema": {
-          "title": "test string",
-          "type": "object"
-        },
-        "uiSchema": {},
-        "isRequired": false
-      }
-    }
-  },
-  "type": "Template",
-  "props": {
-    "title": "test string",
-    "isRequired": false,
-    "id": ""
-  },
-  "children": [
-    {
-      "node": {
-        "nodeType": "class",
-        "type": "CodeField",
-        "props": {
-          "id": "",
-          "schema": {
-            "title": "test string",
-            "type": "object"
-          },
-          "uiSchema": {},
-          "isRequired": false
-        }
+      "schema": {
+        "title": "test string",
+        "type": "object"
       },
-      "type": "CodeField",
-      "props": {
-        "id": "",
-        "schema": {
-          "title": "test string",
-          "type": "object"
-        },
-        "uiSchema": {},
-        "isRequired": false
-      }
+      "uiSchema": {},
+      "isRequired": false
     }
-  ]
-};
-
-exports["<SchemaField />/render/should match snapshot when schema type is array(0)"] = {
-  "node": {
-    "nodeType": "class",
-    "type": "Template",
-    "props": {
+  },
+  "type": "CodeField",
+  "props": {
+    "id": "",
+    "schema": {
       "title": "test string",
-      "isRequired": false,
-      "id": "",
-      "children": {
-        "props": {
-          "id": "",
-          "schema": {
-            "title": "test string",
-            "type": "array"
-          },
-          "uiSchema": {},
-          "isRequired": false
-        },
-        "_store": {}
-      }
+      "type": "object"
     },
-    "rendered": {
-      "nodeType": "function",
-      "props": {
-        "id": "",
-        "schema": {
-          "title": "test string",
-          "type": "array"
-        },
-        "uiSchema": {},
-        "isRequired": false
-      }
-    }
-  },
-  "type": "Template",
-  "props": {
-    "title": "test string",
-    "isRequired": false,
-    "id": ""
-  },
-  "children": [
-    {
-      "node": {
-        "nodeType": "function",
-        "props": {
-          "id": "",
-          "schema": {
-            "title": "test string",
-            "type": "array"
-          },
-          "uiSchema": {},
-          "isRequired": false
-        }
-      },
-      "type": "Component",
-      "props": {
-        "id": "",
-        "schema": {
-          "title": "test string",
-          "type": "array"
-        },
-        "uiSchema": {},
-        "isRequired": false
-      }
-    }
-  ]
+    "uiSchema": {},
+    "isRequired": false
+  }
 };
 
 exports["<SchemaField />/render/should match snapshot when schema type is boolean(0)"] = {
   "node": {
     "nodeType": "class",
-    "type": "Template",
+    "type": "BooleanField",
     "props": {
-      "title": "test string",
-      "isRequired": false,
       "id": "",
-      "children": {
-        "type": "BooleanField",
-        "props": {
-          "id": "",
-          "schema": {
-            "title": "test string",
-            "type": "boolean"
-          },
-          "uiSchema": {},
-          "isRequired": false
-        },
-        "_store": {}
-      }
-    },
-    "rendered": {
-      "nodeType": "class",
-      "type": "BooleanField",
-      "props": {
-        "id": "",
-        "schema": {
-          "title": "test string",
-          "type": "boolean"
-        },
-        "uiSchema": {},
-        "isRequired": false
-      }
-    }
-  },
-  "type": "Template",
-  "props": {
-    "title": "test string",
-    "isRequired": false,
-    "id": ""
-  },
-  "children": [
-    {
-      "node": {
-        "nodeType": "class",
-        "type": "BooleanField",
-        "props": {
-          "id": "",
-          "schema": {
-            "title": "test string",
-            "type": "boolean"
-          },
-          "uiSchema": {},
-          "isRequired": false
-        }
+      "schema": {
+        "title": "test string",
+        "type": "boolean"
       },
-      "type": "BooleanField",
-      "props": {
-        "id": "",
-        "schema": {
-          "title": "test string",
-          "type": "boolean"
-        },
-        "uiSchema": {},
-        "isRequired": false
-      }
+      "uiSchema": {},
+      "isRequired": false
     }
-  ]
+  },
+  "type": "BooleanField",
+  "props": {
+    "id": "",
+    "schema": {
+      "title": "test string",
+      "type": "boolean"
+    },
+    "uiSchema": {},
+    "isRequired": false
+  }
 };
 
 exports["<SchemaField />/render/should match snapshot when schema has enum(0)"] = {
   "node": {
     "nodeType": "class",
-    "type": "Template",
+    "type": "SelectField",
     "props": {
-      "title": "test string",
-      "isRequired": false,
       "id": "",
-      "children": {
-        "type": "SelectField",
-        "props": {
-          "id": "",
-          "schema": {
-            "title": "test string",
-            "type": "string",
-            "enum": [
-              "test1",
-              "test2"
-            ]
-          },
-          "uiSchema": {},
-          "isRequired": false
-        },
-        "_store": {}
-      }
-    },
-    "rendered": {
-      "nodeType": "class",
-      "type": "SelectField",
-      "props": {
-        "id": "",
-        "schema": {
-          "title": "test string",
-          "type": "string",
-          "enum": [
-            "test1",
-            "test2"
-          ]
-        },
-        "uiSchema": {},
-        "isRequired": false
-      }
-    }
-  },
-  "type": "Template",
-  "props": {
-    "title": "test string",
-    "isRequired": false,
-    "id": ""
-  },
-  "children": [
-    {
-      "node": {
-        "nodeType": "class",
-        "type": "SelectField",
-        "props": {
-          "id": "",
-          "schema": {
-            "title": "test string",
-            "type": "string",
-            "enum": [
-              "test1",
-              "test2"
-            ]
-          },
-          "uiSchema": {},
-          "isRequired": false
-        }
+      "schema": {
+        "title": "test string",
+        "type": "string",
+        "enum": [
+          "test1",
+          "test2"
+        ]
       },
-      "type": "SelectField",
-      "props": {
-        "id": "",
-        "schema": {
-          "title": "test string",
-          "type": "string",
-          "enum": [
-            "test1",
-            "test2"
-          ]
-        },
-        "uiSchema": {},
-        "isRequired": false
-      }
+      "uiSchema": {},
+      "isRequired": false
     }
-  ]
+  },
+  "type": "SelectField",
+  "props": {
+    "id": "",
+    "schema": {
+      "title": "test string",
+      "type": "string",
+      "enum": [
+        "test1",
+        "test2"
+      ]
+    },
+    "uiSchema": {},
+    "isRequired": false
+  }
 };
 
 exports["<SchemaField />/render/should match snapshot when schema type is string(0)"] = {
   "node": {
     "nodeType": "class",
-    "type": "Template",
+    "type": "StringField",
     "props": {
-      "title": "test string",
-      "isRequired": false,
       "id": "",
-      "children": {
-        "type": "StringField",
-        "props": {
-          "id": "",
-          "schema": {
-            "title": "test string",
-            "type": "string"
-          },
-          "uiSchema": {},
-          "isRequired": false
-        },
-        "_store": {}
-      }
-    },
-    "rendered": {
-      "nodeType": "class",
-      "type": "StringField",
-      "props": {
-        "id": "",
-        "schema": {
-          "title": "test string",
-          "type": "string"
-        },
-        "uiSchema": {},
-        "isRequired": false
-      }
-    }
-  },
-  "type": "Template",
-  "props": {
-    "title": "test string",
-    "isRequired": false,
-    "id": ""
-  },
-  "children": [
-    {
-      "node": {
-        "nodeType": "class",
-        "type": "StringField",
-        "props": {
-          "id": "",
-          "schema": {
-            "title": "test string",
-            "type": "string"
-          },
-          "uiSchema": {},
-          "isRequired": false
-        }
+      "schema": {
+        "title": "test string",
+        "type": "string"
       },
-      "type": "StringField",
-      "props": {
-        "id": "",
-        "schema": {
-          "title": "test string",
-          "type": "string"
-        },
-        "uiSchema": {},
-        "isRequired": false
-      }
+      "uiSchema": {},
+      "isRequired": false
     }
-  ]
+  },
+  "type": "StringField",
+  "props": {
+    "id": "",
+    "schema": {
+      "title": "test string",
+      "type": "string"
+    },
+    "uiSchema": {},
+    "isRequired": false
+  }
 };
 
 exports["<SchemaField />/render/should match snapshot when schema type is integer(0)"] = {
   "node": {
     "nodeType": "class",
-    "type": "Template",
+    "type": "NumberField",
     "props": {
-      "title": "test string",
-      "isRequired": false,
       "id": "",
-      "children": {
-        "type": "NumberField",
-        "props": {
-          "id": "",
-          "schema": {
-            "title": "test string",
-            "type": "integer"
-          },
-          "uiSchema": {},
-          "isRequired": false
-        },
-        "_store": {}
-      }
-    },
-    "rendered": {
-      "nodeType": "class",
-      "type": "NumberField",
-      "props": {
-        "id": "",
-        "schema": {
-          "title": "test string",
-          "type": "integer"
-        },
-        "uiSchema": {},
-        "isRequired": false
-      }
-    }
-  },
-  "type": "Template",
-  "props": {
-    "title": "test string",
-    "isRequired": false,
-    "id": ""
-  },
-  "children": [
-    {
-      "node": {
-        "nodeType": "class",
-        "type": "NumberField",
-        "props": {
-          "id": "",
-          "schema": {
-            "title": "test string",
-            "type": "integer"
-          },
-          "uiSchema": {},
-          "isRequired": false
-        }
+      "schema": {
+        "title": "test string",
+        "type": "integer"
       },
-      "type": "NumberField",
-      "props": {
-        "id": "",
-        "schema": {
-          "title": "test string",
-          "type": "integer"
-        },
-        "uiSchema": {},
-        "isRequired": false
-      }
+      "uiSchema": {},
+      "isRequired": false
     }
-  ]
+  },
+  "type": "NumberField",
+  "props": {
+    "id": "",
+    "schema": {
+      "title": "test string",
+      "type": "integer"
+    },
+    "uiSchema": {},
+    "isRequired": false
+  }
 };
 
 exports["<SchemaField />/render/should match snapshot when schema type is number(0)"] = {
   "node": {
     "nodeType": "class",
-    "type": "Template",
+    "type": "NumberField",
     "props": {
-      "title": "test string",
-      "isRequired": false,
       "id": "",
-      "children": {
-        "type": "NumberField",
-        "props": {
-          "id": "",
-          "schema": {
-            "title": "test string",
-            "type": "integer"
-          },
-          "uiSchema": {},
-          "isRequired": false
-        },
-        "_store": {}
-      }
-    },
-    "rendered": {
-      "nodeType": "class",
-      "type": "NumberField",
-      "props": {
-        "id": "",
-        "schema": {
-          "title": "test string",
-          "type": "integer"
-        },
-        "uiSchema": {},
-        "isRequired": false
-      }
-    }
-  },
-  "type": "Template",
-  "props": {
-    "title": "test string",
-    "isRequired": false,
-    "id": ""
-  },
-  "children": [
-    {
-      "node": {
-        "nodeType": "class",
-        "type": "NumberField",
-        "props": {
-          "id": "",
-          "schema": {
-            "title": "test string",
-            "type": "integer"
-          },
-          "uiSchema": {},
-          "isRequired": false
-        }
+      "schema": {
+        "title": "test string",
+        "type": "integer"
       },
-      "type": "NumberField",
-      "props": {
-        "id": "",
-        "schema": {
-          "title": "test string",
-          "type": "integer"
-        },
-        "uiSchema": {},
-        "isRequired": false
-      }
+      "uiSchema": {},
+      "isRequired": false
     }
-  ]
+  },
+  "type": "NumberField",
+  "props": {
+    "id": "",
+    "schema": {
+      "title": "test string",
+      "type": "integer"
+    },
+    "uiSchema": {},
+    "isRequired": false
+  }
 };
 
 exports["<SchemaField />/render/should match snapshot when schema type is incorrect(0)"] = {
   "node": {
     "nodeType": "class",
-    "type": "Template",
+    "type": "NotFoundWidget",
     "props": {
-      "title": "test string",
-      "isRequired": false,
       "id": "",
-      "children": {
-        "type": "NotFoundWidget",
-        "props": {
-          "id": "",
-          "schema": {
-            "title": "test string",
-            "type": "void"
-          },
-          "uiSchema": {},
-          "isRequired": false
-        },
-        "_store": {}
-      }
-    },
-    "rendered": {
-      "nodeType": "class",
-      "type": "NotFoundWidget",
-      "props": {
-        "id": "",
-        "schema": {
-          "title": "test string",
-          "type": "void"
-        },
-        "uiSchema": {},
-        "isRequired": false
-      }
-    }
-  },
-  "type": "Template",
-  "props": {
-    "title": "test string",
-    "isRequired": false,
-    "id": ""
-  },
-  "children": [
-    {
-      "node": {
-        "nodeType": "class",
-        "type": "NotFoundWidget",
-        "props": {
-          "id": "",
-          "schema": {
-            "title": "test string",
-            "type": "void"
-          },
-          "uiSchema": {},
-          "isRequired": false
-        }
+      "schema": {
+        "title": "test string",
+        "type": "void"
       },
-      "type": "NotFoundWidget",
-      "props": {
-        "id": "",
-        "schema": {
-          "title": "test string",
-          "type": "void"
-        },
-        "uiSchema": {},
-        "isRequired": false
-      }
+      "uiSchema": {},
+      "isRequired": false
     }
-  ]
+  },
+  "type": "NotFoundWidget",
+  "props": {
+    "id": "",
+    "schema": {
+      "title": "test string",
+      "type": "void"
+    },
+    "uiSchema": {},
+    "isRequired": false
+  }
 };
 

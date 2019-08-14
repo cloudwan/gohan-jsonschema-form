@@ -1,14 +1,14 @@
+import {Form} from 'antd';
 import * as React from 'react';
 
-import Asterisk from '../components/Asterisk';
-import Description from '../components/Description';
-import Label from '../components/Label';
+import 'antd/lib/form/style';
 
 interface TTemplateProps {
   title?: string;
   description?: string;
   id: string;
   isRequired?: boolean;
+  errors?: string;
 }
 
 export default class Template extends React.Component<TTemplateProps> {
@@ -19,19 +19,18 @@ export default class Template extends React.Component<TTemplateProps> {
   };
 
   public render() {
-    const {isRequired, title, description, id} = this.props;
+    const {isRequired, title, description, errors} = this.props;
 
     return (
-      <React.Fragment>
-        {title && (
-          <Label htmlFor={id}>
-            {title}
-            {isRequired && <Asterisk />}
-          </Label>
-        )}
-        {description && <Description>{description}</Description>}
+      <Form.Item
+        label={title}
+        extra={description}
+        required={isRequired}
+        help={errors}
+        validateStatus={errors ? 'error' : 'success'}
+      >
         {this.props.children}
-      </React.Fragment>
+      </Form.Item>
     );
   }
 }

@@ -35,7 +35,7 @@ describe('<BooleanField/>', () => {
       should.equal(wrapper.instance().validate(false), undefined);
     });
 
-    it('should return component with errors when value is required and it is undefined', () => {
+    it('should show one error when value is required and it is undefined', () => {
       const wrapper = shallow(
         <BooleanField
           id="foo"
@@ -45,11 +45,11 @@ describe('<BooleanField/>', () => {
         />,
       );
 
-      const errorsWrapper = shallow(wrapper.instance().validate(false));
-      errorsWrapper.type().should.equal('div');
+      const result = wrapper.instance().validate(false).length;
+      result.should.equal(1);
     });
 
-    it('should return component with errors when value is invalid', () => {
+    it('should show one error when value is invalid', () => {
       const wrapper = shallow(
         <BooleanField
           id="foo"
@@ -59,8 +59,8 @@ describe('<BooleanField/>', () => {
         />,
       );
 
-      const errorsWrapper = shallow(wrapper.instance().validate(null));
-      errorsWrapper.type().should.equal('div');
+      const result = wrapper.instance().validate(null).length;
+      result.should.equal(1);
     });
   });
 });

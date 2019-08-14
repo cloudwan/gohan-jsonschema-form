@@ -1,8 +1,7 @@
-import {ErrorMessage, FastField} from 'formik';
+import {FastField} from 'formik';
 import * as React from 'react';
 
 import {IWidget} from '../../typings/IWidget';
-import Errors from '../components/Errors';
 import validator from '../Validator';
 import SelectWidget from '../widgets/SelectWidget';
 import FormContext from './../FormContext';
@@ -33,7 +32,6 @@ export class SelectField extends React.Component<ISelectFieldProps> {
             ) => Promise<Array<{label: string; value: string}>>,
           ) => (
             <React.Fragment>
-              <ErrorMessage name={id} />
               <FastField {...commonProps} fetcher={fetcher} />
             </React.Fragment>
           )}
@@ -43,7 +41,6 @@ export class SelectField extends React.Component<ISelectFieldProps> {
 
     return (
       <React.Fragment>
-        <ErrorMessage name={id} />
         <FastField {...commonProps} />
       </React.Fragment>
     );
@@ -54,7 +51,7 @@ export class SelectField extends React.Component<ISelectFieldProps> {
     const errors = [];
 
     if (isRequired && !value) {
-      errors.push({message: 'Required'});
+      errors.push({message: 'This field cannot be empty'});
     }
 
     if (value !== undefined) {
@@ -65,7 +62,7 @@ export class SelectField extends React.Component<ISelectFieldProps> {
       }
     }
 
-    return errors.length > 0 ? <Errors errors={errors} /> : undefined;
+    return errors.length > 0 ? errors : undefined;
   };
 }
 
